@@ -4,7 +4,7 @@
      
 \sloppy
 
-\title{Uma Revisão de Literatura sobre \textit{A Utilização de Jogos no Ensino de Estruturas de Dados}}
+\title{Uma Revisão de Literatura sobre \textit{Um objeto didático baseado no jogo Rush Hour para auxílio ao ensino de estruturas de dados}}
 
 \author{Mauricio Souza Menezes\\}
 \address{Departamento de Ciências Exatas e da Terra, Campus I\\
@@ -13,9 +13,12 @@ Salvador, Bahia, Brasil.
   \email{mauriciosm95@gmail.com}
 }
 
+\begin{document}
 
-
-\begin{document} 
+\newacronym{ed}{ED}{Estruturas de Dados}
+\newacronym{rs}{RS}{Revisão Sistemática}
+\newacronym{cafe}{CAFe}{Comunidade Acadêmica Federada}
+\newacronym{rnp}{RNO}{Rede Nacional de Ensino e Pesquisa}
 
 \maketitle
 
@@ -32,10 +35,29 @@ Salvador, Bahia, Brasil.
 
 
 \section{Introdução}
+Este artigo apresenta uma \gls{rs} da literatura referente a utilização de jogos no ensino de \gls{ed}. A localização dos artigos foi realizado em cinco bases de dados(ACM, CEIE, IEEE, Scielo e Spring) levando em conta a principal questão: Quais metodologias são utilizadas no ensino de \gls{ed} com o auxilio de jogos? Foram incluidos todos os artigos que atenderam os critérios definidos.
+Nos cursos da área de computação, a disciplina de \gls{ed} serve como base para a maioria das matérias posteriores, apesar disso, ainda existe grande dificuldade relacionada ao seu ensino. Sendo assim, várias metodologias foram propostas ao longo do tempo, e uma dessas propostas foi o ensino de \gls{ed} com a utilização de jogos.
 
-Este relatório é um artigo com o mínimo de 4 páginas e limitado a 6 páginas (excluída a planilha-resumo de resultados). Na Introdução deve ser descrito de forma CLARA o que motivou a realização da revisão sistemática de literatura. Contextualização da área, Objetivos, questões problema, objeto de estudo aparecem aqui. Fique atento pois os objetivos da revisão sistemática não necessariamente são os mesmos ou possuem interseção com os objetivos do projeto de pesquisa que ainda será construído a seguir. As normas de citação devem ser obedecidas normalmente neste texto, como neste exemplo\cite{Laranjeira2015}.
+Este relatório é um artigo com o mínimo de 4 páginas e limitado a 6 páginas (excluída a planilha-resumo de resultados). Na Introdução deve ser descrito de forma CLARA o que motivou a realização da revisão sistemática de literatura. Contextualização da área, Objetivos, questões problema, objeto de estudo aparecem aqui. Fique atento pois os objetivos da revisão sistemática não necessariamente são os mesmos ou possuem interseção com os objetivos do projeto de pesquisa que ainda será construído a seguir. As normas de citação devem ser obedecidas normalmente neste texto, como neste exemplo\cite{Sunikova2018}.
 
 \section{Relato da Revisão de Literatura}
+
+Ao realizar a \gls{rs} foi necessário utilizar um protocolo para a obtenção dos estudos que viriam a ser analisdos. As definições feitas no protocolo foram as seguintes: Questões de pesquisa, palavras-chave, critérios de busca, fontes de pesquisa, críterios para inclusão e exclusão e string de busca.
+
+Foram definidas três questões de pesquisa. A primeira e principal foi: "Quais metodologias são utilizadas para ensinar estruturas de dados com jogos?" Já as duas questões secundárias foram: "Quais jogos são utilizados para ensinar estruturas de dados?" e "O jogo Hora do Rush já foi utilizado, de alguma forma, para ensinar estruturas de dados?". As questões de pesquisa foram escolhidas com base naquilo que se queria entender ao final da \gls{rs}.
+
+As palavras-chave utilizadas foras as seguintes: Aprendizagem; Metodologia de ensino; Estruturas de dados; jogo; Hora do rush.
+Elas foram definidas com o objetivo de encontrar o máximo de estudos relevantes que pudessem responder as questões de pesquisa. É importante salientar que foram também utilizadas as respectivas palavras em Inglês e Espanhol, pois também foram considerados estudos nesses idiomas.
+
+Critérios de busca
+
+Para a obtenção dos estudos foram utilizados as seguintes bases de dados: ACM Digital Library; Comissão Especial de Informática na Educação; IEEE Digital Library; Scielo; Spring.
+As bases foram escolhidas principalmente por conta da conceituação dos trabalhos que possuem. Também foi possível, através dessas bases, a obtenção dos estudos de forma completa e na sua maioria de forma gratuita, sendo importante salientar, que para que isso fosse possível, foi necessário realizar o acesso remoto por meio do \gls{cafe} que é um serviço provido pela \gls{rnp}.
+
+Para realizar o processo de seleção dos estudos foram definidos críterios, podendo ser de inclusão ou de exclusão. Os critérios de inclusão foram os seguintes: "Aborda Ensino de Estruturas de Dados"; "Aborda Uso de Jogos para Ensino de Estruturas de Dados"; "Contém as Palavras-chaves, no Resumo e/ou Título e/ou nas Palavras-chave"; "Possui Texto Completo Disponível". Já os critérios de exclusão foram: "O Resumo não Define Claramente o Objetivo do Trabalho"; "Estudo Duplicado"; "Estudo Pago para Realizar a Leitura"; "Não está em Português, Inglês ou Espanhol"; "Tema não está Relacionado ao Ensino de Estruturas de Dados".
+
+String de busca
+
 
 Aqui deve ser descrito, detalhadamente, o passo a passo da execução da revisão sistemática. Inicia-se pela definição do protocolo justificando a definição das questões-problema, das palavras-chave, dos critérios de busca, das fontes de pesquisa, das questões de inclusão e exclusão e da string de busca. Todos estes itens devem ser definidos e ter sua escolha justificada de forma convinente e sem subjetividade.
 
@@ -49,19 +71,18 @@ Observem que esta etapa de seleção prevê a leitura apenas do título, abstrac
 
 Para retratar estes dados, podem ser usados gráficos e figuras formatados como no exemplo da Figura \ref{fig:depth}. Se usar a ferramenta STArt, pode incluir no relatório alguns gráficos e tabelas gerados pela ferramenta que refletem bem esta etapa da revisão sistemática.
 
-\begin{figure}[tb]
-    \centering
-    \includegraphics[scale=0.7]{tree-depth.png}
-    \caption{Exemplo genérico de um gráfico ou figura que pode ser colocao aqui para representar os resultados quantitativos.}
-    \label{fig:depth}
-\end{figure}
-
 \subsection{Análise Qualitativa dos Resultados}
 
 Esta subseção reflete o resultado da extração de dados. Depois de extrair as informações úteis através da leitura completa dos artigos selecionados, o autor deve descrever aqui sua análise qualitativa do que encontrou durante a pesquisa, citando os principais artigos e as informações relevantes que encontrou para responder às questões de pesquisa definidas no protocolo da revisão sistemática. Também podem ser usadas figuras e tabelas para fundamentar a análise. 
 
 Observe que alguns artigos que foram originalmente selecionados para leitura, podem ser excluídos por algum dos critérios de exclusão definido após a leitura completa. Neste caso a planilha-resumo deve ser atualizada.
 
+\begin{figure}[tb]
+    \centering
+    \includegraphics[scale=0.7]{tree-depth.png}
+    \caption{Exemplo genérico de um gráfico ou figura que pode ser colocao aqui para representar os resultados quantitativos.}
+    \label{fig:depth}
+\end{figure}
 
 \section{Conclusões}
 
