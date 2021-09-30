@@ -31,13 +31,14 @@ Salvador, Bahia, Brasil.
 
 
 \begin{abstract}
-\begin{otherlanguage}{english}
-    You should put here the abstract summarizing your sistematic review report. You are supposed to describe the main points in your report: review goals, main research questions and main results achieved. 
-\end{otherlanguage} \textcolor{red}{Atenção ! Não faça tradução automática do resumo usando o Google ou outro tradutor automático. Se fizer isto, o Abstract ficará de péssima qualidade. Reescreva o Resumo em inglês e não apenas o traduza. A ideia expressada é que deve se a mesma e não as palavras.}
+    \begin{otherlanguage}{english}
+        You should put here the abstract summarizing your sistematic review report. You are supposed to describe the main points in your report: review goals, main research questions and main results achieved.
+    \end{otherlanguage} \textcolor{red}{Atenção ! Não faça tradução automática do resumo usando o Google ou outro tradutor automático. Se fizer isto, o Abstract ficará de péssima qualidade. Reescreva o Resumo em inglês e não apenas o traduza. A ideia expressada é que deve se a mesma e não as palavras.}
 \end{abstract}
 
 
 \section{Introdução}
+
 Este artigo apresenta uma \gls{rs} da literatura referente a utilização de jogos no ensino de \gls{ed}. A localização dos artigos foi realizada em cinco bases de dados(ACM, CEIE, IEEE, Scielo e Spring) levando em conta a principal questão: Quais metodologias são utilizadas no ensino de \gls{ed} com o auxilio de jogos? Foram incluidos todos os artigos que atenderam os critérios definidos.
 Nos cursos da área de computação, a disciplina de \gls{ed} serve como base para a maioria das matérias posteriores, apesar disso, ainda existe grande dificuldade relacionada ao seu ensino. Sendo assim, várias metodologias foram propostas ao longo do tempo, e uma dessas propostas foi o ensino de \gls{ed} com a utilização de jogos.
 
@@ -50,7 +51,7 @@ Elas foram definidas com o objetivo de encontrar o máximo de estudos relevantes
 
 \subsection{Objetivo da Pesquisa}
 
-A pesquisa teve como objetivo a obtenção do conhecimento fundamental sobre a área, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma solução nova para o ensino de \gls{ed} com jogos. 
+A pesquisa teve como objetivo a obtenção do conhecimento fundamental sobre a área, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma solução nova para o ensino de \gls{ed} com jogos.
 
 \subsection{Questões de Pesquisa}
 
@@ -60,6 +61,7 @@ As questões de pesquisa foram escolhidas com base naquilo que se queria entende
 
 \subsection{Repositório de Busca de Dados}
 
+Para a obtenção dos estudos foram utilizados as seguintes bases de dados:
 \begin{itemize}
     \item{ACM Digital Library}
     \item{\gls{ceie}}
@@ -68,32 +70,79 @@ As questões de pesquisa foram escolhidas com base naquilo que se queria entende
     \item{Springer}
 \end{itemize}
 
-Para a obtenção dos estudos foram utilizados as seguintes bases de dados: ACM Digital Library; Comissão Especial de Informática na Educação; IEEE Digital Library; Scielo; Spring.\\
-As bases foram escolhidas principalmente por conta da conceituação dos trabalhos que possuem. Um dos críterios utilizados para tal escolha foi o sistema Qualis Capes. Também foi possível, através dessas bases, a obtenção dos estudos de forma completa e na sua maioria de forma gratuita, sendo importante salientar, que para que isso fosse possível, foi necessário realizar o acesso remoto por meio do \gls{cafe} que é um serviço provido pela \gls{rnp}.
+As bases foram escolhidas principalmente por conta da conceituação dos trabalhos que possuem. Um dos críterios utilizados para tal escolha foi o sistema Qualis Capes. Também foi possível, através dessas bases, a obtenção dos estudos de forma completa e na sua maioria de forma gratuita, sendo importante salientar, que para que isso fosse possível, foi necessário realizar o acesso remoto por meio do portal da \gls{cafe} que é um serviço provido pela \gls{rnp}.
 
-\subsection{Palavras-chave}
+\subsection{Palavras-chave e Strings de Busca}
+
+As palavras-chave selecionadas para a busca nas bases de dados, com o objetivo de encontrar o máximo de estudos relevantes, foram as seguintes:
+\begin{itemize}
+    \item{Aprendizagem}
+    \item{Dificuldade de aprendizagem}
+    \item{Estruturas de dados}
+    \item{Hora do rush}
+    \item{Jogo}
+    \item{Metodologia de ensino}
+    \item{Objeto de aprendizagem}
+\end{itemize}
+
+A tabela a seguir apresenta as strings de busca utilizadas em suas respectivas bases de dados. É importante salientar, que a depender da base de dados, também foram utilizados os correlatos em espanhol e inglês das palavras-chave, para que o máximo de trabalhos relevantes fossem encontrados.
+
+\begin{table}[h]
+    \centering
+
+    \caption{STRINGS DE BUSCA NAS BASES DE DADOS}
+    \label{fig:stringBuscaBase}
+    \begin{tabular}{|p{2cm}|p{10cm}|}
+        \hline
+        BASE DE DADOS        & STRING BUSCA                                                                                                                                                                                                                                       \\
+        \hline
+        STRING GERAL         & ("Estruturas de Dados" OR "Data Structures") AND (("Learning" OR "Aprendizagem") OR ("Metodologia de Ensino" OR "Teaching Methodology")) AND (("Jogo" OR "Game") OR ("Hora do Rush" OR "Rush Hour"))                                               \\
+        \hline
+        ACM Digital Library  & "Data Structures" AND ("Learning Object" OR "Teaching Methodology" OR "Learning Difficulty" OR "Learning Teaching") AND ("Game" OR "Rush Hour")                                                                                                    \\
+        \hline
+        CEIE                 & "Data Structure" OR "Estruturas de Dados"                                                                                                                                                                                                          \\
+        \hline
+        IEEE Digital Library & ("Estruturas de Dados" OR "Data Structures") AND (("Learning" OR "Aprendizagem") OR ("Metodologia de Ensino" OR "Teaching Methodology")) AND (("Jogo" OR "Game") OR ("Hora do Rush" OR "Rush Hour"))                                               \\
+        \hline
+        SciELO               & ("Estruturas de Dados" OR "Data Structure" OR "Estructuras de datos") AND ("Aprendizagem" OR "Learning" OR "Aprendiendo" OR "Ensino" OR "Enseñando" OR "Teaching" OR "Jogo" OR "Games" OR "Juego" OR "Hora do Rush" OR "Rush Hour" OR "Hora Pico") \\
+        \hline
+        Springer             & "Data Structures" AND ("Learning Object" OR "Teaching Methodology" OR "Learning Difficulty" OR "Learning Teaching") AND ("Game" OR "Rush Hour")                                                                                                    \\
+        \hline
+    \end{tabular}
+
+\end{table}
 
 \subsection{Critérios de busca}
 
+Para realizar o processo de seleção dos estudos foram definidos críterios, podendo ser de inclusão ou de exclusão.
 
-Para realizar o processo de seleção dos estudos foram definidos críterios, podendo ser de inclusão ou de exclusão. Os critérios de inclusão foram os seguintes: "Aborda Ensino de Estruturas de Dados"; "Aborda Uso de Jogos para Ensino de Estruturas de Dados"; "Contém as Palavras-chaves, no Resumo e/ou Título e/ou nas Palavras-chave"; "Possui Texto Completo Disponível". Já os critérios de exclusão foram: "O Resumo não Define Claramente o Objetivo do Trabalho"; "Estudo Duplicado"; "Estudo Pago para Realizar a Leitura"; "Não está em Português, Inglês ou Espanhol"; "Tema não está Relacionado ao Ensino de Estruturas de Dados".
-
-String de busca
-
-
-Aqui deve ser descrito, detalhadamente, o passo a passo da execução da revisão sistemática. Inicia-se pela definição do protocolo justificando a definição das questões-problema, das palavras-chave, dos critérios de busca, das fontes de pesquisa, das questões de inclusão e exclusão e da string de busca. Todos estes itens devem ser definidos e ter sua escolha justificada de forma convinente e sem subjetividade.
+Os critérios de inclusão foram os seguintes:
+\begin{itemize}
+    \item O estudo aborda o ensino de \gls{ed}.
+    \item O estudo aborda o uso de jogos para o ensino de \gls{ed}.
+    \item O estudo contém as palavras-chave definidas na pesquisa no resumo, titulo ou palavras-chave.
+    \item O estudo possui o texto completo disponível.
+\end{itemize}
+Os critérios de exclusão foram os seguintes:
+\begin{itemize}
+    \item O resumo não define claramente o objetido do estudo.
+    \item O estudo está duplicado.
+    \item É necessário o pagamento de uma taxa para acesso ao estudo.
+    \item O estudo não está escrito em português, inglês ou espanhol.
+    \item O tema do estudo não está relacionado ao ensino de \gls{ed}.
+\end{itemize}
 
 \section{Resultados Parciais}
 
-Nesta subseção devem ser apresentados os resultados parciais após a etapa de seleção dos trabalhos. Indicando a quantidade total de artigos retornados pela busca nas bases, a quantidade de arquivos selecionados, indicando a distribuição por critérios de inclusão/exclusão. Enfim, uma análise quantitativa dos trabalhos e qualitativa indicando se as principais questões de pesquisa tendem a ser respondidas, considerando os critérios de inclusão mapeados. 
+Nesta subseção devem ser apresentados os resultados parciais após a etapa de seleção dos trabalhos. Indicando a quantidade total de artigos retornados pela busca nas bases, a quantidade de arquivos selecionados, indicando a distribuição por critérios de inclusão/exclusão. Enfim, uma análise quantitativa dos trabalhos e qualitativa indicando se as principais questões de pesquisa tendem a ser respondidas, considerando os critérios de inclusão mapeados.
 
-Observem que esta etapa de seleção prevê a leitura apenas do título, abstract e palavras-chave dos artigos. Desta forma faz-se a seleção inicial do que será de fato lido a fundo. 
+Observem que esta etapa de seleção prevê a leitura apenas do título, abstract e palavras-chave dos artigos. Desta forma faz-se a seleção inicial do que será de fato lido a fundo.
 
 Para retratar estes dados, podem ser usados gráficos e figuras formatados como no exemplo da Figura \ref{fig:depth}. Se usar a ferramenta STArt, pode incluir no relatório alguns gráficos e tabelas gerados pela ferramenta que refletem bem esta etapa da revisão sistemática.
 
 \subsection{Análise Qualitativa dos Resultados}
 
-Esta subseção reflete o resultado da extração de dados. Depois de extrair as informações úteis através da leitura completa dos artigos selecionados, o autor deve descrever aqui sua análise qualitativa do que encontrou durante a pesquisa, citando os principais artigos e as informações relevantes que encontrou para responder às questões de pesquisa definidas no protocolo da revisão sistemática. Também podem ser usadas figuras e tabelas para fundamentar a análise. 
+Esta subseção reflete o resultado da extração de dados. Depois de extrair as informações úteis através da leitura completa dos artigos selecionados, o autor deve descrever aqui sua análise qualitativa do que encontrou durante a pesquisa, citando os principais artigos e as informações relevantes que encontrou para responder às questões de pesquisa definidas no protocolo da revisão sistemática. Também podem ser usadas figuras e tabelas para fundamentar a análise.
 
 Observe que alguns artigos que foram originalmente selecionados para leitura, podem ser excluídos por algum dos critérios de exclusão definido após a leitura completa. Neste caso a planilha-resumo deve ser atualizada.
 
@@ -106,9 +155,9 @@ Observe que alguns artigos que foram originalmente selecionados para leitura, po
 
 \section{Conclusões}
 
-Aqui o autor deve fazer uma reflexão sobre os achados da revisão sistemática. Esteja atento para acrescentar informação nova, ou seja, para "Concluir" de fato alguma coisa e não para repetir a análise da seção anterior. 
+Aqui o autor deve fazer uma reflexão sobre os achados da revisão sistemática. Esteja atento para acrescentar informação nova, ou seja, para "Concluir" de fato alguma coisa e não para repetir a análise da seção anterior.
 
-Devem ser inclusive apontadas as lacunas e limitações identificadas a partir da revisão sistemática, fazendo link com as possíveis propostas que serão apresentadas futuramente no anteprojeto. Ou seja, a conclusão deste relatório deve preparar o alicerce para a construção do anteprojeto de pesquisa. 
+Devem ser inclusive apontadas as lacunas e limitações identificadas a partir da revisão sistemática, fazendo link com as possíveis propostas que serão apresentadas futuramente no anteprojeto. Ou seja, a conclusão deste relatório deve preparar o alicerce para a construção do anteprojeto de pesquisa.
 
 
 
@@ -119,55 +168,52 @@ Devem ser inclusive apontadas as lacunas e limitações identificadas a partir d
 \begin{landscape}
 
 
-\section{Planilha-resumo de Resultados}
+    \section{Planilha-resumo de Resultados}
 
-Aqui deve ser atualizada a planilha-resumo contendo todos os trabalhos selecionados após a fase de seleção. A tabela deve conter todas as colunas indicadas a seguir com as informações relevantes sobre os trabalhos lidos na íntegra. Ver o exemplo na Tabela \ref{tab:resumo}.
+    Aqui deve ser atualizada a planilha-resumo contendo todos os trabalhos selecionados após a fase de seleção. A tabela deve conter todas as colunas indicadas a seguir com as informações relevantes sobre os trabalhos lidos na íntegra. Ver o exemplo na Tabela \ref{tab:resumo}.
 
-\begin{center}
-    
- 
-    \begin{longtable}{p{8cm}|c|c|c|c|c|p{7cm}|p{5cm}}
-     \caption{Planilha-resumo dos trabalhos selecionados.}
-    \label{tab:resumo} \\
-     \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
-     \multicolumn{1}{c|}{\textbf{I1}} &
-     \multicolumn{1}{c|}{\textbf{I2}} &
-     \multicolumn{1}{c|}{\textbf{I3}} &
-     \multicolumn{1}{c|}{\textbf{E1}} &
-     \multicolumn{1}{c|}{\textbf{E2}} &
-     \multicolumn{1}{c|}{\textbf{Descrição}} & \multicolumn{1}{c}{\textbf{Avaliação}} \\ \hline \hline
-    \endfirsthead
+    \begin{center}
 
-    \multicolumn{8}{c}%
-    {{\bfseries \tablename\ \thetable{} -- continuação da página anterior}} \\
-    \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
-     \multicolumn{1}{c|}{\textbf{I1}} &
-     \multicolumn{1}{c|}{\textbf{I2}} &
-     \multicolumn{1}{c|}{\textbf{I3}} &
-     \multicolumn{1}{c|}{\textbf{E1}} &
-     \multicolumn{1}{c|}{\textbf{E2}} &
-     \multicolumn{1}{c|}{\textbf{Descrição}} & \multicolumn{1}{c}{\textbf{Avaliação}} \\ \hline \hline 
-    \endhead
 
-    \hline \multicolumn{8}{r}{{Continua na próxima página}} \\ 
-    \endfoot
-    \hline \hline
-    \endlastfoot
-         
-    
-         \bibentry{Laranjeira2015} & X & & & & & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
-         \hline
-         \bibentry{breiman2017classification} & & & X & & X & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
-         \hline
-         \bibentry{SimoesEtAl2016-BRAHUR} & & X & X & & & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
-         \hline
-         
-         
-         
-    \end{longtable}
+        \begin{longtable}{p{8cm}|c|c|c|c|c|p{7cm}|p{5cm}}
+            \caption{Planilha-resumo dos trabalhos selecionados.}
+            \label{tab:resumo}                                                                                                                                                                                                                                                                                                                                                            \\
+            \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
+            \multicolumn{1}{c|}{\textbf{I1}}                        &
+            \multicolumn{1}{c|}{\textbf{I2}}                        &
+            \multicolumn{1}{c|}{\textbf{I3}}                        &
+            \multicolumn{1}{c|}{\textbf{E1}}                        &
+            \multicolumn{1}{c|}{\textbf{E2}}                        &
+            \multicolumn{1}{c|}{\textbf{Descrição}}                 & \multicolumn{1}{c}{\textbf{Avaliação}}                                                                                                                                                                                                                                                                              \\ \hline \hline
+            \endfirsthead
 
-    
-\end{center}
+            \multicolumn{8}{c}%
+            {{\bfseries \tablename\ \thetable{} -- continuação da página anterior}}                                                                                                                                                                                                                                                                                                       \\
+            \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
+            \multicolumn{1}{c|}{\textbf{I1}}                        &
+            \multicolumn{1}{c|}{\textbf{I2}}                        &
+            \multicolumn{1}{c|}{\textbf{I3}}                        &
+            \multicolumn{1}{c|}{\textbf{E1}}                        &
+            \multicolumn{1}{c|}{\textbf{E2}}                        &
+            \multicolumn{1}{c|}{\textbf{Descrição}}                 & \multicolumn{1}{c}{\textbf{Avaliação}}                                                                                                                                                                                                                                                                              \\ \hline \hline
+            \endhead
+
+            \hline \multicolumn{8}{r}{{Continua na próxima página}}                                                                                                                                                                                                                                                                                                                       \\
+            \endfoot
+            \hline \hline
+            \endlastfoot
+
+
+            \bibentry{Laranjeira2015}                               & X                                      &   &   &  &   & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \hline
+            \bibentry{breiman2017classification}                    &                                        &   & X &  & X & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \hline
+            \bibentry{SimoesEtAl2016-BRAHUR}                        &                                        & X & X &  &   & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \hline
+        \end{longtable}
+
+
+    \end{center}
 
 \end{landscape}
 \end{document}
