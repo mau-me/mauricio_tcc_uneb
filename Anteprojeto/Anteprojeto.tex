@@ -1,0 +1,148 @@
+\documentclass[font=plain]{abnt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\usepackage{abntex2cite}
+\usepackage{graphicx}
+\usepackage{graphicx,color}
+\usepackage{paralist}
+\usepackage{subfloat}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{booktabs}
+
+
+
+\graphicspath{{imagens/}}
+
+\instituicao{UNEB - Universidade do Estado da Bahia
+             \par Departamento de Ciências Exatas e da Terra}
+\titulo{Título do Projeto}
+\autor{Mauricio Souza Menezes}
+\orientador{PhD Diego Gervasio Frias Suárez}
+\comentario{\textbf{Áreas da Computação:}
+           \\ Bioinformática}
+\local{Salvador-BA}
+%esta data deve ficar estática após entrega final
+\data{\today}
+
+\begin{document}
+\capa
+\folhaderosto
+
+\begin{folhadeaprovacao}
+    \begin{center}
+        \large
+        \textbf{Folha de Aprovação}
+    \end{center}
+
+    Anteprojeto sob o título provisório \textit{\textcolor{red}{Título do Anteprojeto}} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Nome do Aluno} a Marco Antônio Costa Simões e Diego Frias, professores da disciplina, em \today, em Salvador, Bahia.
+    \setlength{\ABNTsignthickness}{0.4pt}
+    \setlength{\ABNTsignskip}{2cm}
+    \hspace*{1cm}
+    \assinatura{Nome do Aluno\\Orientando}
+    \hspace*{1cm}
+    \assinatura{Nome do Orientador}
+\end{folhadeaprovacao}
+
+%\begin{resumo}
+
+%\end{resumo}
+
+
+\sumario
+
+
+\chapter{Introdução}
+
+Escrever aqui a contextualização do tema. Falar sobre a grande área em que o problema investigado está inserido.  Este capítulo deve apresentar o referencial teórico necessário para o entendimento do tema, do problema,  dos conceitos e tecnologias envolvidos e do que já foi realizado nos trabalhos relacionados (fruto da revisão sistemática realizada) e das lacunas identificadas (o que não foi feito), desenvolvendo uma ligação entre o contexto e o problema de pesquisa.
+Normalmente autores de referência são usados nesta contextualização.
+
+A Introdução deve ser finalizada definindo claramente o problema de pesquisa. O problema deve ser contextualizado e descrito detalhadamente. Não confundir, problema com solução. A solução proposta (hipótese) irá aparecer nos objetivos.
+
+Espera-se um capítulo de aproximadamente 3 páginas aqui.
+
+\chapter{Objetivos}
+Escrever de forma clara, o Objetivo Geral do Trabalho (a meta que se pretende atingir com o final do trabalho, o que se pretende fazer) e os Objetivos Específicos (Objetivos menores, parciais que precisam ser atingidos como parte do desenvolvimento do Trabalho OU Objetivos Secundários que complementam o objetivo Geral ou são consequências do mesmo). Cuidado ao escrever os objetivos, além de claros eles precisam ser exequíveis. Os objetivos são as soluções hipotéticas apresentadas para solucionar o problema descrito na introdução.
+
+\chapter{Justificativas e Contribuições}
+
+Escrever a Motivação (por que) para a execução deste trabalho, destacando a relevância (social, econômica ou acadêmica) do mesmo. Descrever as razões pelas quais o projeto deve ser desenvolvido, quais as contribuições (acadêmicas e/ou científicas) para a área de conhecimento do projeto. Tal contribuição é assegurada pela utilidade do trabalho aos demais, pela contribuição cumulativa (ou seja, pelo que este acrescenta ao conjunto do conhecimento científico do tema), pelo ineditismo do tema ou da abordagem e pela contribuição à superação de lacunas no conhecimento.
+
+\chapter{Metodologia}
+Escrever detalhadamente a Metodologia (como será feito)  que será usada para execução do Trabalho. Em outras palavras, dizer como os objetivos geral e específicos serão atingidos, que ações serão executadas, que testes serão realizados, que indicadores serão usados, etc. Descrever também as tecnologias que serão utilizadas para o desenvolvimento do trabalho e como se pretende validar o projeto. Lembre de usar a fundamentação em estatística para trabalhos que tenham isto como requisito (pesquisas de campo, aplicação de questionários, estudos de caso, etc). Ao descrever as ações na metodologia não economize em detalhes. Quanto mais detalhadas forem as ações, mais fácil será estimar prazos exequíveis no cronograma.
+
+
+\chapter{Cronograma}
+
+Descrever o cronograma de execução do trabalho planejando a duração de cada uma das etapas previstas na metodologia até a conclusão do mesmo ao final da disciplina TCC-02.
+
+O cronograma deste projeto é apresentado nas tabelas \ref{tab:cronograma-1-2} e \ref{tab:cronograma-2-2}.
+
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ p{7.8cm} c c c c c c c }
+        \toprule
+         & Jan       & Fev       & Mar       & Abr       & Mai       & Jun       & \\
+        \midrule
+        Atividade 1
+         & $\bullet$ & $\bullet$ & $\bullet$ &           &           &           & \\
+        \midrule
+        Atividade 2
+         &           & $\bullet$ & $\bullet$ &           &           &           & \\
+        \midrule
+        Atividade 3
+         &           & $\bullet$ & $\bullet$ & $\bullet$ &           &           & \\
+        \midrule
+        Atividade 4
+         &           &           & $\bullet$ &           &           &           & \\
+        \midrule
+        Atividade 5
+         &           &           &           & $\bullet$ & $\bullet$ & $\bullet$ & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Cronograma de Janeiro a Junho de 20XX}
+    \label{tab:cronograma-1-2}
+\end{table}
+
+\begin{table}[hb]
+    \centering
+    \begin{tabular}{ p{7.8cm} c c c c c c c }
+        \toprule
+         & Jul       & Ago       & Set       & Out       & Nov       & Dez       & \\
+        \midrule
+        Atividade 6
+         & $\bullet$ & $\bullet$ &           &           &           &           & \\
+        \midrule
+        Atividade 7
+         &           & $\bullet$ & $\bullet$ &           &           &           & \\
+        \midrule
+        Atividade 8
+         &           & $\bullet$ & $\bullet$ & $\bullet$ &           &           & \\
+        \midrule
+        Atividade 9
+         &           &           & $\bullet$ & $\bullet$ &           &           & \\
+        \midrule
+        Atividade 10
+         &           &           &           & $\bullet$ & $\bullet$ &           & \\
+        \midrule
+        Atividade 11
+         &           &           &           &           &           & $\bullet$ & \\
+        \bottomrule
+    \end{tabular}
+    \caption{Cronograma de Julho até Dezembro de 20XX}
+    \label{tab:cronograma-2-2}
+\end{table}
+
+\textcolor{red}{Observação: As tabelas acima são apenas ilustrativas, o aluno deve elaborar seu cronograma e apresentá-lo da forma mais adequada ao seu projeto, inclusive podendo usar uma única tabela, dividir os períodos em semanas, dias, etc.}
+
+Incluir as Referências Bibliográficas pesquisadas durante a elaboração do Anteprojeto e que foram CITADAS no mesmo, já utilizando a norma da ABNT como nos exemplos\cite{exemplo1} \cite{exemplo2} \cite{exemplo3}.
+
+\begin{citacao} Exemplo de citação direta com mais de três linhas.Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas\cite[p. 3]{exemplo1}.
+\end{citacao}
+Numa citação direta com menos de três linhas, ``coloca-se entre aspas e cita indicando a página" \cite[p. 2]{exemplo3}.
+
+\bibliographystyle{abnt-num}
+\bibliography{exemplo}
+
+\end{document}
