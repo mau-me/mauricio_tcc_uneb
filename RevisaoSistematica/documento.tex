@@ -4,212 +4,272 @@
 
 \sloppy
 
-\title{Uma Revisão de Literatura sobre \textit{Ferramentas Computacionais para o Estudo da Evolução de Espécies Baseado no Uso de Códons}}
+\title{Uma Revisão de Literatura sobre \textit{Ferramentas Computacionais para
+        o Estudo da Evolução de Espécies Baseado no Uso de Códons}}
 
 \author{Mauricio Souza Menezes\\}
 \address{Departamento de Ciências Exatas e da Terra, Campus I\\
-Universidade do Estado da Bahia (UNEB)\\
-Salvador, Bahia, Brasil.
-  \email{mauriciosm95@gmail.com}
+    Universidade do Estado da Bahia (UNEB)\\
+    Salvador, Bahia, Brasil.
+    \email{mauriciosm95@gmail.com}
 }
 
 \begin{document}
 
 \newacronym{ufm}{UFM}{Universal Feature Method}
 \newacronym{ngs}{NGS}{Sequenciamento de Nova Geração}
-\newacronym{ed}{ED}{Estruturas de Dados}
 \newacronym{rs}{RS}{Revisão Sistemática}
 \newacronym{cafe}{CAFe}{Comunidade Acadêmica Federada}
+\newacronym{parsifal}{Parsifal}{Perform Systematic Literature Reviews}
+\newacronym{fcgr}{FCGR}{Frequency Chaos Game Representation}
 
 \maketitle
 
 \begin{resumo}
-    Aqui deve ser colocado o resumo do relatório da revisão sistemática, descrevendo os pontos mais importantes, como os objetivos da revisão, principais questões-problema, e principais resultados obtidos.
+    Esta \gls{rs} teve como objetivo buscar a sustentação relacionada a genotipagem de sequências, levantando quais métodos são utilizados.
+    Vários métodos diferentes foram identificados, demostrando assim, que nenhum deles foi considerado como indubitável.
 \end{resumo}
-
 
 \begin{abstract}
     \begin{otherlanguage}{english}
-        You should put here the abstract summarizing your sistematic review report. You are supposed to describe the main points in your report: review goals, main research questions and main results achieved.
-    \end{otherlanguage} \textcolor{red}{Atenção ! Não faça tradução automática do resumo usando o Google ou outro tradutor automático. Se fizer isto, o Abstract ficará de péssima qualidade. Reescreva o Resumo em inglês e não apenas o traduza. A ideia expressada é que deve se a mesma e não as palavras.}
+        This Systematic Review (SR) aimed to seek support related to sequence genotyping, identifying which methods are used. Several different methods were identified, thus demonstrating that none of them was considered indubitable.
+    \end{otherlanguage}
 \end{abstract}
-
 
 \section{Introdução}
 
-Este artigo apresenta uma \gls{rs} da literatura referente a utilização do método \gls{ufm} no processamento da saída dos equipamentos \gls{ngs} em vírus de alta relevância epidemiológica. A artigos foram obtidos através da busca realizada em sete bases de dados(ACM, BioRxiv, Elsevier, Google Scholar, IEEE, PubMed, e Spring) levando em conta a principal questão: Se o método \gls{ufm}, pode ser utilizado para processar os fragmentos de DNA/RNA viral, obtidos com as técnicas de \gls{ngs}? Foram incluídos todos os artigos que atenderam os critérios definidos.
-Nos cursos da área de computação, a disciplina de \gls{ed} serve como base para a maioria das matérias posteriores, apesar disso, ainda existe grande dificuldade relacionada ao seu ensino. Sendo assim, várias metodologias foram propostas ao longo do tempo, e uma dessas propostas foi o ensino de \gls{ed} com a utilização de jogos.
+A análise filogenética é uma ferramenta de extrema importância para a virologia. Sua avaliação é parte essencial para definição, por exemplo, da evolução de agentes causadores de doenças.
+Segundo~\cite{behl_threat_2022} `existe uma tendência histórica, onde os vírus e bactérias sofrem mutações no decorrer do tempo, encontrando mecanismos para infectar as células humanas.'
+Este artigo apresenta uma \gls{rs} da literatura referente aos métodos computacionais utilizados para realizar o estudo de especiação genômica. Os artigos foram obtidos através da busca realizada em quatro bases de dados (PubMed, ScienceDirect, Scopus e Springer Link) levando em conta a principal questão: Quais métodos são utilizados para realizar o estudo de especiação? Foram incluídos todos os artigos que atenderam aos critérios definidos.
 
 \section{Relato da Revisão de Literatura}
 
-Logo após identificar o problema de dificuldades no ensino de \gls{ed}, foi necessário conhecer os pormenores que estavam relacionados a mesma. Para isso, foi necessário realizar uma \gls{rs}. Foi utilizado um protocolo, que serviria como base no processo para a obtenção dos estudos que deveriam ser analisdos. As definições feitas no protocolo foram as seguintes: Questões de pesquisa, palavras-chave, critérios de busca, fontes de pesquisa, críterios para inclusão e exclusão e string de busca.
-
-As palavras-chave utilizadas foras as seguintes: Aprendizagem; Metodologia de ensino; Estruturas de dados; jogo; Hora do rush.
-Elas foram definidas com o objetivo de encontrar o máximo de estudos relevantes que pudessem responder as questões de pesquisa. É importante salientar que foram também utilizadas as respectivas palavras em Inglês e Espanhol, pois também foram considerados estudos nesses idiomas.
+Logo após definir os objetivos da pesquisa, foi primordial conhecer os pormenores que estavam relacionados aos mesmos, e para isso foi necessário realizar uma \gls{rs}. Dessa forma, foi utilizado um protocolo que serviria de base no processo para a obtenção dos estudos que deveriam ser analisados, os quais foram definidos e analisados através de: Objetivos, questões, palavras-chave, strings de busca, fontes e critérios para inclusão e exclusão.
 
 \subsection{Objetivo da Pesquisa}
 
-A pesquisa teve como objetivo a obtenção do conhecimento fundamental sobre a área, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma solução nova para o ensino de \gls{ed} com jogos.
+A pesquisa teve como objetivo verificar e conhecer a existência de métodos utilizados para a analise da evolução de espécies com base no uso de códons, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma nova solução.
 
 \subsection{Questões de Pesquisa}
 
-Foram definidas três questões de pesquisa. A primeira e principal foi: "Quais metodologias são utilizadas para ensinar estruturas de dados com jogos?", já as duas questões secundárias foram: "Quais jogos são utilizados para ensinar estruturas de dados?" e "O jogo Hora do Rush já foi utilizado, de alguma forma, para ensinar estruturas de dados?".
-
-As questões de pesquisa foram escolhidas com base naquilo que se queria entender ao final da \gls{rs}.
+Foram definidas duas questões de pesquisa. A primeira e principal questionava quais métodos são utilizados para realizar o estudo o estudo de especiação. Enquanto a segunda era se alguma dessas metodologias é baseada no uso/frequência de códons. As questões de pesquisa foram escolhidas com base naquilo que se queria entender ao final da \gls{rs}.
 
 \subsection{Repositório de Busca de Dados}
 
-Para a obtenção dos estudos foram utilizados as seguintes bases de dados:
+As bases precisavam conter trabalhos relevantes relacionados a bioinformática, completos e gratuitos. No entanto, em alguns casos, esse acesso se deu através por meio do portal da \gls{cafe}. Deste modo, as seguintes bases de dados acadêmicos foram selecionadas:
 \begin{itemize}
-    \item{ACM Digital Library}
-    \item{\gls{ceie}}
-    \item{\gls{ieee}}
-    \item{\gls{scielo}}
-    \item{Springer}
+    \item{PubMed}
+    \item{ScienceDirect}
+    \item{Scopus}
+    \item{Springer Link}
 \end{itemize}
 
-As bases foram escolhidas principalmente por conta da conceituação dos trabalhos que possuem. Um dos críterios utilizados para tal escolha foi o sistema Qualis Capes. Também foi possível, através dessas bases, a obtenção dos estudos de forma completa e na sua maioria de forma gratuita, sendo importante salientar, que para que isso fosse possível, foi necessário realizar o acesso remoto por meio do portal da \gls{cafe} que é um serviço provido pela \gls{rnp}.
+Para o refinamento das consultas foram utilizados os filtros que serão apresentados a seguir:
+
+\begin{enumerate}
+    \item ScienceDirect
+          \begin{enumerate}
+              \item Article type: Review Articles e Research Articles
+              \item Access type: Open access e Open Archive
+              \item Years: 2018 até 2022
+          \end{enumerate}
+    \item Springer Link
+          \begin{enumerate}
+              \item Include preview-only content: Desmarcado
+              \item Content type: Article
+              \item Language: English
+              \item Years: 2018 até 2022
+          \end{enumerate}
+    \item Scopus
+          \begin{enumerate}
+              \item Open access: All open access
+              \item Years: 2018 até 2022
+          \end{enumerate}
+\end{enumerate}
+
 
 \subsection{Palavras-chave e Strings de Busca}
 
-As palavras-chave selecionadas para a busca nas bases de dados, com o objetivo de encontrar o máximo de estudos relevantes, foram as seguintes:
+As palavras-chave, com seus sinônimos e correlatos em inglês, selecionadas para a busca nas bases de dados, com o objetivo de encontrar o máximo de estudos relevantes, foram as seguintes:
 \begin{itemize}
-    \item{Aprendizagem}
-    \item{Dificuldade de aprendizagem}
-    \item{Estruturas de dados}
-    \item{Hora do rush}
-    \item{Jogo}
-    \item{Metodologia de ensino}
-    \item{Objeto de aprendizagem}
+    \item{Bioinformatics e Bioinformática}
+    \item{Codon e códon}
+    \item{Gene}
+    \item{Phylogeny e filogenia}
+    \item{Classification, classificação, genotyping, genotipagem, subtyping, subtipagem, typing e tipagem}
+    \item{Viral}
 \end{itemize}
-
-A tabela a seguir apresenta as strings de busca utilizadas em suas respectivas bases de dados. É importante salientar, que a depender da base de dados, também foram utilizados os correlatos em espanhol e inglês das palavras-chave, para que o máximo de trabalhos relevantes fossem encontrados.
+A tabela~\ref{tab:stringBuscaBase} apresenta as strings de busca utilizadas em suas respectivas bases de dados.
 
 \begin{table}[h]
     \centering
 
     \caption{STRINGS DE BUSCA NAS BASES DE DADOS}
-    \label{fig:stringBuscaBase}
+    \label{tab:stringBuscaBase}
     \begin{tabular}{|p{2cm}|p{10cm}|}
         \hline
-        BASE DE DADOS        & STRING BUSCA                                                                                                                                                                                                                                       \\
+        BASE DE DADOS  & STRING BUSCA
+
+        \\
         \hline
-        STRING GERAL         & ("Estruturas de Dados" OR "Data Structures") AND (("Learning" OR "Aprendizagem") OR ("Metodologia de Ensino" OR "Teaching Methodology")) AND (("Jogo" OR "Game") OR ("Hora do Rush" OR "Rush Hour"))                                               \\
+        PubMed         & ((`bioinformatics') AND (`codon') AND (`phylogeny') AND (`typing' OR `classification' OR `genotyping' OR `subtyping') AND (`gene') AND (`viral'))
+        \\
         \hline
-        ACM Digital Library  & "Data Structures" AND ("Learning Object" OR "Teaching Methodology" OR "Learning Difficulty" OR "Learning Teaching") AND ("Game" OR "Rush Hour")                                                                                                    \\
+        Science Direct & ((`bioinformatics') AND (`codon') AND (`phylogeny') AND (`typing' OR `classification' OR `genotyping' OR `subtyping') AND (`gene') AND (`viral')) \\
         \hline
-        CEIE                 & "Data Structure" OR "Estruturas de Dados"                                                                                                                                                                                                          \\
+        Scopus         & ((`bioinformatics') AND (`codon') AND (`phylogeny') AND (`typing' OR `classification' OR `genotyping' OR `subtyping') AND (`gene') AND (`viral'))
+        \\
         \hline
-        IEEE Digital Library & ("Estruturas de Dados" OR "Data Structures") AND (("Learning" OR "Aprendizagem") OR ("Metodologia de Ensino" OR "Teaching Methodology")) AND (("Jogo" OR "Game") OR ("Hora do Rush" OR "Rush Hour"))                                               \\
-        \hline
-        SciELO               & ("Estruturas de Dados" OR "Data Structure" OR "Estructuras de datos") AND ("Aprendizagem" OR "Learning" OR "Aprendiendo" OR "Ensino" OR "Enseñando" OR "Teaching" OR "Jogo" OR "Games" OR "Juego" OR "Hora do Rush" OR "Rush Hour" OR "Hora Pico") \\
-        \hline
-        Springer             & "Data Structures" AND ("Learning Object" OR "Teaching Methodology" OR "Learning Difficulty" OR "Learning Teaching") AND ("Game" OR "Rush Hour")                                                                                                    \\
+        Springer Link  & ((`bioinformatics') AND (`codon') AND (`phylogeny') AND (`typing' OR `classification' OR `genotyping' OR `subtyping') AND (`gene') AND (`viral'))
+        \\
         \hline
     \end{tabular}
 
 \end{table}
 
-\subsection{Critérios de busca}
+\subsection{Critérios de seleção}
 
-Para realizar o processo de seleção dos estudos foram definidos críterios, podendo ser de inclusão ou de exclusão.
-
+Para realizar o processo de seleção dos estudos foram definidos critérios, podendo ser de inclusão ou de exclusão.
 Os critérios de inclusão foram os seguintes:
+
 \begin{itemize}
-    \item O estudo aborda o ensino de \gls{ed}.
-    \item O estudo aborda o uso de jogos para o ensino de \gls{ed}.
-    \item O estudo contém as palavras-chave definidas na pesquisa no resumo, titulo ou palavras-chave.
-    \item O estudo possui o texto completo disponível.
+    \item I1: O estudo contém as palavras-chave definidas na pesquisa no resumo, título ou palavras-chave.
+    \item I2: Aborda algum método de especiação.
 \end{itemize}
 Os critérios de exclusão foram os seguintes:
 \begin{itemize}
-    \item O resumo não define claramente o objetido do estudo.
-    \item O estudo está duplicado.
-    \item É necessário o pagamento de uma taxa para acesso ao estudo.
-    \item O estudo não está escrito em português, inglês ou espanhol.
-    \item O tema do estudo não está relacionado ao ensino de \gls{ed}.
+    \item E1: O tema do estudo não está relacionado à especiação.
+    \item E2: O tema do estudo não é pertinente com a área/objetivos da pesquisa.
+    \item E3: O estudo está duplicado.
 \end{itemize}
 
 \section{Resultados Parciais}
 
-Nesta subseção devem ser apresentados os resultados parciais após a etapa de seleção dos trabalhos. Indicando a quantidade total de artigos retornados pela busca nas bases, a quantidade de arquivos selecionados, indicando a distribuição por critérios de inclusão/exclusão. Enfim, uma análise quantitativa dos trabalhos e qualitativa indicando se as principais questões de pesquisa tendem a ser respondidas, considerando os critérios de inclusão mapeados.
+A aplicação das strings nas bases de dados selecionadas, resultou em um total geral de 177 (cento e setenta e sete) artigos, os quais foram oriundos da fonte PubMed 3 (três) artigos, da fonte ScienceDirect 85 (oitenta e cinco) artigos, da fonte Scopus 10 (dez) artigos e da fonte Springer Link 79 (setenta e nove) artigos.\\
+Após o processo de obtenção, foi iniciada a seleção dos artigos, onde foi realizada a leitura do título, resumo e palavras-chave, aplicando os critérios de inclusão e exclusão. Esse processo resultou em: 26 (vinte e seis) artigos aceitos; 147 (cento e quarenta e sete) artigos rejeitados; e 4 (quatro) artigos duplicados. Os resultados são apresentados nos gráficos nas figuras~\ref{fig:artigoBases} e \ref{fig:excluidosCriterios}.\\
 
-Observem que esta etapa de seleção prevê a leitura apenas do título, abstract e palavras-chave dos artigos. Desta forma faz-se a seleção inicial do que será de fato lido a fundo.
-
-Para retratar estes dados, podem ser usados gráficos e figuras formatados como no exemplo da Figura \ref{fig:depth}. Se usar a ferramenta STArt, pode incluir no relatório alguns gráficos e tabelas gerados pela ferramenta que refletem bem esta etapa da revisão sistemática.
-
-\subsection{Análise Qualitativa dos Resultados}
-
-Esta subseção reflete o resultado da extração de dados. Depois de extrair as informações úteis através da leitura completa dos artigos selecionados, o autor deve descrever aqui sua análise qualitativa do que encontrou durante a pesquisa, citando os principais artigos e as informações relevantes que encontrou para responder às questões de pesquisa definidas no protocolo da revisão sistemática. Também podem ser usadas figuras e tabelas para fundamentar a análise.
-
-Observe que alguns artigos que foram originalmente selecionados para leitura, podem ser excluídos por algum dos critérios de exclusão definido após a leitura completa. Neste caso a planilha-resumo deve ser atualizada.
 
 \begin{figure}[tb]
     \centering
-    \includegraphics[scale=0.7]{tree-depth.png}
-    \caption{Exemplo genérico de um gráfico ou figura que pode ser colocao aqui para representar os resultados quantitativos.}
-    \label{fig:depth}
+    \includegraphics[scale=0.43]{figuras/_artigosAceitosSelecionados.png}
+    \caption{Artigos Selecionados e Aceitos por Base.}\label{fig:artigoBases}
 \end{figure}
+
+\begin{figure}[tb]
+    \centering
+    \includegraphics[scale=0.5]{figuras/_artigosExcluidosPorCriterio.png}
+    \caption{Artigos Selecionados e Aceitos por Base.}\label{fig:excluidosCriterios}
+\end{figure}
+
+
+\subsection{Análise Qualitativa dos Resultados}
+
+Na etapa de extração, realizada com o auxílio da ferramenta \gls{parsifal}, houve o levantamento da resposta para 4(quatro) informações importantes para o trabalho: Qual método de genotipagem foi utilizado; Se necessitava de algum treinamento, e em caso positivo, se o mesmo era supervisionado e se necessitava de uma árvore de referência supervisionada. Essas informações foram importantes também para a construção da planilha-resumo de resultados.
+
+O trabalho~\cite{dimitrov_updated_2019} apresentou e comparou três métodos para a construção de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana.
+Já em~\cite{yin_systematic_2019},~\cite{bedoya-pilozo_molecular_epidemiology_2018} e~\cite{dimitrov_updated_2019} foi empregada a inferência bayesiana. Temos que em~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{dimitrov_updated_2019},\newline\cite{hudu_hepatitis_2018} e~\cite{cho_analysis_2022} foi aplicada a máxima verossimilhança.
+Os demais estudos apresentaram metodologias distintas: No trabalho de~\cite{lichtblau_alignment-free_2019} foi \gls{fcgr};~\cite{kim_ngs_2022} a floresta aleatória;~\cite{sallard_tracing_2021} construiu as árvores por meio de inferências filogenéticas;~\cite{paez-espino_diversity_evolution_2019} o alinhamento concatenado;~\cite{potdar_phylogenetic_2021} a junção de vizinhos e~\cite{tang_evolutionary_2021} a máxima parcimônia.
 
 \section{Conclusões}
 
-Aqui o autor deve fazer uma reflexão sobre os achados da revisão sistemática. Esteja atento para acrescentar informação nova, ou seja, para "Concluir" de fato alguma coisa e não para repetir a análise da seção anterior.
-
-Devem ser inclusive apontadas as lacunas e limitações identificadas a partir da revisão sistemática, fazendo link com as possíveis propostas que serão apresentadas futuramente no anteprojeto. Ou seja, a conclusão deste relatório deve preparar o alicerce para a construção do anteprojeto de pesquisa.
-
-
+A necessidade do desenvolvimento de novas ferramentas ficou evidente no decorrer de toda a pesquisa, tendo em vista que a maioria dos trabalhos não apresentavam um comparativo conclusivo entre as análises filogenéticas. Sendo assim, uma nova metodologia para genotipagem de sequências contribuiria com um grande valor científico nessa área.
 
 \bibliographystyle{sbc}
-\bibliography{RefDoc}
+\bibliography{RefGeral}
 
 \pagebreak
 \begin{landscape}
 
-
     \section{Planilha-resumo de Resultados}
 
-    Aqui deve ser atualizada a planilha-resumo contendo todos os trabalhos selecionados após a fase de seleção. A tabela deve conter todas as colunas indicadas a seguir com as informações relevantes sobre os trabalhos lidos na íntegra. Ver o exemplo na Tabela \ref{tab:resumo}.
+    Na~\ref{tab:resumo} é apresentada a planilha-resumo de resultados com os trabalhos aceitos no processo de seleção. Assim, para cada artigo foi extraído a sua identificação, os critérios de inclusão ou exclusão que foram aplicados, uma breve descrição e uma avaliação qualitativa.
 
     \begin{center}
 
-
         \begin{longtable}{p{8cm}|c|c|c|c|c|p{7cm}|p{5cm}}
-            \caption{Planilha-resumo dos trabalhos selecionados.}
-            \label{tab:resumo}                                                                                                                                                                                                                                                                                                                                                            \\
+            \caption{Planilha-resumo dos trabalhos selecionados.}\label{tab:resumo}
+            \\
             \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
             \multicolumn{1}{c|}{\textbf{I1}}                        &
             \multicolumn{1}{c|}{\textbf{I2}}                        &
-            \multicolumn{1}{c|}{\textbf{I3}}                        &
             \multicolumn{1}{c|}{\textbf{E1}}                        &
             \multicolumn{1}{c|}{\textbf{E2}}                        &
-            \multicolumn{1}{c|}{\textbf{Descrição}}                 & \multicolumn{1}{c}{\textbf{Avaliação}}                                                                                                                                                                                                                                                                              \\ \hline \hline
+            \multicolumn{1}{c|}{\textbf{E3}}                        &
+            \multicolumn{1}{c|}{\textbf{Descrição}}                 &
+            \multicolumn{1}{c}{\textbf{Avaliação}}
+
+            \\ \hline
+            \hline
             \endfirsthead
 
             \multicolumn{8}{c}%
-            {{\bfseries \tablename\ \thetable{} -- continuação da página anterior}}                                                                                                                                                                                                                                                                                                       \\
+            {{\bfseries \tablename\ \thetable{} -- continuação da página
+                        anterior}}
+
+            \\
             \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
             \multicolumn{1}{c|}{\textbf{I1}}                        &
             \multicolumn{1}{c|}{\textbf{I2}}                        &
-            \multicolumn{1}{c|}{\textbf{I3}}                        &
             \multicolumn{1}{c|}{\textbf{E1}}                        &
             \multicolumn{1}{c|}{\textbf{E2}}                        &
-            \multicolumn{1}{c|}{\textbf{Descrição}}                 & \multicolumn{1}{c}{\textbf{Avaliação}}                                                                                                                                                                                                                                                                              \\ \hline \hline
+            \multicolumn{1}{c|}{\textbf{E3}}                        &
+            \multicolumn{1}{c|}{\textbf{Descrição}}                 &
+            \multicolumn{1}{c}{\textbf{Avaliação}}
+
+            \\ \hline
+            \hline
             \endhead
 
-            \hline \multicolumn{8}{r}{{Continua na próxima página}}                                                                                                                                                                                                                                                                                                                       \\
+            \hline \multicolumn{8}{r}{{Continua na próxima página}}
+
+            \\
             \endfoot
             \hline \hline
             \endlastfoot
 
-
-            \bibentry{Laranjeira2015}                               & X                                      &   &   &  &   & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \bibentry{ahmad_comprehensive_2022}                     &
+                                                                    & X &  &  &  & O estudo tem como objetivo investigar e analisar a mutação d 157 genomas de SARS-Cov-2 e suas variantes Delta e Omicron.                                                                                                            & O estudo apresenta a utilização do método Neighbor-Joining que foi utilizado para inferir a história evolutiva. O método não necessita de treinamento.                                                                  \\
             \hline
-            \bibentry{breiman2017classification}                    &                                        &   & X &  & X & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \bibentry{yin_systematic_2019}                          &
+                                                                    & X &  &  &  & O estudo apresentou a reconstrução a filogenia do HBV com base em 4.429 sequências completas.                                                                                                                                       & O estudo apresenta a utilização da inferência bayesiana sem treinamento.                                                                                                                                                \\
             \hline
-            \bibentry{SimoesEtAl2016-BRAHUR}                        &                                        & X & X &  &   & Aqui é colocada a descrição do artigo com os dados resultantes da etapa de extração, após leitura completa do trabalho. & Aqui é feita avaliação do que foi encontrado neste artigo. Esta informação será útil para a avaliação qualitativa dos resultados. \\
+            \bibentry{lichtblau_alignment-free_2019}                &
+                                                                    & X &  &  &  & O estudo apresentou a utilização de métodos livres de alinhamento de comparação genômica para escalonamento de grandes conjuntos de dados de sequências de nucleotídeos.                                                            & Foi utilizado o método Frequency Chaos Game Representation (FCGR) que cria imagens a partir das sequências de nucleotídeos. O método necessita de treinamento com redes neurais.                                        \\
+            \hline
+            \bibentry{cho_analysis_2022}                            &
+            X                                                       & X &  &  &  & O estudo teve como objetivo confirmar o padrão geral de uso de códons e explorar as características evolutivas e genéticas comumente ou especificamente expressas em HIV1, HIV2 e SIV.                                              & Foi construída árvores filogenéticas e índices do uso de códons. O processo foi realizado cinco vezes para cada gene e foi gerada uma árvore representativa com alto grau de concordância.                              \\
+            \hline
+            \bibentry{paez-espino_diversity_2019}                   &
+                                                                    & X &  &  &  & O trabalho examinou uma coleção com 14.000 metagenomas, identificando 44.221 sequências de virófagos, das quais 328 era genomas completos ou quase completos. Nesses foi realizada a analise genômica comparativa.                  & O alinhamento foi realizado através do MAFFT e as árvores foram construídas com o software Fasttree v2.1.                                                                                                               \\
+            \hline
+            \bibentry{tang_evolutionary_2021}                       &
+                                                                    & X &  &  &  & O estudo analisou variantes de nucleotídeo único (SNVs) em 121.618 genomas de SARS-CoV-2 de alta qualidade.                                                                                                                         & Foi utilizado o método de máxima parcimônia sobre o alinhamento de múltiplas sequências de SARS-CoV-2                                                                                                                   \\
+            \hline
+            \bibentry{fall_genetic_2021}                            &
+                                                                    & X &  &  &  & O estudo analisou a diversidade genética e a dinâmica evolutiva do HSRV no Senegal com dados coletados entre 2008 e 2018 com o objetivo de compreender a base da evolução molecular das cepas.                                      & Foi utilizado o método de máxima verossimilhança. Também foi realizada a análise filodinâmica através do método Markov Chain Monte Carlo com o software Beast.                                                          \\
+            \hline
+            \bibentry{hudu_hepatitis_2018}                          &
+                                                                    & X &  &  &  & O estudo caracterizou a análise genômica comparativa do HEV de 82 pacientes nos anos de 2015 e 2016.                                                                                                                                & Foi utilizado o método de máxima verossimilhança.                                                                                                                                                                       \\
+            \hline
+            \bibentry{bedoya-pilozo_molecular_2018}                 &
+                                                                    & X &  &  &  & O estudo analisou a evolução das variantes do HPV mais prevalentes com base em 166 amostras caracterizando-as através da filogenia e coalescência.                                                                                  & Foi construída árvores filogenéticas com o método Bayesiano através do software BEAST.                                                                                                                                  \\
+            \hline
+            \bibentry{kim_ngs_2022}                                 &
+            X                                                       & X &  &  &  & O estudo propôs métodos para vetorizar os dados da sequência, realizar análises de agrupamento e visualizar os resultados com métodos de aprendizagem de máquina.                                                                   & O método proposto utiliza aprendizagem de máquina com treinamento supervisionado e pode lidar com uma variedade de sequências de dados, podendo ser usado para todos os tipos de doenças, incluindo gripe e SARS-CoV-2. \\
+            \hline
+            \bibentry{potdar_phylogenetic_2021}                     &
+                                                                    & X &  &  &  & O estudo fornece uma integração das classificações filogenéticas existentes, e descreve as tendências evolutivas das cepas de SARS-CoV-2 que circulam na Índia. Foi realizada a análise de 3.014 sequências indianas de SARS-CoV-2. & Foi realizada a análise filogenética das sequências dos genomas através do software MEGA com base na abordagem de junção de vizinhos com a probabilidade composta como modelo de substituição.                          \\
+            \hline
+            \bibentry{behl_threat_2022}                             &
+                                                                    & X &  &  &  & O estudo apresenta uma análise evolutiva da doença infecciosa através de análises filogenéticas.                                                                                                                                    & Foi utilizado o método de máxima verossimilhança.                                                                                                                                                                       \\
+            \hline
+            \bibentry{sallard_tracing_2021}                         &
+                                                                    & X &  &  &  & O estudo apresentou uma discussão bre a origem, natural ou sintética, do SARS-CoV-2, com base em inferências filogenéticas, análises de sequências e relações estrutura-função das proteínas do coronavírus.                        & Foi utilizado inferências filogenéticas, análise de sequências e relações estrutura-função das proteínas.                                                                                                               \\
+            \hline
+            \bibentry{dimitrov_updated_2019}                        &
+                                                                    & X &  &  &  & O estudo propôs um sistema de classificação para facilitar a nomenclatura em estudos da evolução e epidemiologia de vírus da doença de Newcastle.                                                                                   & Foi utilizado os métodos de junção de vizinhos, máxima verossimilhança e Bayesiano.                                                                                                                                     \\
             \hline
         \end{longtable}
-
 
     \end{center}
 
