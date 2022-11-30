@@ -144,19 +144,14 @@ Após o processo de obtenção, foi iniciada a seleção dos artigos, onde foi r
 
 \subsection{Análise Qualitativa dos Resultados}
 
-Na etapa de extração, realizada com o auxílio da ferramenta \gls{parsifal}, houve o levantamento de informações para ajudar a responder as questões de pesquisa, 4(quatro) para a principal e 1(uma) para a secundaria, apresentadas a seguir:
+Na etapa de extração, realizada com o auxílio da ferramenta \gls{parsifal}, houve o levantamento de informações para ajudar a responder as questões de pesquisa, 4(quatro) para a principal e 1(uma) para a secundaria, apresentadas a seguir: \\
+
 \begin{itemize}
-    \item Perguntas para a questão principal
-          \begin{enumerate}
-              \item Qual método de genotipagem foi utilizado?
-              \item O método necessitava de algum treinamento?
-              \item Se necessita de algum treinamento, o mesmo era supervisionado?
-              \item O método necessitava de uma árvore de referência supervisionada?
-          \end{enumerate}
-    \item Perguntas para a questão secundária
-          \begin{enumerate}
-              \item Alguma dessas metodologias é baseada no uso/frequência de códons?
-          \end{enumerate}
+    \item P1: Qual método de genotipagem foi utilizado?
+    \item P2: O método necessitava de algum treinamento?
+    \item P3: Se necessita de algum treinamento, o mesmo era supervisionado?
+    \item P4: O método necessitava de uma árvore de referência supervisionada?
+    \item S1: Alguma dessas metodologias é baseada no uso/frequência de códons?
 \end{itemize}
 
 Essas informações foram importantes também para a construção da planilha-resumo de resultados. Também é importante salientar, que após a leitura completa, 12(doze) dos trabalhos se enquadraram em um dos critérios de exclusão apresentados anteriormente.
@@ -180,11 +175,11 @@ A possibilidade do desenvolvimento de uma ferramenta de genotipagem com base no 
 
     \section{Planilha-resumo de Resultados}
 
-    Na~\ref{tab:resumo} é apresentada a planilha-resumo de resultados com os trabalhos aceitos no processo de seleção. Assim, para cada artigo foi extraído a sua identificação, os critérios de inclusão ou exclusão que foram aplicados, uma breve descrição e uma avaliação qualitativa.
+    Na~\ref{tab:resumo} é apresentada a planilha-resumo de resultados com os trabalhos aceitos no processo de seleção. Assim, para cada artigo foi extraído a sua identificação, os critérios de inclusão ou exclusão que foram aplicados, uma breve descrição e as respostas para as perguntas apresentadas na seção de análise qualitativa dos resultados. Alguns campos foram respondidos com S (sim), N (não) e O (Omitido).
 
     \begin{center}
 
-        \begin{longtable}{p{8cm}|c|c|c|c|c|p{7cm}|p{5cm}}
+        \begin{longtable}{p{8cm}|c|c|c|c|c|p{5cm}|p{3cm}|c|c|c|c}
             \caption{Planilha-resumo dos trabalhos selecionados.}\label{tab:resumo}
             \\
             \multicolumn{1}{c|}{\textbf{Identificação do Trabalho}} &
@@ -194,7 +189,11 @@ A possibilidade do desenvolvimento de uma ferramenta de genotipagem com base no 
             \multicolumn{1}{c|}{\textbf{E2}}                        &
             \multicolumn{1}{c|}{\textbf{E3}}                        &
             \multicolumn{1}{c|}{\textbf{Descrição}}                 &
-            \multicolumn{1}{c}{\textbf{Avaliação}}
+            \multicolumn{1}{c|}{\textbf{P1}}                        &
+            \multicolumn{1}{c|}{\textbf{P2}}                        &
+            \multicolumn{1}{c|}{\textbf{P3}}                        &
+            \multicolumn{1}{c|}{\textbf{P4}}                        &
+            \multicolumn{1}{c}{\textbf{S1}}
 
             \\ \hline
             \hline
@@ -212,7 +211,11 @@ A possibilidade do desenvolvimento de uma ferramenta de genotipagem com base no 
             \multicolumn{1}{c|}{\textbf{E2}}                        &
             \multicolumn{1}{c|}{\textbf{E3}}                        &
             \multicolumn{1}{c|}{\textbf{Descrição}}                 &
-            \multicolumn{1}{c}{\textbf{Avaliação}}
+            \multicolumn{1}{c|}{\textbf{P1}}                        &
+            \multicolumn{1}{c|}{\textbf{P2}}                        &
+            \multicolumn{1}{c|}{\textbf{P3}}                        &
+            \multicolumn{1}{c|}{\textbf{P4}}                        &
+            \multicolumn{1}{c}{\textbf{S1}}
 
             \\ \hline
             \hline
@@ -226,46 +229,46 @@ A possibilidade do desenvolvimento de uma ferramenta de genotipagem com base no 
             \endlastfoot
 
             \bibentry{ahmad_comprehensive_2022}                     &
-                                                                    & X &  &  &  & O estudo tem como objetivo investigar e analisar a mutação d 157 genomas de SARS-Cov-2 e suas variantes Delta e Omicron.                                                                                                            & O estudo apresenta a utilização do método Neighbor-Joining que foi utilizado para inferir a história evolutiva. O método não necessita de treinamento.                                                                  \\
+                                                                    & X &  &  &  & O estudo tem como objetivo investigar e analisar a mutação d 157 genomas de SARS-Cov-2 e suas variantes Delta e Omicron.                                                                                                            & Neighbor-Joining&N&N&N&N                                                                  \\
             \hline
             \bibentry{yin_systematic_2019}                          &
-                                                                    & X &  &  &  & O estudo apresentou a reconstrução a filogenia do HBV com base em 4.429 sequências completas.                                                                                                                                       & O estudo apresenta a utilização da inferência bayesiana sem treinamento.                                                                                                                                                \\
+                                                                    & X &  &  &  & O estudo apresentou a reconstrução a filogenia do HBV com base em 4.429 sequências completas.                                                                                                                                       & Inferência bayesiana&N&N&N&N                                                                                                                                                \\
             \hline
             \bibentry{lichtblau_alignment-free_2019}                &
-                                                                    & X &  &  &  & O estudo apresentou a utilização de métodos livres de alinhamento de comparação genômica para escalonamento de grandes conjuntos de dados de sequências de nucleotídeos.                                                            & Foi utilizado o método Frequency Chaos Game Representation (FCGR) que cria imagens a partir das sequências de nucleotídeos. O método necessita de treinamento com redes neurais.                                        \\
+                                                                    & X &  &  &  & O estudo apresentou a utilização de métodos livres de alinhamento de comparação genômica para escalonamento de grandes conjuntos de dados de sequências de nucleotídeos.                                                            & Frequency Chaos Game Representation (FCGR).&S&N&O&N                                        \\
             \hline
             \bibentry{cho_analysis_2022}                            &
-            X                                                       & X &  &  &  & O estudo teve como objetivo confirmar o padrão geral de uso de códons e explorar as características evolutivas e genéticas comumente ou especificamente expressas em HIV1, HIV2 e SIV.                                              & Foi construída árvores filogenéticas e índices do uso de códons. O processo foi realizado cinco vezes para cada gene e foi gerada uma árvore representativa com alto grau de concordância.                              \\
+            X                                                       & X &  &  &  & O estudo teve como objetivo confirmar o padrão geral de uso de códons e explorar as características evolutivas e genéticas comumente ou especificamente expressas em HIV1, HIV2 e SIV.                                              & Máxima verossimilhança&N&O&O&S                              \\
             \hline
-            \bibentry{paez-espino_diversity_2019}                   &
-                                                                    & X &  &  &  & O trabalho examinou uma coleção com 14.000 metagenomas, identificando 44.221 sequências de virófagos, das quais 328 era genomas completos ou quase completos. Nesses foi realizada a analise genômica comparativa.                  & O alinhamento foi realizado através do MAFFT e as árvores foram construídas com o software Fasttree v2.1.                                                                                                               \\
+            \bibentry{paez-espino_diversity_evolution_2019}                   &
+                                                                    & X &  &  &  & O trabalho examinou uma coleção com 14.000 metagenomas, identificando 44.221 sequências de virófagos, das quais 328 era genomas completos ou quase completos. Nesses foi realizada a analise genômica comparativa.                  & Alinhamento concatenado.&N&N&N&N                                                                                                               \\
             \hline
             \bibentry{tang_evolutionary_2021}                       &
-                                                                    & X &  &  &  & O estudo analisou variantes de nucleotídeo único (SNVs) em 121.618 genomas de SARS-CoV-2 de alta qualidade.                                                                                                                         & Foi utilizado o método de máxima parcimônia sobre o alinhamento de múltiplas sequências de SARS-CoV-2                                                                                                                   \\
+                                                                    & X &  &  &  & O estudo analisou variantes de nucleotídeo único (SNVs) em 121.618 genomas de SARS-CoV-2 de alta qualidade.                                                                                                                         & Máxima parcimônia&N&N&N&N                                                                                                                   \\
             \hline
-            \bibentry{fall_genetic_2021}                            &
-                                                                    & X &  &  &  & O estudo analisou a diversidade genética e a dinâmica evolutiva do HSRV no Senegal com dados coletados entre 2008 e 2018 com o objetivo de compreender a base da evolução molecular das cepas.                                      & Foi utilizado o método de máxima verossimilhança. Também foi realizada a análise filodinâmica através do método Markov Chain Monte Carlo com o software Beast.                                                          \\
+            \bibentry{fall_genetic_diversity_2021}                            &
+                                                                    & X &  &  &  & O estudo analisou a diversidade genética e a dinâmica evolutiva do HSRV no Senegal com dados coletados entre 2008 e 2018 com o objetivo de compreender a base da evolução molecular das cepas.                                      & Máxima verossimilhança.&N&N&N&N                                                          \\
             \hline
             \bibentry{hudu_hepatitis_2018}                          &
-                                                                    & X &  &  &  & O estudo caracterizou a análise genômica comparativa do HEV de 82 pacientes nos anos de 2015 e 2016.                                                                                                                                & Foi utilizado o método de máxima verossimilhança.                                                                                                                                                                       \\
+                                                                    & X &  &  &  & O estudo caracterizou a análise genômica comparativa do HEV de 82 pacientes nos anos de 2015 e 2016.                                                                                                                                & Máxima verossimilhança.&N&N&N&N                                                                                                                                                                       \\
             \hline
-            \bibentry{bedoya-pilozo_molecular_2018}                 &
-                                                                    & X &  &  &  & O estudo analisou a evolução das variantes do HPV mais prevalentes com base em 166 amostras caracterizando-as através da filogenia e coalescência.                                                                                  & Foi construída árvores filogenéticas com o método Bayesiano através do software BEAST.                                                                                                                                  \\
+            \bibentry{bedoya-pilozo_molecular_epidemiology_2018}                 &
+                                                                    & X &  &  &  & O estudo analisou a evolução das variantes do HPV mais prevalentes com base em 166 amostras caracterizando-as através da filogenia e coalescência.                                                                                  & Inferência bayesiana&N&N&N&N                                                                                                                                  \\
             \hline
             \bibentry{kim_ngs_2022}                                 &
-            X                                                       & X &  &  &  & O estudo propôs métodos para vetorizar os dados da sequência, realizar análises de agrupamento e visualizar os resultados com métodos de aprendizagem de máquina.                                                                   & O método proposto utiliza aprendizagem de máquina com treinamento supervisionado e pode lidar com uma variedade de sequências de dados, podendo ser usado para todos os tipos de doenças, incluindo gripe e SARS-CoV-2. \\
+            X                                                       & X &  &  &  & O estudo propôs métodos para vetorizar os dados da sequência, realizar análises de agrupamento e visualizar os resultados com métodos de aprendizagem de máquina.                                                                   & Floresta aleatória&S&S&O&N \\
             \hline
             \bibentry{potdar_phylogenetic_2021}                     &
-                                                                    & X &  &  &  & O estudo fornece uma integração das classificações filogenéticas existentes, e descreve as tendências evolutivas das cepas de SARS-CoV-2 que circulam na Índia. Foi realizada a análise de 3.014 sequências indianas de SARS-CoV-2. & Foi realizada a análise filogenética das sequências dos genomas através do software MEGA com base na abordagem de junção de vizinhos com a probabilidade composta como modelo de substituição.                          \\
+                                                                    & X &  &  &  & O estudo fornece uma integração das classificações filogenéticas existentes, e descreve as tendências evolutivas das cepas de SARS-CoV-2 que circulam na Índia. Foi realizada a análise de 3.014 sequências indianas de SARS-CoV-2. & Junção de vizinhos&N&N&N&N                          \\
             \hline
             \bibentry{behl_threat_2022}                             &
-                                                                    & X &  &  &  & O estudo apresenta uma análise evolutiva da doença infecciosa através de análises filogenéticas.                                                                                                                                    & Foi utilizado o método de máxima verossimilhança.                                                                                                                                                                       \\
+                                                                    & X &  &  &  & O estudo apresenta uma análise evolutiva da doença infecciosa através de análises filogenéticas.                                                                                                                                    & Máxima verossimilhança.&N&N&N&N                                                                                                                                                                       \\
             \hline
             \bibentry{sallard_tracing_2021}                         &
-                                                                    & X &  &  &  & O estudo apresentou uma discussão bre a origem, natural ou sintética, do SARS-CoV-2, com base em inferências filogenéticas, análises de sequências e relações estrutura-função das proteínas do coronavírus.                        & Foi utilizado inferências filogenéticas, análise de sequências e relações estrutura-função das proteínas.                                                                                                               \\
+                                                                    & X &  &  &  & O estudo apresentou uma discussão bre a origem, natural ou sintética, do SARS-CoV-2, com base em inferências filogenéticas, análises de sequências e relações estrutura-função das proteínas do coronavírus.                        & Inferências filogenéticas&N&N&N&N                                                                                                               \\
             \hline
             \bibentry{dimitrov_updated_2019}                        &
-                                                                    & X &  &  &  & O estudo propôs um sistema de classificação para facilitar a nomenclatura em estudos da evolução e epidemiologia de vírus da doença de Newcastle.                                                                                   & Foi utilizado os métodos de junção de vizinhos, máxima verossimilhança e Bayesiano.                                                                                                                                     \\
+                                                                    & X &  &  &  & O estudo propôs um sistema de classificação para facilitar a nomenclatura em estudos da evolução e epidemiologia de vírus da doença de Newcastle.                                                                                   & Junção de vizinhos, máxima verossimilhança e inferência bayesiana.&N&N&N&N                                                                                                                                     \\
             \hline
         \end{longtable}
 
