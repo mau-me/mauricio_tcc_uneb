@@ -1,0 +1,4 @@
+Analysis of evolutionary and genetic patterns in ... {Valor para índice de uso de códons}
+O segundo objetivo foi agrupar sequências para análise de índices de uso de códons com base em padrões de agrupamento dentro das três árvores gênicas, incluindo informações de gênero, tribo e subfamília do hospedeiro SIV.
+
+As relações evolutivas dos lentivírus primatas foram confirmadas. Em relação ao SIV, o agrupamento da análise de uso de códons foi realizado com base nos resultados da árvore filogenética e considerando o gênero, tribo e subfamília do hospedeiro. Os resultados da análise comparativa do uso de códons foram interpretados considerando as relações filogenéticas entre as espécies de lentivírus.
