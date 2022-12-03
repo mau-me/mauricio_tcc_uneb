@@ -17,7 +17,7 @@
 
 \instituicao{UNEB - Universidade do Estado da Bahia
              \par Departamento de Ciências Exatas e da Terra}
-\titulo{Título do Projeto}
+\titulo{Ferramenta Computacional para o Estudo da Evolução de Espécies Baseado no Uso de Códons}
 \autor{Mauricio Souza Menezes}
 \orientador{PhD Diego Gervasio Frias Suárez}
 \comentario{\textbf{Áreas da Computação:}
@@ -36,13 +36,13 @@
         \textbf{Folha de Aprovação}
     \end{center}
 
-    Anteprojeto sob o título provisório \textit{\textcolor{red}{Título do Anteprojeto}} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Nome do Aluno} a Marco Antônio Costa Simões e Diego Frias, professores da disciplina, em \today, em Salvador, Bahia.
+    Anteprojeto sob o título provisório \textit{Ferramenta Computacional para o Estudo da Evolução de Espécies Baseado no Uso de Códons} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Mauricio Souza Menezes} a Marco Antônio Costa Simões professor da disciplina, em \today, em Salvador, Bahia.
     \setlength{\ABNTsignthickness}{0.4pt}
     \setlength{\ABNTsignskip}{2cm}
     \hspace*{1cm}
-    \assinatura{Nome do Aluno\\Orientando}
+    \assinatura{Mauricio Souza Menezes\\Orientando}
     \hspace*{1cm}
-    \assinatura{Nome do Orientador}
+    \assinatura{Diego Gervasio Frias Suárez}
 \end{folhadeaprovacao}
 
 %\begin{resumo}
@@ -55,18 +55,43 @@
 
 \chapter{Introdução}
 
-Escrever aqui a contextualização do tema. Falar sobre a grande área em que o problema investigado está inserido.  Este capítulo deve apresentar o referencial teórico necessário para o entendimento do tema, do problema,  dos conceitos e tecnologias envolvidos e do que já foi realizado nos trabalhos relacionados (fruto da revisão sistemática realizada) e das lacunas identificadas (o que não foi feito), desenvolvendo uma ligação entre o contexto e o problema de pesquisa.
-Normalmente autores de referência são usados nesta contextualização.
+Os desafios impostos pela pandemia do COVID-19 incluíram a falta de conhecimento suficiente na compreensão da importância das ameaças biológicas e da preparação médica, apesar dos avanços científicos e tecnológicos. O conhecimento prévio sobre os agentes biológicos com potencial para causar pandemia pode melhorar substancialmente nossa preparação pré-pandemia.~\cite[p. 1]{behl_threat_2022}
 
-A Introdução deve ser finalizada definindo claramente o problema de pesquisa. O problema deve ser contextualizado e descrito detalhadamente. Não confundir, problema com solução. A solução proposta (hipótese) irá aparecer nos objetivos.
+Segundo~\cite[p.1]{barry_phylogenetic_analysis_2006} `os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.'
 
-Espera-se um capítulo de aproximadamente 3 páginas aqui.
+Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde é representada as relações evolutivas entre um conjunto de espécies. De acordo com~\cite{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
+
+A partir da análise filogenética realizada, pode-se facilmente interpretar que algumas cadeias de sequências de nucleotídeos podem resultar em catástrofe. A semelhança genética entre vários vírus infecciosos e mortais fornece uma visão do fato de que o RNA é a chave para discernir e marcar os possíveis patógenos que podem causar uma pandemia. Embora um padrão geral e motivos conservados possam ser observados em ancestrais imediatos, essas sequências podem ter sido induzidas ou incorporadas por meio de mutações, evolução ou percalços na replicação.~\cite[p. 11]{behl_threat_2022}
+
+Apesar da utilidade da filogenética e dos softwares e manuais baratos e prontamente disponíveis para análises filogenéticas, os métodos filogenéticos são muitas vezes aplicados de forma inadequada. Mesmo quando aplicados adequadamente, muitas vezes são mal explicados e, portanto, mal compreendidos.~\cite[p. 1]{barry_phylogenetic_analysis_2006} Além disso, por trabalhar com grandes quantidades de dados, os métodos utilizados devem ser avaliados também em relação ao seu custo computacional.
+
+% AINDA FALTA COMPLEMENTAR
+% CITAR TRABALHOS SOBRE USO DE CÓDONS
+% Encaixar o CBUC
+
+% Comentários
+% Escrever aqui a contextualização do tema. Falar sobre a grande área em que o problema investigado está inserido.  Este capítulo deve apresentar o referencial teórico necessário para o entendimento do tema, do problema,  dos conceitos e tecnologias envolvidos e do que já foi realizado nos trabalhos relacionados (fruto da revisão sistemática realizada) e das lacunas identificadas (o que não foi feito), desenvolvendo uma ligação entre o contexto e o problema de pesquisa.
+% Normalmente autores de referência são usados nesta contextualização.
+
+% A Introdução deve ser finalizada definindo claramente o problema de pesquisa. O problema deve ser contextualizado e descrito detalhadamente. Não confundir, problema com solução. A solução proposta (hipótese) irá aparecer nos objetivos.
+
+% Espera-se um capítulo de aproximadamente 3 páginas aqui.
 
 \chapter{Objetivos}
-Escrever de forma clara, o Objetivo Geral do Trabalho (a meta que se pretende atingir com o final do trabalho, o que se pretende fazer) e os Objetivos Específicos (Objetivos menores, parciais que precisam ser atingidos como parte do desenvolvimento do Trabalho OU Objetivos Secundários que complementam o objetivo Geral ou são consequências do mesmo). Cuidado ao escrever os objetivos, além de claros eles precisam ser exequíveis. Os objetivos são as soluções hipotéticas apresentadas para solucionar o problema descrito na introdução.
+Com base no problema de pesquisa apresentado na seção anterior apresentamos foi definido como objetivo geral o desenvolvimento de um método para a criação de cladogramas a partir da diferença do uso de códons. Além desse, os objetivos específicos são apresentados a seguir:
+\begin{itemize}
+    \item Definir um padrão comparativo entre o modelo proposto e árvores construídas a partir das mutações de nucleotídeos.
+\end{itemize}
+
+% Não funcionou assim...
+% \subsection{Objetivos Gerais}
+% Desenvolver um método capaz de realizar a análise filogenética com base no uso/frequência de códons.
+% \subsection{Objetivos Específicos}
+% Desenvolver um método capaz de realizar a análise filogenética com base no uso/frequência de códons.
+
+% Escrever de forma clara, o Objetivo Geral do Trabalho (a meta que se pretende atingir com o final do trabalho, o que se pretende fazer) e os Objetivos Específicos (Objetivos menores, parciais que precisam ser atingidos como parte do desenvolvimento do Trabalho OU Objetivos Secundários que complementam o objetivo Geral ou são consequências do mesmo). Cuidado ao escrever os objetivos, além de claros eles precisam ser exequíveis. Os objetivos são as soluções hipotéticas apresentadas para solucionar o problema descrito na introdução.
 
 \chapter{Justificativas e Contribuições}
-
 Escrever a Motivação (por que) para a execução deste trabalho, destacando a relevância (social, econômica ou acadêmica) do mesmo. Descrever as razões pelas quais o projeto deve ser desenvolvido, quais as contribuições (acadêmicas e/ou científicas) para a área de conhecimento do projeto. Tal contribuição é assegurada pela utilidade do trabalho aos demais, pela contribuição cumulativa (ou seja, pelo que este acrescenta ao conjunto do conhecimento científico do tema), pelo ineditismo do tema ou da abordagem e pela contribuição à superação de lacunas no conhecimento.
 
 \chapter{Metodologia}
@@ -143,6 +168,6 @@ Incluir as Referências Bibliográficas pesquisadas durante a elaboração do An
 Numa citação direta com menos de três linhas, ``coloca-se entre aspas e cita indicando a página" \cite[p. 2]{exemplo3}.
 
 \bibliographystyle{abnt-num}
-\bibliography{exemplo}
+\bibliography{refGeral}
 
 \end{document}
