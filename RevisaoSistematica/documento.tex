@@ -26,19 +26,18 @@
 \maketitle
 
 \begin{resumo}
-    Esta \gls{rs} teve como objetivo buscar a sustentação relacionada a genotipagem de sequências, levantando quais métodos são utilizados.
-    Vários métodos diferentes foram identificados, demostrando assim, que nenhum deles foi considerado como indubitável.
+    Esta \gls{rs} dos métodos de classificação genética de sequências implementados e aplicados até o momento. Vários métodos diferentes foram identificados, sugerindo que nenhum deles foi considerado indubitável.
 \end{resumo}
 
 \begin{abstract}
     \begin{otherlanguage}{english}
-        This Systematic Review (SR) aimed to seek support related to sequence genotyping, identifying which methods are used. Several different methods were identified, thus demonstrating that none of them was considered indubitable.
+        This Systematic Review (SR) of sequence genetic classification methods implemented and applied to date. Several different methods were identified, suggesting that none of them was considered indubitable.
     \end{otherlanguage}
 \end{abstract}
 
 \section{Introdução}
 
-A análise filogenética é uma ferramenta de extrema importância para a virologia. Sua avaliação é parte essencial para definição, por exemplo, da evolução de agentes causadores de doenças.
+As análises de reconstrução filogenética é uma ferramenta muito utilizada no campo das Ciências Biológicas. O seu uso busca identificar e compreender as relações evolutivas entre diferentes formas de vida no planeta, pois ela busca compreender a evolução de agentes causadores de doenças.
 Segundo~\cite{behl_threat_2022} `existe uma tendência histórica, onde os vírus e bactérias sofrem mutações no decorrer do tempo, encontrando mecanismos para infectar as células humanas.'
 Este artigo apresenta uma \gls{rs} da literatura referente aos métodos computacionais utilizados para realizar o estudo de especiação genômica. Os artigos foram obtidos através da busca realizada em quatro bases de dados (PubMed, ScienceDirect, Scopus e Springer Link) levando em conta a principal questão: Quais métodos são utilizados para realizar o estudo de especiação? Foram incluídos todos os artigos que atenderam aos critérios definidos.
 
@@ -48,7 +47,7 @@ Logo após definir os objetivos da pesquisa, foi primordial conhecer os pormenor
 
 \subsection{Objetivo da Pesquisa}
 
-A pesquisa teve como objetivo verificar e conhecer a existência de métodos utilizados para a analise da evolução de espécies com base no uso de códons, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma nova solução.
+A pesquisa teve como objetivo verificar e conhecer a existência de métodos utilizados para a analise da evolução de espécies com base no uso de códons, a identificação do que já foi feito para sanar o problema identificado e também se era viável ou não o desenvolvimento de uma nova solução para classificação gênica.
 
 \subsection{Questões de Pesquisa}
 
@@ -147,7 +146,7 @@ Após o processo de obtenção, foi iniciada a seleção dos artigos, onde foi r
 Na etapa de extração, realizada com o auxílio da ferramenta \gls{parsifal}, houve o levantamento de informações para ajudar a responder as questões de pesquisa, 4(quatro) para a principal e 1(uma) para a secundaria, apresentadas a seguir: \\
 
 \begin{itemize}
-    \item P1: Qual método de genotipagem foi utilizado?
+    \item P1: Qual método de classificação genética foi utilizado?
     \item P2: O método necessitava de algum treinamento?
     \item P3: Se necessita de algum treinamento, o mesmo era supervisionado?
     \item P4: O método necessitava de uma árvore de referência supervisionada?
@@ -156,16 +155,16 @@ Na etapa de extração, realizada com o auxílio da ferramenta \gls{parsifal}, h
 
 Essas informações foram importantes também para a construção da planilha-resumo de resultados. Também é importante salientar, que após a leitura completa, 12(doze) dos trabalhos se enquadraram em um dos critérios de exclusão apresentados anteriormente.
 
-Se tratando dos métodos de genotipagem utilizados, o trabalho~\cite{dimitrov_updated_2019} apresentou e comparou três para a construção de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana.
-Já em~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi empregada a inferência bayesiana. Temos que em~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018} e~\cite{cho_analysis_2022} foi aplicada a máxima verossimilhança.
-Os demais estudos apresentaram metodologias distintas: No trabalho de~\cite{lichtblau_alignment-free_2019} foi \gls{fcgr};~\cite{kim_ngs_2022} a floresta aleatória;~\cite{sallard_tracing_2021} construiu as árvores por meio de inferências filogenéticas;~\cite{paez-espino_diversity_evolution_2019} o alinhamento concatenado;~\cite{potdar_phylogenetic_2021} a junção de vizinhos e~\cite{tang_evolutionary_2021} a máxima parcimônia.
-Além disso, levando em conta a necessidade de treinamento,~\cite{lichtblau_alignment-free_2019} utilizou redes neurais e~\cite{kim_ngs_2022} aprendizado de máquina. Em nenhum dos dois casos o treinamento era supervisionado ou necessitava de uma árvore de referência supervisionada.
+Se tratando dos métodos de classificação gênica utilizados, o trabalho~\cite{dimitrov_updated_2019} apresentou e comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana.
+Para~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi usada a inferência bayesiana. Temos que em~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022} foi aplicada a máxima verossimilhança.
+Os demais estudos apresentaram metodologias distintas: No trabalho de~\cite{lichtblau_alignment-free_2019} foi \gls{fcgr};~\cite{kim_ngs_2022} a floresta aleatória e~\cite{potdar_phylogenetic_2021} a junção de vizinhos.
+Além disso, levando em conta a necessidade de treinamento,~\cite{lichtblau_alignment-free_2019} utilizou redes neurais, onde não houve treinamento supervisionado ou necessidade de uma árvore de referência supervisionada.
 
 Já em relação metodologias baseadas em uso/frequência de códons, nenhum dos trabalhos apresentou tal proposta. O que mais se aproximou disso foi~\cite{cho_analysis_2022} que segundo ele `realizou um agrupamento da análise do uso de códons com base nos resultados das árvores filogenéticas'.
 
 \section{Conclusões}
 
-A possibilidade do desenvolvimento de uma ferramenta de genotipagem com base no uso/frequência de códons se mostrou possível, tendo em vista que os métodos encontrados não realizavam tal função. Sendo assim, uma nova metodologia para genotipagem de sequências poderá contribuir com um grande valor científico nessa área.
+A possibilidade do desenvolvimento de uma ferramenta de classificação gênica com base no uso/frequência de códons se mostrou possível, tendo em vista que os métodos encontrados não realizavam tal metodologia. Sendo assim, uma nova sistematização para classificação de sequências genéticas poderá contribuir com avanços na otimização de classificação de grandes conjuntos de dados para determinar a sua caracterização genômica.
 
 \bibliographystyle{sbc}
 \bibliography{RefGeral}
