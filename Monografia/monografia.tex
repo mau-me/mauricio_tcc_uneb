@@ -1,0 +1,224 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Customizações do abnTeX2 (http://abnTeX2.googlecode.com)           %%
+%%                                                                    %%
+%% This work may be distributed and/or modified under the             %%
+%% conditions of the LaTeX Project Public License, either version 1.3 %%
+%% of this license or (at your option) any later version.             %%
+%% The latest version of this license is in                           %%
+%%   http://www.latex-project.org/lppl.txt                            %%
+%% and version 1.3 or later is part of all distributions of LaTeX     %%
+%% version 2005/12/01 or later.                                       %%
+%%                                                                    %%
+%% This work has the LPPL maintenance status `maintained'.            %%
+%%                                                                    %%
+%% The Current Maintainer of this work is Thiago Nascimento           %%
+%%                                                                    %%
+%% Project available on: https://github.com/thiagodnf/uecetex2        %%
+%%                                                                    %%
+%% Further information about abnTeX2                                  %%
+%% are available on http://abntex2.googlecode.com/                    %%
+%% Adapted to meet Universidade do Estado da Bahia (UNEB) requirements. %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[
+    a4paper,          % Tamanho da folha A4
+    12pt,             % Tamanho da fonte 12pt
+    chapter=TITLE,    % Todos os capitulos devem ter caixa alta
+    section=TITLE,    % Todas as secoes devem ter caixa alta
+    oneside,          % Usada para impressao em apenas uma face do papel
+    english,          % Hifenizacoes em ingles
+    spanish,          % Hifenizacoes em espanhol
+    brazil            % Ultimo idioma eh o idioma padrao do documento
+]{abntex2}
+
+\input{lib/preambulo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          Configuracoes do ueceTeX2              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Opcoes disponiveis
+
+\trabalhoacademico{tccgraduacao}
+%\trabalhoacademico{tccespecializacao}
+%\trabalhoacademico{dissertacao}
+%\trabalhoacademico{tese}
+
+\termoorientador{1}%Colocar 1 para entrega final de TCC1 e 2 para entrega final de TCC2. Comentar a linha inteira na versão final após correções realizadas pela banca examinadora.
+
+
+% Define se o trabalho eh uma qualificação
+% Coloque 'nao' para versão final do trabalho
+
+\ehqualificacao{nao}
+
+% Remove as bordas vermelhas e verdes do PDF gerado
+% Coloque 'sim' pare remover
+
+\removerbordasdohyperlink{sim}
+
+% Adiciona a cor Azul a todos os hyperlinks
+
+\cordohyperlink{nao}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%          Informação sobre a IES                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\ies{Universidade do Estado da Bahia}
+\iessigla{UNEB}
+\centro{Departamento de Ciências Exatas e da Terra}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%        Informação para TCC de Graduação         %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\graduacaoem{Sistemas de Informação}
+\habilitacao{bacharel} % Pode colocar também 'licenciada'
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     Informação para TCC de Especialização       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\especializacaoem{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%         Informação para Dissertação             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\programamestrado{Programa de Pós-Graduação em Ciência da Computação}
+\nomedomestrado{Mestrado Acadêmico em Ciência da Computação}
+\mestreem{Ciência da Computação}
+\areadeconcentracaomestrado{Ciência da Computação; Bioinformática}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%               Informação para Tese              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\programadoutorado{Programa de Pós-Graduação em Saúde Coletiva}
+\nomedodoutorado{Doutorado em Saúde Coletiva}
+\doutorem{Saúde Coletiva}
+\areadeconcentracaodoutorado{Saúde Coletiva}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Informação relacionadas ao trabalho     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\autor{Mauricio Souza Menezes}
+\titulo{Ferramenta Computacional para o Estudo da Evolução de Espécies Baseado no Uso de Códons}
+\data{\the\year}
+\local{Salvador, Bahia, Brasil}
+\areadeconcentracaograduacao{Ciência da Computação}
+% Exemplo: \dataaprovacao{01 de Janeiro de 2012}
+\dataaprovacao{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%     Informação sobre o Orientador       %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\orientador{PhD Diego Gervasio Frias Suárez}
+\orientadories{Universidade do Estado da Bahia – UNEB}
+\orientadorcentro{Departamento de Ciências Exatas e da Terra - DCET}
+\orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informação sobre o Co-orientador   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Deixe o nome do coorientador em branco para remover do documento
+
+\coorientador{PhD Vagner Fonseca}
+\coorientadories{Universidade Co-orientador - SIGLA}
+\coorientadorcentro{Centro do Co-orientador - SIGLA}
+\coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%      Informação sobre a banca           %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Atenção! Deixe o nome do membro da banca em branco para remover da folha de aprovacao
+
+% Exemplo de uso:
+% \membrodabancadois{Prof. Dr. Fulano de Tal}
+% \membrodabancadoisies{Universidade Estadual do Ceará - UECE}
+%\membrodabancaum{a}
+%\membrodabancaumcentro{b}
+\membrodabancadois{Membro da Banca 1}
+%\membrodabancadoiscentro{Faculdade de Filosofia Dom Aureliano Matos – FAFIDAM}
+\membrodabancadoisies{IES do Membro da Banca 1}
+\membrodabancatres{Membro da Banca 2}
+%\membrodabancatrescentro{Centro de Ciências e Tecnologia - CCT}
+\membrodabancatresies{IES do Membro da Banca 2}
+%\membrodabancaquatro{Membro da Banca 3}
+%\membrodabancaquatrocentro{Centro de Ciências e Tecnologia - CCT}
+\membrodabancaquatroies{IES do Membro da Banca 3}
+\membrodabancaquatroies{IES do Membro da Banca 3}
+%\membrodabancacinco{Membro da Banca 4}
+%\membrodabancacincocentro{Teste}
+%\membrodabancacincoies{IES do Membro da Banca 4}
+%\membrodabancaseis{Membro da Banca 5}
+%\membrodabancaseiscentro{}
+%\membrodabancaseisies{IES do Membro da Banca 5}
+
+\graphicspath{{figuras/}}
+
+\makeatletter
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
+  \hskip -\arraycolsep
+  \let\@ifnextchar\new@ifnextchar
+  \array{#1}}
+\makeatother
+
+\newcommand\overmat[2]{%
+  \makebox[0pt][l]{$\smash{\color{white}\overbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}^{\text{\color{black}#1}}}$}#2}
+\newcommand\bovermat[2]{%
+  \makebox[0pt][l]{$\smash{\overbrace{\phantom{%
+    \begin{matrix}#2\end{matrix}}}^{\text{#1}}}$}#2}
+
+\begin{document}
+
+	% Elementos pré-textuais
+	\imprimircapa
+	\imprimirfolhaderosto{}
+	%\imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
+	\imprimiranuenciaorientador %comentar esta linha na versão final após correções indicadas pela banca examinadora de TCC2
+	%\imprimirerrata{elementos-pre-textuais/errata}
+    %\imprimirfolhadeaprovacao %Descomentar esta linha se for TCC2
+	\imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
+	\imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
+	\imprimirepigrafe{elementos-pre-textuais/epigrafe}
+	\imprimirresumo{elementos-pre-textuais/resumo}
+	\imprimirabstract{elementos-pre-textuais/abstract}
+	\imprimirlistadeilustracoes
+	\imprimirlistadetabelas
+%	\imprimirlistadequadros
+%	\imprimirlistadealgoritmos
+%	\imprimirlistadecodigosfonte
+	\imprimirlistadeabreviaturasesiglas
+	\imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}
+	%\input{elementos-pre-textuais/lista-de-simbolos}
+	\imprimirsumario
+
+	%Elementos textuais
+	\textual
+	\input{elementos-textuais/introducao}
+	\input{elementos-textuais/cap2}
+	\input{elementos-textuais/cap3}
+	\input{elementos-textuais/conclusao}
+
+	%Elementos pós-textuais
+	\bibliography{elementos-pos-textuais/referencias}
+	%\bibliographystyle{abntex2-alf}
+	%\imprimirglossario
+	\imprimirapendices
+		% Adicione aqui os apendices do seu trabalho
+		\input{elementos-pos-textuais/apendices/lorem-ipsum}
+	\imprimiranexos
+		% Adicione aqui os anexos do seu trabalho
+		\input{elementos-pos-textuais/anexos/exemplo-de-anexo}
+
+	\imprimirindice
+
+\end{document}

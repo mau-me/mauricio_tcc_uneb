@@ -1,0 +1,117 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%                         INTRODUÇÃO                                  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Introdução}
+
+\setlength{\parskip}{0.3cm}
+%\thispagestyle{headings}
+
+% Introdução do Anteprojeto
+Os desafios impostos pela pandemia do COVID-19 incluíram a falta de conhecimento suficiente na compreensão da importância das ameaças biológicas e da preparação médica, apesar dos avanços científicos e tecnológicos. O conhecimento prévio sobre os agentes biológicos com potencial para causar pandemia pode melhorar substancialmente nossa preparação pré-pandemia.~\cite[p. 1]{behl_threat_2022}
+
+Segundo~\cite[p.1]{barry_phylogenetic_analysis_2006} `os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.'
+
+Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\cite{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
+
+A semelhança genética entre vários vírus infecciosos e mortais fornece uma visão do fato de que o RNA é a chave para discernir e marcar os possíveis patógenos que podem causar uma pandemia. Embora um padrão geral e motivos conservados possam ser observados em ancestrais imediatos, as regiões não conservadas das sequências são o resultado da acumulação de mutações, seja por inserção ou deleção de um ou vários nucleotídeos ou por substituição pontual de um nucleotídeo por outro. A fonte principal de mutações em vírus são percalços na replicação e a recombinação de RNA~\cite[p. 11]{behl_threat_2022}. Nos eucariotos, a principal fonte de mutação é a radiação incidente nas gônadas, que pode ser ambiental (solo com material radioativo), artificial (radiografias e tomografias) ou radiação cósmica.
+
+Apesar da utilidade da filogenética e dos softwares comerciais e públicos disponíveis para análises filogenéticas, os métodos filogenéticos são muitas vezes aplicados de forma inadequada. Mesmo quando aplicados adequadamente, muitas vezes são mal explicados e, portanto, mal compreendidos.~\cite[p. 1]{barry_phylogenetic_analysis_2006} Além disso, por trabalhar com grandes quantidades de dados, os métodos utilizados devem ser avaliados também em relação ao seu custo computacional.
+
+Os trabalhos relacionados apresentaram vários métodos de classificação gênica. Como por exemplo~\cite{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana. Para~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi usada a inferência bayesiana. Já a proposta do método de máxima verossimilhança foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}. Além desses, o trabalho de~\cite{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation,~\cite{kim_ngs_2022} a floresta aleatória e~\cite{potdar_phylogenetic_2021} a junção de vizinhos.
+
+As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons. Necessita-se pesquisa e desenvolvimento de ferramentas que realizem uma classificação de sequências genéticas com base no uso/frequência de códons.
+
+% Objetivos do Anteprojeto
+Com base no problema de pesquisa proposto, foram construídos os objetivos que deveriam ser atingidos, os mesmos são apresentados a seguir:
+\begin{itemize}
+  \item Objetivo Geral
+    \begin{enumerate}[label=~(\roman*)]
+      \item Desenvolver e validar um novo método de análise da evolução molecular de vírus
+    \end{enumerate}
+  \item Objetivos Específicos
+    \begin{enumerate}[label=~(\roman*)]
+      \item Definir um modelo para validação do método proposto
+      \item Desenvolver uma de ferramenta para caracterizar/validar o método
+      \item Coletar os dados necessários para aplicar na ratificação do método
+    \end{enumerate}
+\end{itemize}
+
+% Justificativas e Contribuições
+Atingir o objetivo de desenvolver um método de construção de árvores com base nas distâncias obtidas a partir da diferença do uso de códons, contribuiria com a tarefa de classificação de cepas para a vigilância sanitária, especialmente na descoberta de novas cepas emergentes com potenciais pandêmicos. Ademais, é também importante dispor de alternativas à filogenia molecular atualmente utilizada, para gerar informações de outro ponto de vista e-ou para servir de referência aos métodos filogenéticos.
+Os métodos atuais ainda demandam de um alto custo computacional, sendo assim, existe a necessidade de desenvolver outros mais baratos e que possam suportar o volume crescente de dados (sequências).
+Posto isso, o projeto visa apresentar um método que seja capaz de realizar classificações, com um custo computacional baixo, em relação a outros métodos, e que possa apresentar, do ponto de vista científico, alternativas de comparação com outras técnicas já existentes.
+
+% Metodologia
+Um ponto importante para a obtenção dos objetivos deste trabalho está relacionada a definição da metodologia que serviria como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso é elaborada numa pesquisa do tipo quantitativa, ou seja, com o uso de medidas estatísticas para mensurar e comparar os resultados obtidos.\\
+A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.\cite{da_silva_pesquisa_2014}
+
+% A Introdução deve incluir a contextualização do tema como já realizado no anteprojeto, revisada e melhorada. Também dever caracterizar claramente o problema de pesquisa, a justificativa/motivação/relevância para a investigação realizada, os objetivos gerais e específicos. Para ajudar na justificativa, devem ser feita uma sintética revisão dos trabalhos relacionados apontando especialmente as lacunas que serão exploradas pelo presente trabalho. Alguns autores podem optar por já realizar uma completa revisão de literatura (trabalhos relacionados) na introdução enquanto outros fazem isto sucintamente na introdução deixando para aprofundar em um capítulo específico de Trabalhos Relacionados ou Revisão de Literatura. Discuta com seu orientador qual a melhor abordagem para o seu trabalho.
+
+% \section{Seção 1 do Capítulo 1 }
+
+% A introdução, assim como os demais capítulos, podem ser divididos em seções, subseções e subsubseções. Não é obrigatório, mas é permitido. O cuidado que se deve ter é para não criar seções ou subseções muito curtas. É comum ver trabalhos mal escritos com várias seções contendo apenas um parágrafo. Discuta com seu orientador a divisão do seu capítulo. Não há qualquer erro em ter um capítulo que não tenha subdivisões. Uma seção deve tratar de um assunto específico e auto-contido que não é tratado no restante do capítulo, apesar de estar relacionado com o tema do mesmo.
+% \subsection{Subseção}
+
+% Se necessário, uma seção pode estar subdividida em subseções.
+% \subsubsection{Subsubseção - Figuras, Tabelas e Equações}
+
+% É pouco comum, mas uma subseção pode ainda estar subdividida em subsubseções.
+
+% As figuras devem seguir as normas da ABNT conforme orientado. Sempre que usar uma figura ela deve ser referenciada no texto, usada como parte da explicação que está sendo apresentada no capítulo, como na Figura~\ref{fig:juntasNAO}.
+
+% %%figura
+% \begin{figure}[htb]
+% \centering
+% \caption{Articulações do Robô NAO.}
+% \includegraphics[scale=0.5]{figuras/nao_joints.png}
+% \fonte{Retirada de \citeauthor{boedecker2008simspark}}~\label{fig:juntasNAO}
+% \end{figure}
+
+% Tabelas também devem ser referenciadas no texto e utilizadas como parte da explicação ou análise desenvolvida no capítulo. Deve ser referenciada como a Tabela~\ref{tab:tabelaTeste}. Observe que tanto figuras como tabelas devem ter suas legendas antes e a fonte indicada imediatamente após a figura ou tabela. Mesmo quando for criada pelo autor isto deve obrigatoriamente ser indicado segundo as normas da ABNT. As legendas devem ser auto-explicativas de forma que alguém que olhe a figura ou tabela e leia sua legenda consiga compreender tudo que vê sem necessidade de recorrer ao texto. O texto deve aprofundar e detalhar esta explicação, até repetindo algumas coisas que estão na legenda, mas principalmente vinculando à sequencia lógica do que está sendo exposto no texto.
+
+% %%tabela
+% \begin{table}[htb]
+% \caption{Primeira tabela.}
+% \begin{center}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% coluna 1 & coluna 2 & coluna 3 \\
+% \hline
+% valor 1,1 & valor 1,2 & valor 1,3 \\
+% valor 2,1 & valor 2,2 & valor 2,3 \\
+% \hline
+% \end{tabular}
+% \end{center}
+% \fonte{Criada pelo autor.}
+% \label{tab:tabelaTeste}
+% \end{table}
+
+%  Equações devem aparecer como parte natural do texto. Por exemplo energia pode ser definida como:
+
+% %%equacao
+% \begin{equation}
+% E = m \times c^2,
+% \label{eq1}
+% \end{equation}
+
+% \noindent onde $E$ é a energia, $m$ é a massa e $c$ é a velocidade da luz. Desta forma, apesar de numeradas, no local onde a equação aparece não será citada pelo número e sim como parte integrante do texto. Entretanto, às vezes é necessário fazer referência novamente à equação em um ponto posterior do texto (em outra seção ou mesmo em outro capítulo, ou num ponto mais distante dentro da mesma seção depois da ocorrência da mesma). Neste caso é usada a referência à Equação \eqref{eq1}.
+
+
+% \section{Seção 2 do Capítulo 1 - Citações}
+% Num texto científico é muito comum citar diversos autores lidos ou estudados. São feitas citações a livros, artigos científicos, etc. As normas ABNT regulamentam o formato das citações.
+
+% São dois tipos de citações: diretas e indiretas. As citações diretas são feitas quando repete-se o texto citado igual ao original, com as mesmas palavras. Ou seja, a citação direta é uma cópia do trecho citado literalmente.
+
+% Se a citação direta tiver menos que três linhas, deve ser feita entre aspas, assim: \foreignlanguage{english}{"This is one of the oldest leagues in RoboCupSoccer"}\cite{RoboCup}. Observe que se sua fonte for um texto em inglês ou outro idioma estrangeiro, deve se reproduzido no mesmo idioma original numa citação direta. Se você traduzir, isto vira uma citação indireta.
+
+% Outro formato de citação direta é quando ela tem três ou mais linhas. Aí deve ser feita desta forma:
+% \begin{citacao}[english]
+% In the Humanoid League, autonomous robots with a human-like body plan and human-like senses play soccer against each other. Unlike humanoid robots outside the Humanoid League the task of perception and world modeling is not simplified by using non-human like range sensors. In addition to soccer competitions technical challenges take place. Dynamic walking, running, and kicking the ball while maintaining balance, visual perception of the ball, other players, and the field, self-localization, and team play are among the many research issues investigated in the Humanoid League. Several of the best autonomous humanoid robots in the world compete in the RoboCup Humanoid League\cite{RoboCup}.
+% \end{citacao}
+
+
+% Por fim, a forma mais comum de fazer uma citação é a indireta, quando você reproduz as ideias de um texto lido com as suas palavras. Ou seja, você não copia literalmente o texto de um autor, mas sim suas idéias, reescrevendo-as com suas palavras e de forma que faça sentido logicamente no seu texto. Isto vale inclusive para o caso em que reescrevemos em português as ideias de um texto lido em outro idioma. Neste caso a citação pode vir simplesmente logo ao final da ideia reproduzida, assim\cite{Alamdari2017}. Em alguns casos, você quer usar os autores como sujeito ou objeto de uma sentença. Por exemplo, quer dizer que \citeauthor{Xu2017} apresentaram alguma ideia ou ainda falar sobre algo que foi apresentado por \citeauthor{shafii2015learning}.
+
+
+% Outra coisa comum é o uso de siglas (acrônimos). Ao utilizar uma sigla pela primeira vez, a mesma deve aparecer por extenso, assim: \gls{US}. Nas próximas ocorrências a sigla já aparecerá apenas como acrônimo, veja: \gls{US}. Qualquer nova sigla - como \gls{AA} - seguirá esta regra. Observe que siglas em inglês serão colocadas em itálico. Ao usar as siglas, as mesmas serão exibidas na Lista de siglas e abreviaturas entre os elementos pré-textuais.
