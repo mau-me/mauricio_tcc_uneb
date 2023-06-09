@@ -1,15 +1,16 @@
-umentclass[font=plain]{abnt}
+\documentclass[font=plain]{abnt}
 
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage{abntex2cite}
+\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{graphicx,color}
+\usepackage{multirow}
 \usepackage{paralist}
 \usepackage{subfloat}
 \usepackage{subfig}
-\usepackage{multirow}
-\usepackage{booktabs}
+% \usepackage[acronym]{glossaries}
 
 
 
@@ -18,7 +19,7 @@ umentclass[font=plain]{abnt}
 \instituicao{UNEB~-~Universidade do Estado da Bahia
              \par Departamento de Ciências Exatas e da Terra
              \par Colegiado de Sistemas de Informação}
-\titulo{Ferramenta Computacional para o Estudo da Evolução de Espécies Baseado no Uso de Códons}
+\titulo{Ferramenta Computacional para Estudo da Evolução de Espécies Virais Baseado no Uso de Códons}
 \autor{Mauricio Souza Menezes}
 \orientador{PhD Diego Gervasio Frias Suárez}
 \coorientador{PhD Vagner Fonseca}
@@ -30,6 +31,8 @@ umentclass[font=plain]{abnt}
 
 \begin{document}
 
+% \newacronym{ufm}{UFM}{Universal Feature Method}
+
 \capa\
 \folhaderosto\
 \begin{folhadeaprovacao}
@@ -38,7 +41,7 @@ umentclass[font=plain]{abnt}
         \textbf{Folha de Aprovação}
     \end{center}
 
-    Anteprojeto sob o título provisório \textit{Ferramenta Computacional para o Estudo da Evolução de Espécies Baseado no Uso de Códons} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Mauricio Souza Menezes} a Marco Antônio Costa Simões professor da disciplina, em \today, em Salvador, Bahia.
+    Anteprojeto sob o título provisório \textit{Ferramenta Computacional para Estudo da Evolução de Espécies Virais Baseado no Uso de Códons} apresentado como exigência parcial para avaliação na disciplina Trabalho de Conclusão de Curso I do bacharelado em Sistemas de Informação da Universidade do Estado da Bahia entregue por \textit{Mauricio Souza Menezes} a Maria Cristina Elyote Santos professora da disciplina, em \today, em Salvador, Bahia.
     \setlength{\ABNTsignthickness}{0.4pt}
     \setlength{\ABNTsignskip}{2cm}
     \hspace*{1cm}
@@ -70,9 +73,9 @@ Apesar da utilidade da filogenética e dos softwares comerciais e públicos disp
 Na busca de trabalhos relacionados, vários métodos foram encontrados, e a seguir são apresentados.\\
 O método de Máxima Verossimilhança (\textit{Maximum Likelihood}) não é exclusivo da filogenia, mas sim uma abordagem estatística. A aplicação da Máxima Verossimilhança em filogenia consiste em avaliar a probabilidade de que o modelo de evolução escolhido gere os dados observados. Essa proposta foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}.
 
-Já o
+% Já o ... procurar pela árvore que tem a maior probabilidade de dar origem ao dado observado.
 
-procurar pela árvore que tem a maior probabilidade de dar origem ao dado observado. No caso da filogenia os dados observados serão as características de cada organismo (a matriz de estado de características) e as hipóteses são todas as possíveis árvores. É também necessário um modelo matemático de evolução de características que será aplicado pelo ML.
+No caso da filogenia os dados observados serão as características de cada organismo (a matriz de estado de características) e as hipóteses são todas as possíveis árvores. É também necessário um modelo matemático de evolução de características que será aplicado pelo ML.
 
 Os trabalhos relacionados apresentaram vários métodos de classificação gênica. Como por exemplo~\cite{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana. Para~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi usada a inferência bayesiana. Já a proposta do método de máxima verossimilhança foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}. Além desses, o trabalho de~\cite{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation,~\cite{kim_ngs_2022} a floresta aleatória e~\cite{potdar_phylogenetic_2021} a junção de vizinhos.
 
@@ -127,15 +130,16 @@ A pesquisa quantitativa só tem sentido quando há um problema muito bem definid
 \chapter{Cronograma}
 As atividades descritas nas tabelas abaixo, correspondem aos processos realizados para alcançar os objetivos propostos na segunda seção deste trabalho.
 A tabela~\ref{tab:cronograma_tcc_i} apresenta as atividades realizadas seguindo o escopo da disciplina de Trabalho de Conclusão de Curso I, já a tabela~\ref{tab:cronograma_tcc_ii} corresponde as atividades com conclusão previstas para a disciplina de Trabalho de Conclusão de Curso II.\space\\
-Cada mês corresponde a aproximadamente 30(trinta) dias. São alocadas, pelo menos, 6(seis) horas diárias para realização das atividades.
+Cada mês corresponde a aproximadamente 30(trinta) dias. São alocadas, pelo menos, 4(quatro) horas diárias para realização das atividades.
 
 \begin{table}[hb]
     \centering
     \begin{tabular}{ p{7.8cm} c c c c c c c }
         \toprule
-         & Jul       & Ago       & Set       & Out       & Nov       & Dez       & \\
+         & Jan       & Fev       & Mar       & Abr       & Mai       & Jun       & \\
         \midrule
-         & $\bullet$ & $\bullet$ & $\bullet$ &           &           &           & \\
+        Definição dos objetivos e questões de pesquisa
+         & $\bullet$ &           &           &           &           &           & \\
         \midrule
         Revisão sistemática da literatura e descrição do trabalho em forma de relatório
          &           & $\bullet$ & $\bullet$ &           &           &           & \\
@@ -151,30 +155,33 @@ Cada mês corresponde a aproximadamente 30(trinta) dias. São alocadas, pelo men
 
         \bottomrule
     \end{tabular}
-    \caption{Cronograma de Julho até Dezembro de 2022}~\label{tab:cronograma_tcc_i}
+    \caption{Cronograma de Janeiro até Junho de 2023}~\label{tab:cronograma_tcc_i}
 \end{table}
 
 \begin{table}[ht]
     \centering
     \begin{tabular}{ p{7.8cm} c c c c c c c }
         \toprule
-         & Jan       & Fev       & Mar       & Abr       & Mai       & Jun       & \\
+         & Jul       & Ago       & Set       & Out       & Nov       & Dez       & \\
         \midrule
-        Desenvolvimento da primeira versão\\ do método
+        Desenvolvimento da primeira versão                                         \\ do método
          & $\bullet$ & $\bullet$ & $\bullet$ &           &           &           & \\
         \midrule
         Avaliação formativa do método de acordo com a metodologia proposta para o projeto
          &           &           & $\bullet$ & $\bullet$ &           &           & \\
         \midrule
-        Testar e implementar as melhorias\\ necessárias para atingir o objetivo
+        Testar e implementar as melhorias                                          \\ necessárias para atingir o objetivo
          &           &           &           & $\bullet$ & $\bullet$ &           & \\
         \midrule
         Análise e considerações do resultado final
-         &           &           &           &           &           & $\bullet$ & \\
+         &           &           &           &           & $\bullet$ &           & \\
+        \midrule
+        Elaboração e escrita da monografia
+         &           &           &           &           & $\bullet$ & $\bullet$ & \\
         \midrule
         \bottomrule
     \end{tabular}
-    \caption{Cronograma de Janeiro a Junho de 2023}~\label{tab:cronograma_tcc_ii}
+    \caption{Cronograma de Julho a Dezembro de 2023}~\label{tab:cronograma_tcc_ii}
 \end{table}
 
 % Como realizar as citações
