@@ -1,16 +1,27 @@
 \documentclass[font=plain]{abnt}
-
+\usepackage{subfigure}
 \usepackage[utf8]{inputenc}
 \usepackage[brazil]{babel}
 \usepackage{abntex2cite}
-\usepackage{booktabs}
+\usepackage{caption}
+%\usepackage[alf]{abntex2cite}
 \usepackage{graphicx}
 \usepackage{graphicx,color}
-\usepackage{multirow}
 \usepackage{paralist}
 \usepackage{subfloat}
 \usepackage{subfig}
-% \usepackage[acronym]{glossaries}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{acronym}
+
+\newacro{ufm}[UFM]{Universal Feature Method}
+\acrodef{ngs}[NGS]{Sequenciamento de Nova Geração}
+\acrodef{rs}[RS]{Revisão Sistemática}
+\acrodef{cafe}[CAFe]{Comunidade Acadêmica Federada}
+\acrodef{parsifal}[Parsifal]{Perform Systematic Literature Reviews}
+\acrodef{fcgr}[FCGR]{Frequency Chaos Game Representation}
+\acrodef{dsr}[DSR]{Design Science Research}
+
 
 
 
@@ -30,8 +41,6 @@
 \data{\today}
 
 \begin{document}
-
-% \newacronym{ufm}{UFM}{Universal Feature Method}
 
 \capa\
 \folhaderosto\
@@ -57,143 +66,13 @@
 
 \sumario\
 
-
-\chapter{Introdução}
-
-Os desafios impostos pela pandemia do COVID-19 incluíram a falta de conhecimento suficiente na compreensão da importância das ameaças biológicas e da preparação médica, apesar dos avanços científicos e tecnológicos. O conhecimento prévio sobre os agentes biológicos com potencial para causar pandemia pode melhorar substancialmente nossa preparação pré-pandemia.~\cite[p. 1]{behl_threat_2022}
-
-Segundo~\cite[p.1]{barry_phylogenetic_analysis_2006} `os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.'
-
-Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\cite{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
-
-A semelhança genética entre vários vírus infecciosos e mortais fornece uma visão do fato de que o RNA é a chave para discernir e marcar os possíveis patógenos que podem causar uma pandemia. Embora um padrão geral e motivos conservados possam ser observados em ancestrais imediatos, as regiões não conservadas das sequências são o resultado da acumulação de mutações, seja por inserção ou deleção de um ou vários nucleotídeos ou por substituição pontual de um nucleotídeo por outro. A fonte principal de mutações em vírus são percalços na replicação e a recombinação de RNA~\cite[p. 11]{behl_threat_2022}. Nos eucariotos, a principal fonte de mutação é a radiação incidente nas gônadas, que pode ser ambiental (solo com material radioativo), artificial (radiografias e tomografias) ou radiação cósmica.
-
-Apesar da utilidade da filogenética e dos softwares comerciais e públicos disponíveis para análises filogenéticas, os métodos filogenéticos são muitas vezes aplicados de forma inadequada. Mesmo quando aplicados adequadamente, muitas vezes são mal explicados e, portanto, mal compreendidos.~\cite[p. 1]{barry_phylogenetic_analysis_2006} Além disso, por trabalhar com grandes quantidades de dados, os métodos utilizados devem ser avaliados também em relação ao seu custo computacional.
-
-Na busca de trabalhos relacionados, vários métodos foram encontrados, e a seguir são apresentados.\\
-O método de Máxima Verossimilhança (\textit{Maximum Likelihood}) não é exclusivo da filogenia, mas sim uma abordagem estatística. A aplicação da Máxima Verossimilhança em filogenia consiste em avaliar a probabilidade de que o modelo de evolução escolhido gere os dados observados. Essa proposta foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}.
-
-% Já o ... procurar pela árvore que tem a maior probabilidade de dar origem ao dado observado.
-
-No caso da filogenia os dados observados serão as características de cada organismo (a matriz de estado de características) e as hipóteses são todas as possíveis árvores. É também necessário um modelo matemático de evolução de características que será aplicado pelo ML.
-
-Os trabalhos relacionados apresentaram vários métodos de classificação gênica. Como por exemplo~\cite{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana. Para~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi usada a inferência bayesiana. Já a proposta do método de máxima verossimilhança foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}. Além desses, o trabalho de~\cite{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation,~\cite{kim_ngs_2022} a floresta aleatória e~\cite{potdar_phylogenetic_2021} a junção de vizinhos.
-
-As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons. Necessita-se pesquisa e desenvolvimento de ferramentas que realizem uma classificação de sequências genéticas com base no uso/frequência de códons.
-
-% Apresentar os conceitos envolvidos: por exemplo nucleotídeos, sequências, codon, dna, rna...
-
-% Checar se é necessário colocar...
-% O método de junção de vizinhos é especialmente útil quando o número de sequências a serem analisadas é da ordem de centenas ou milhares. Além disso, a precisão das árvores por ele geradas é semelhante a outros métodos mais demorados para conjuntos de dados relativamente pequenos (200 sequências). O método constrói árvores agrupando sequências vizinhas de maneira
-% gradual. Em cada etapa do agrupamento de sequências, ele minimiza a soma dos comprimentos dos ramos e, assim, examina múltiplas topologias. No entanto, para grandes conjuntos de dados, NJ examina apenas uma fração minúscula do número total de topologias possíveis.~\cite[p. 1]{tamura_prospects_2004}
-
-% Comentários
-% Escrever aqui a contextualização do tema. Falar sobre a grande área em que o problema investigado está inserido.  Este capítulo deve apresentar o referencial teórico necessário para o entendimento do tema, do problema,  dos conceitos e tecnologias envolvidos e do que já foi realizado nos trabalhos relacionados (fruto da revisão sistemática realizada) e das lacunas identificadas (o que não foi feito), desenvolvendo uma ligação entre o contexto e o problema de pesquisa.
-% Normalmente autores de referência são usados nesta contextualização.
-
-% A Introdução deve ser finalizada definindo claramente o problema de pesquisa. O problema deve ser contextualizado e descrito detalhadamente. Não confundir, problema com solução. A solução proposta (hipótese) irá aparecer nos objetivos.
-
-% Espera-se um capítulo de aproximadamente 3 páginas aqui.
-
-\chapter{Objetivos}
-
-Com base no problema de pesquisa apresentado na seção anterior destacamos os seguintes objetivos a serem atingidos ao final da pesquisa.
-\section{Objetivo Geral}
-Desenvolver e validar um novo método de análise da evolução molecular de vírus
-
-\section{Objetivos Específicos}
-\begin{enumerate}[(i)]
-    \item Definir um modelo para validação do método proposto.
-    \item Desenvolver uma de ferramenta para caracterizar/validar o método.
-    \item Coletar os dados necessários para aplicar na ratificação do método.
-\end{enumerate}
-
-% Escrever de forma clara, o Objetivo Geral do Trabalho (a meta que se pretende atingir com o final do trabalho, o que se pretende fazer) e os Objetivos Específicos (Objetivos menores, parciais que precisam ser atingidos como parte do desenvolvimento do Trabalho OU Objetivos Secundários que complementam o objetivo Geral ou são consequências do mesmo). Cuidado ao escrever os objetivos, além de claros eles precisam ser exequíveis. Os objetivos são as soluções hipotéticas apresentadas para solucionar o problema descrito na introdução.
-
-\chapter{Justificativas e Contribuições}
-
-Desenvolver um método de construção de árvores com base nas distâncias obtidas a partir da diferença do uso de códons contribuiria com a tarefa de classificação de cepas para a vigilância sanitária, especialmente na descoberta de novas cepas emergentes com potenciais pandêmicos. Ademais, é também importante dispor de alternativas à filogenia molecular atualmente utilizada, para gerar informações de outro ponto de vista e-ou para servir de referência aos métodos filogenéticos.
-Os métodos atuais ainda demandam de um alto custo computacional, sendo assim, existe a necessidade de desenvolver outros mais baratos e que possam suportar o volume crescente de dados (sequências).
-Sendo assim, o projeto visa apresentar um método que seja capaz de realizar classificações, com um custo computacional baixo, em relação a outros métodos, e que possa apresentar, do ponto de vista científico, alternativas de comparação com outras técnicas já existentes.
-
-% Escrever a Motivação (por que) para a execução deste trabalho, destacando a relevância (social, econômica ou acadêmica) do mesmo. Descrever as razões pelas quais o projeto deve ser desenvolvido, quais as contribuições (acadêmicas e/ou científicas) para a área de conhecimento do projeto. Tal contribuição é assegurada pela utilidade do trabalho aos demais, pela contribuição cumulativa (ou seja, pelo que este acrescenta ao conjunto do conhecimento científico do tema), pelo ineditismo do tema ou da abordagem e pela contribuição à superação de lacunas no conhecimento.
-
-\chapter{Metodologia}
-Um ponto importante para a obtenção dos objetivos deste trabalho está relacionada a definição da metodologia que serviria como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso é elaborada numa pesquisa do tipo quantitativa, ou seja, com o uso de medidas estatísticas para mensurar e comparar os resultados obtidos.\\
-A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.\cite{da_silva_pesquisa_2014}
-
-% Para uma pesquisa quantitativa deve-se identificar a amostra, definir os instrumentos de coleta de dados e os procedimentos de análise de dados (CRESWELL, 2007).
-
-% Escrever detalhadamente a Metodologia (como será feito)  que será usada para execução do Trabalho. Em outras palavras, dizer como os objetivos geral e específicos serão atingidos, que ações serão executadas, que testes serão realizados, que indicadores serão usados, etc. Descrever também as tecnologias que serão utilizadas para o desenvolvimento do trabalho e como se pretende validar o projeto. Lembre de usar a fundamentação em estatística para trabalhos que tenham isto como requisito (pesquisas de campo, aplicação de questionários, estudos de caso, etc). Ao descrever as ações na metodologia não economize em detalhes. Quanto mais detalhadas forem as ações, mais fácil será estimar prazos exequíveis no cronograma.
-
-
-\chapter{Cronograma}
-As atividades descritas nas tabelas abaixo, correspondem aos processos realizados para alcançar os objetivos propostos na segunda seção deste trabalho.
-A tabela~\ref{tab:cronograma_tcc_i} apresenta as atividades realizadas seguindo o escopo da disciplina de Trabalho de Conclusão de Curso I, já a tabela~\ref{tab:cronograma_tcc_ii} corresponde as atividades com conclusão previstas para a disciplina de Trabalho de Conclusão de Curso II.\space\\
-Cada mês corresponde a aproximadamente 30(trinta) dias. São alocadas, pelo menos, 4(quatro) horas diárias para realização das atividades.
-
-\begin{table}[hb]
-    \centering
-    \begin{tabular}{ p{7.8cm} c c c c c c c }
-        \toprule
-         & Jan       & Fev       & Mar       & Abr       & Mai       & Jun       & \\
-        \midrule
-        Definição dos objetivos e questões de pesquisa
-         & $\bullet$ &           &           &           &           &           & \\
-        \midrule
-        Revisão sistemática da literatura e descrição do trabalho em forma de relatório
-         &           & $\bullet$ & $\bullet$ &           &           &           & \\
-        \midrule
-        Elaboração deste texto do anteprojeto
-         &           &           &           & $\bullet$ & $\bullet$ &           & \\
-        \midrule
-        Formulação da hipótese identificada na pesquisa, que resultará no método proposto para solução
-         &           &           &           &           & $\bullet$ & $\bullet$ & \\
-        \midrule
-        Apresentação da hipótese da pesquisa sobre um novo método de caracterização genômica
-         &           &           &           &           &           & $\bullet$ & \\
-
-        \bottomrule
-    \end{tabular}
-    \caption{Cronograma de Janeiro até Junho de 2023}~\label{tab:cronograma_tcc_i}
-\end{table}
-
-\begin{table}[ht]
-    \centering
-    \begin{tabular}{ p{7.8cm} c c c c c c c }
-        \toprule
-         & Jul       & Ago       & Set       & Out       & Nov       & Dez       & \\
-        \midrule
-        Desenvolvimento da primeira versão                                         \\ do método
-         & $\bullet$ & $\bullet$ & $\bullet$ &           &           &           & \\
-        \midrule
-        Avaliação formativa do método de acordo com a metodologia proposta para o projeto
-         &           &           & $\bullet$ & $\bullet$ &           &           & \\
-        \midrule
-        Testar e implementar as melhorias                                          \\ necessárias para atingir o objetivo
-         &           &           &           & $\bullet$ & $\bullet$ &           & \\
-        \midrule
-        Análise e considerações do resultado final
-         &           &           &           &           & $\bullet$ &           & \\
-        \midrule
-        Elaboração e escrita da monografia
-         &           &           &           &           & $\bullet$ & $\bullet$ & \\
-        \midrule
-        \bottomrule
-    \end{tabular}
-    \caption{Cronograma de Julho a Dezembro de 2023}~\label{tab:cronograma_tcc_ii}
-\end{table}
-
-% Como realizar as citações
-% \textcolor{red}{Observação: As tabelas acima são apenas ilustrativas, o aluno deve elaborar seu cronograma e apresentá-lo da forma mais adequada ao seu projeto, inclusive podendo usar uma única tabela, dividir os períodos em semanas, dias, etc.}
-
-% Incluir as Referências Bibliográficas pesquisadas durante a elaboração do Anteprojeto e que foram CITADAS no mesmo, já utilizando a norma da ABNT como nos exemplos\cite{exemplo1} \cite{exemplo2} \cite{exemplo3}.
-
-% \begin{citacao} Exemplo de citação direta com mais de três linhas.Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas. Exemplo de citação direta com mais de três linhas\cite[p. 3]{exemplo1}.
-% \end{citacao}
-% Numa citação direta com menos de três linhas, ``coloca-se entre aspas e cita indicando a página" \cite[p. 2]{exemplo3}.
-
+% \input{acro_list}
+\input{capitulos/introducao.tex}
+\input{capitulos/objetivo.tex}
+\input{capitulos/justificativa_contribuicao.tex}
+\input{capitulos/metodologia.tex}
+\input{capitulos/cronograma.tex}
 \bibliographystyle{abnt-num}
-\bibliography{refGeral}
-
+\bibliography{RT1.bib}
+%\bibliography{RT2.bib}
 \end{document}
