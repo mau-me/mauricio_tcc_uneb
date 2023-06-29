@@ -8,33 +8,45 @@
 %\thispagestyle{headings}
 
 % Introdução do Anteprojeto
-Os desafios impostos pela pandemia do COVID-19 incluíram a falta de conhecimento suficiente na compreensão da importância das ameaças biológicas e da preparação médica, apesar dos avanços científicos e tecnológicos. O conhecimento prévio sobre os agentes biológicos com potencial para causar pandemia pode melhorar substancialmente nossa preparação pré-pandemia.~\cite[p. 1]{behl_threat_2022}
+Os desafios impostos pela pandemia do COVID-19 incluíram a falta de conhecimento suficiente para a compreensão da importância das ameaças biológicas e para a preparação médica, apesar dos avanços científicos e tecnológicos. O conhecimento prévio sobre os agentes biológicos com potencial para causar pandemias pode melhorar substancialmente nossa preparação pré-pandemia~\cite{behl_threat_2022}.
 
-Segundo~\cite[p.1]{barry_phylogenetic_analysis_2006} `os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.'
+Diante disso, a bioinformática, que é a junção de métodos computacionais e técnicas estatísticas com o objetivo de extrair informações de dados biológicos brutos, desempenha um papel fundamental na interpretação de dados genômicos e na compreensão de processos evolutivos.
+Segundo~\citeauthor{barry_phylogenetic_analysis_2006} os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.''
 
-Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\cite{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
+A reconstrução filogenética é uma das abordagens amplamente utilizadas na análise da evolução de espécies, que permite investigar as relações evolutivas entre diferentes linhagens de vírus. Essas observações são realizadas com base em dados como sequências de \gls{dna} e \gls{rna}. Essas sequências são formadas por blocos fundamentais chamados de nucleotídeos, que são compostos por uma base nitrogenada, um açúcar e um grupo fosfato. As bases presentes nos nucleotídeos do \gls{dna} são adenina (A), timina (T), citosina (C) e guanina (G), enquanto no \gls{rna} a base timina é substituída pela uracila (U)~\cite{alberts2002molecular}.
 
-A semelhança genética entre vários vírus infecciosos e mortais fornece uma visão do fato de que o RNA é a chave para discernir e marcar os possíveis patógenos que podem causar uma pandemia. Embora um padrão geral e motivos conservados possam ser observados em ancestrais imediatos, as regiões não conservadas das sequências são o resultado da acumulação de mutações, seja por inserção ou deleção de um ou vários nucleotídeos ou por substituição pontual de um nucleotídeo por outro. A fonte principal de mutações em vírus são percalços na replicação e a recombinação de RNA~\cite[p. 11]{behl_threat_2022}. Nos eucariotos, a principal fonte de mutação é a radiação incidente nas gônadas, que pode ser ambiental (solo com material radioativo), artificial (radiografias e tomografias) ou radiação cósmica.
+Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\citeauthor{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
 
-Apesar da utilidade da filogenética e dos softwares comerciais e públicos disponíveis para análises filogenéticas, os métodos filogenéticos são muitas vezes aplicados de forma inadequada. Mesmo quando aplicados adequadamente, muitas vezes são mal explicados e, portanto, mal compreendidos.~\cite[p. 1]{barry_phylogenetic_analysis_2006} Além disso, por trabalhar com grandes quantidades de dados, os métodos utilizados devem ser avaliados também em relação ao seu custo computacional.
+A semelhança genética entre vários vírus infecciosos e mortais fornece uma visão do fato de que o \gls{rna} é a chave para discernir e marcar os possíveis patógenos que podem causar uma pandemia. Embora um padrão geral e motivos conservados possam ser observados em ancestrais imediatos, as regiões não conservadas das sequências são o resultado da acumulação de mutações, seja por inserção ou deleção de um ou vários nucleotídeos ou por substituição pontual de um nucleotídeo por outro. A fonte principal de mutações em vírus são percalços na replicação e a recombinação de \gls{rna}~\cite{behl_threat_2022}.
 
-Os trabalhos relacionados apresentaram vários métodos de classificação gênica. Como por exemplo~\cite{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; máxima verossimilhança e inferência bayesiana. Para~\cite{yin_systematic_2019} e~\cite{bedoya-pilozo_molecular_epidemiology_2018} foi usada a inferência bayesiana. Já a proposta do método de máxima verossimilhança foi utilizada por~\cite{fall_genetic_diversity_2021},~\cite{behl_threat_2022},~\cite{shabbir_comprehensive_2020},~\cite{hudu_hepatitis_2018},~\cite{sallard_tracing_2021},~\cite{paez-espino_diversity_evolution_2019},~\cite{tang_evolutionary_2021} e~\cite{cho_analysis_2022}. Além desses, o trabalho de~\cite{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation,~\cite{kim_ngs_2022} a floresta aleatória e~\cite{potdar_phylogenetic_2021} a junção de vizinhos.
+Apesar da utilidade da filogenética e dos softwares comerciais e públicos disponíveis para análises filogenéticas, os métodos filogenéticos são muitas vezes aplicados de forma inadequada. Mesmo quando aplicados adequadamente, são mal explicados e, portanto, mal compreendidos.~\cite[p. 1]{barry_phylogenetic_analysis_2006} Além disso, por trabalhar com grandes quantidades de dados, os métodos utilizados devem ser avaliados também em relação ao seu custo computacional.
 
-As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons. Necessita-se pesquisa e desenvolvimento de ferramentas que realizem uma classificação de sequências genéticas com base no uso/frequência de códons.
+Na busca de trabalhos relacionados, vários métodos foram encontrados, e a seguir são apresentados.
+
+O método de \gls{ml} (ou \textit{Maximum Likelihood}), não é exclusivo da filogenia, mas sim uma abordagem estatística. A sua aplicação em filogenia consiste em avaliar a probabilidade de que o modelo de evolução escolhido gere os dados observados, que são por exemplo, características de um organismo. Essa proposta foi utilizada por~\cite{fall_genetic_diversity_2021,behl_threat_2022,shabbir_comprehensive_2020,hudu_hepatitis_2018,sallard_tracing_2021,paez-espino_diversity_evolution_2019,tang_evolutionary_2021,cho_analysis_2022}.
+
+Já em~\cite{yin_systematic_2019, bedoya-pilozo_molecular_epidemiology_2018}, foi usada a inferência bayesiana, que é fundamentada no teorema de Bayes, que permite a atualização das probabilidades a priori para probabilidades a posteriori à medida que novas evidências são incorporadas.
+
+Além desses,~\cite{potdar_phylogenetic_2021} utilizou a junção de vizinhos (ou \textit{Neighbor-Joining}), que é baseado em uma abordagem heurística que visa construir uma árvore filogenética a partir de uma matriz de distância entre as sequências estudadas. O trabalho de~\cite{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation e~\cite{kim_ngs_2022} a floresta aleatória. Por fim,~\cite{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; \gls{ml} e inferência bayesiana.
+
+As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons, que são sequências de três nucleotídeos responsáveis pela codificação dos aminoácidos nas proteínas. Os códons desempenham um papel crucial na determinação da função e estrutura das proteínas, e alterações nos códons podem resultar em mudanças significativas nas características fenotípicas dos vírus. Necessita-se então, de pesquisas e desenvolvimento de ferramentas que realizem uma classificação de sequências genéticas com base no uso/frequência de códons.
 
 % Objetivos do Anteprojeto
+
 Com base no problema de pesquisa proposto, foram construídos os objetivos que deveriam ser atingidos, os mesmos são apresentados a seguir:
 \begin{itemize}
   \item Objetivo Geral
-    \begin{enumerate}[label=~(\roman*)]
-      \item Desenvolver e validar um novo método de análise da evolução molecular de vírus
-    \end{enumerate}
+        \begin{enumerate}[label=~(\roman*)]
+          \item Desenvolver e validar um novo método de análise da evolução molecular viral.
+        \end{enumerate}
   \item Objetivos Específicos
-    \begin{enumerate}[label=~(\roman*)]
-      \item Definir um modelo para validação do método proposto
-      \item Desenvolver uma de ferramenta para caracterizar/validar o método
-      \item Coletar os dados necessários para aplicar na ratificação do método
-    \end{enumerate}
+        \begin{enumerate}[label=~(\roman*)]
+          \item Coletar os dados necessários para aplicar na ratificação do método.
+          \item Definir um modelo para validação do método proposto.
+          \item Desenvolver uma de ferramenta para caracterizar/validar o método.
+          \item Disponibilizar o modelo como uma ferramenta web de fácil acesso.
+          \item Realizar a comparação da performance computacional no novo método com algum dos métodos do estado da arte.
+        \end{enumerate}
 \end{itemize}
 
 % Justificativas e Contribuições
@@ -43,8 +55,29 @@ Os métodos atuais ainda demandam de um alto custo computacional, sendo assim, e
 Posto isso, o projeto visa apresentar um método que seja capaz de realizar classificações, com um custo computacional baixo, em relação a outros métodos, e que possa apresentar, do ponto de vista científico, alternativas de comparação com outras técnicas já existentes.
 
 % Metodologia
-Um ponto importante para a obtenção dos objetivos deste trabalho está relacionada a definição da metodologia que serviria como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso é elaborada numa pesquisa do tipo quantitativa, ou seja, com o uso de medidas estatísticas para mensurar e comparar os resultados obtidos.\\
+Um ponto importante para a obtenção dos objetivos deste trabalho está relacionada a definição da metodologia que servirá como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso é o \gls{dsr}. Essa metodologia, proporciona um framework teórico e prático para a criação de artefatos inovadores, como métodos, modelos ou frameworks, visando resolver problemas específicos.\cite{peffers_dsr_2007}
+
+Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão seguidos:
+\begin{enumerate}
+  \item Identificação do problema e definição dos objetivos.
+  \item Desenvolvimento do artefatos.
+  \item Avaliação do artefato.
+  \item Apresentar contribuições científicas.
+\end{enumerate}
+
+Também será utilizada analises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
 A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.\cite{da_silva_pesquisa_2014}
+
+Os pontos a seguir serão realizados durante o desenvolvimento do projeto:
+\begin{itemize}
+  \item Coleta de sequências que serão utilizadas.
+  \item Tratamento necessário dos dados.
+  \item Avaliação de desempenho do modelo.
+  \item Analise comparativa com modelos convencionais.
+  \item Disponibilização do modelo como ferramenta web.
+\end{itemize}
+
+%%%%%% ANOTAÇÕES %%%%%%
 
 % A Introdução deve incluir a contextualização do tema como já realizado no anteprojeto, revisada e melhorada. Também dever caracterizar claramente o problema de pesquisa, a justificativa/motivação/relevância para a investigação realizada, os objetivos gerais e específicos. Para ajudar na justificativa, devem ser feita uma sintética revisão dos trabalhos relacionados apontando especialmente as lacunas que serão exploradas pelo presente trabalho. Alguns autores podem optar por já realizar uma completa revisão de literatura (trabalhos relacionados) na introdução enquanto outros fazem isto sucintamente na introdução deixando para aprofundar em um capítulo específico de Trabalhos Relacionados ou Revisão de Literatura. Discuta com seu orientador qual a melhor abordagem para o seu trabalho.
 
