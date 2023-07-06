@@ -20,20 +20,30 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
 \end{figure}
 
 As informações contidas no \gls{dna} é copiada em uma molécula de \gls{rna}, esse processo é conhecido como transcrição. A transcrição ocorre no núcleo das células e envolve a separação das duas fitas do \gls{dna} e o pareamento de nucleotídeos complementares para sintetizar uma molécula de \gls{mrna}. O \gls{mrna} é uma cópia do DNA que carrega a sequência de bases nitrogenadas correspondente a um gene específico.
-Após isso, ocorre o processo de tradução onde a sequência de bases nitrogenadas do \gls{mrna} é utilizada para sintetizar proteínas. A tradução ocorre nos ribossomos, presentes no citoplasma celular. Durante a tradução, o \gls{mrna} é lido em grupos de três bases, chamados de códons. Cada códon especifica um aminoácido distinto. Os aminoácidos são transportados para o ribossomo por moléculas de \gls{trna}, que possuem um anticódon complementar ao códon do \gls{mrna}. À medida que o ribossomo percorre o \gls{mrna}, os aminoácidos são ligados em uma sequência específica, formando uma cadeia polipeptídica que será dobrada e modificada para se tornar uma proteína funcional~\cite{alberts_biologia_2017}.
+Após isso, ocorre o processo de tradução onde a sequência de bases nitrogenadas do \gls{mrna} é utilizada para sintetizar proteínas. A tradução ocorre nos ribossomos, presentes no citoplasma celular. Durante a tradução, o \gls{mrna} é lido em grupos de três bases, chamados de códons. Os códons são sequências de três nucleotídeos consecutivos no RNA que correspondem a um aminoácido específico. Existem 64 códons possíveis, correspondentes a 20 aminoácidos diferentes como apresentado na Figura~\ref{fig:tabelaCodons}, além de sinais de início e parada da tradução. A tradução é o processo pelo qual a sequência de códons no RNA é utilizada para sintetizar proteínas. Durante a tradução, os códons são reconhecidos por moléculas de RNA transportador (tRNA) que trazem os aminoácidos correspondentes.
+\begin{figure}[htb]
+  \centering
+  \caption{Tabela de Códons.}
+  \includegraphics[scale=0.6]{figuras/tabelaCodons.pdf}
+  \fonte{Adaptade de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
+\end{figure}
 
-\section{Virus}
+A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
 
-Os vírus são agentes infecciosos compostos por uma cápsula proteica (capsídeo) que envolve seu material genético, que pode ser \gls{dna} ou \gls{rna}.
-A estrutura viral varia entre diferentes tipos de vírus, mas de modo geral, eles consistem em uma cápsula proteica chamada capsídeo, que envolve o material genético viral. O capsídeo pode apresentar diferentes formas, como hélices, icosaedros ou formas complexas. Além do capsídeo, alguns vírus possuem uma camada lipídica chamada envelope viral, que é derivada da membrana da célula hospedeira e contém glicoproteínas virais que são importantes para a entrada do vírus nas células hospedeiras~\cite{david_virology_2022}.
-O ciclo e vida viral é conjunto de etapas que um vírus passa para se reproduzir e infectar novas células. Esse ciclo pode variar entre diferentes tipos de vírus, mas geralmente envolve as seguintes etapas:
+Cada códon especifica um aminoácido distinto. Os aminoácidos são transportados para o ribossomo por moléculas de \gls{trna}, que possuem um anticódon complementar ao códon do \gls{mrna}. À medida que o ribossomo percorre o \gls{mrna}, os aminoácidos são ligados em uma sequência específica, formando uma cadeia polipeptídica que será dobrada e modificada para se tornar uma proteína funcional~\cite{alberts_biologia_2017}.
+
+\section{Vírus}
+
+Os vírus são agentes infecciosos que possuem uma estrutura viral que varia entre os seus diferentes tipos, mas que de modo geral é composta por uma cápsula proteica chamada capsídeo, que envolve o material genético viral, que pode ser \gls{dna} ou \gls{rna}. O capsídeo pode apresentar diferentes formas, como hélices, icosaedros ou formas complexas. Além do capsídeo, alguns vírus possuem uma camada lipídica chamada envelope viral, que é derivada da membrana da célula hospedeira e contém glicoproteínas virais que são importantes para a entrada do vírus nas células hospedeiras~\cite{david_virology_2022}.
+O ciclo e vida viral é conjunto de etapas que um vírus passa para se reproduzir e infectar novas células. Esse ciclo pode variar entre diferentes tipos de vírus, mas geralmente envolve as seguintes etapas\cite{alberts_molecular_2002}:
 
 \begin{enumerate}
-  \item Adsorção: o vírus se liga especificamente a receptores na superfície da célula hospedeira.
-  \item Penetração: o vírus entra na célula hospedeira, liberando seu material genético.
-  \item Replicação e síntese de proteínas virais: o material genético viral é replicado e transcritas em moléculas de \gls{mrna}, que são utilizadas para a síntese de proteínas virais
-  \item Montagem: as proteínas virais se unem para formar novas partículas virais
-  \item Liberação: as novas partículas virais são liberadas da célula hospedeira, podendo ocorrer por lise celular ou por brotamento
+  \item \textbf{Adsorção:} o vírus se liga especificamente a receptores na superfície da célula hospedeira.
+  \item \textbf{Penetração:} o vírus é internalizado na célula hospedeira, liberando seu material genético.
+  \item \textbf{Replicação e síntese de proteínas virais:} o material genético viral é transportado para os ribossomos da célula hospedeira, replicado e transcritas em moléculas de \gls{mrna}, que são utilizadas para a síntese de proteínas virais.
+  \item \textbf{Montagem:} as proteínas virais se unem para formar novas partículas virais.
+  \item \textbf{Liberação:} as novas partículas virais são liberadas da célula hospedeira, para a montagem de novos vírus e para a modificação do ambiente celular para garantir a sua replicação.
+  % \item \textbf{Liberação:} as novas partículas virais são liberadas da célula hospedeira, podendo ocorrer por lise celular ou por brotamento
 \end{enumerate}
 
 \subsection{SARS-CoV-2}
@@ -60,6 +70,15 @@ Por outro lado, os métodos baseados em caracteres analisam as mudanças nos car
 % \section{Bioinformática}
 
 % Alinhamento de Sequências, Análise de Genomas Virais, Análise de Expressão Gênica, Ferramentas de Bioinformática
+
+% \section{Machine Learning}
+
+% Escrever sobre
+
+
+\section{Trabalhos Relacionais}
+
+
 
 % Para iniciar, vamos testar novamente o uso de siglas: \gls{AA}. Observe que mesmo ao iniciar outro capítulo, a sigla não precisa ser definida novamente por extenso, pois já foi definida no capítulo anterior, além de estar definida na lista de siglas e abreviaturas.
 
