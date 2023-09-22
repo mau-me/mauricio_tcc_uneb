@@ -1,0 +1,21 @@
+- Tirar o spike das sequências alinhadas
+  Perguntar a Vagner se é viável
+
+Descrever as opções utilizadas
+  Anterior
+    Baixar genoma completo -> Tirar Unicas -> Blast (Extrair Spike) -> Alinhamento dos Genes (Demorou)
+  Nova
+    Baixar genoma completo -> Tirar Unicas -> Minimap2 (Alinhamento do genoma completo) -> Gofasta -> Extração dos spikes já alinhados
+
+Genoma de refêrencia
+
+### O Minimap2 pode adicionar gaps na sequência de refêrencia???
+  Perguntar a Vagner
+
+65 Códons - 1 codon GAP
+
+Controle de qualidade
+  ATG - Start Codon
+  TAG - TGA - TAA - Stop codons
+
+Entender as configurações do script passado por Vagner
