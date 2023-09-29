@@ -19,3 +19,12 @@ Controle de qualidade
   TAG - TGA - TAA - Stop codons
 
 Entender as configurações do script passado por Vagner
+
+-----------------------------------
+
+Alinhamento com o blast não foi possível
+Foi utilizada a 'pesca'/'isca' (bait) motifs (verificar se é utilizado para aminoacidos ou nucleotideos / ou os dois) inicial e final
+
+Contar quantos N e Gaps tem cada sequência extraída
+
+Perguntar a Vagner sé eles tiram as colunas com N's ou não

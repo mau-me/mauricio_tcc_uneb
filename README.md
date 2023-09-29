@@ -19,14 +19,15 @@ These instructions will get you a copy of the project up and running on your loc
 
 É necessário ter os seguintes programas instalados:
 
-```
+```programs
 python3
 ncbi-blast+
 Clustal Omega
+Scipy
 virtualenv (Opcional)
 ```
 
-#### Gerando arquivo requirements.txt
+#### Gerando arquivo requirements.txt (Caso necessário atualizar o já existente)
 
 ```
 pip freeze > requirements.txt
@@ -37,8 +38,9 @@ pip freeze > requirements.txt
 É recomendado que a instalação dos pacotes necessários seja realizada em um ambiente virtual.
 
 Passos iniciais para criação do ambiente virtual com o virtualenv e instalação das bibs requeridas pelo projeto:
+Obs.: A criação do ambiente virtual deve ser realizado dentro da pasta do projeto.
 
-```
+```bash
 virtualenv `nome_do_ambiente`
 source `nome_do_ambiente`/bin/activate
 pip install -r requirements.txt
@@ -46,9 +48,10 @@ pip install -r requirements.txt
 
 Instalação necessárias feitas em um sistema linux(Caso estaja em outro SO, verifique como realizar a instalação no seu caso):
 
-```
+```bash
 - sudo apt install ncbi-blast+
 - sudo apt install clustalo
+- sudo apt install python3-scipy
 ```
 
 Após isso é possível abrir e executar os notebooks disponíveis.

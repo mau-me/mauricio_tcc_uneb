@@ -1,0 +1,44 @@
+Foi realizado o processo de extração do gene spike das sequências alinhadas com o minimap2/Gofasta.
+
+O processo se deu da seguinte forma:
+
+1. É feita a leitura da sequência de referência do gene spike e das sequências de genoma completo já alinhados.
+2. A função 'encontrar_posicoes_subsequencia', recebe a sequência genica de referência e uma sequência de genoma completo por vez. A mesma realiza o processo
+para encontrar tamanhos ótimos de iscá (bait's) inicial e final, que serão utilizados posteriormente para o corte/extração da sequência genica de dentro do genoma completo. Essa função retorna a posição inicial e final de onde deve-se realizar o corte no genoma completo para se obter o gene spike daquela sequência.
+3. É realizado o corte no genoma completo com as posições obtidas anteriormente, e a sequência genica extraída é armazenada em um arquivo para cada lineage chamado 'sequencias_spike_alinhadas.fasta'
+4. É contado também o número de gaps e n's de cada uma das sequências. As sequências que possuirem mais de 1 gap ou n é armazenada em um arquivo chamado de 'contagem_gaps_n.txt'. As respectivas quantidades também são armazenadas.
+
+-----------------------------------------------------------------------------------------------------------------------
+27.09.23 - Reunião com Vagner
+
+Verificar sequências maiores geradas. Provavelmente relacionado a multação*
+Olhar a referência e buscar nos genomas alinhados
+Tentar encontar a referencia spike nas maiores
+
+1ª opção - Aumenta a 'isca' verificar a porcentagem de singularidade
+
+2ª opção - Alinhamento global par a par, sequencia completa com a referência
+Script para realizar o 'corte'
+
+--------------
+Remover as sequências defeituosas, onde o spike não foi identificado.
+Rodar no AGUA
+
+Filtar antes de alinhas as sequências com mais de 1% de N's
+Depois alinhar e verificar o resultado
+
+CONSIDERAR INICIALMENTE COMO SEQUÊNCIAS DE MÁ QUALIDADE
+
+-------------------------------------------------------------------------------------------------------------
+
+Critérios
+
+Aplicar os filtros
+
+30 N's seguidos sequência será descartada
+
+- Número total de N's da sequência
+- Número de N's consecultivos
+
+
+Contar a quantidade de sequências descartadas

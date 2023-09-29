@@ -78,8 +78,8 @@ echo "Sistema Operacional: $sistema_operacional"
 echo "Informações do Processador:$processador_info"
 echo "$memoria_info"
 
-# Exibe o número total de sequências processadas
-echo "Número total de sequências processadas: $sequencias_processadas"
+# Exibe o número total de linhagens processadas
+echo "Número total de linhagens processadas: $sequencias_processadas"
 
 # Exibe o tempo total de execução
 echo "Tempo total de execução do script: $elapsed_time segundos"
