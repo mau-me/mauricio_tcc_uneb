@@ -1,0 +1,13 @@
+Adicionar o referêncial teorico relacionado a:
+  Machine Learning
+    Métodos Supervisionados e Não supervisionados
+
+Escrever na descrição do pipeline relacionado ao download de sequências do bv-brc:
+  Data/Periodo de quando foi realizada a extração das sequências da plataforma
+  Que foram desconsideradas as sequências que possuiam, na epoca, menos de 50 sequências
+  Foram baixadas somente sequências genomicas completas
+
+Pegar as anotações que estão na outra máquina - branch implementation
+
+Adicionar a ferramenta trello ao trabalho
+Fazer um apanhado de todas as ferramentas utilizadas no projeto.
