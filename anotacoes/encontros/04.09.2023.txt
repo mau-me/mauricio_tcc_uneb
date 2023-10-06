@@ -1,0 +1,22 @@
+Definição do escopo final do projeto
+
+Construção de uma página web para treinamento e classificação com o AGUA
+
+Salvar de onde foram obtidos os arquivos de anotação:
+  1. Cov-Lineage_Pango: https://github.com/cov-lineages/pango-designation/blob/master/lineage_notes.txt
+  2. GisAid: https://www.epicov.org/epi3/frontend#592c8d
+
+Cinco variantes
+As demais International A_B Diversity
+
+---------------------------------------------------------------------------------------------------------------
+
+Criando arquivo de treinamento e arquivo de anotação
+Arquivo de Treinamento:
+  X sequências de cada lineage pango, em sequência em um único arquivo
+Arquivo de Anotação:
+  Cabeçalho em ordem das sequências no arquivo de treinamento
+  Lineage pango da sequência, que é o nome do diretorio
+
+Sequência problematica na filtragem:
+  spike(pos.ini:11143 pos.fin:25384)accn|MZ937100,A.2.5

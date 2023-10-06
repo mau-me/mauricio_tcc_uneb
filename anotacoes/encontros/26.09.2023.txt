@@ -35,6 +35,8 @@ Critérios
 
 Aplicar os filtros
 
+IMPORTANTE!!!
+
 30 N's seguidos sequência será descartada
 
 - Número total de N's da sequência
