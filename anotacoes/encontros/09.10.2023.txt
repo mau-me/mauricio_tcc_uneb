@@ -1,0 +1,23 @@
+- Remover acima de 1% de N's na completa
+
+- iqtree2 com as sequências completas e com o spike
+
+iqtree2 -s arquivo.fasta -fast -m GTR+G4+F -alrt 1000 -nt AUTO
+
+bv-brc -> filtrar únicas -> alinhamento isca -> extrair spike -> filtrar únicas 02 -> filtrar N's -> montar dataset AGUA
+
+bv-brc -> filtrar únicas -> filtrar N's (+1% n's) -> alinhamento isca -> extrair spike -> filtrar únicas 02 -> filtrar N's -> montar dataset AGUA
+
+
+Importante
+
+Por quê é necessário filtrar as sequências únicas???
+Resposta Diego:
+  Um dos critérios de qualidade de um dataset de treinamento é ter balanceamento das classes que vai aprender, isso significa ter aprox. O mesmo número de amostras de cada classe. Como nosso método precisa APENAS DE UMA AMOSTRA PARA IDENTIFICAR OS PADRÕES DA CLASSE, o dataset balanceado ótimo é aquele que tem uma sequência de cada classe (não em refiro a genótipo, senão a classe primária, pq nos atribuimos numa classe a cada sequência diferente)
+
+---------------------------------------------
+
+Softwares utilizados:
+
+iqTree2 -> Gerar árvores filogeneticas com base em um arquivo de sequências
+FigTree -> Visualizar as árvores geradas pelo iqtree2

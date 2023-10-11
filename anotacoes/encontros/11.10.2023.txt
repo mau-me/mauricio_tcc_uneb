@@ -1,0 +1,6 @@
+Formato do arquivo de saída final:
+  Spike_OM056186
+
+Remover pos.ini, pos.fim e accn
+
+Montar anotação que vai no figtree (Ver configurações com Vagner)
