@@ -16,19 +16,25 @@ try:
     from Bio.SeqRecord import SeqRecord
 except ImportError:
     print("Biopython missing, attempting to install...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "biopython>=1.78"])
+    subprocess.check_call([sys.executable, "-m", "pip",
+                          "install", "biopython>=1.78"])
     from Bio import SeqIO
     from Bio.Seq import Seq
     from Bio.SeqRecord import SeqRecord
 
 ###################################
-parser = argparse.ArgumentParser(prog='DupRemover.py', formatter_class=argparse.RawTextHelpFormatter,
-    description='Removes duplicate sequences in multifasta file, and append fasta header to unique sequence')
-parser.add_argument("-i", "--input", dest='input', required=True, type=str, help='input fasta file')
-parser.add_argument("-o", "--output", dest='output', required=False, type=str, help='output fasta file (default: Uniq_<input_fasta_file>)')
-parser.add_argument("-l", "--lineage", dest='lineage', required=True, type=str, help='lineage of the sequences')
-parser.add_argument("-v", "--verbose", dest='verbose', metavar='Y/y or N/n', default='Y', type=str, help='print progress to the terminal (default: verbose)')
-parser.add_argument('-V', '--version', action='version', version='%(prog)s 1.0.3')
+parser = argparse.ArgumentParser(prog='filtra_sequencias_fasta.py', formatter_class=argparse.RawTextHelpFormatter,
+                                 description='Removes duplicate sequences in multifasta file, and append fasta header to unique sequence')
+parser.add_argument("-i", "--input", dest='input',
+                    required=True, type=str, help='input fasta file')
+parser.add_argument("-o", "--output", dest='output', required=False,
+                    type=str, help='output fasta file (default: Uniq_<input_fasta_file>)')
+parser.add_argument("-l", "--lineage", dest='lineage',
+                    required=True, type=str, help='lineage of the sequences')
+parser.add_argument("-v", "--verbose", dest='verbose', metavar='Y/y or N/n',
+                    default='Y', type=str, help='print progress to the terminal (default: verbose)')
+parser.add_argument('-V', '--version', action='version',
+                    version='%(prog)s 1.0.3')
 args = parser.parse_args()
 
 ###################################
@@ -57,10 +63,10 @@ verbosity = verbosity.upper()
 # Print info
 date = datetime.datetime.now()
 print("[Program]\t: DupRemover")
-print("[Date]\t\t: "+ date.strftime("%Y-%m-%d %H:%M:%S"))
-print("[Input file]\t: "+ input_obj.name)
-print("[Output file]\t: "+ output_obj.name)
-print("[Lineage]\t: "+ args.lineage)
+print("[Date]\t\t: " + date.strftime("%Y-%m-%d %H:%M:%S"))
+print("[Input file]\t: " + input_obj.name)
+print("[Output file]\t: " + output_obj.name)
+print("[Lineage]\t: " + args.lineage)
 
 ###################################
 # reading and parsing fasta file
@@ -70,7 +76,8 @@ for qry in SeqIO.parse(input_obj, 'fasta'):
     uniq_seqs[str(qry.seq)].append(qry.description)
 
 # making unique sequences
-final_seq = (SeqRecord(Seq(seqi), id="|".join(accn), name='', description=args.lineage) for seqi, accn in uniq_seqs.items())
+final_seq = (SeqRecord(Seq(seqi), id="|".join(accn), name='',
+             description=args.lineage) for seqi, accn in uniq_seqs.items())
 
 # write output file
 output_num = SeqIO.write(final_seq, output_obj, 'fasta')
@@ -99,13 +106,13 @@ for input_seqs in open(input_file, 'r'):
 # Number of duplicate sequences
 Duplicate_num = input_num - output_num
 
-###################################
-# Write results to a file
-results_file = "results.txt"
-with open(results_file, 'a') as f:
-    f.write(f"{args.lineage}, ")
-    f.write(f"{input_num}, ")
-    f.write(f"{output_num}\n")
+# ###################################
+# # Write results to a file
+# results_file = "results.txt"
+# with open(results_file, 'a') as f:
+#     f.write(f"{args.lineage}, ")
+#     f.write(f"{input_num}, ")
+#     f.write(f"{output_num}\n")
 
 ###################################
 # Print stats
@@ -113,7 +120,7 @@ print("[input seq]\t:", input_num)
 print("[Output seq]\t:", output_num)
 print("[Duplicates]\t:", Duplicate_num)
 print("[Lineage]\t:", args.lineage)
-print("Results written to:", results_file)
+# print("Results written to:", results_file)
 
 ###################################
 # END OF SCRIPT
