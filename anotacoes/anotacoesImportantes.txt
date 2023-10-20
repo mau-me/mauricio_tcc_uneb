@@ -1,0 +1,24 @@
+# Processo realizado que servirá como base para a escrita da monografia
+
+1. Todo o pipeline realizado para o download das sequências do bv-brc
+2. Pipeline para remover sequências genomicas duplicadas (Explicar o motivo para isso. Conversa com Diego no wpp, marcada como favorito)
+3. A partir daqui explicar os dois fluxos criados
+    1. Descartado
+        1. Pipeline com o blast para remover os genes spike, utilizando a referência do gene.
+        2. Alinhamento das sequências genicas (Duas formas para buscar a que realizasse em menor tempo)
+            1. Alinhamento multiplo
+            2. Alinhamento sequência por sequência
+        3. Fim
+    2. Atual
+        1. Realizado o alinhamento dos genomas completos com a referência do genoma sars-cov-2 obtida no NCBI
+        2. Pipeline para extrair o gene spike das sequências genomicas já alinhadas (Utilizando Iscas. Explicar)
+        3. Pipeline para remover sequências genicas duplicadas (Explicar o motivo para isso. Conversa com Diego no wpp, marcada como favorito)
+        4. Pipeline para filtrar as sequências genicas de melhor qualidade (Remove sequências de qualidade ruim após o processo de alinhamento)
+            1. Foram descartadas as sequências com as seguintes caracteristicas:
+                1. Possuiam mais de 30 N's consecultivos
+                2. Possuiam tamanho de sequência discrepante com a sequência de referência
+        5. Pipeline para montagem do dataset de treinamento
+            1. Arquivo com x sequências de cada tipo
+            2. Arquivo de anotação com o cabeçalho de cada sequência e o seu tipo
+        6. AGUA
+        7. Gera árvores com o modelo tradicional, utilizando o iqtree2, para comparação com as geradas com o AGUA

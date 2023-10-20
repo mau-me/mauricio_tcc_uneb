@@ -1,0 +1,19 @@
+softwares necessários:
+
+minimap2
+iqtree2
+figtree
+venv
+aliView
+openJDK
+
+sudo apt install figtree
+sudo apt install iqtree
+sudo apt install minimap2
+
+sudo apt install python3-venv
+python3 -m venv env
+source env/bin/activate
+pip install -r requirements.txt
+
+iqtree2 -s sequencias_treinamento.fasta -fast -m GTR+G4+F -alrt 1000 -nt AUTO
