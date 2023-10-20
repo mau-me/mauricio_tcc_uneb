@@ -1,0 +1,14 @@
+Intro, trabalhos correlatos, descrição do projeto, metodologia, resultados e conclusões
+
+Intro = contextualizar o problema, relevância dele ( importância, justificativa, necessidade), abordagens anteriores em ordem cronológica, apresentação da sua abordagem - resultados esperados, principais diferenciais, descrição da estrutura da monografia.: o que será tratado em cada seção
+
+Trabalhos correlatos: descrição de trabalhos com o mesmo objetivo que consideraram a composição do DNA a nível de codons, e que aplicaram técnicas de clusterizacao não supervisionada, e em particular CLOPE para esse trabalho. Plus trabalhos que implementaram a combinação de técnicas não supervisionadas com técnicas supervisionadas, como em água
+
+Descrição do projeto: objetivos, ponto de partida, produtos e resultados esperados, tecnologias a serem usadas.
++ estrutura da solução nas fases de treinamento e aplicação
+
+Metodologia: descrição da metodologia DSR, fases e atividades em cada fase, destacando a fase de testes e experimentos, os critérios de desempenho usados para a escolha da melhor alternativa
+
+Resultados: resultados dos testes previstos e discussão
+
+Conclusões: principais contribuições do projeto e futuras pesquisas/desenvolvimento recomendadas
