@@ -8,3 +8,15 @@ https://mail-attachment.googleusercontent.com/attachment/u/0/?ui=2&ik=00a598d405
 https://academic.oup.com/sysbio/article/59/3/307/1702850?login=true
 
 http://etetoolkit.org/
+
+------------------------------------
+DNA - RNA
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6822018/
+https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid#:~:text=Deoxyribonucleic%20acid%20(abbreviated%20DNA)%20is,known%20as%20a%20double%20helix.
+https://www.technologynetworks.com/genomics/articles/what-are-the-key-differences-between-dna-and-rna-296719
+
+Gene - Genoma
+Falar sobre a quantidade de sequências estudadas e também sobre os datasetes montados
+https://www.medicalnewstoday.com/articles/gene-vs-genome
+https://news.cancerresearchuk.org/2018/05/29/science-surgery-whats-the-difference-between-the-words-genome-gene-and-chromosome/
+https://www.genome.gov/genetics-glossary/Genome
