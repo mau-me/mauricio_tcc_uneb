@@ -2,32 +2,22 @@
 %%%                         O MODELO                                    %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Capítulo 3 -~Descrição do Projeto}
+\chapter{Descrição do Projeto}
 
 % objetivos, ponto de partida, produtos e resultados esperados, tecnologias a serem usadas.
 % + estrutura da solução nas fases de treinamento e aplicação
 
-% Lista de Tecnologias/Ferramentas utilizadas:
-% Python 3
-% Selenium
-% Biopython
-% Shell (verificar necessidade)
-% Jupyter Notebook
-% Minimap2
-% GoFasta
-% virtualEnv
-% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
-
-
 % ### METODOLOGIA ###
 
 % ### Falar das seguintes ferramentas:
+%   - DSR
 %   - Trello
 %   - Github
 
-A seguir, serão apresentadas a metodologia adotada neste estudo, bem como as etapas detalhadas de sua implementação.
+A seguir, serão apresentadas a metodologia e os softwares utilizados neste estudo, bem como as etapas detalhadas de sua implementação.
 
 % Metodologia
+\section{Metodologia}~\label{sec:metodologia}
 Um ponto importante para a obtenção dos objetivos deste trabalho está relacionada a definição da metodologia que servirá como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso é o \gls{dsr}. Essa metodologia, proporciona um framework teórico e prático para a criação de artefatos inovadores, como métodos, modelos ou frameworks, visando resolver problemas específicos~\cite{peffers_dsr_2007}. Neste projeto, a ferramenta de análise de genes virais baseada em códons é o artefato que será desenvolvido e avaliado. Além disso, o \gls{dsr} enfatiza a validação e a avaliação da utilidade e eficácia do artefato em relação aos seus objetivos práticos. No caso deste projeto, a validação será realizada através da comparação dos resultados obtidos com a ferramenta proposta em relação às técnicas clássicas filogenéticas, que são amplamente utilizadas para a análise de genes virais. Essa comparação permitirá avaliar a eficácia e o valor agregado da abordagem baseada em códons.
 
 Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão seguidos:
@@ -39,39 +29,96 @@ Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão 
 \end{enumerate}
 
 Também será utilizada analises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
-A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.\cite{da_silva_pesquisa_2014}
+A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.~\cite{da_silva_pesquisa_2014}
 
-\section{Plano de Implementação}
+\section{Materiais e Métodos}
+Nesta sessão, será apresentada as ferramentas utilizadas para a construção e desenvolvimento de todo o trabalho.
 
-Os pontos a seguir serão realizados durante o desenvolvimento do projeto:
+O Python é uma linguagem de programação de alto nível, interpretada, iterativa e de código aberto. Foi criada por Guido van Rossum e lançada em 1991. A linguagem é conhecida por ter uma sintaxe simples, tornando-a popular para o desenvolvimento de software, automação, análise de dados, aprendizado de máquina entre outras aplicações. A mesma apresenta suporte a vários paradigmas de programação, como a orientada a objetos, imperativa, procedural e funcional. Além disso, o Python é portátil, podendo ser executado em diversos sistemas operacionais como linux, mac e windows.~\cite{python-reference}
+
+Para a construção dos pipelines do projeto, utilizamos Python em conjunto com o Jupyter Notebook. O Jupyter Notebook é uma aplicação de código aberto que permite criar documentos interativos que integram código, texto narrativo e visualizações. É uma ferramenta amplamente adotada por cientistas de dados, pesquisadores e desenvolvedores para explorar dados, prototipar código, documentar projetos e facilitar a colaboração. Além disso, o Jupyter Notebook oferece suporte a diversas linguagens de programação, incluindo Python~\cite{jupyter-notebook}.
+
+O python possue uma gama de bibliotecas que facilitam a implementação de soluções complexas. A seguir serão apresentadas a bibliotecas utilizadas:
 
 \begin{itemize}
-  \item Coleta de sequências que serão utilizadas.
-  \item Tratamento necessário dos dados.
-  \item Avaliação de desempenho do modelo.
-  \item Analise comparativa com modelos convencionais.
-  \item Disponibilização do modelo como ferramenta web.
+  \item \textbf{Biopython}: Coleção de bibliotecas e ferramentas em Python, disponíveis gratuitamente para biologia molecular computacional. Ele fornece uma ampla gama de funcionalidades, desde a leitura e análise de arquivos de sequência biológica até a execução de algoritmos sofisticados de bioinformática. Desenvolvida e mantida pelo Projeto Biopython, que é uma associação internacional de desenvolvedores de ferramentas python.~\cite{biopython}
+  \item \textbf{Selenium}: Biblioteca de código aberto que fornece uma interface programática para automatizar interações com navegadores da web. É amplamente utilizado por desenvolvedores e testadores de software para realizar testes automatizados, raspagem de dados na web e outras tarefas que envolvem interações com páginas da web. O Selenium para Python permite a automação de ações como clicar em botões, preencher formulários, navegar em sites e extrair informações da web, tornando-o uma ferramenta valiosa para desenvolvimento e automação de tarefas na web.~\cite{selenium-python}
 \end{itemize}
 
-Com base nos itens apresentados anteriormente existem três grandes pilares a serem executados: Montagem e preparação do dataset a ser utilizado pelo modelo; Desenvolvimento completo do modelo, com todos as definições, implementações, testes e correções necessárias; e a análise comparativa que será realizada com um outro método existente e já tradicional. Esses pontos são apresentados de forma minuciosa a seguir:
+% Lista de Tecnologias/Ferramentas utilizadas:
+% Python 3 ok
+% Selenium ok
+% Biopython ok
+% Shell (verificar necessidade)
+% Jupyter Notebook ok
+% Minimap2
+% GoFasta
+% virtualEnv
+% BV_BRC - O \gls{bvbrc}, é um centro de recursos de bioinformática dedicado ao estudo e análise de bactérias e vírus. O site também disponibiliza uma uma coleção abrangente de banco de dados, incluindo sequências genômicas, anotações funcionais, informações de expressão gênica e estruturas tridimensionais. O acesso aos bancos de dados é dado por meio de uma interface amigável, onde é possível realizar pesquisas avançadas.
+
+% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
+
+\section{Plano de Implementação}
+% Lista de Tecnologias/Ferramentas utilizadas:
+% Python 3
+% Selenium
+% Biopython
+% Shell (verificar necessidade)
+% Jupyter Notebook
+% Minimap2
+% GoFasta
+% virtualEnv
+% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
+
+Durante o desenvolvimento do projeto foi necessário dividir o projeto em fases com base nas atividades que deveriam ser realizadas de forma a atender todos os passos descritos na seção~\ref{sec:metodologia}. As principais fases identificadas foram: Montagem e preparação do dataset a ser utilizado pelo modelo; Desenvolvimento completo do modelo, com todos as definições, implementações, testes e correções necessárias; e a análise comparativa que será realizada com um outro método existente e já tradicional. Esses pontos são apresentados de forma minuciosa a seguir.
+
+\subsection{Montagem e Preparação do Dataset}
+% Verificar como descrever os dois conjuntos de pipelines montados. Pip 01 (Descartado) - Pip 02 (Atual)
+Para realizar o treinamento do modelo a ser construído, eram necessárias sequências únicas e alinhadas do gene Spike. Em vista disso, é importante salientar que o site \gls{bvbrc} disponibiliza sequências genômicas, e sendo assim, foi preciso construir um pipeline para, após o download das sequências, transformar as mesmas para a criação de um dataset com as sequências que atendessem os requisitos esperados.
+
+Inicialmente, foi realizada uma analise do \gls{bvbrc}, para entende a sua estrutura e verificar também se era possível realizar o download de todas as sequências queridas de forma manual. Foi verificado que o site possuía uma área de seleção de filtros, e foi definido que só seriam selecionadas sequências completas no campo \textit{Genome Status} e no campo \textit{Lineage}, onde é possível filtrar as sequências pelo seu tipo \textit{Pango} e também verificar a quantidade, só os que tivessem mais de 50 sequências do mesmo tipo.
+
+Após a análise, foi constatado que realizar o download manualmente era infactível, e que seria preciso automatizar esse processo de iteração com a página, como vistos na Figura~\ref{fig:pipelineBvbrc}. Isto posto, foi realizado uma sequência de passos conhecidos como \textit{Web Scrapping} utilizado o Python juntamente com o Selenium, apresentados em seguida:
+
+\begin{enumerate}
+  \item teste 01
+  \item teste 02
+\end{enumerate}
+
+Ao final do processo de montagem do dataset com sequências genômicas completas, o mesmo ficou com as seguintes informações apresentadas na tabela x.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Pipeline de Download das Sequências Genômicas.}
+  \includegraphics[scale=0.6]{figuras/pipelines/bvbrc.png}
+  \fonte{O Autor}~\label{fig:pipelineBvbrc}
+\end{figure}
+
+A montagem do dataset se deu com a construção de pipelines de processamento das sequências. Um pipeline inicial foi construído e será apresentado a seguir, o mesmo foi descontinuado após se verificar que o tempo de processamento ficaria inviável.
 
 \begin{itemize}
-  \item \textbf{Montagem e Preparação do Dataset:} O download das sequências necessárias para a realização do projeto será realizada através do site \gls{bvbrc}. O \gls{bvbrc}, é um centro de recursos de bioinformática dedicado ao estudo e análise de bactérias e vírus. O site também disponibiliza uma uma coleção abrangente de banco de dados, incluindo sequências genômicas, anotações funcionais, informações de expressão gênica e estruturas tridimensionais. O acesso aos bancos de dados é dado por meio de uma interface amigável, onde é possível realizar pesquisas avançadas.
-        Abaixo, está apresentado o passo a passo que será seguido nesta etapa:
+  % Verificar se é melhor descrever o processo ou listar os itens como está atualmente
+  \item \textbf{Montagem e Preparação do Dataset:}  Abaixo, está apresentado o passo a passo que foi realizado nesta etapa:
         \begin{itemize}
           \item Analise do site \gls{bvbrc}.
-          \item Desenvolvimento do script para download automático das sequências.
-          \item Implementar procedimento de filtragem de sequências, removendo redundâncias e mantendo apenas sequências únicas.
-          \item Implementar procedimento de extração do gene de interesse das sequências obtidas anteriormente.
-          \item Utilizar um algoritmo de alinhamento múltiplo para alinhar as sequências obtidas.
-          \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
+          \item Desenvolvimento de um script Python juntamente com o Selenium, para o download automático das sequências genomicas no \gls{bvbrc}.
+          \item Filtragem das sequências genômicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genomicas únicas. (Filtro 01)
+          \item Alinhamento das sequências genomicas utilizando o Minimap2.
+          \item Implementado procedimento de extração do gene de interesse (Spike), com base em uma sequência Spike de referência, das sequências únicas.
+          \item Filtragem das sequências genicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genicas únicas. (Filtro 02)
+          \item Filtragem das sequências genicas de má qualidade. Foram removidas as sequências que possuiam mais de 30 N's consecultivos ou que ficaram com a quantidade de nucleotídeos discrepantes em relação a referência genica. (Filtro 03)
+          \item Criar arquivo de treinamento com linhagens diferentes e um arquivo de anotação. % Descrever melhor os arquivos
         \end{itemize}
 
+
   \item \textbf{Desenvolvimento do Modelo:} Para a realização do desenvolvimento do modelo serão realizados os seguintes passos:
+        % FAZER
+        % Escrever uma descrição melhor do desenvolvimento do modelo
         \begin{itemize}
           \item Levantamento dos requisitos.
           \item Definir a arquitetura e a abordagem do modelo de classificação baseado em códons.
           \item Implementar o modelo utilizando uma biblioteca ou framework adequado.
+          \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
           \item Realizar treinamento do modelo utilizando os dados preparados.
           \item Avaliar o desempenho do modelo utilizando métricas apropriadas.
                 % \item \item Avaliar o desempenho do modelo utilizando métricas apropriadas, como acurácia, precisão e recall.

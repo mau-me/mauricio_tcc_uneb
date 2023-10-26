@@ -119,7 +119,7 @@
 
 \orientador{PhD Diego Gervasio Frias Suárez}
 \orientadories{Universidade do Estado da Bahia – UNEB}
-\orientadorcentro{Departamento de Ciências Exatas e da Terra - DCET}
+\orientadorcentro{Departamento de Ciências Exatas e da Terra -~DCET}
 \orientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -129,8 +129,8 @@
 % Deixe o nome do coorientador em branco para remover do documento
 
 \coorientador{PhD Vagner Fonseca}
-\coorientadories{Universidade Coorientador - SIGLA}
-\coorientadorcentro{Centro do Coorientador - SIGLA}
+\coorientadories{Universidade Coorientador -~SIGLA}
+\coorientadorcentro{Centro do Coorientador -~SIGLA}
 \coorientadorfeminino{nao} % Coloque 'sim' se for do sexo feminino
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -164,9 +164,9 @@
 \graphicspath{{figuras/}}
 
 \makeatletter
-\renewcommand*\env@matrix[1][*\c@MaxMatrixCols c]{%
-  \hskip -\arraycolsep
-  \let\@ifnextchar\new@ifnextchar
+\renewcommand*\env@matrix[1][*\c@MaxMatrixCols{} c]{%
+  \hskip -\arraycolsep{}
+  \let\@ifnextchar\new@ifnextchar{}
   \array{#1}}
 \makeatother
 
@@ -180,29 +180,29 @@
 \begin{document}
 
 % Elementos pré-textuais
-\imprimircapa
+\imprimircapa{}
 \imprimirfolhaderosto{}
 % \imprimirfichacatalografica{elementos-pre-textuais/ficha-catalografica}
-\imprimiranuenciaorientador %comentar esta linha na versão final após correções indicadas pela banca examinadora de TCC2
+\imprimiranuenciaorientador{} %comentar esta linha na versão final após correções indicadas pela banca examinadora de TCC2
 %\imprimirerrata{elementos-pre-textuais/errata}
-\imprimirfolhadeaprovacao %Descomentar esta linha se for TCC2
+\imprimirfolhadeaprovacao{} %Descomentar esta linha se for TCC2
 \imprimirdedicatoria{elementos-pre-textuais/dedicatoria}
 \imprimiragradecimentos{elementos-pre-textuais/agradecimentos}
 % \imprimirepigrafe{elementos-pre-textuais/epigrafe}
 \imprimirresumo{elementos-pre-textuais/resumo}
 \imprimirabstract{elementos-pre-textuais/abstract}
-\imprimirlistadeilustracoes
-\imprimirlistadetabelas
+\imprimirlistadeilustracoes{}
+\imprimirlistadetabelas{}
 %	\imprimirlistadequadros
 %	\imprimirlistadealgoritmos
 %	\imprimirlistadecodigosfonte
-\imprimirlistadeabreviaturasesiglas
+\imprimirlistadeabreviaturasesiglas{}
 \imprimirlistadesimbolos{elementos-pre-textuais/lista-de-simbolos}
 %\input{elementos-pre-textuais/lista-de-simbolos}
-\imprimirsumario
+\imprimirsumario{}
 
 %Elementos textuais
-\textual
+\textual{}
 \input{elementos-textuais/introducao}
 \input{elementos-textuais/fundamentacao_teorica.tex}
 \input{elementos-textuais/descricao_metodologia.tex}
@@ -219,6 +219,6 @@
 % Adicione aqui os anexos do seu trabalho
 % \input{elementos-pos-textuais/anexos/exemplo-de-anexo}
 
-\imprimirindice
+\imprimirindice{}
 
 \end{document}

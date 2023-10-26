@@ -1,0 +1,6 @@
+Informações para verificar onde adicionar na monografia
+
+Informações sobre o dataset: quantidade de lineages, sequências, tamanho do dataset e data de download.
+Informações sobre a máquina utilizada para o processamento das sequências.
+
+Falar do spike
