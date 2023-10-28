@@ -34,11 +34,11 @@ A pesquisa quantitativa só tem sentido quando há um problema muito bem definid
 \section{Materiais e Métodos}
 Nesta sessão, será apresentada as ferramentas utilizadas para a construção e desenvolvimento de todo o trabalho.
 
-O Python é uma linguagem de programação de alto nível, interpretada, iterativa e de código aberto. Foi criada por Guido van Rossum e lançada em 1991. A linguagem é conhecida por ter uma sintaxe simples, tornando-a popular para o desenvolvimento de software, automação, análise de dados, aprendizado de máquina entre outras aplicações. A mesma apresenta suporte a vários paradigmas de programação, como a orientada a objetos, imperativa, procedural e funcional. Além disso, o Python é portátil, podendo ser executado em diversos sistemas operacionais como linux, mac e windows.~\cite{python-reference}
+O Python é uma linguagem de programação de alto nível, interpretada, iterativa e de código aberto. Foi criada por Guido van Rossum e lançada em 1991. A linguagem é conhecida por ter uma sintaxe simples, tornando-a popular para o desenvolvimento de software, automação, análise de dados, aprendizado de máquina entre outras aplicações. A mesma apresenta suporte a vários paradigmas de programação, como a orientada a objetos, imperativa, procedural e funcional. Além disso, o Python é portátil, podendo ser executado em diversos sistemas operacionais como Linux, Mac e Windows.~\cite{python-reference}
 
 Para a construção dos pipelines do projeto, utilizamos Python em conjunto com o Jupyter Notebook. O Jupyter Notebook é uma aplicação de código aberto que permite criar documentos interativos que integram código, texto narrativo e visualizações. É uma ferramenta amplamente adotada por cientistas de dados, pesquisadores e desenvolvedores para explorar dados, prototipar código, documentar projetos e facilitar a colaboração. Além disso, o Jupyter Notebook oferece suporte a diversas linguagens de programação, incluindo Python~\cite{jupyter-notebook}.
 
-O python possue uma gama de bibliotecas que facilitam a implementação de soluções complexas. A seguir serão apresentadas a bibliotecas utilizadas:
+O python possui uma gama de bibliotecas que facilitam a implementação de soluções complexas. A seguir serão apresentadas a bibliotecas utilizadas:
 
 \begin{itemize}
   \item \textbf{Biopython}: Coleção de bibliotecas e ferramentas em Python, disponíveis gratuitamente para biologia molecular computacional. Ele fornece uma ampla gama de funcionalidades, desde a leitura e análise de arquivos de sequência biológica até a execução de algoritmos sofisticados de bioinformática. Desenvolvida e mantida pelo Projeto Biopython, que é uma associação internacional de desenvolvedores de ferramentas python.~\cite{biopython}
@@ -80,13 +80,6 @@ Inicialmente, foi realizada uma analise do \gls{bvbrc}, para entende a sua estru
 
 Após a análise, foi constatado que realizar o download manualmente era infactível, e que seria preciso automatizar esse processo de iteração com a página, como vistos na Figura~\ref{fig:pipelineBvbrc}. Isto posto, foi realizado uma sequência de passos conhecidos como \textit{Web Scrapping} utilizado o Python juntamente com o Selenium, apresentados em seguida:
 
-\begin{enumerate}
-  \item teste 01
-  \item teste 02
-\end{enumerate}
-
-Ao final do processo de montagem do dataset com sequências genômicas completas, o mesmo ficou com as seguintes informações apresentadas na tabela x.
-
 \begin{figure}[htb]
   \centering
   \caption{Pipeline de Download das Sequências Genômicas.}
@@ -94,7 +87,84 @@ Ao final do processo de montagem do dataset com sequências genômicas completas
   \fonte{O Autor}~\label{fig:pipelineBvbrc}
 \end{figure}
 
-A montagem do dataset se deu com a construção de pipelines de processamento das sequências. Um pipeline inicial foi construído e será apresentado a seguir, o mesmo foi descontinuado após se verificar que o tempo de processamento ficaria inviável.
+\begin{enumerate}
+  \item Criar uma lista com todos as linhagens disponíveis e a quantidade de sequências de cada.
+  \item Desenvolver script Python para remover as linhagens com menos de 50 sequências da lista.
+  \item Desenvolver script Python para gerar uma url personalizada do \gls{bvbrc}, já com os filtros, para cada linhagem.
+  \item Desenvolver script Python juntamente com o Selenium para abrir as urls de forma automática e realizar o download das sequências.
+\end{enumerate}
+
+Ao final do processo de montagem do dataset, realizado no dia 02 junho de 2023, com sequências genômicas completas, foi gerado um diretório raiz (dataset), e dentro deste, um diretório para cada linhagem (Lineage L¹, Lineage L², \dots, Lineage $L^{n}$), contendo um arquivo nomeado \textnormal{BVBRC\_genome\_sequence.fasta}, como apresentado na figura~\ref{fig:datasetGenomas}.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Dataset de sequências genômicas.}
+  \includegraphics[scale=0.5]{figuras/dataset_principal.png}
+  \fonte{O Autor}~\label{fig:datasetGenomas}
+\end{figure}
+
+Ao finalizar o processo de download, o dataset completo ficou com as seguintes informações apresentadas na tabela~\ref{tab:datasetGenomas}.
+
+%%tabela
+\begin{table}[htb]
+  \caption{Informações do dataset de sequências genômicas.}
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      Campo                              & Valor     \\
+      \hline
+      Quantidade de Linhagens            & 1086      \\
+      Quantidade de Sequências Genômicas & 1.494.650 \\
+      Tamanho em \gls{gigabyte}          & 47.5      \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:datasetGenomas}
+\end{table}
+
+A seguir, era necessário construir um dataset de sequências do gene Spike a partir do existente. Para isso, com o objetivo de diminuir o tempo de execução dos pipelines durante o desenvolvimento, foi construído também, um dataset de testes, apresentado na tabela~\ref{tab:datasetGenomasTeste}, que serviria como base para execução das atividades, e após as verificações, seria realizado o processo com o dataset completo. No dataset de testes, foram escolhidas 5 (cinco) linhagens que são amplamente conhecidas (gamma, delta, alpha, beta e omicron), o que tornaria mais preciso o processo de validação futuramente.
+
+\begin{table}[htb]
+  \caption{Informações do dataset de teste de sequências genômicas.}
+  \begin{center}
+    \begin{tabular}{|c|c|c|c|}
+      \hline
+      Pango     & \gls{who} & Quantidade de Sequências & Tamanho em \gls{megabyte} \\
+      \hline
+      B.1.1.7   & Alpha     & 9982                     & 307                       \\
+      B.1.1.529 & Omicron   & 3694                     & 112.7                     \\
+      B.1.351   & Beta      & 5256                     & 160.6                     \\
+      B.1.617.2 & Delta     & 9996                     & 305.3                     \\
+      P.1       & Gamma     & 10000                    & 305.9                     \\
+      \hline
+      Total     &           & 38928                    & 1191,5                    \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:datasetGenomasTeste}
+\end{table}
+
+Depois, foi verificado a existência de sequências genômicas idênticas, melhor dizendo, sequências com exatamente a mesma quantidade e ordem dos nucleotídeos. Por isso, foi necessário desenvolver um pipeline que filtrasse as sequências repetidas, e mantivesse apenas uma, como exibido na figura~\ref{fig:pipelineGenomicasDuplicadas}, gerando assim um novo dataset de sequências genômicas únicas.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Pipeline de Filtragem de Sequências Genômicas Duplicadas.}
+  \includegraphics[scale=0.6]{figuras/pipelines/seqs_genomicas_duplicadas.png}
+  \fonte{O Autor}~\label{fig:pipelineGenomicasDuplicadas}
+\end{figure}
+
+Com o dataset de sequências únicas montado, foi decidido os passos a seguir, que seriam executados com o papel de atingir o objetivo de obter o dataset de sequências gênicas únicas e alinhadas. Primeiro, como visto na figura~\ref{fig:pipelinesDescontinuados}, foi realizado o processo de extração do gene Spike, utilizando uma sequência de referência do gene obtida do dataset da \gls{ncbi}\footnote{Url para download: \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=genbank&from=21563&to=25384}}, juntamente com o software Blast, para encontrar e extrair o gene Spike de cada uma das sequências genômicas de todo o dataset. Após isso, com o dataset de sequências genicas já montado, era necessário realizar o processo de alinhamento das sequências. Foram verificada duas formas de realizar esse procedimento utilizando o software Clustalo Omega, uma passando uma sequência por vez (\textit{sequence by sequence}) com a sequência do Spike de referência e outra passando todas as sequências com a referência (\textit{multiple sequence}). Mesmo com o dataset de teste, que possuía um tamanho e quantidade de sequências muito inferior ao principal, o processo de alinhamento apresentou uma demora excessiva (até 2 dias) para finalizar. Em decorrência disso, o processo foi descontinuado, e um novo foi repensado e reconstruído e será apresentado a seguir.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Pipelines descontinuado.}
+  \includegraphics[scale=0.45]{figuras/pipelines/pipelines_descontinuado.png}
+  \fonte{O Autor}~\label{fig:pipelinesDescontinuados}
+\end{figure}
+
+% FAZER
+% Como escrever essa parte: Após análise; Após orientação do coorientador...
+Após orientação do coorientador, o processo foi repensado para ocorrer da seguinte forma, como visto na figura AQUI
 
 \begin{itemize}
   % Verificar se é melhor descrever o processo ou listar os itens como está atualmente
