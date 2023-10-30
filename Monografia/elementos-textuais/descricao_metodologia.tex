@@ -164,44 +164,65 @@ Com o dataset de sequências únicas montado, foi decidido os passos a seguir, q
 
 % FAZER
 % Como escrever essa parte: Após análise; Após orientação do coorientador...
-Após orientação do coorientador, o processo foi repensado para ocorrer da seguinte forma, como visto na figura AQUI
+% Reescrever a lista abaixo de forma descritiva
+% Substituir onde estiver citando 'modelo desenvolvido' pelo nome AGUA
+
+Após a análise com os orientadores, o processo, que continuou a partir das sequências genômicas únicas, foi feito da seguinte maneira:
 
 \begin{itemize}
-  % Verificar se é melhor descrever o processo ou listar os itens como está atualmente
-  \item \textbf{Montagem e Preparação do Dataset:}  Abaixo, está apresentado o passo a passo que foi realizado nesta etapa:
-        \begin{itemize}
-          \item Analise do site \gls{bvbrc}.
-          \item Desenvolvimento de um script Python juntamente com o Selenium, para o download automático das sequências genomicas no \gls{bvbrc}.
-          \item Filtragem das sequências genômicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genomicas únicas. (Filtro 01)
-          \item Alinhamento das sequências genomicas utilizando o Minimap2.
-          \item Implementado procedimento de extração do gene de interesse (Spike), com base em uma sequência Spike de referência, das sequências únicas.
-          \item Filtragem das sequências genicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genicas únicas. (Filtro 02)
-          \item Filtragem das sequências genicas de má qualidade. Foram removidas as sequências que possuiam mais de 30 N's consecultivos ou que ficaram com a quantidade de nucleotídeos discrepantes em relação a referência genica. (Filtro 03)
-          \item Criar arquivo de treinamento com linhagens diferentes e um arquivo de anotação. % Descrever melhor os arquivos
-        \end{itemize}
+  \item Alinhamento das sequências genômicas.
+  \item Extração do gene spike.
+  \item Filtragem das sequências genicas repetidas.
+  \item Filtragem das sequências genicas de má qualidade.
+\end{itemize}
 
+Ao final do processo, foi gerado um dataset contendo sequências gênicas únicas para as variantes alpha, beta, delta, gamma e omicron.
+A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura\ref{fig:inputAgua} apresenta, que serviria de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências genicas de cada uma das linhagem, e um arquivo de anotações que serviria como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
 
-  \item \textbf{Desenvolvimento do Modelo:} Para a realização do desenvolvimento do modelo serão realizados os seguintes passos:
-        % FAZER
-        % Escrever uma descrição melhor do desenvolvimento do modelo
-        \begin{itemize}
-          \item Levantamento dos requisitos.
-          \item Definir a arquitetura e a abordagem do modelo de classificação baseado em códons.
-          \item Implementar o modelo utilizando uma biblioteca ou framework adequado.
-          \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
-          \item Realizar treinamento do modelo utilizando os dados preparados.
-          \item Avaliar o desempenho do modelo utilizando métricas apropriadas.
-                % \item \item Avaliar o desempenho do modelo utilizando métricas apropriadas, como acurácia, precisão e recall.
-          \item Identificar possíveis problemas e realizar ajustes no modelo.
-                % \item Identificar possíveis problemas de overfitting ou underfitting e realizar ajustes no modelo, como ajuste de hiperparâmetros ou utilização de técnicas de regularização.
-        \end{itemize}
+\begin{figure}[htb]
+  \centering
+  \caption{Arquivos de entrada do modelo.}
+  \includegraphics[scale=0.45]{figuras/pipelines/input_AGUA.png}
+  \fonte{O Autor}~\label{fig:inputAgua}
+\end{figure}
 
-  \item \textbf{Análise comparativa entre o método proposto e outro método existente:} Será realizada uma analise com um conjunto de dados, onde será realizado analises estatísticas para verificação de melhorias, ou não, do novo método proposto analisando os seguintes aspectos:
-        \begin{itemize}
-          \item Comparação dos métodos de agrupamento adotados, avaliando sua eficácia na formação de clusters e na identificação de padrões ou similaridades nas sequências.
-          \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
-          \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
-        \end{itemize}
+%   % Verificar se é melhor descrever o processo ou listar os itens como está atualmente
+%   \item \textbf{Montagem e Preparação do Dataset:}  Abaixo, está apresentado o passo a passo que foi realizado nesta etapa:
+%         \begin{itemize}
+%           \item Analise do site \gls{bvbrc}.
+%           \item Desenvolvimento de um script Python juntamente com o Selenium, para o download automático das sequências genomicas no \gls{bvbrc}.
+%           \item Filtragem das sequências genômicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genomicas únicas. (Filtro 01)
+%           \item Alinhamento das sequências genomicas utilizando o Minimap2.
+%           \item Implementado procedimento de extração do gene de interesse (Spike), com base em uma sequência Spike de referência, das sequências únicas.
+%           \item Filtragem das sequências genicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genicas únicas. (Filtro 02)
+%           \item Filtragem das sequências genicas de má qualidade. Foram removidas as sequências que possuiam mais de 30 N's consecultivos ou que ficaram com a quantidade de nucleotídeos discrepantes em relação a referência genica. (Filtro 03)
+%           \item Criar arquivo de treinamento com linhagens diferentes e um arquivo de anotação. % Descrever melhor os arquivos
+%         \end{itemize}
+
+\subsection{Desenvolvimento do Modelo}
+Para o desenvolvimento do modelo foram realizados os seguintes passos:
+
+% FAZER
+% Escrever uma descrição melhor do desenvolvimento do modelo
+\begin{itemize}
+  \item Levantamento dos requisitos.
+  \item Definir a arquitetura e a abordagem do modelo de classificação baseado em códons.
+  \item Implementar o modelo utilizando uma biblioteca ou framework adequado.
+  \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
+  \item Realizar treinamento do modelo utilizando os dados preparados.
+  \item Avaliar o desempenho do modelo utilizando métricas apropriadas.
+        % \item \item Avaliar o desempenho do modelo utilizando métricas apropriadas, como acurácia, precisão e recall.
+  \item Identificar possíveis problemas e realizar ajustes no modelo.
+        % \item Identificar possíveis problemas de overfitting ou underfitting e realizar ajustes no modelo, como ajuste de hiperparâmetros ou utilização de técnicas de regularização.
+\end{itemize}
+
+\subsection{Análise comparativa entre o método proposto e outro método existente:}
+
+Será realizada uma analise com um conjunto de dados, onde será realizado analises estatísticas para verificação de melhorias, ou não, do novo método proposto analisando os seguintes aspectos:
+\begin{itemize}
+  \item Comparação dos métodos de agrupamento adotados, avaliando sua eficácia na formação de clusters e na identificação de padrões ou similaridades nas sequências.
+  \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
+  \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
 \end{itemize}
 
 % Depois dos capítulos de fundamentação teórica e trabalhos relacionados, é hora de apresentar o trabalho propriamente dito. Descrever o que foi feito para desenvolver a solução do problema investigado. Aqui a metodologia deve ser bem detalhada, a arquitetura das soluções descritas em detalhes, as tecnologias utilizadas apresentadas e justificadas. Enfim, aqui é uma espécie de relatório do que você fez.
@@ -211,4 +232,4 @@ Após orientação do coorientador, o processo foi repensado para ocorrer da seg
 
 % \section{Plano de Testes e Validação}
 
-% \section{Resultados Obtidos}
+\section{Resultados Obtidos}

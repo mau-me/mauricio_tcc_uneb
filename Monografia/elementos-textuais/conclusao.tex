@@ -1,14 +1,20 @@
 \chapter{Considerações finais}
 
-Nesta fase inicial do projeto, foi realizada com sucesso a montagem do dataset de genes virais a serem estudados. Através do uso de scripts e procedimentos adequados, foram baixadas sequências classificadas de genoma completo do vírus de uma base de dados pública, como o \gls{bvbrc}, e em seguida, filtradas para manter apenas as sequências únicas. Além disso, o gene de interesse foi extraído utilizando a técnica de blast.
+Neste estágio avançado do projeto, podemos destacar que alcançamos marcos significativos no desenvolvimento de nossa ferramenta de análise de genes virais com base no uso de codons para classificação não supervisionada. Ao longo deste processo, enfrentamos desafios técnicos e científicos, e estamos progredindo de maneira consistente em direção à conclusão do projeto.
 
-A montagem do dataset é uma etapa crucial para o desenvolvimento da ferramenta de análise de genes virais baseada em códons. Ao obter uma base de dados representativa e de qualidade, garantimos que a análise subsequente seja feita em um conjunto abrangente de sequências relevantes.
+Primeiramente, concluímos com sucesso a montagem do dataset, um dos passos fundamentais para o desenvolvimento do nosso método. Utilizando técnicas de download de forma automatizada, para baixar as sequências classificadas de genoma completo do vírus a partir da base de dados pública \gls{bvbrc}, fomos capazes de construir um conjunto de dados abrangente e representativo. Além disso, implementamos um procedimento de filtragem rigoroso para selecionar apenas sequências únicas, garantindo a qualidade dos dados utilizados em nossa análise.
 
-No entanto, é importante ressaltar que essa é apenas uma etapa inicial do projeto e que há muito trabalho a ser feito nas próximas fases. A análise comparativa entre o método proposto e outro método existente, bem como a implementação do modelo de classificação e as etapas subsequentes do processo, ainda estão por vir.
+Além disso, desenvolvemos um conjunto de etapas para o processamento das sequências genéticas, incluindo o alinhamento com a ferramenta Minimap2, a extração de genes de interesse usando o conceito de `isca' e a remoção de sequências duplicadas. Essas etapas são cruciais para preparar os dados de maneira adequada para análise subsequente.
 
-Com base na conclusão desta etapa, temos uma base sólida de dados que nos permitirá avançar no desenvolvimento do projeto. O próximo passo será a implementação do modelo de análise de genes virais baseado em codons e a realização das etapas subsequentes, como o alinhamento, a tradução e a extração de códigos únicos para a classificação e agrupamento das sequências.
+O desenvolvimento do modelo de classificação não supervisionada também foi concluído com sucesso, permitindo-nos traduzir sequências de DNA em codons e extrair códigos únicos com base nas posições com codons distintos. Isso estabelece as bases para o nosso método de agrupamento e classificação.
 
-A montagem bem-sucedida do dataset é um marco importante para o progresso do projeto, fornecendo a base necessária para a etapa seguinte. Com um dataset representativo e de qualidade, podemos agora prosseguir para a implementação do modelo e a análise comparativa com outras abordagens existentes.
+Neste ponto, estamos nos estágios finais do projeto, com apenas uma etapa pendente. A finalização de um script que será utilizado para a comparação entre o método desenvolvido e um método tradicional está em andamento. Esta etapa é crucial para avaliar a eficácia e a precisão de nossa abordagem em relação às técnicas clássicas de filogenética. Após a finalização deste script, realizaremos a execução completa do método com o dataset completo, possibilitando uma avaliação abrangente.
+
+Além disso, continuaremos a monitorar de perto o custo computacional, prestando atenção especial ao tempo necessário para classificar as sequências. Essa informação será valiosa para avaliar a escalabilidade e a eficiência do nosso método.
+
+Em resumo, estamos avançando de maneira sólida e estruturada em direção aos objetivos de nosso projeto. Com a conclusão iminente da etapa final e a execução com o dataset completo, estamos ansiosos para avaliar os resultados e contribuir para a pesquisa em genética viral e análise filogenética.
+
+Esta conclusão reflete o progresso atual do projeto, destacando as realizações e as etapas futuras para atingir os objetivos finais.
 
 % Neste capítulo são apresentadas duas coisas: Conclusões e Trabalhos Futuros. Aqui devem ser apresentadas a que conclusões se pode chegar a partir dos resultados apresentados e analisados no capítulo anterior. Um erro grave e recorrente é usar este capítulo para REPETIR coisas que já foram ditas. Não precisa dizer aqui o que você fez, isto já foi dito no capítulo de desenvolvimento projeto. Não precisa aqui repetir todos os resultados, isto já foi apresentado antes também. Você pode referenciar os seus principais resultados para fundamentar suas conclusões.
 
