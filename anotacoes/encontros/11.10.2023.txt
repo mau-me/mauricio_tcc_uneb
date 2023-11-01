@@ -4,3 +4,7 @@ Formato do arquivo de saída final:
 Remover pos.ini, pos.fim e accn
 
 Montar anotação que vai no figtree (Ver configurações com Vagner)
+1. Importar anotações
+2. Marcar Tip Shapes
+3. Na barra ir na opção 'Tree'->Annotate nodes from trips
+4. Marcar a opção na barra lateral 'Tips Shapes->colour by=(voc ou pango)

@@ -1,0 +1,386 @@
+check: number of transactions = annotations:  450 = 450
+Looking for optimal repulsion with  10 random iterations and threshold of minimum cluster accuracy of  0.1
+-----REPULSION:  10 ----------------------------------------------------
+RANDOM ITERATION  1
+INITIAL CLUSTER NUMBER:  15
+----------- clope iteration  1  number of clusters  19
+----------- clope iteration  2  number of clusters  19
+----------- clope iteration  3  number of clusters  19
+----------- clope iteration  4  number of clusters  20
+----------- clope iteration  5  number of clusters  20
+ ------------- best found
+REPULSION | ITERATION TIME (min):  10  |  0.013534684975941976
+RANDOM ITERATION  2
+INITIAL CLUSTER NUMBER:  17
+----------- clope iteration  1  number of clusters  21
+----------- clope iteration  2  number of clusters  21
+----------- clope iteration  3  number of clusters  21
+----------- clope iteration  4  number of clusters  21
+REPULSION | ITERATION TIME (min):  10  |  0.010695052146911622
+RANDOM ITERATION  3
+INITIAL CLUSTER NUMBER:  16
+----------- clope iteration  1  number of clusters  20
+----------- clope iteration  2  number of clusters  22
+----------- clope iteration  3  number of clusters  22
+----------- clope iteration  4  number of clusters  22
+----------- clope iteration  5  number of clusters  22
+REPULSION | ITERATION TIME (min):  10  |  0.013105940818786622
+RANDOM ITERATION  4
+INITIAL CLUSTER NUMBER:  14
+----------- clope iteration  1  number of clusters  19
+----------- clope iteration  2  number of clusters  19
+----------- clope iteration  3  number of clusters  19
+----------- clope iteration  4  number of clusters  19
+REPULSION | ITERATION TIME (min):  10  |  0.010098016262054444
+RANDOM ITERATION  5
+INITIAL CLUSTER NUMBER:  17
+----------- clope iteration  1  number of clusters  19
+----------- clope iteration  2  number of clusters  19
+----------- clope iteration  3  number of clusters  19
+----------- clope iteration  4  number of clusters  19
+----------- clope iteration  5  number of clusters  19
+REPULSION | ITERATION TIME (min):  10  |  0.012155421574910482
+RANDOM ITERATION  6
+INITIAL CLUSTER NUMBER:  16
+----------- clope iteration  1  number of clusters  20
+----------- clope iteration  2  number of clusters  20
+----------- clope iteration  3  number of clusters  21
+----------- clope iteration  4  number of clusters  21
+----------- clope iteration  5  number of clusters  21
+----------- clope iteration  6  number of clusters  21
+----------- clope iteration  7  number of clusters  21
+REPULSION | ITERATION TIME (min):  10  |  0.015651694933573403
+RANDOM ITERATION  7
+INITIAL CLUSTER NUMBER:  17
+----------- clope iteration  1  number of clusters  19
+----------- clope iteration  2  number of clusters  19
+REPULSION | ITERATION TIME (min):  10  |  0.00658949613571167
+RANDOM ITERATION  8
+INITIAL CLUSTER NUMBER:  15
+----------- clope iteration  1  number of clusters  20
+----------- clope iteration  2  number of clusters  21
+----------- clope iteration  3  number of clusters  21
+----------- clope iteration  4  number of clusters  22
+REPULSION | ITERATION TIME (min):  10  |  0.010652724901835125
+RANDOM ITERATION  9
+INITIAL CLUSTER NUMBER:  17
+----------- clope iteration  1  number of clusters  20
+----------- clope iteration  2  number of clusters  22
+----------- clope iteration  3  number of clusters  22
+----------- clope iteration  4  number of clusters  22
+----------- clope iteration  5  number of clusters  22
+REPULSION | ITERATION TIME (min):  10  |  0.013492854436238606
+RANDOM ITERATION  10
+INITIAL CLUSTER NUMBER:  15
+----------- clope iteration  1  number of clusters  19
+----------- clope iteration  2  number of clusters  21
+----------- clope iteration  3  number of clusters  22
+----------- clope iteration  4  number of clusters  22
+----------- clope iteration  5  number of clusters  22
+----------- clope iteration  6  number of clusters  22
+----------- clope iteration  7  number of clusters  22
+REPULSION | ITERATION TIME (min):  10  |  0.01696795622507731
+0.045454545454545414
+-----REPULSION:  12 ----------------------------------------------------
+RANDOM ITERATION  1
+INITIAL CLUSTER NUMBER:  20
+----------- clope iteration  1  number of clusters  26
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+----------- clope iteration  4  number of clusters  26
+----------- clope iteration  5  number of clusters  27
+ ------------- best found
+REPULSION | ITERATION TIME (min):  12  |  0.015358265240987141
+RANDOM ITERATION  2
+INITIAL CLUSTER NUMBER:  18
+----------- clope iteration  1  number of clusters  25
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+----------- clope iteration  4  number of clusters  26
+----------- clope iteration  5  number of clusters  26
+ ------------- best found
+REPULSION | ITERATION TIME (min):  12  |  0.015473290284474691
+RANDOM ITERATION  3
+INITIAL CLUSTER NUMBER:  21
+----------- clope iteration  1  number of clusters  26
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+----------- clope iteration  4  number of clusters  26
+REPULSION | ITERATION TIME (min):  12  |  0.012877496083577473
+RANDOM ITERATION  4
+INITIAL CLUSTER NUMBER:  20
+----------- clope iteration  1  number of clusters  25
+----------- clope iteration  2  number of clusters  27
+----------- clope iteration  3  number of clusters  27
+----------- clope iteration  4  number of clusters  28
+REPULSION | ITERATION TIME (min):  12  |  0.013106131553649902
+RANDOM ITERATION  5
+INITIAL CLUSTER NUMBER:  21
+----------- clope iteration  1  number of clusters  26
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+REPULSION | ITERATION TIME (min):  12  |  0.010790987809499105
+RANDOM ITERATION  6
+INITIAL CLUSTER NUMBER:  19
+----------- clope iteration  1  number of clusters  25
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+----------- clope iteration  4  number of clusters  26
+REPULSION | ITERATION TIME (min):  12  |  0.011996229489644369
+RANDOM ITERATION  7
+INITIAL CLUSTER NUMBER:  20
+----------- clope iteration  1  number of clusters  24
+----------- clope iteration  2  number of clusters  25
+----------- clope iteration  3  number of clusters  25
+----------- clope iteration  4  number of clusters  25
+----------- clope iteration  5  number of clusters  25
+REPULSION | ITERATION TIME (min):  12  |  0.014246559143066407
+RANDOM ITERATION  8
+INITIAL CLUSTER NUMBER:  20
+----------- clope iteration  1  number of clusters  26
+----------- clope iteration  2  number of clusters  26
+----------- clope iteration  3  number of clusters  26
+----------- clope iteration  4  number of clusters  26
+REPULSION | ITERATION TIME (min):  12  |  0.01227492888768514
+RANDOM ITERATION  9
+INITIAL CLUSTER NUMBER:  19
+----------- clope iteration  1  number of clusters  25
+----------- clope iteration  2  number of clusters  27
+----------- clope iteration  3  number of clusters  27
+----------- clope iteration  4  number of clusters  28
+REPULSION | ITERATION TIME (min):  12  |  0.013868780930836995
+RANDOM ITERATION  10
+INITIAL CLUSTER NUMBER:  21
+----------- clope iteration  1  number of clusters  27
+----------- clope iteration  2  number of clusters  28
+----------- clope iteration  3  number of clusters  28
+----------- clope iteration  4  number of clusters  29
+----------- clope iteration  5  number of clusters  29
+REPULSION | ITERATION TIME (min):  12  |  0.01562623182932536
+0.052631578947368474
+-----REPULSION:  14 ----------------------------------------------------
+RANDOM ITERATION  1
+INITIAL CLUSTER NUMBER:  24
+----------- clope iteration  1  number of clusters  29
+----------- clope iteration  2  number of clusters  30
+----------- clope iteration  3  number of clusters  30
+----------- clope iteration  4  number of clusters  31
+----------- clope iteration  5  number of clusters  31
+ ------------- best found
+REPULSION | ITERATION TIME (min):  14  |  0.016465437412261964
+RANDOM ITERATION  2
+INITIAL CLUSTER NUMBER:  26
+----------- clope iteration  1  number of clusters  30
+----------- clope iteration  2  number of clusters  32
+----------- clope iteration  3  number of clusters  32
+----------- clope iteration  4  number of clusters  32
+----------- clope iteration  5  number of clusters  32
+----------- clope iteration  6  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.019106860955556235
+RANDOM ITERATION  3
+INITIAL CLUSTER NUMBER:  23
+----------- clope iteration  1  number of clusters  30
+----------- clope iteration  2  number of clusters  32
+----------- clope iteration  3  number of clusters  32
+----------- clope iteration  4  number of clusters  32
+----------- clope iteration  5  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.017278412977854412
+RANDOM ITERATION  4
+INITIAL CLUSTER NUMBER:  22
+----------- clope iteration  1  number of clusters  30
+----------- clope iteration  2  number of clusters  30
+----------- clope iteration  3  number of clusters  32
+----------- clope iteration  4  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.014424335956573487
+RANDOM ITERATION  5
+INITIAL CLUSTER NUMBER:  23
+----------- clope iteration  1  number of clusters  30
+----------- clope iteration  2  number of clusters  31
+----------- clope iteration  3  number of clusters  31
+REPULSION | ITERATION TIME (min):  14  |  0.0124863068262736
+RANDOM ITERATION  6
+INITIAL CLUSTER NUMBER:  25
+----------- clope iteration  1  number of clusters  32
+----------- clope iteration  2  number of clusters  33
+----------- clope iteration  3  number of clusters  33
+----------- clope iteration  4  number of clusters  33
+REPULSION | ITERATION TIME (min):  14  |  0.014746367931365967
+RANDOM ITERATION  7
+INITIAL CLUSTER NUMBER:  26
+----------- clope iteration  1  number of clusters  32
+----------- clope iteration  2  number of clusters  32
+----------- clope iteration  3  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.01302335262298584
+RANDOM ITERATION  8
+INITIAL CLUSTER NUMBER:  25
+----------- clope iteration  1  number of clusters  31
+----------- clope iteration  2  number of clusters  32
+----------- clope iteration  3  number of clusters  32
+----------- clope iteration  4  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.015338118871053059
+RANDOM ITERATION  9
+INITIAL CLUSTER NUMBER:  25
+----------- clope iteration  1  number of clusters  30
+----------- clope iteration  2  number of clusters  31
+----------- clope iteration  3  number of clusters  31
+----------- clope iteration  4  number of clusters  31
+----------- clope iteration  5  number of clusters  31
+----------- clope iteration  6  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.020584654808044434
+RANDOM ITERATION  10
+INITIAL CLUSTER NUMBER:  26
+----------- clope iteration  1  number of clusters  29
+----------- clope iteration  2  number of clusters  30
+----------- clope iteration  3  number of clusters  30
+----------- clope iteration  4  number of clusters  30
+----------- clope iteration  5  number of clusters  31
+----------- clope iteration  6  number of clusters  31
+----------- clope iteration  7  number of clusters  31
+----------- clope iteration  8  number of clusters  32
+REPULSION | ITERATION TIME (min):  14  |  0.02558622360229492
+0.05464480874316935
+-----REPULSION:  16 ----------------------------------------------------
+RANDOM ITERATION  1
+INITIAL CLUSTER NUMBER:  27
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  37
+----------- clope iteration  3  number of clusters  37
+----------- clope iteration  4  number of clusters  37
+ ------------- best found
+REPULSION | ITERATION TIME (min):  16  |  0.017572053273518882
+RANDOM ITERATION  2
+INITIAL CLUSTER NUMBER:  29
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  36
+----------- clope iteration  3  number of clusters  36
+ ------------- best found
+REPULSION | ITERATION TIME (min):  16  |  0.013319512208302816
+RANDOM ITERATION  3
+INITIAL CLUSTER NUMBER:  28
+----------- clope iteration  1  number of clusters  33
+----------- clope iteration  2  number of clusters  34
+----------- clope iteration  3  number of clusters  34
+----------- clope iteration  4  number of clusters  34
+----------- clope iteration  5  number of clusters  34
+----------- clope iteration  6  number of clusters  34
+REPULSION | ITERATION TIME (min):  16  |  0.020712037881215412
+RANDOM ITERATION  4
+INITIAL CLUSTER NUMBER:  26
+----------- clope iteration  1  number of clusters  36
+----------- clope iteration  2  number of clusters  37
+----------- clope iteration  3  number of clusters  37
+REPULSION | ITERATION TIME (min):  16  |  0.013106282552083333
+RANDOM ITERATION  5
+INITIAL CLUSTER NUMBER:  29
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  36
+----------- clope iteration  3  number of clusters  36
+----------- clope iteration  4  number of clusters  36
+----------- clope iteration  5  number of clusters  36
+REPULSION | ITERATION TIME (min):  16  |  0.019321616490681967
+RANDOM ITERATION  6
+INITIAL CLUSTER NUMBER:  27
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  35
+----------- clope iteration  3  number of clusters  35
+----------- clope iteration  4  number of clusters  35
+REPULSION | ITERATION TIME (min):  16  |  0.01597726345062256
+RANDOM ITERATION  7
+INITIAL CLUSTER NUMBER:  27
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  34
+----------- clope iteration  3  number of clusters  34
+----------- clope iteration  4  number of clusters  34
+REPULSION | ITERATION TIME (min):  16  |  0.015964245796203612
+RANDOM ITERATION  8
+INITIAL CLUSTER NUMBER:  28
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  37
+----------- clope iteration  3  number of clusters  37
+----------- clope iteration  4  number of clusters  39
+REPULSION | ITERATION TIME (min):  16  |  0.017301317056020102
+RANDOM ITERATION  9
+INITIAL CLUSTER NUMBER:  27
+----------- clope iteration  1  number of clusters  34
+----------- clope iteration  2  number of clusters  37
+----------- clope iteration  3  number of clusters  37
+----------- clope iteration  4  number of clusters  38
+----------- clope iteration  5  number of clusters  38
+REPULSION | ITERATION TIME (min):  16  |  0.018758376439412434
+RANDOM ITERATION  10
+INITIAL CLUSTER NUMBER:  28
+----------- clope iteration  1  number of clusters  35
+----------- clope iteration  2  number of clusters  35
+----------- clope iteration  3  number of clusters  35
+----------- clope iteration  4  number of clusters  35
+REPULSION | ITERATION TIME (min):  16  |  0.01593268314997355
+0.06578947368421051
+-----REPULSION:  18 ----------------------------------------------------
+RANDOM ITERATION  1
+INITIAL CLUSTER NUMBER:  33
+----------- clope iteration  1  number of clusters  40
+----------- clope iteration  2  number of clusters  41
+----------- clope iteration  3  number of clusters  41
+ ------------- best found
+REPULSION | ITERATION TIME (min):  18  |  0.015023871262868246
+RANDOM ITERATION  2
+INITIAL CLUSTER NUMBER:  29
+----------- clope iteration  1  number of clusters  40
+----------- clope iteration  2  number of clusters  40
+----------- clope iteration  3  number of clusters  40
+REPULSION | ITERATION TIME (min):  18  |  0.014495774110158285
+RANDOM ITERATION  3
+INITIAL CLUSTER NUMBER:  28
+----------- clope iteration  1  number of clusters  35
+----------- clope iteration  2  number of clusters  37
+----------- clope iteration  3  number of clusters  38
+----------- clope iteration  4  number of clusters  38
+ ------------- best found
+REPULSION | ITERATION TIME (min):  18  |  0.01680284341176351
+RANDOM ITERATION  4
+INITIAL CLUSTER NUMBER:  31
+----------- clope iteration  1  number of clusters  39
+----------- clope iteration  2  number of clusters  42
+----------- clope iteration  3  number of clusters  42
+----------- clope iteration  4  number of clusters  42
+REPULSION | ITERATION TIME (min):  18  |  0.018317691485087075
+RANDOM ITERATION  5
+INITIAL CLUSTER NUMBER:  31
+----------- clope iteration  1  number of clusters  38
+----------- clope iteration  2  number of clusters  39
+----------- clope iteration  3  number of clusters  40
+REPULSION | ITERATION TIME (min):  18  |  0.014015003045399984
+RANDOM ITERATION  6
+INITIAL CLUSTER NUMBER:  30
+----------- clope iteration  1  number of clusters  38
+----------- clope iteration  2  number of clusters  39
+----------- clope iteration  3  number of clusters  39
+REPULSION | ITERATION TIME (min):  18  |  0.014145191510518391
+RANDOM ITERATION  7
+INITIAL CLUSTER NUMBER:  33
+----------- clope iteration  1  number of clusters  40
+----------- clope iteration  2  number of clusters  40
+----------- clope iteration  3  number of clusters  40
+----------- clope iteration  4  number of clusters  40
+REPULSION | ITERATION TIME (min):  18  |  0.018123618761698403
+RANDOM ITERATION  8
+INITIAL CLUSTER NUMBER:  30
+----------- clope iteration  1  number of clusters  36
+----------- clope iteration  2  number of clusters  39
+----------- clope iteration  3  number of clusters  39
+----------- clope iteration  4  number of clusters  39
+REPULSION | ITERATION TIME (min):  18  |  0.017615842819213866
+RANDOM ITERATION  9
+INITIAL CLUSTER NUMBER:  30
+----------- clope iteration  1  number of clusters  38
+----------- clope iteration  2  number of clusters  40
+----------- clope iteration  3  number of clusters  40
+----------- clope iteration  4  number of clusters  40
+REPULSION | ITERATION TIME (min):  18  |  0.017936503887176512
+RANDOM ITERATION  10
+INITIAL CLUSTER NUMBER:  30
+----------- clope iteration  1  number of clusters  37
+----------- clope iteration  2  number of clusters  39
+----------- clope iteration  3  number of clusters  39
+REPULSION | ITERATION TIME (min):  18  |  0.014794933795928954
+0.06896551724137934
