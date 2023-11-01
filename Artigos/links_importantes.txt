@@ -20,3 +20,61 @@ Falar sobre a quantidade de sequências estudadas e também sobre os datasetes m
 https://www.medicalnewstoday.com/articles/gene-vs-genome
 https://news.cancerresearchuk.org/2018/05/29/science-surgery-whats-the-difference-between-the-words-genome-gene-and-chromosome/
 https://www.genome.gov/genetics-glossary/Genome
+
+------------------------------------
+
+- https://www.bioinformatics.org/sms/iupac.html
+- genetics a conceptual approach pdf
+  https://generalgenetics.files.wordpress.com/2015/09/pierce-genetics-conceptual-approach-4th-txtbk.pdf
+
+- sars-cov-2 spike gene reference
+https://www.google.com/search?q=sars-cov-2+spike+gene+reference&oq=sars-cov-2+spike+gene+reference&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEzMjQwajBqN6gCALACAA&sourceid=chrome&ie=UTF-8
+
+https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2
+
+spike
+https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=genbank&from=21563&to=25384
+
+modelos evolutivos bioinformatica
+GTR Generalized time Reversible
+
+-----------------------------------------------------
+https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-022-08358-2
+https://en.wikipedia.org/wiki/Phylogenetic_Assignment_of_Named_Global_Outbreak_Lineages
+https://pubmed.ncbi.nlm.nih.gov/35148677/
+https://www.cdc.gov/coronavirus/2019-ncov/variants/variant-classifications.html
+https://cov-lineages.org/index.html#cite
+pango lineage and who lineage
+
+https://academic.oup.com/mbe/article/37/5/1530/5721363
+
+DNA
+https://www.genome.gov/genetics-glossary/Deoxyribonucleic-Acid#:~:text=Deoxyribonucleic%20acid%20(abbreviated%20DNA)%20is,known%20as%20a%20double%20helix.
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6822018/
+https://www.todamateria.com.br/dna-e-rna/
+https://www.diferenca.com/dna-e-rna/
+https://edisciplinas.usp.br/pluginfile.php/7761364/mod_resource/content/1/DNA%20RNA%20-%20estrutura%20e%20func%CC%A7a%CC%83o%202023.pdf
+https://www.technologynetworks.com/genomics/articles/what-are-the-key-differences-between-dna-and-rna-296719
+
+Gene
+https://www.genome.gov/genetics-glossary/Gene-Expression
+https://www.genome.gov/genetics-glossary/Gene-Regulation
+https://www.quickbiology.com/ngs-services/rna-sequencing-rna-seq-service?gclid=CjwKCAjw1t2pBhAFEiwA_-A-NOga_sXj74nHJVf1hfa_BQinJBenjH8sbZbfaibZDk-WFbaNfBIUrBoCwr0QAvD_BwE
+https://www.medicalnewstoday.com/articles/gene-vs-genome
+https://www.nigms.nih.gov/education/Documents/Studying_genes_final.pdf
+https://www.genome.gov/about-genomics/fact-sheets/Genetics-vs-Genomics
+
+BOM
+https://byjus.com/biology/difference-between-gene-and-genome/
+https://medlineplus.gov/genetics/understanding/basics/gene/
+
+Genome
+https://www.genome.gov/genetics-glossary/Genome
+
+https://www.genome.gov/genetics-glossary/Genetics
+
+https://www.genome.gov/genetics-glossary
+
+
+-----------------------------------------
+motifs in nucleotide sequence
