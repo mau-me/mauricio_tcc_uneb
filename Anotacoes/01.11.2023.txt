@@ -1,0 +1,22 @@
+Trabalhos futuros
+
+- Testar o AGUA com outras espécies virais
+- Construção do site para a ferramenta AGUA
+- Testar a ferramenta com outros tipos de métodos tradicionais
+
+------------------------------------------------------------------------------
+Como são montadas as árvores - arquivo nwk, treefile...
+
+Entender a diferença entre a árvore gerada no AGUA e a utilizando o iqtree2 (Máxima Verossimilhança)
+
+IMPORTANTE!!!
+Verificar a necessidade de um tópico de "Discussão" no trabalho
+Resultados Obtidos com os presentes em outros trabalhos encontrados
+
+Introdução do cap de resultados obtidos
+Pedir ao cgpt
+
+metodo do cotovelo
+- Estudar
+- Escrever na monografia?
+- Ver no código tree analyzer

@@ -9,7 +9,8 @@ Descrição do projeto: objetivos, ponto de partida, produtos e resultados esper
 
 Metodologia: descrição da metodologia DSR, fases e atividades em cada fase, destacando a fase de testes e experimentos, os critérios de desempenho usados para a escolha da melhor alternativa
 
-Resultados: resultados dos testes previstos e discussão
+IMPORTANTE
+Resultados: resultados dos testes previstos e discussão(Verificar)
 
 Conclusões: principais contribuições do projeto e futuras pesquisas/desenvolvimento recomendadas
 
