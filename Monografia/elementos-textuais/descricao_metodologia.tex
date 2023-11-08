@@ -94,7 +94,7 @@ Após a análise, foi constatado que realizar o download manualmente era infact�
   \item Desenvolver script Python juntamente com o Selenium para abrir as urls de forma automática e realizar o download das sequências.
 \end{enumerate}
 
-Ao final do processo de montagem do dataset, realizado no dia 02 junho de 2023, com sequências genômicas completas, foi gerado um diretório raiz (dataset), e dentro deste, um diretório para cada linhagem (Lineage L¹, Lineage L², \dots, Lineage $L^{n}$), contendo um arquivo nomeado \textnormal{BVBRC\_genome\_sequence.fasta}, como apresentado na figura~\ref{fig:datasetGenomas}.
+Ao final do processo de montagem do dataset, realizado no dia 02 junho de 2023, com sequências genômicas completas, foi gerado um diretório raiz (dataset), e dentro deste, um diretório para cada linhagem (\textit{Lineage} L¹, \textit{Lineage} L², \dots, \textit{Lineage} $L^{n}$), contendo um arquivo nomeado \textnormal{BVBRC\_genome\_sequence.fasta}, como apresentado na figura~\ref{fig:datasetGenomas}.
 
 \begin{figure}[htb]
   \centering
@@ -199,8 +199,8 @@ A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura\ref{f
 %           \item Criar arquivo de treinamento com linhagens diferentes e um arquivo de anotação. % Descrever melhor os arquivos
 %         \end{itemize}
 
-\subsection{Desenvolvimento do Modelo}
-Para o desenvolvimento do modelo foram realizados os seguintes passos:
+\subsection{AGUA}
+O modelo proposto foi nomeado como \gls{agua}. A seguir o mesmo será apresentado, desde a sua concepção, implementação e testes.
 
 % FAZER
 % Escrever uma descrição melhor do desenvolvimento do modelo
@@ -227,11 +227,6 @@ Será realizada uma analise com um conjunto de dados, onde será realizado anali
   \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
   \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
 \end{itemize}
-
-% Depois dos capítulos de fundamentação teórica e trabalhos relacionados, é hora de apresentar o trabalho propriamente dito. Descrever o que foi feito para desenvolver a solução do problema investigado. Aqui a metodologia deve ser bem detalhada, a arquitetura das soluções descritas em detalhes, as tecnologias utilizadas apresentadas e justificadas. Enfim, aqui é uma espécie de relatório do que você fez.
-
-% Mais uma vez, alguns autores preferem neste mesmo capítulo apresentar também o plano de testes e validação e os resultados obtidos. Outros autores colocam isto num capítulo separado depois deste. Novamente não há regra rígida para isto. As duas opções são válidas e devem ser decididas em conjunto com o orientador. Sempre usar o bom senso para não ter capítulos curtos demais nem longos demais. É importante deixar muito claro o plano de validação, a fundamentação estatística utilizada, o processo de coleta de dados, e apresentar o resultado de forma adequada usando gráficos, tabelas, etc. Estes resultados devem ser analisados, mas NÃO DEVEM GERAR CONCLUSÕES AINDA. Analisar não significa concluir. Para isto existe um capítulo de Conclusão!
-
 
 % \section{Plano de Testes e Validação}
 
