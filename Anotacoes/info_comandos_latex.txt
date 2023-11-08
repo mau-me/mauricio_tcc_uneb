@@ -1,0 +1,93 @@
+% Descrição da estrutura da monografia
+%%%%%% ANOTAÇÕES %%%%%%
+
+% A Introdução deve incluir a contextualização do tema como já realizado no anteprojeto, revisada e melhorada. Também dever caracterizar claramente o problema de pesquisa, a justificativa/motivação/relevância para a investigação realizada, os objetivos gerais e específicos. Para ajudar na justificativa, devem ser feita uma sintética revisão dos trabalhos relacionados apontando especialmente as lacunas que serão exploradas pelo presente trabalho. Alguns autores podem optar por já realizar uma completa revisão de literatura (trabalhos relacionados) na introdução enquanto outros fazem isto sucintamente na introdução deixando para aprofundar em um capítulo específico de Trabalhos Relacionados ou Revisão de Literatura. Discuta com seu orientador qual a melhor abordagem para o seu trabalho.
+
+% \section{Seção 1 do Capítulo 1 }
+
+% A introdução, assim como os demais capítulos, podem ser divididos em seções, subseções e subsubseções. Não é obrigatório, mas é permitido. O cuidado que se deve ter é para não criar seções ou subseções muito curtas. É comum ver trabalhos mal escritos com várias seções contendo apenas um parágrafo. Discuta com seu orientador a divisão do seu capítulo. Não há qualquer erro em ter um capítulo que não tenha subdivisões. Uma seção deve tratar de um assunto específico e auto-contido que não é tratado no restante do capítulo, apesar de estar relacionado com o tema do mesmo.
+% \subsection{Subseção}
+
+% Se necessário, uma seção pode estar subdividida em subseções.
+% \subsubsection{Subsubseção - Figuras, Tabelas e Equações}
+
+% É pouco comum, mas uma subseção pode ainda estar subdividida em subsubseções.
+
+% As figuras devem seguir as normas da ABNT conforme orientado. Sempre que usar uma figura ela deve ser referenciada no texto, usada como parte da explicação que está sendo apresentada no capítulo, como na Figura~\ref{fig:juntasNAO}.
+
+% %%figura
+% \begin{figure}[htb]
+% \centering
+% \caption{Articulações do Robô NAO.}
+% \includegraphics[scale=0.5]{figuras/nao_joints.png}
+% \fonte{Retirada de \citeauthor{boedecker2008simspark}}~\label{fig:juntasNAO}
+% \end{figure}
+
+% Tabelas também devem ser referenciadas no texto e utilizadas como parte da explicação ou análise desenvolvida no capítulo. Deve ser referenciada como a Tabela~\ref{tab:tabelaTeste}. Observe que tanto figuras como tabelas devem ter suas legendas antes e a fonte indicada imediatamente após a figura ou tabela. Mesmo quando for criada pelo autor isto deve obrigatoriamente ser indicado segundo as normas da ABNT. As legendas devem ser auto-explicativas de forma que alguém que olhe a figura ou tabela e leia sua legenda consiga compreender tudo que vê sem necessidade de recorrer ao texto. O texto deve aprofundar e detalhar esta explicação, até repetindo algumas coisas que estão na legenda, mas principalmente vinculando à sequencia lógica do que está sendo exposto no texto.
+
+% %%tabela
+% \begin{table}[htb]
+% \caption{Primeira tabela.}
+% \begin{center}
+% \begin{tabular}{|c|c|c|}
+% \hline
+% coluna 1 & coluna 2 & coluna 3 \\
+% \hline
+% valor 1,1 & valor 1,2 & valor 1,3 \\
+% valor 2,1 & valor 2,2 & valor 2,3 \\
+% \hline
+% \end{tabular}
+% \end{center}
+% \fonte{Criada pelo autor.}
+% \label{tab:tabelaTeste}
+% \end{table}
+
+%  Equações devem aparecer como parte natural do texto. Por exemplo energia pode ser definida como:
+
+% %%equacao
+% \begin{equation}
+% E = m \times c^2,
+% \label{eq1}
+% \end{equation}
+
+% \noindent onde $E$ é a energia, $m$ é a massa e $c$ é a velocidade da luz. Desta forma, apesar de numeradas, no local onde a equação aparece não será citada pelo número e sim como parte integrante do texto. Entretanto, às vezes é necessário fazer referência novamente à equação em um ponto posterior do texto (em outra seção ou mesmo em outro capítulo, ou num ponto mais distante dentro da mesma seção depois da ocorrência da mesma). Neste caso é usada a referência à Equação \eqref{eq1}.
+
+
+% \section{Seção 2 do Capítulo 1 - Citações}
+% Num texto científico é muito comum citar diversos autores lidos ou estudados. São feitas citações a livros, artigos científicos, etc. As normas ABNT regulamentam o formato das citações.
+
+% São dois tipos de citações: diretas e indiretas. As citações diretas são feitas quando repete-se o texto citado igual ao original, com as mesmas palavras. Ou seja, a citação direta é uma cópia do trecho citado literalmente.
+
+% Se a citação direta tiver menos que três linhas, deve ser feita entre aspas, assim: \foreignlanguage{english}{"This is one of the oldest leagues in RoboCupSoccer"}\cite{RoboCup}. Observe que se sua fonte for um texto em inglês ou outro idioma estrangeiro, deve se reproduzido no mesmo idioma original numa citação direta. Se você traduzir, isto vira uma citação indireta.
+
+% Outro formato de citação direta é quando ela tem três ou mais linhas. Aí deve ser feita desta forma:
+% \begin{citacao}[english]
+% In the Humanoid League, autonomous robots with a human-like body plan and human-like senses play soccer against each other. Unlike humanoid robots outside the Humanoid League the task of perception and world modeling is not simplified by using non-human like range sensors. In addition to soccer competitions technical challenges take place. Dynamic walking, running, and kicking the ball while maintaining balance, visual perception of the ball, other players, and the field, self-localization, and team play are among the many research issues investigated in the Humanoid League. Several of the best autonomous humanoid robots in the world compete in the RoboCup Humanoid League\cite{RoboCup}.
+% \end{citacao}
+
+
+% Por fim, a forma mais comum de fazer uma citação é a indireta, quando você reproduz as ideias de um texto lido com as suas palavras. Ou seja, você não copia literalmente o texto de um autor, mas sim suas idéias, reescrevendo-as com suas palavras e de forma que faça sentido logicamente no seu texto. Isto vale inclusive para o caso em que reescrevemos em português as ideias de um texto lido em outro idioma. Neste caso a citação pode vir simplesmente logo ao final da ideia reproduzida, assim\cite{Alamdari2017}. Em alguns casos, você quer usar os autores como sujeito ou objeto de uma sentença. Por exemplo, quer dizer que \citeauthor{Xu2017} apresentaram alguma ideia ou ainda falar sobre algo que foi apresentado por \citeauthor{shafii2015learning}.
+
+
+% Outra coisa comum é o uso de siglas (acrônimos). Ao utilizar uma sigla pela primeira vez, a mesma deve aparecer por extenso, assim: \gls{US}. Nas próximas ocorrências a sigla já aparecerá apenas como acrônimo, veja: \gls{US}. Qualquer nova sigla - como \gls{AA} - seguirá esta regra. Observe que siglas em inglês serão colocadas em itálico. Ao usar as siglas, as mesmas serão exibidas na Lista de siglas e abreviaturas entre os elementos pré-textuais.
+
+%--------------------------------------------------------------------------------------------
+
+% Depois dos capítulos de fundamentação teórica e trabalhos relacionados, é hora de apresentar o trabalho propriamente dito. Descrever o que foi feito para desenvolver a solução do problema investigado. Aqui a metodologia deve ser bem detalhada, a arquitetura das soluções descritas em detalhes, as tecnologias utilizadas apresentadas e justificadas. Enfim, aqui é uma espécie de relatório do que você fez.
+
+% Mais uma vez, alguns autores preferem neste mesmo capítulo apresentar também o plano de testes e validação e os resultados obtidos. Outros autores colocam isto num capítulo separado depois deste. Novamente não há regra rígida para isto. As duas opções são válidas e devem ser decididas em conjunto com o orientador. Sempre usar o bom senso para não ter capítulos curtos demais nem longos demais. É importante deixar muito claro o plano de validação, a fundamentação estatística utilizada, o processo de coleta de dados, e apresentar o resultado de forma adequada usando gráficos, tabelas, etc. Estes resultados devem ser analisados, mas NÃO DEVEM GERAR CONCLUSÕES AINDA. Analisar não significa concluir. Para isto existe um capítulo de Conclusão!
+
+%----------------------------------------------------------------------------
+
+% ---------------------------------------------------------------------
+% Para iniciar, vamos testar novamente o uso de siglas: \gls{AA}. Observe que mesmo ao iniciar outro capítulo, a sigla não precisa ser definida novamente por extenso, pois já foi definida no capítulo anterior, além de estar definida na lista de siglas e abreviaturas.
+
+% A partir do capítulo~\ref{ch:fundamentacao} começa-se a apresentar a fundamentação teórica. Atenção ! Fundamentação teórica não é o mesmo que trabalhos relacionados ou estado da arte. Fundamentação teórica são conceitos teóricos - alguns mesmo antigos ou clássicos - que precisam ser compreendidos para entender a solução apresentada para o problema investigado.
+
+% Não há um modelo de divisão de capítulos. Alguns autores criam um único capítulo chamado `Fundamentação Teórica' e nele colocam todos os conteúdos divididos em seções, subseções, etc. Outros preferem criar capítulos diferentes para temas diferentes da fundamentação teórica. Enfim, não há uma regra rígida para isto. Deve ser definido em consenso com o orientador. O importante é ter bom senso para não criar vários capítulos minúsculos com 1 página ou menos. Se o que tem para falar de um tema é tão pouco, talvez valha à pena ter um único capítulo de fundamentação teórica com várias seções falando dos diversos temas que compõem sua fundamentação. Mas se cada tema tem muito a ser falado, pode ficar melhor dividi-los em capítulos diferentes.
+
+% Quanto a Trabalhos Relacionados ou Estado da Arte eles são as publicações recentes de pessoas que tentaram resolver o mesmo problema ou um problema similar. São o resultado da revisão sistemática de literatura feita no início do processo de TCC. Alguns autores optam por fazer a análise destes trabalhos dentro do capítulo de introdução. Outros optam por criar um capítulo denominado "Estado da Arte" ou "Revisão de Literatura" ou "Trabalhos Relacionados" e fazer esta análise lá. A decisão mais uma vez fica a critério de cada autor e deve ser tomada em consenso com o orientador. Se os Trabalhos Relacionados estiverem na introdução, certamente irá gerar uma introdução mais longa. Mas não há problema ou impedimento quanto a isto.
+
+% Uma vantagem de colocar na introdução é que logo no início da monografia já ficam claras as lacunas do estado da arte que seu trabalho buscará preencher. Quando feito num capítulo à parte isto só aparece depois, mas gera o benefício de não deixar a introdução tão extensa e por vezes cansativa para o leitor. Então é uma questão de decisão do autor e do orientador.
+
+% Quando colocado num capítulo à parte costuma vir antes dos capítulos de fundamentação teórica.

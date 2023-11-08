@@ -15,7 +15,7 @@ Resultados: resultados dos testes previstos e discussão(Verificar)
 Conclusões: principais contribuições do projeto e futuras pesquisas/desenvolvimento recomendadas
 
 
-Testo base GPT:
+Texto base GPT:
 Estou escrevendo um projeto que visa o desenvolvimento de ferramenta de análise de genes virais com base no uso de codons para classificação não supervisionada. O método será criado por mim, mas para a mesma funcionar é necessario criar uma base de dados de genes a serem estudados de um determinado virus. Eu vou ter que criar um procedimento e escripts para baixar de forma automatica sequencias classificadas de genoma completo do virus de uma base dados publica Bv-brc, depois filtrar selecionando somente as unicas, depois realizar o alinhamento com o minimap2, extrair o gene em estudo usando o conceito de 'isca', depois remover as sequências genicas duplicadas. Uma vez construido a base de dados, irei programar um script que traduz as sequencia de DNA para codons e depois extrair um código unico para cada sequencia considerando as posições com codons distintos. Depois baseado nas distâncias (diferenças) entre os códigos fazer o agrupamento deles e identificar os clusters. Depois associar os clusters com as classes das sequencias neles contidas. Finalmente faremos uma discussão dos resultados. Em todo o processo prestaremos atencao ao custo computacional (tempo) para classificação das sequencias. Também realizaremos uma comparação com a classificação realizada com tecnicas classicas filogeneticas. Usaremos a metodologia DSR(Design Science Research). Quero que gere os seguintes tópicos:
 1. uma descrição do projeto
 2. um resumo
