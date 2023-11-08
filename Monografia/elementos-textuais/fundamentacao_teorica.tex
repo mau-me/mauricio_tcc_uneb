@@ -6,15 +6,18 @@
 
 \chapter{Fundamentação Teórica}~\label{ch:fundamentacao}
 
+% FAZER
+% Analisar e reescrever introdução da fundamentação teórica
+A análise de genes virais baseada em codons é um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente o código de codificação genética, conhecido como código IUPAC, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
+
+Este capítulo também destacará a importância da filogenética na classificação de genes virais e como as árvores filogenéticas são construídas com base em informações genéticas. Além disso, discutiremos a metodologia de Design Science Research (DSR), que serve como um guia metodológico para o desenvolvimento da nossa ferramenta.
+
+Para entender completamente os métodos e resultados apresentados nos capítulos subsequentes, é crucial absorver os conceitos apresentados aqui. O conhecimento teórico sólido proporcionará a base necessária para a análise crítica do desenvolvimento da nossa ferramenta de análise de genes virais baseada em codons.
+
+Vamos começar esta jornada pela fundamentação teórica que sustenta o projeto, garantindo uma compreensão sólida e fundamentada de cada passo subsequente.
+
 \section{Biologia Molecular}
 A Biologia Molecular é um ramo da biologia que lida e investigas os processos e mecanismos moleculares relacionados à estrutura, função e interações das biomoléculas presentes nos organismos vivos. Consiste principalmente em estudar as interações entre os vários sistemas da célula, partindo da relação entre o \gls{dna}, \gls{rna} e a síntese de proteínas, e o modo como essas interações são reguladas.
-
-% FAZER
-% Sequenciamento genético (Como são obtidas as sequências) De forma bem sucinta
-% Apresentar a IUPAC nucleotide code
-% Nessa tabela é apresentada cada nucleotideo e também os códigos após o alinhamento. O N e o Gap por exemplo
-% Adicionar na tabela de simbolos
-% Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
 
 É fundamental entender a estrutura do \gls{dna} apresentada na Figura~\ref{fig:estruturaDNA}. Está é uma molécula em forma de dupla hélice que carrega a informação genética em organismos vivos. Ela é composta por duas cadeias polinucleotídicas complementares enroladas em torno de um eixo central. Cada cadeia é composta por uma sequência de nucleotídeos, que consistem em uma pentose (a desoxirribose), um grupo fosfato e uma base nitrogenada que pode ser \gls{adenina}, \gls{timina}, \gls{citosina} ou \gls{guanina}. A estrutura do \gls{dna} é mantida por pontes de hidrogênio entre as bases complementares, com a adenina pareando sempre com a timina e a citosina pareando sempre com a guanina.
 
@@ -27,6 +30,8 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
 
 % FAZER
 % Corrigir/Complementar a definição de genoma e gene
+% Comparar o genoma humano com o genoma viral em relação a quantidade de pares de bases
+% https://www.genome.gov/genetics-glossary/Genome REF para imagens
 A conjunto completo de material genético contido em um organismo, seja ele um vírus, uma bactéria, uma planta ou um animal é conhecido como genoma. Ele abrange todas as informações genéticas necessárias para o desenvolvimento, funcionamento e reprodução do organismo. O genoma é composto por sequências de \gls{dna} que carregam as instruções para a síntese de proteínas e regulam várias funções celulares. A análise do genoma desempenha um papel fundamental na genética, na biologia molecular e na compreensão da hereditariedade e da evolução.~\cite{alberts_biologia_2017}
 
 As informações contidas no \gls{dna} são copiadas em uma molécula de \gls{rna}, esse processo é conhecido como transcrição. A transcrição ocorre no núcleo das células e envolve a separação das duas fitas do \gls{dna} e o pareamento de nucleotídeos complementares para sintetizar uma molécula de \gls{mrna}. O \gls{mrna} é uma cópia do DNA que carrega a sequência de bases nitrogenadas correspondente a um gene específico.
@@ -38,6 +43,8 @@ Após isso, ocorre o processo de tradução onde a sequência de bases nitrogena
   \fonte{Adaptade de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
 \end{figure}
 
+% FAZER
+% Sequenciamento genético (Como são obtidas as sequências) De forma bem sucinta
 
 A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
 
@@ -73,7 +80,21 @@ O SARS-CoV-2 possui uma estrutura viral apresentada na Figura~\ref{fig:estrutura
   \fonte{Retirada de \citeauthor{li_coronavirus_2020}}~\label{fig:estruturaCoronavirus}
 \end{figure}
 
+% FAZER
+% Falar sobre as nomenclaturas PANGO e WHO
+% Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
+
+\section{Bioinformática}
+
+% Alinhamento de Sequências, Análise de Genomas Virais, Análise de Expressão Gênica, Ferramentas de Bioinformática (Algoritmos de Alinhamento e Algoritmos de reconstrução de árvores)
+% Apresentar a IUPAC nucleotide code
+% Nessa tabela é apresentada cada nucleotideo e também os códigos após o alinhamento. O N e o Gap por exemplo
+% Adicionar na tabela de simbolos
+
 \section{Filogenia}
+% Fazer
+% Escrever sobre Modelos Evolutivos
+% GTR Generalized time Reversible
 
 A filogenia é uma disciplina da biologia que estuda as relações evolutivas entre organismos, buscando reconstruir a história evolutiva e a ancestralidade comum. A filogenética molecular é uma abordagem utilizada para inferir a filogenia com base em informações moleculares, como sequências de \gls{dna}, \gls{rna} e proteínas\cite{felsenstein_inferring_2004}.
 
@@ -81,30 +102,42 @@ A construção de árvores filogenéticas é um aspecto fundamental da filogené
 Os métodos baseados em distância medem a similaridade ou a dissimilaridade entre sequências moleculares e constroem árvores filogenéticas com base nessas medidas. Alguns exemplos de métodos baseados em distância incluem o método de Neighbor Joining (NJ) e o método de Mínima Evolução (ME).
 Por outro lado, os métodos baseados em caracteres analisam as mudanças nos caracteres moleculares ao longo do tempo para inferir as relações filogenéticas. Exemplos de métodos baseados em caracteres são o método de Máxima Parcimônia (MP) e o método de Inferência Bayesiana\cite{swofford_phylogenetic_1996}.
 
-% Modelos Evolutivos
-% GTR Generalized time Reversible
+% Abordagens anteriores em ordem cronológica
+Ao longo dos anos, vários métodos utilizados para análise filogenética foram desenvolvidos, logo após, será apresentado alguns dos principais e amplamente utilizados:
 
-% \section{Bioinformática}
+\begin{enumerate}
+  \item \textbf{Método de reconstrução de árvore filogenética de distância (1957)}: Esse método é baseado na construção de árvores filogenéticas a partir de uma matriz de distâncias que quantifica a diferença evolutiva entre diferentes sequências. A árvore é construída de modo que as sequências mais semelhantes estejam mais próximas umas das outras. Esse método é amplamente utilizado em análises filogenéticas e é uma das técnicas mais antigas.~\cite{sokal_statistical_method_1958}
+  \item \textbf{Método de máxima parsimônia (1966)}: A máxima parsimônia busca a árvore filogenética mais simples, ou seja, aquela que requer o menor número de mudanças evolutivas para explicar as sequências observadas. Esse método é baseado no princípio de que a evolução segue o caminho mais econômico, evitando mudanças desnecessárias.~\cite{fitch_toward_definition_1971}
+  \item \textbf{Método de máxima verossimilhança (1981)}: O método de máxima verossimilhança estima a árvore filogenética que maximiza a probabilidade de observar as sequências dadas, dadas as hipóteses filogenéticas. Ele é baseado na modelagem estatística da evolução molecular e é amplamente considerado um dos métodos mais precisos para a reconstrução de árvores filogenéticas.~\cite{felsenstein_evolutionary_tree_1981}
+  \item \textbf{Método de junção de vizinhos (1987)}: O método Neighbor-Joining é uma técnica de construção de árvore filogenética que se baseia em uma abordagem de aglomeração hierárquica. Ele é amplamente utilizado para criar árvores filogenéticas a partir de matrizes de distância, representando a proximidade evolutiva entre sequências ou espécies. Esse método é especialmente útil para análises de grandes conjuntos de dados e é conhecido por sua eficiência computacional.~\cite{saitou_neighbor_1987} % MÉTODO UTILIZADO NO AGUA!? Junção de Vizinhos / Neighbor-Joining
+  \item \textbf{Método de inferência bayesiana (2001)}: A inferência bayesiana combina informações a priori com dados observados para estimar a árvore filogenética mais provável. Ela se baseia no Teorema de Bayes e permite incorporar informações prévias sobre as relações filogenéticas. Esse método é particularmente útil quando se dispõe de conhecimento prévio sobre as relações entre as espécies.~\cite{huelsenbeck_bayesian_inference_2001}
+  \item \textbf{Método de coalescência (2004)}: O método de coalescência, também conhecido como filogenia de coalescência, aborda a filogenia a partir do ponto de vista do ancestral comum mais recente. Ele modela a história da população ancestral e como as sequências evoluíram a partir dessa população. Esse método é especialmente útil para analisar sequências de genes individuais.~\cite{kingman_coalescent_1982}
+  \item \textbf{Método de redes filogenéticas (2005)}: As redes filogenéticas são uma extensão das árvores filogenéticas que permitem representar relacionamentos mais complexos, como reticulações ou eventos de hibridização. Elas são úteis quando as relações entre as espécies não podem ser adequadamente representadas por uma árvore simples.~\cite{huson_phylogenetic_networks_2006}
+  \item \textbf{Método de filogenia de genoma inteiro (2010)}: Esse método se concentra na análise comparativa de genomas completos para inferir relações filogenéticas. Ele utiliza informações genômicas de alta resolução, como sequências de genes e elementos regulatórios, para construir árvores filogenéticas que refletem a evolução das espécies.~\cite{eisen_horizontal_gene_transfre_2000}
+\end{enumerate}
 
-% Alinhamento de Sequências, Análise de Genomas Virais, Ferramentas de Bioinformática (Algoritmos de Alinhamento e Algoritmos de reconstrução de árvores)
+\subsection{Nomenclaturas de Linhagens do SARS-CoV-2}
 
 % \section{Machine Learning}
 % Modelo não supervisionado
 % Escrever sobre
-
-% FAZER
-% Falar sobre as nomenclaturas PANGO e WHO
 % Verificar utilização da sessão trabalhos correlatos!
-% \section{Trabalhos Correlatos}
+\section{Trabalhos Correlatos}
 
-% Para iniciar, vamos testar novamente o uso de siglas: \gls{AA}. Observe que mesmo ao iniciar outro capítulo, a sigla não precisa ser definida novamente por extenso, pois já foi definida no capítulo anterior, além de estar definida na lista de siglas e abreviaturas.
+Na busca de trabalhos relacionados, vários métodos foram encontrados, e a seguir são apresentados.
 
-% A partir do capítulo~\ref{ch:fundamentacao} começa-se a apresentar a fundamentação teórica. Atenção ! Fundamentação teórica não é o mesmo que trabalhos relacionados ou estado da arte. Fundamentação teórica são conceitos teóricos - alguns mesmo antigos ou clássicos - que precisam ser compreendidos para entender a solução apresentada para o problema investigado.
+O método de \gls{ml} (ou \textit{Maximum Likelihood}), não é exclusivo da filogenia, mas sim uma abordagem estatística. A sua aplicação em filogenia consiste em avaliar a probabilidade de que o modelo de evolução escolhido gere os dados observados, que são por exemplo, características de um organismo. Essa proposta foi utilizada nos seguintes trabalhos:
+\begin{itemize}
+  \item \citeauthor{behl_threat_2022}
+  \item \citeauthor{fall_genetic_diversity_2021}
+  \item \citeauthor{shabbir_comprehensive_2020}
+  \item \citeauthor{hudu_hepatitis_2018}
+  \item \citeauthor{sallard_tracing_2021}
+  \item \citeauthor{paez-espino_diversity_evolution_2019}
+  \item \citeauthor{tang_evolutionary_2021}
+  \item \citeauthor{cho_analysis_2022}
+\end{itemize}
 
-% Não há um modelo de divisão de capítulos. Alguns autores criam um único capítulo chamado `Fundamentação Teórica' e nele colocam todos os conteúdos divididos em seções, subseções, etc. Outros preferem criar capítulos diferentes para temas diferentes da fundamentação teórica. Enfim, não há uma regra rígida para isto. Deve ser definido em consenso com o orientador. O importante é ter bom senso para não criar vários capítulos minúsculos com 1 página ou menos. Se o que tem para falar de um tema é tão pouco, talvez valha à pena ter um único capítulo de fundamentação teórica com várias seções falando dos diversos temas que compõem sua fundamentação. Mas se cada tema tem muito a ser falado, pode ficar melhor dividi-los em capítulos diferentes.
+Já em~\citeauthor{yin_systematic_2019} e \citeauthor{bedoya-pilozo_molecular_epidemiology_2018}, foi usada a inferência bayesiana, que é fundamentada no teorema de Bayes, que permite a atualização das probabilidades a priori para probabilidades a posteriori à medida que novas evidências são incorporadas.
 
-% Quanto a Trabalhos Relacionados ou Estado da Arte eles são as publicações recentes de pessoas que tentaram resolver o mesmo problema ou um problema similar. São o resultado da revisão sistemática de literatura feita no início do processo de TCC. Alguns autores optam por fazer a análise destes trabalhos dentro do capítulo de introdução. Outros optam por criar um capítulo denominado "Estado da Arte" ou "Revisão de Literatura" ou "Trabalhos Relacionados" e fazer esta análise lá. A decisão mais uma vez fica a critério de cada autor e deve ser tomada em consenso com o orientador. Se os Trabalhos Relacionados estiverem na introdução, certamente irá gerar uma introdução mais longa. Mas não há problema ou impedimento quanto a isto.
-
-% Uma vantagem de colocar na introdução é que logo no início da monografia já ficam claras as lacunas do estado da arte que seu trabalho buscará preencher. Quando feito num capítulo à parte isto só aparece depois, mas gera o benefício de não deixar a introdução tão extensa e por vezes cansativa para o leitor. Então é uma questão de decisão do autor e do orientador.
-
-% Quando colocado num capítulo à parte costuma vir antes dos capítulos de fundamentação teórica.
+Além desses,~\citeauthor{potdar_phylogenetic_2021} utilizou a junção de vizinhos (ou \textit{Neighbor-Joining}), que é baseado em uma abordagem heurística que visa construir uma árvore filogenética a partir de uma matriz de distância entre as sequências estudadas. O trabalho de~\citeauthor{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation e~\citeauthor{kim_ngs_2022} a floresta aleatória. Por fim,~\citeauthor{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; \gls{ml} e inferência bayesiana.
