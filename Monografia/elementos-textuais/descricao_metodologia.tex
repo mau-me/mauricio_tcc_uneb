@@ -10,7 +10,7 @@
 % ### METODOLOGIA ###
 
 % ### Falar das seguintes ferramentas:
-%   - DSR
+%   - DSR ok
 %   - Trello
 %   - Github
 
@@ -22,12 +22,26 @@ Um ponto importante para a obtenção dos objetivos deste trabalho está relacio
 
 Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão seguidos:
 \begin{enumerate}
-  \item Identificação do problema e definição dos objetivos.
-  \item Desenvolvimento dos artefatos.
-  \item Avaliação do artefato.
-  \item Apresentar contribuições científicas.
+  \item \textbf{Identificação do problema e definição dos objetivos:} Nesta fase, o problema a ser resolvido é identificado e compreendido em detalhes. No contexto deste projeto, isso envolveria a compreensão das limitações das abordagens existentes para a classificação de genes virais.
+  \item \textbf{Concepção e planejamento:} Aqui, são definidos os objetivos do artefato a ser criado, suas características e funcionalidades. No projeto em questão, isso envolveria a definição da funcionalidade da ferramenta de análise de genes virais com base em códons.
+  \item \textbf{Desenvolvimento dos artefatos:} Nesta fase, o artefato é desenvolvido. Para o projeto, isso incluiria a criação dos scripts de download, processamento, tradução de sequências, algoritmos de agrupamento e outras partes da ferramenta.
+  \item \textbf{Avaliação do artefato:} O artefato é testado e avaliado quanto à sua eficácia na resolução do problema. Isso pode incluir testes de desempenho, experimentos e comparações com métodos existentes.
+  \item \textbf{Apresentar contribuições científicas:} Os resultados e contribuições do artefato são comunicados, geralmente por meio de artigos científicos e relatórios técnicos.
+  \item \textbf{Iteração:} O processo é iterado conforme necessário. À medida que novos problemas ou insights surgem, o artefato é aprimorado.
 \end{enumerate}
 
+Sendo assim, como apresentado na figura\ref{fig:processoDSR}, os passos citados anteriormente são realizados em uma iteração constante, até a obtenção do objetivo final.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Processo iterativo da metodologia \gls{dsr}.}
+  \includegraphics[scale=0.6]{figuras/Design-Science-Research.png}
+  \fonte{O Autor}~\label{fig:processoDSR}
+\end{figure}
+
+% FAZER
+% Para auxiliar no processo de gerenciamento e desenvolvimento dos artefatos, foram utilizadas outras duas ferramentas, trello e github...
+% Escrever sobre as ferramentas
 Também será utilizada analises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
 A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar.~\cite{da_silva_pesquisa_2014}
 
@@ -54,22 +68,10 @@ O python possui uma gama de bibliotecas que facilitam a implementação de solu�
 % Minimap2
 % GoFasta
 % virtualEnv
+% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
 % BV_BRC - O \gls{bvbrc}, é um centro de recursos de bioinformática dedicado ao estudo e análise de bactérias e vírus. O site também disponibiliza uma uma coleção abrangente de banco de dados, incluindo sequências genômicas, anotações funcionais, informações de expressão gênica e estruturas tridimensionais. O acesso aos bancos de dados é dado por meio de uma interface amigável, onde é possível realizar pesquisas avançadas.
 
-% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
-
 \section{Plano de Implementação}
-% Lista de Tecnologias/Ferramentas utilizadas:
-% Python 3
-% Selenium
-% Biopython
-% Shell (verificar necessidade)
-% Jupyter Notebook
-% Minimap2
-% GoFasta
-% virtualEnv
-% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
-
 Durante o desenvolvimento do projeto foi necessário dividir o projeto em fases com base nas atividades que deveriam ser realizadas de forma a atender todos os passos descritos na seção~\ref{sec:metodologia}. As principais fases identificadas foram: Montagem e preparação do dataset a ser utilizado pelo modelo; Desenvolvimento completo do modelo, com todos as definições, implementações, testes e correções necessárias; e a análise comparativa que será realizada com um outro método existente e já tradicional. Esses pontos são apresentados de forma minuciosa a seguir.
 
 \subsection{Montagem e Preparação do Dataset}
@@ -103,7 +105,7 @@ Ao final do processo de montagem do dataset, realizado no dia 02 junho de 2023, 
   \fonte{O Autor}~\label{fig:datasetGenomas}
 \end{figure}
 
-Ao finalizar o processo de download, o dataset completo ficou com as seguintes informações apresentadas na tabela~\ref{tab:datasetGenomas}.
+Ao finalizar o processo de download, o \textit{dataset} completo ficou com as seguintes informações apresentadas na tabela~\ref{tab:datasetGenomas}.
 
 %%tabela
 \begin{table}[htb]
@@ -166,38 +168,50 @@ Com o dataset de sequências únicas montado, foi decidido os passos a seguir, q
 % Como escrever essa parte: Após análise; Após orientação do coorientador...
 % Reescrever a lista abaixo de forma descritiva
 % Substituir onde estiver citando 'modelo desenvolvido' pelo nome AGUA
+Após a análise com os orientadores, o processo, que continuou a partir das sequências genômicas únicas, foi feito seguindo os quatro (4) passos apresentados a seguir:
 
-Após a análise com os orientadores, o processo, que continuou a partir das sequências genômicas únicas, foi feito da seguinte maneira:
+\begin{enumerate}
+  \item \textbf{Alinhamento das sequências genômicas:} A primeira etapa, como apresentado na figura~\ref{fig:alinhamentoGenomas}, consistiu em alinhar as sequências genômicas únicas já disponíveis, utilizando a ferramenta de alinhamento Minimap2. O Minimap2 é uma ferramenta eficiente para mapear sequências genômicas em um genoma de referência. Esse processo permitiu a identificação de regiões específicas relacionadas ao gene spike nas sequências genômicas.
+        \begin{figure}[htb]
+          \centering
+          \caption{Pipeline de Alinhamento de Sequências Genômicas Duplicadas.}
+          \includegraphics[scale=0.45]{figuras/pipelines/alinhamento_genoma.png}
+          \fonte{O Autor}~\label{fig:alinhamentoGenomas}
+        \end{figure}
+  \item \textbf{Extração do Gene Spike com Uso de Isca:} Após o alinhamento, as sequências de referência do gene spike foram usadas como ``iscas'' para identificar e extrair as sequências correspondentes nas sequências genômicas alinhadas, como visto na figura~\ref{fig:extracaoSpike}. O gene spike é de importância crítica, pois desempenha um papel fundamental na interação do vírus com as células hospedeiras. A utilização de iscas garantiu que as sequências genicas fossem extraídas corretamente do genoma completo.
+        \begin{figure}[htb]
+          \centering
+          \caption{Pipeline de Extração do Gene Spike das Sequências Genômicas Alinhadas.}
+          \includegraphics[scale=0.45]{figuras/pipelines/extracao_gene_spike.png}
+          \fonte{O Autor}~\label{fig:extracaoSpike}
+        \end{figure}
+  \item \textbf{Filtragem de Sequências Genicas Duplicadas:} Uma das preocupações na criação do dataset foi a presença de sequências duplicadas, que podem enviesar os resultados da análise. Portanto, as sequências genômicas duplicadas foram identificadas e removidas do conjunto de dados. Esse processo garantiu que cada sequência fosse única, evitando redundâncias.
+        \begin{figure}[htb]
+          \centering
+          \caption{Pipeline de Filtragem de Sequências Genicas Duplicadas.}
+          \includegraphics[scale=0.45]{figuras/pipelines/filtrando_spikes_duplicados.png}
+          \fonte{O Autor}~\label{fig:spikeDuplicados}
+        \end{figure}
+  \item \textbf{Filtragem de Sequências de Má Qualidade:} Para garantir a qualidade do dataset, as sequências genômicas que continham características indesejáveis foram filtradas. Isso incluiu a remoção de sequências que continham mais de 30 bases nitrogenadas (N) consecutivas e aquelas que não correspondiam ao tamanho esperado das sequências de referência do gene spike como visto na imagem~\ref{fig:spikesRuins}. Essa filtragem ajudou a garantir que as sequências incluídas no dataset fossem de alta qualidade e relevantes para a análise subsequente.
+        % FAZER: Corrigir parte que fala dos Ns
+        \begin{figure}[htb]
+          \centering
+          \caption{Pipeline de Filtragem de Sequências Genicas de Má Qualidade.}
+          \includegraphics[scale=0.45]{figuras/pipelines/filtrando_spikes_ruins.png}
+          \fonte{O Autor}~\label{fig:spikesRuins}
+        \end{figure}
+\end{enumerate}
 
-\begin{itemize}
-  \item Alinhamento das sequências genômicas.
-  \item Extração do gene spike.
-  \item Filtragem das sequências genicas repetidas.
-  \item Filtragem das sequências genicas de má qualidade.
-\end{itemize}
+Ao final do processo, foi gerado um \textit{dataset} de alta qualidade, contendo sequências gênicas únicas para as variantes alpha, beta, delta, gamma e omicron. Esse dataset será a base para a análise de genes virais com base no uso de códons e a aplicação de técnicas de classificação não supervisionada.
 
-Ao final do processo, foi gerado um dataset contendo sequências gênicas únicas para as variantes alpha, beta, delta, gamma e omicron.
-A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura\ref{fig:inputAgua} apresenta, que serviria de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências genicas de cada uma das linhagem, e um arquivo de anotações que serviria como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
+A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura~\ref{fig:inputAgua} apresenta, que serviria de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências genicas de cada uma das linhagem, e um arquivo de anotações que serviria como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
 
 \begin{figure}[htb]
   \centering
-  \caption{Arquivos de entrada do modelo.}
+  \caption{Arquivos de Entrada do AGUA.}
   \includegraphics[scale=0.45]{figuras/pipelines/input_AGUA.png}
   \fonte{O Autor}~\label{fig:inputAgua}
 \end{figure}
-
-%   % Verificar se é melhor descrever o processo ou listar os itens como está atualmente
-%   \item \textbf{Montagem e Preparação do Dataset:}  Abaixo, está apresentado o passo a passo que foi realizado nesta etapa:
-%         \begin{itemize}
-%           \item Analise do site \gls{bvbrc}.
-%           \item Desenvolvimento de um script Python juntamente com o Selenium, para o download automático das sequências genomicas no \gls{bvbrc}.
-%           \item Filtragem das sequências genômicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genomicas únicas. (Filtro 01)
-%           \item Alinhamento das sequências genomicas utilizando o Minimap2.
-%           \item Implementado procedimento de extração do gene de interesse (Spike), com base em uma sequência Spike de referência, das sequências únicas.
-%           \item Filtragem das sequências genicas duplicadas, ou seja, que contenham exatamente, a mesma sequência de nucleotídeos, mantendo apenas 1(uma) das repetidas e construindo um dataset de sequências genicas únicas. (Filtro 02)
-%           \item Filtragem das sequências genicas de má qualidade. Foram removidas as sequências que possuiam mais de 30 N's consecultivos ou que ficaram com a quantidade de nucleotídeos discrepantes em relação a referência genica. (Filtro 03)
-%           \item Criar arquivo de treinamento com linhagens diferentes e um arquivo de anotação. % Descrever melhor os arquivos
-%         \end{itemize}
 
 \subsection{AGUA}
 O modelo proposto foi nomeado como \gls{agua}. A seguir o mesmo será apresentado, desde a sua concepção, implementação e testes.
@@ -216,18 +230,41 @@ O modelo proposto foi nomeado como \gls{agua}. A seguir o mesmo será apresentad
         % \item Identificar possíveis problemas de overfitting ou underfitting e realizar ajustes no modelo, como ajuste de hiperparâmetros ou utilização de técnicas de regularização.
 \end{itemize}
 
-\subsection{Análise comparativa entre o método proposto e outro método existente}
+\subsection{Análise comparativa entre o método proposto (AGUA) e outro método existente}
+
+Nesta seção, apresentamos uma análise comparativa detalhada entre o método proposto e um método tradicional amplamente utilizado. O objetivo é avaliar o desempenho e a eficácia do nosso método em relação a uma abordagem estabelecida. Para esse fim, realizamos a análise em um conjunto de dados comum, utilizando o mesmo conjunto de dados que foi empregado na construção do nosso modelo, apresentado na figura~\ref{tab:datasetGenomasTeste}. O método tradicional selecionado para comparação é o utilizando o \textit{software} IQ-TREE, que é um estimador de máxima verossimilhança de alta performance, frequentemente empregado na filogenia molecular.~\cite{iqtree2_minh_2020}
+
+A escolha do IQ-TREE como método tradicional se baseia em sua prevalência na comunidade científica e sua eficácia comprovada em construir árvores filogenéticas a partir de dados de sequenciamento. A avaliação comparativa entre o método proposto e o IQ-TREE nos permitirá avaliar a capacidade do nosso modelo em produzir resultados relevantes e precisos em comparação com uma abordagem estabelecida.
+
+% FAZER Pontos importantes na análise comparativa
+Nesta análise comparativa, examinaremos aspectos críticos da construção de árvores filogenéticas, como a topologia das árvores resultantes, a robustez das ramificações, e a resolução de agrupamentos de espécies. Além disso, consideraremos aspectos de escalabilidade e eficiência computacional.
+
+A abordagem metodológica consiste em utilizar o mesmo conjunto de dados que alimentou nosso modelo para a construção de árvores filogenéticas usando o IQ-TREE como apresentado na figura~\ref{fig:inputAguaIqtree}. Comparamos, então, as árvores filogenéticas obtidas por ambos os métodos, avaliando suas similaridades e diferenças. Essa análise comparativa nos permitirá determinar se o método proposto representa uma melhoria significativa em relação à abordagem tradicional, contribuindo assim para o avanço no campo da filogenia molecular.
+
+\begin{figure}[htb]
+  \centering
+  \caption{Arquivos de entrada do AGUA e do IQ-TREE.}
+  \includegraphics[scale=0.45]{figuras/pipelines/agua_iqtree.png}
+  \fonte{O Autor}~\label{fig:inputAguaIqtree}
+\end{figure}
 
 % FAZER
-% Descrever as ferramentas utilizadas aqui, quando falar do processo filogenético tradicional...
+% A seguir, descrevemos em detalhes a metodologia utilizada para realizar essa análise comparativa, bem como os resultados obtidos e suas implicações.
+No contexto da análise comparativa realizada, o IQ-TREE foi aplicado ao mesmo conjunto de dados utilizado na construção do modelo proposto. Isso permitiu a geração de árvores filogenéticas com as linhagens corretamente separadas, como visto na figura~\ref{fig:arvoreIqtree}, que serviram como ponto de comparação para avaliar o desempenho do método proposto em relação a uma abordagem tradicional.
 
-Será realizada uma analise com um conjunto de dados, onde será realizado analises estatísticas para verificação de melhorias, ou não, do novo método proposto analisando os seguintes aspectos:
-\begin{itemize}
-  \item Comparação dos métodos de agrupamento adotados, avaliando sua eficácia na formação de clusters e na identificação de padrões ou similaridades nas sequências.
-  \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
-  \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
-\end{itemize}
+% FAZER
+% Melhorar a figura
+\begin{figure}[htb]
+  \centering
+  \caption{Árvore Filogenética Construída com o IQ-TREE.}
+  \includegraphics[scale=0.2]{figuras/filogenia_tradicional/sequencias_treinamento.fasta.treefile.pdf}
+  \fonte{O Autor}~\label{fig:arvoreIqtree}
+\end{figure}
 
-% \section{Plano de Testes e Validação}
+% \begin{itemize}
+%   \item Comparação dos métodos de agrupamento adotados, avaliando sua eficácia na formação de clusters e na identificação de padrões ou similaridades nas sequências.
+%   \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
+%   \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
+% \end{itemize}
 
 % \section{Resultados Obtidos}

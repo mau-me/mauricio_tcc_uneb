@@ -28,11 +28,43 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
   \fonte{Retirada de \citeauthor{alberts_biologia_2017}}~\label{fig:estruturaDNA}
 \end{figure}
 
+Além das bases nitrogenadas originais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
+
+\begin{table}[htb]
+  \caption{\textit{IUPAC Nucleotide Code}.}
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      Base             & IUPAC Nucleotide Code    \\
+      \hline
+      Adenina          & A                        \\
+      Citosina         & C                        \\
+      Guanina          & G                        \\
+      Timina           & T                        \\
+      Uracila          & U                        \\
+      A ou G           & R                        \\
+      C ou T           & Y                        \\
+      A ou C           & M                        \\
+      G ou T           & K                        \\
+      G ou C           & S                        \\
+      A ou T ou G      & W                        \\
+      C ou G ou T      & B                        \\
+      A ou C ou T      & D                        \\
+      A ou G ou T      & H                        \\
+      C ou G ou A      & V                        \\
+      A ou C ou G ou T & N                        \\
+      GAP              & \textbf{.} ou \textbf{-} \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:iupacNucleotideCode}
+\end{table}
+
 % FAZER
 % Corrigir/Complementar a definição de genoma e gene
 % Comparar o genoma humano com o genoma viral em relação a quantidade de pares de bases
 % https://www.genome.gov/genetics-glossary/Genome REF para imagens
-A conjunto completo de material genético contido em um organismo, seja ele um vírus, uma bactéria, uma planta ou um animal é conhecido como genoma. Ele abrange todas as informações genéticas necessárias para o desenvolvimento, funcionamento e reprodução do organismo. O genoma é composto por sequências de \gls{dna} que carregam as instruções para a síntese de proteínas e regulam várias funções celulares. A análise do genoma desempenha um papel fundamental na genética, na biologia molecular e na compreensão da hereditariedade e da evolução.~\cite{alberts_biologia_2017}
+O conjunto completo de material genético contido em um organismo, seja ele um vírus, uma bactéria, uma planta ou um animal é conhecido como genoma. Ele abrange todas as informações genéticas necessárias para o desenvolvimento, funcionamento e reprodução do organismo. O genoma é composto por sequências de \gls{dna} que carregam as instruções para a síntese de proteínas e regulam várias funções celulares. A análise do genoma desempenha um papel fundamental na genética, na biologia molecular e na compreensão da hereditariedade e da evolução.~\cite{alberts_biologia_2017}
 
 As informações contidas no \gls{dna} são copiadas em uma molécula de \gls{rna}, esse processo é conhecido como transcrição. A transcrição ocorre no núcleo das células e envolve a separação das duas fitas do \gls{dna} e o pareamento de nucleotídeos complementares para sintetizar uma molécula de \gls{mrna}. O \gls{mrna} é uma cópia do DNA que carrega a sequência de bases nitrogenadas correspondente a um gene específico.
 Após isso, ocorre o processo de tradução onde a sequência de bases nitrogenadas do \gls{mrna} é utilizada para sintetizar proteínas. A tradução ocorre nos ribossomos, presentes no citoplasma celular. Durante a tradução, o \gls{mrna} é lido em grupos de três bases, chamados de códons. Os códons são sequências de três nucleotídeos consecutivos no RNA que correspondem a um aminoácido específico. Existem 64 códons possíveis, correspondentes a 20 aminoácidos diferentes como apresentado na Figura~\ref{fig:tabelaCodons}, além de sinais de início e parada da tradução. A tradução é o processo pelo qual a sequência de códons no RNA é utilizada para sintetizar proteínas. Durante a tradução, os códons são reconhecidos por moléculas de RNA transportador (tRNA) que trazem os aminoácidos correspondentes.
@@ -43,12 +75,12 @@ Após isso, ocorre o processo de tradução onde a sequência de bases nitrogena
   \fonte{Adaptade de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
 \end{figure}
 
+A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
+Cada códon especifica um aminoácido distinto. Os aminoácidos são transportados para o ribossomo por moléculas de \gls{trna}, que possuem um anticódon complementar ao códon do \gls{mrna}. À medida que o ribossomo percorre o \gls{mrna}, os aminoácidos são ligados em uma sequência específica, formando uma cadeia polipeptídica que será dobrada e modificada para se tornar uma proteína funcional~\cite{alberts_biologia_2017}.
+
 % FAZER
 % Sequenciamento genético (Como são obtidas as sequências) De forma bem sucinta
-
-A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
-
-Cada códon especifica um aminoácido distinto. Os aminoácidos são transportados para o ribossomo por moléculas de \gls{trna}, que possuem um anticódon complementar ao códon do \gls{mrna}. À medida que o ribossomo percorre o \gls{mrna}, os aminoácidos são ligados em uma sequência específica, formando uma cadeia polipeptídica que será dobrada e modificada para se tornar uma proteína funcional~\cite{alberts_biologia_2017}.
+Para determinar a ordem exata dos nucleotídeos em uma molécula de \gls{dna} ou \gls{rna} é realizada uma técnica conhecida como sequenciamento genético. Existem várias técnicas de sequenciamento, cada uma com suas vantagens e desvantagens, sendo as mais notáveis o sequenciamento de Sanger, o \gls{ngs} e o sequenciamento de terceira geração.~\cite{nanopore_sequence_jain_2016,dna_sequence_sanger_1977,next_generation_sequence_goodwin_2016}
 
 \section{Vírus}
 
@@ -68,10 +100,7 @@ O ciclo e vida viral é conjunto de etapas que um vírus passa para se reproduzi
 
 O SARS-CoV-2 é um vírus da família Coronaviridae, que causa a doença chamada \gls{covid19}. Ele foi identificado pela primeira vez em dezembro de 2019 na cidade de Wuhan, na província de Hubei, na China, e desde então se espalhou para todo o mundo, resultando em uma pandemia global~\cite{zhu_novel_2020,wu_coronavirus_2020}.
 
-O SARS-CoV-2 possui uma estrutura viral apresentada na Figura~\ref{fig:estruturaCoronavirus}, característica dos coronavírus. Ele é composto por uma partícula viral esférica, com um envelope lipídico que envolve seu material genético. A estrutura do vírus inclui proteínas de espículas na sua superfície, conhecidas como proteína spike (S), que são responsáveis pela ligação do vírus às células hospedeiras. Além disso, o SARS-CoV-2 possui proteínas de membrana (M), envelope (E) e nucleocapsídeo (N), que desempenham papéis importantes na estrutura e na replicação viral.
-
-% FAZER
-% Falar um pouco mais sobre o gene spike
+O SARS-CoV-2 possui uma estrutura viral apresentada na Figura~\ref{fig:estruturaCoronavirus}, característica dos coronavírus. Ele é composto por uma partícula viral esférica, com um envelope lipídico que envolve seu material genético. A estrutura do vírus inclui proteínas de espículas na sua superfície, conhecidas como proteína spike (S). Além disso, o SARS-CoV-2 possui proteínas de membrana (M), envelope (E) e nucleocapsídeo (N), que desempenham papéis importantes na estrutura e na replicação viral.
 
 \begin{figure}[htb]
   \centering
@@ -80,19 +109,23 @@ O SARS-CoV-2 possui uma estrutura viral apresentada na Figura~\ref{fig:estrutura
   \fonte{Retirada de \citeauthor{li_coronavirus_2020}}~\label{fig:estruturaCoronavirus}
 \end{figure}
 
-% FAZER
-% Falar sobre as nomenclaturas PANGO e WHO
-% Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
+% SPIKE
+A proteína Spike (S) do vírus SARS-CoV-2 é uma das principais proteínas de superfície do vírus e desempenha um papel crucial na infecção das células hospedeiras. Ela é uma glicoproteína que forma estruturas semelhantes a espículas na superfície do vírus, dando-lhe uma aparência coroada. A proteína Spike é o alvo principal das respostas imunes do hospedeiro e é fundamental para a ligação do vírus às células humanas e sua subsequente entrada.
+
+A proteína Spike é composta por três domínios principais: o domínio de ligação ao receptor (RBD -~Receptor-Binding Domain), o domínio de fusão (FD -~Fusion Domain) e o domínio N-terminal (NTD -~N-Terminal Domain). O RBD é particularmente importante, pois é responsável pela interação com o receptor da enzima conversora de angiotensina 2 (ACE2) nas células hospedeiras humanas. Essa interação é crucial para a entrada do vírus nas células.
+% Apresentar imagem específica da SPIKE
+
+A estrutura da proteína Spike é altamente dinâmica e pode mudar de conformação para facilitar a fusão da membrana viral com a membrana da célula hospedeira, permitindo assim a entrada do vírus. Essa capacidade de mudança conformacional torna a proteína Spike um alvo promissor para o desenvolvimento de vacinas e terapias antivirais.
+
+Estudos detalhados da proteína Spike são essenciais para compreender a patogenicidade do vírus SARS-CoV-2 e para o desenvolvimento de estratégias terapêuticas eficazes. Além disso, mutações na proteína Spike têm sido identificadas como uma das principais causas de variantes do vírus, o que destaca ainda mais a importância de sua investigação contínua.
+% SPIKE
 
 \section{Bioinformática}
 
 % Alinhamento de Sequências, Análise de Genomas Virais, Análise de Expressão Gênica, Ferramentas de Bioinformática (Algoritmos de Alinhamento e Algoritmos de reconstrução de árvores)
-% Apresentar a IUPAC nucleotide code
-% Nessa tabela é apresentada cada nucleotideo e também os códigos após o alinhamento. O N e o Gap por exemplo
-% Adicionar na tabela de simbolos
 
 \section{Filogenia}
-% Fazer
+% FAZER
 % Escrever sobre Modelos Evolutivos
 % GTR Generalized time Reversible
 
@@ -117,11 +150,48 @@ Ao longo dos anos, vários métodos utilizados para análise filogenética foram
 \end{enumerate}
 
 \subsection{Nomenclaturas de Linhagens do SARS-CoV-2}
+% FAZER
+% Falar sobre as nomenclaturas PANGO e WHO
+% Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
+A nomenclatura das linhagens do SARS-CoV-2 é uma parte crucial na classificação e rastreamento das diferentes variantes do vírus. Duas das principais nomenclaturas usadas para descrever essas linhagens são a nomenclatura \gls{pango} e a nomenclatura da \gls{who}. Essas nomenclaturas são usadas para descrever as diferentes variantes do vírus com base em suas características genéticas e filogenéticas.
 
-% \section{Machine Learning}
+A nomenclatura \gls{pango} é uma abordagem baseada na filogenia para nomear e rastrear as linhagens do \gls{sarscov2}. Ela atribui um nome único a cada linhagem com base em sua posição na árvore filogenética do vírus. Isso permite uma identificação clara das diferentes linhagens e ajuda na compreensão de como o vírus está evoluindo ao longo do tempo.~\cite{pango_rambaut_2020} Já a \gls{who} também desenvolveu sua própria nomenclatura para classificar as variantes do \gls{sarscov2}. Essa nomenclatura envolve letras gregas, como Alpha, Beta, Gamma, Delta, e assim por diante. Cada variante é nomeada com base nas letras gregas em ordem alfabética e é usada para evitar estigmatização de locais geográficos ou populações.~\cite{who_variants}
+
+A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as principais variantes com as suas respectivas nomenclaturas \gls{pango} e \gls{who}
+
+\begin{table}[htb]
+  \caption{\textit{Nomenclaturas \gls{pango} e \gls{who}}.}
+  \begin{center}
+    \begin{tabular}{|c|c|}
+      \hline
+      Nomenclatura WHO & Nomenclatura PANGO \\
+      \hline
+      B.1.1.7          & Alpha              \\
+      B.1.1.529        & Omicron            \\
+      B.1.351          & Beta               \\
+      B.1.617.2        & Delta              \\
+      P.1              & Gamma              \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:nomenclaturaPangoWho}
+\end{table}
+
+\section{Machine Learning}
 % Modelo não supervisionado
-% Escrever sobre
-% Verificar utilização da sessão trabalhos correlatos!
+% Adicionar as referências (Algumas já estão no bibtex)
+Machine learning é uma subárea da inteligência artificial que se concentra no desenvolvimento de algoritmos e modelos que permitem a um sistema aprender a partir de dados e realizar tarefas específicas sem ser explicitamente programado. Dentro do campo do machine learning, existem duas categorias principais de aprendizado: supervisionado e não supervisionado. Neste contexto, abordaremos a segunda categoria, com ênfase nos modelos não supervisionados.
+
+O aprendizado não supervisionado é uma abordagem de machine learning na qual o algoritmo é treinado em dados não rotulados, ou seja, dados que não têm rótulos ou categorias previamente atribuídos. O objetivo do aprendizado não supervisionado é explorar a estrutura e os padrões subjacentes aos dados sem orientação externa. Isso torna o aprendizado não supervisionado útil para tarefas em que a natureza dos dados é desconhecida, e os padrões emergentes devem ser identificados.
+
+Um dos principais tipos de tarefa no aprendizado não supervisionado é o agrupamento (clustering). Nessa tarefa, o algoritmo identifica grupos ou clusters de dados que compartilham características semelhantes. O objetivo é agrupar dados de acordo com suas propriedades intrínsecas, sem conhecimento prévio das categorias. Algoritmos de clustering, como o K-Means e o Hierarchical Clustering, são amplamente utilizados em campos como biologia, processamento de imagem, análise de dados e muito mais.
+
+O aprendizado não supervisionado é fundamental em diversas aplicações. Na biologia, por exemplo, algoritmos de clustering podem ser usados para identificar grupos de genes que são coexpressos, revelando padrões de regulação genética. Em finanças, a redução de dimensionalidade pode ser aplicada para entender a relação entre diferentes ativos financeiros. Na área de processamento de linguagem natural, o aprendizado não supervisionado é usado para detectar tópicos em grandes volumes de texto.
+
+Apesar de sua versatilidade, o aprendizado não supervisionado também apresenta desafios. A interpretação dos resultados pode ser complexa, pois não há rótulos de classe para validar as descobertas. Além disso, a escolha de hiperparâmetros e a avaliação da qualidade do agrupamento ou da redução de dimensionalidade podem ser complicadas.
+
+Em resumo, o aprendizado não supervisionado desempenha um papel fundamental no campo do machine learning, permitindo a extração de informações valiosas de dados não rotulados. Sua capacidade de encontrar estrutura oculta nos dados é crucial em uma variedade de domínios, tornando-o uma ferramenta poderosa na análise e interpretação de informações complexas.
+
 \section{Trabalhos Correlatos}
 
 Na busca de trabalhos relacionados, vários métodos foram encontrados, e a seguir são apresentados.
