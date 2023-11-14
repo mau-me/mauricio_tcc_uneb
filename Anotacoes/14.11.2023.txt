@@ -1,0 +1,9 @@
+Próximas atividades:
+
+1. Adicionar referência a monografia de Diego e Cândido (CBUC)
+2. Corrigir referencia com base nos apontamentos enviados pela prof.ª Debora no Teams
+3. Adicionar na parte de variantes: Variantes de Interesse (VOI) ou Variantes de Preocupação (VOC)
+- variantes VOC
+- https://www.paho.org/pt/noticias/1-6-2021-oms-anuncia-nomenclaturas-simples-e-faceis-pronunciar-para-variantes-interesse-e
+- http://painelsaude.unb.br/#/variantes
+4. Refazer análise de resultados, executando o AGUA com a nova metodologia proposta. Treinar o modelo com uma variante de cada vez, e testar se o mesmo é capaz de checar a existência de novas variantes.

@@ -13,9 +13,9 @@ Os problemas impostos pela pandemia do COVID-19 incluíram a falta de conhecimen
 Diante disso, a bioinformática, que é a junção de métodos computacionais e técnicas estatísticas com o objetivo de extrair informações de dados biológicos brutos, desempenha um papel fundamental na interpretação de dados genômicos e na compreensão de processos evolutivos. Juntamente com a análise genética, é uma disciplina crucial na compreensão da diversidade e evolução de vírus que podem afetar organismos, incluindo seres humanos, animais e plantas. Essa análise não apenas fornece \textit{insights} sobre a classificação e identificação de vírus, mas também é fundamental para a pesquisa em saúde pública, agronegócio e ecologia. No entanto, a complexidade inerente às sequências genéticas dos vírus e a crescente disponibilidade de dados genômicos desafiam a capacidade de análise humana.
 
 A reconstrução filogenética é uma das abordagens amplamente utilizadas na análise da evolução de espécies, que permite investigar as relações evolutivas entre diferentes linhagens de vírus. Essas observações são realizadas com base em dados como sequências de \gls{dna} e \gls{rna}. Essas sequências são formadas por blocos fundamentais chamados de nucleotídeos, que são compostos por uma base nitrogenada, um açúcar e um grupo fosfato. As bases presentes nos nucleotídeos do \gls{dna} são adenina (A), timina (T), citosina (C) e guanina (G), enquanto no \gls{rna} a base timina é substituída pela uracila (U)~\cite{alberts_molecular_2002}.
-Segundo~\citeauthor{barry_phylogenetic_analysis_2006} os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.
+Segundo~\citeauthoronline{barry_phylogenetic_analysis_2006} os métodos filogenéticos podem ser usados para analisar os dados da sequência de nucleotídeos de forma que a ordem de descendência de cepas relacionadas possa ser determinada. Quando associada à análise filogenética apropriada, a epidemiologia molecular tem o potencial de elucidar os mecanismos que levam a surtos microbianos e epidemias.
 
-Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\citeauthor{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
+Uma das principais formas de análise filogenética é realizada através da árvore filogenética, onde são representadas as relações evolutivas entre um conjunto de espécies. De acordo com~\citeauthoronline{morrison_tree_thinking} elas tem função importante porque apresentam de forma sucinta e particular a evolução dos descendentes partindo de ancestrais em comum.
 
 % Justificativas e Contribuições
 Seguindo a linha dos métodos até então desenvolvidos, este trabalho busca tentar desenvolver um método de construção de árvores com base nas distâncias obtidas a partir da diferença do uso de códons, e assim poder contribuir com a tarefa de classificação de cepas para entes responsáveis por controles voltados a áreas da saúde, como por exemplo a vigilância sanitária, especialmente na descoberta de novas cepas emergentes com potenciais pandêmicos. Ademais, é também importante dispor de alternativas à filogenia molecular atualmente utilizada, para gerar informações de outro ponto de vista e-ou para servir de referência aos métodos filogenéticos.
@@ -32,58 +32,58 @@ Apesar da utilidade da filogenética e dos softwares comerciais e públicos disp
 % É possível realizar a classificação de sequências genéticas com base no uso de códons
 % Repetição encontrada acima na parte de apresentação da nossa abordagem
 
-As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons, que são sequências de três nucleotídeos responsáveis pela codificação dos aminoácidos nas proteínas. Os códons desempenham um papel crucial na determinação da função e estrutura das proteínas, e alterações nos códons podem resultar em mudanças significativas nas características fenotípicas dos vírus. Necessita-se então, de pesquisas e desenvolvimento de ferramentas que realizem uma classificação de sequências genéticas com base no uso de códons.
+As soluções até então desenvolvidas, são guiadas pela reconstrução das árvores filogenéticas construídas a partir das mutações de nucleotídeos. Neste aspecto, as ferramentas disponíveis não oferecem uma aplicação no contexto de árvores reconstruídas com distâncias obtidas a partir da diferença do uso de códons. Estes são sequências de três nucleotídeos responsáveis pela codificação dos aminoácidos nas proteínas. Os códons desempenham um papel crucial na determinação da função e estrutura das proteínas, e alterações nos códons podem resultar em mudanças significativas nas características fenotípicas dos vírus. Portanto, é necessário a realização de pesquisas e desenvolvimento de ferramentas que capazes de classificar sequências genéticas com base no uso de códons.
 
 % Objetivos do Anteprojeto
 
 Com base no problema de pesquisa proposto, foram construídos os objetivos que deveriam ser atingidos, os mesmos são apresentados a seguir:
 \begin{itemize}
-  \item \textbf{Objetivo Geral}
-        \begin{enumerate}[label=~(\roman*)]
-          \item Desenvolver e validar um novo método de análise da evolução molecular viral.
-        \end{enumerate}
-  \item \textbf{Objetivos Específicos}
-        \begin{enumerate}[label=~(\roman*)]
-          \item Montagem de dataset do projeto
-          \item Definir um modelo para validação do método proposto
-          \item Desenvolver uma de ferramenta para caracterizar/validar o método
-          \item Coletar os dados necessários para validar o método
-          \item Realizar a comparação da performance computacional do novo método com algum dos métodos do estado da arte.
-          \item Disponibilizar o modelo como uma ferramenta web de fácil acesso.
-        \end{enumerate}
+      \item \textbf{Objetivo Geral}
+            \begin{enumerate}[label=~(\roman*)]
+                  \item Desenvolver um novo método de análise da evolução molecular viral.
+            \end{enumerate}
+      \item \textbf{Objetivos Específicos}
+            \begin{enumerate}[label=~(\roman*)]
+                  \item Montagem de dataset do projeto
+                  \item Definir um modelo para validação do método proposto
+                  \item Desenvolver uma de ferramenta para caracterizar/validar o método
+                  \item Coletar os dados necessários para validar o método
+                  \item Realizar a comparação da performance computacional do novo método com algum dos métodos do estado da arte.
+                  \item Disponibilizar o modelo como uma ferramenta web de fácil acesso.
+            \end{enumerate}
 \end{itemize}
 
 % Estrutura da monografia
 Esta monografia seguirá uma estrutura cuidadosamente elaborada para abordar de forma abrangente o projeto de desenvolvimento da ferramenta de análise de genes virais baseada no uso de códons. A seguir, descrevemos cada seção, delineando seu conteúdo e importância na apresentação do trabalho:
 
 \begin{itemize}
-  \item Capítulo 1: Introdução
+      \item Capítulo 1: Introdução
 
-        O capítulo introdutório contextualiza o problema abordado, destacando sua relevância, importância e necessidade na área de análise de genes virais. Além disso, apresenta a estrutura da monografia, fornecendo uma visão geral das seções subsequentes.
+            O capítulo introdutório contextualiza o problema abordado, destacando sua relevância, importância e necessidade na área de análise de genes virais. Além disso, apresenta a estrutura da monografia, fornecendo uma visão geral das seções subsequentes.
 
-  \item Capítulo 2: Fundamentação Teórica
+      \item Capítulo 2: Fundamentação Teórica
 
-        Este capítulo estabelece as bases teóricas para o projeto. Explora conceitos essenciais relacionados a genes virais, códons, filogenética, metodologia DSR e outras áreas relevantes. É fundamental para a compreensão dos métodos e resultados apresentados posteriormente.
+            Este capítulo estabelece as bases teóricas para o projeto. Explora conceitos essenciais relacionados a genes virais, códons, filogenética, metodologia DSR e outras áreas relevantes. É fundamental para a compreensão dos métodos e resultados apresentados posteriormente.
 
-  \item Capítulo 3: Descrição do Projeto
+      \item Capítulo 3: Descrição do Projeto
 
-        Neste capítulo, detalhamos o projeto em sua totalidade. Isso inclui a metodologia utilizada, materiais e métodos empregados, bem como o plano de implementação. Abordaremos a montagem e preparação do dataset, desenvolvimento do modelo e a análise comparativa do modelo proposto e outro existente.
+            Neste capítulo, detalhamos o projeto em sua totalidade. Isso inclui a metodologia utilizada, materiais e métodos empregados, bem como o plano de implementação. Abordaremos a montagem e preparação do dataset, desenvolvimento do modelo e a análise comparativa do modelo proposto e outro existente.
 
-  \item Capítulo 4: Montagem e Preparação do Dataset
+      \item Capítulo 4: Montagem e Preparação do Dataset
 
-        Este capítulo concentra-se nas etapas iniciais do projeto, destacando o processo de montagem do dataset. Descreveremos o procedimento de recuperação de sequências, filtragem, alinhamento, extração de genes de interesse e a remoção de sequências duplicadas. Essas etapas são fundamentais para obter um dataset de alta qualidade.
+            Este capítulo concentra-se nas etapas iniciais do projeto, destacando o processo de montagem do dataset. Descreveremos o procedimento de recuperação de sequências, filtragem, alinhamento, extração de genes de interesse e a remoção de sequências duplicadas. Essas etapas são fundamentais para obter um dataset de alta qualidade.
 
-  \item Capítulo 5: Desenvolvimento do Modelo
+      \item Capítulo 5: Desenvolvimento do Modelo
 
-        Aqui, detalharemos a implementação do modelo de classificação não supervisionada com base em códons. Isso envolverá a tradução de sequências de DNA, a extração de códigos únicos e o processo de agrupamento. O capítulo também abordará a associação de clusters com classes de sequências.
+            Aqui, detalharemos a implementação do modelo de classificação não supervisionada com base em códons. Isso envolverá a tradução de sequências de DNA, a extração de códigos únicos e o processo de agrupamento. O capítulo também abordará a associação de clusters com classes de sequências.
 
-  \item Capítulo 6: Análise Comparativa do Modelo Proposto e Outro Existente
+      \item Capítulo 6: Análise Comparativa do Modelo Proposto e Outro Existente
 
-        Nesta seção, realizaremos uma análise comparativa entre o método desenvolvido neste projeto e as técnicas clássicas de filogenética. Avaliaremos o desempenho, precisão e eficiência do nosso modelo em relação aos métodos tradicionais.
+            Nesta seção, realizaremos uma análise comparativa entre o método desenvolvido neste projeto e as técnicas clássicas de filogenética. Avaliaremos o desempenho, precisão e eficiência do nosso modelo em relação aos métodos tradicionais.
 
-  \item Capítulo 7: Considerações Finais
+      \item Capítulo 7: Considerações Finais
 
-        A última seção da monografia destacará as principais conclusões, contribuições do projeto e recomendações para pesquisas futuras. Também enfocará as implicações práticas da ferramenta desenvolvida e seu impacto na análise de genes virais.
+            A última seção da monografia destacará as principais conclusões, contribuições do projeto e recomendações para pesquisas futuras. Também enfocará as implicações práticas da ferramenta desenvolvida e seu impacto na análise de genes virais.
 \end{itemize}
 
 % Apresentação da minha abordagem/Resultados esperados

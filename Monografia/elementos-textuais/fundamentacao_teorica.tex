@@ -33,7 +33,7 @@ Além das bases nitrogenadas originais já apresentadas (\gls{adenina}, \gls{tim
 \begin{table}[htb]
   \caption{\textit{IUPAC Nucleotide Code}.}
   \begin{center}
-    \begin{tabular}{|c|c|}
+    \begin{tabular}{c|c}
       \hline
       Base             & IUPAC Nucleotide Code    \\
       \hline
@@ -139,14 +139,14 @@ Por outro lado, os métodos baseados em caracteres analisam as mudanças nos car
 Ao longo dos anos, vários métodos utilizados para análise filogenética foram desenvolvidos, logo após, será apresentado alguns dos principais e amplamente utilizados:
 
 \begin{enumerate}
-  \item \textbf{Método de reconstrução de árvore filogenética de distância (1957)}: Esse método é baseado na construção de árvores filogenéticas a partir de uma matriz de distâncias que quantifica a diferença evolutiva entre diferentes sequências. A árvore é construída de modo que as sequências mais semelhantes estejam mais próximas umas das outras. Esse método é amplamente utilizado em análises filogenéticas e é uma das técnicas mais antigas.~\cite{sokal_statistical_method_1958}
-  \item \textbf{Método de máxima parsimônia (1966)}: A máxima parsimônia busca a árvore filogenética mais simples, ou seja, aquela que requer o menor número de mudanças evolutivas para explicar as sequências observadas. Esse método é baseado no princípio de que a evolução segue o caminho mais econômico, evitando mudanças desnecessárias.~\cite{fitch_toward_definition_1971}
-  \item \textbf{Método de máxima verossimilhança (1981)}: O método de máxima verossimilhança estima a árvore filogenética que maximiza a probabilidade de observar as sequências dadas, dadas as hipóteses filogenéticas. Ele é baseado na modelagem estatística da evolução molecular e é amplamente considerado um dos métodos mais precisos para a reconstrução de árvores filogenéticas.~\cite{felsenstein_evolutionary_tree_1981}
-  \item \textbf{Método de junção de vizinhos (1987)}: O método Neighbor-Joining é uma técnica de construção de árvore filogenética que se baseia em uma abordagem de aglomeração hierárquica. Ele é amplamente utilizado para criar árvores filogenéticas a partir de matrizes de distância, representando a proximidade evolutiva entre sequências ou espécies. Esse método é especialmente útil para análises de grandes conjuntos de dados e é conhecido por sua eficiência computacional.~\cite{saitou_neighbor_1987} % MÉTODO UTILIZADO NO AGUA!? Junção de Vizinhos / Neighbor-Joining
-  \item \textbf{Método de inferência bayesiana (2001)}: A inferência bayesiana combina informações a priori com dados observados para estimar a árvore filogenética mais provável. Ela se baseia no Teorema de Bayes e permite incorporar informações prévias sobre as relações filogenéticas. Esse método é particularmente útil quando se dispõe de conhecimento prévio sobre as relações entre as espécies.~\cite{huelsenbeck_bayesian_inference_2001}
-  \item \textbf{Método de coalescência (2004)}: O método de coalescência, também conhecido como filogenia de coalescência, aborda a filogenia a partir do ponto de vista do ancestral comum mais recente. Ele modela a história da população ancestral e como as sequências evoluíram a partir dessa população. Esse método é especialmente útil para analisar sequências de genes individuais.~\cite{kingman_coalescent_1982}
-  \item \textbf{Método de redes filogenéticas (2005)}: As redes filogenéticas são uma extensão das árvores filogenéticas que permitem representar relacionamentos mais complexos, como reticulações ou eventos de hibridização. Elas são úteis quando as relações entre as espécies não podem ser adequadamente representadas por uma árvore simples.~\cite{huson_phylogenetic_networks_2006}
-  \item \textbf{Método de filogenia de genoma inteiro (2010)}: Esse método se concentra na análise comparativa de genomas completos para inferir relações filogenéticas. Ele utiliza informações genômicas de alta resolução, como sequências de genes e elementos regulatórios, para construir árvores filogenéticas que refletem a evolução das espécies.~\cite{eisen_horizontal_gene_transfre_2000}
+  \item \textbf{Método de reconstrução de árvore filogenética de distância (1957)}: Esse método é baseado na construção de árvores filogenéticas a partir de uma matriz de distâncias que quantifica a diferença evolutiva entre diferentes sequências. A árvore é construída de modo que as sequências mais semelhantes estejam mais próximas umas das outras. Esse método é amplamente utilizado em análises filogenéticas e é uma das técnicas mais antigas~\cite{sokal_statistical_method_1958}.
+  \item \textbf{Método de máxima parsimônia (1966)}: A máxima parsimônia busca a árvore filogenética mais simples, ou seja, aquela que requer o menor número de mudanças evolutivas para explicar as sequências observadas. Esse método é baseado no princípio de que a evolução segue o caminho mais econômico, evitando mudanças desnecessárias~\cite{fitch_toward_definition_1971}.
+  \item \textbf{Método de máxima verossimilhança (1981)}: O método de máxima verossimilhança estima a árvore filogenética que maximiza a probabilidade de observar as sequências dadas, dadas as hipóteses filogenéticas. Ele é baseado na modelagem estatística da evolução molecular e é amplamente considerado um dos métodos mais precisos para a reconstrução de árvores filogenéticas~\cite{felsenstein_evolutionary_tree_1981}.
+  \item \textbf{Método de junção de vizinhos (1987)}: O método Neighbor-Joining é uma técnica de construção de árvore filogenética que se baseia em uma abordagem de aglomeração hierárquica. Ele é amplamente utilizado para criar árvores filogenéticas a partir de matrizes de distância, representando a proximidade evolutiva entre sequências ou espécies. Esse método é especialmente útil para análises de grandes conjuntos de dados e é conhecido por sua eficiência computacional~\cite{saitou_neighbor_1987}. % MÉTODO UTILIZADO NO AGUA!? Junção de Vizinhos / Neighbor-Joining
+  \item \textbf{Método de inferência bayesiana (2001)}: A inferência bayesiana combina informações a priori com dados observados para estimar a árvore filogenética mais provável. Ela se baseia no Teorema de Bayes e permite incorporar informações prévias sobre as relações filogenéticas. Esse método é particularmente útil quando se dispõe de conhecimento prévio sobre as relações entre as espécies~\cite{huelsenbeck_bayesian_inference_2001}.
+  \item \textbf{Método de coalescência (2004)}: O método de coalescência, também conhecido como filogenia de coalescência, aborda a filogenia a partir do ponto de vista do ancestral comum mais recente. Ele modela a história da população ancestral e como as sequências evoluíram a partir dessa população. Esse método é especialmente útil para analisar sequências de genes individuais~\cite{kingman_coalescent_1982}.
+  \item \textbf{Método de redes filogenéticas (2005)}: As redes filogenéticas são uma extensão das árvores filogenéticas que permitem representar relacionamentos mais complexos, como reticulações ou eventos de hibridização. Elas são úteis quando as relações entre as espécies não podem ser adequadamente representadas por uma árvore simples~\cite{huson_phylogenetic_networks_2006}.
+  \item \textbf{Método de filogenia de genoma inteiro (2010)}: Esse método se concentra na análise comparativa de genomas completos para inferir relações filogenéticas. Ele utiliza informações genômicas de alta resolução, como sequências de genes e elementos regulatórios, para construir árvores filogenéticas que refletem a evolução das espécies~\cite{eisen_horizontal_gene_transfre_2000}.
 \end{enumerate}
 
 \subsection{Nomenclaturas de Linhagens do SARS-CoV-2}
@@ -162,7 +162,7 @@ A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as principa
 \begin{table}[htb]
   \caption{\textit{Nomenclaturas \gls{pango} e \gls{who}}.}
   \begin{center}
-    \begin{tabular}{|c|c|}
+    \begin{tabular}{c|c}
       \hline
       Nomenclatura WHO & Nomenclatura PANGO \\
       \hline
@@ -208,6 +208,6 @@ O método de \gls{ml} (ou \textit{Maximum Likelihood}), não é exclusivo da fil
   \item \citeauthor{cho_analysis_2022}
 \end{itemize}
 
-Já em~\citeauthor{yin_systematic_2019} e \citeauthor{bedoya-pilozo_molecular_epidemiology_2018}, foi usada a inferência bayesiana, que é fundamentada no teorema de Bayes, que permite a atualização das probabilidades a priori para probabilidades a posteriori à medida que novas evidências são incorporadas.
+Já em~\textit{\citeauthoronline{yin_systematic_2019}} e \textit{\citeauthoronline{bedoya-pilozo_molecular_epidemiology_2018}}, foi usada a inferência bayesiana, que é fundamentada no teorema de Bayes, que permite a atualização das probabilidades a priori para probabilidades a posteriori à medida que novas evidências são incorporadas.
 
 Além desses,~\citeauthor{potdar_phylogenetic_2021} utilizou a junção de vizinhos (ou \textit{Neighbor-Joining}), que é baseado em uma abordagem heurística que visa construir uma árvore filogenética a partir de uma matriz de distância entre as sequências estudadas. O trabalho de~\citeauthor{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation e~\citeauthor{kim_ngs_2022} a floresta aleatória. Por fim,~\citeauthor{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; \gls{ml} e inferência bayesiana.
