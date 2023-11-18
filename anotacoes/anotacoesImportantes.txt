@@ -22,3 +22,8 @@
             2. Arquivo de anotação com o cabeçalho de cada sequência e o seu tipo
         6. AGUA
         7. Gera árvores com o modelo tradicional, utilizando o iqtree2, para comparação com as geradas com o AGUA
+
+
+FAZER
+Montar figura com a sequência dos arquivos do dataset montado
+BV_BRC.fasta -> _unique_sequences.fasta -> sequencias-alinhadas.fasta -> sequencias_spike_alinhadas.fasta -> sequencias_spike_filtradas.fasta
