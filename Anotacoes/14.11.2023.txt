@@ -7,3 +7,10 @@ Próximas atividades:
 - https://www.paho.org/pt/noticias/1-6-2021-oms-anuncia-nomenclaturas-simples-e-faceis-pronunciar-para-variantes-interesse-e
 - http://painelsaude.unb.br/#/variantes
 4. Refazer análise de resultados, executando o AGUA com a nova metodologia proposta. Treinar o modelo com uma variante de cada vez, e testar se o mesmo é capaz de checar a existência de novas variantes.
+5. Adicionar na introdução uma fala sobre vírus de forma mais geral, e após isso dizer pq a COVID foi escolhida como no trabalho, deixando claro que o método proposto pode ser executado pra outras formas virais.
+- Falar inicialmente sobre as doenças virais e como podem causar, e causaram, endemias/pandemias etc... (Pesquisa aberta no chrome a esquerda)
+- depois linkar isso com a covid-19 com base nas referências enviadas por Vagner
+- Como falar de vírus de uma forma mais geral e só depois explicar pq o trabalho se propôs a abordar o COVID 19
+
+FAZER
+Adicionar no slide a data de download das sequências no bv-brc
