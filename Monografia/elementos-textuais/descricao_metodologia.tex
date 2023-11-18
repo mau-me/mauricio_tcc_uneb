@@ -76,6 +76,9 @@ Durante o desenvolvimento do projeto foi necessário dividir o projeto em fases 
 
 \subsection{Montagem e Preparação do Dataset}
 % Verificar como descrever os dois conjuntos de pipelines montados. Pip 01 (Descartado) - Pip 02 (Atual)
+% FAZER
+% Adicionar nota de rodapé com o link do repositório no Github
+% Adicionar que o máximo de sequências baixadas por tipo foi de 10000 (dez mil). Limite máximo de sequências por vez aplicado pela própria plataforma. Sendo selecionadas as primeiras 10k
 Para realizar o treinamento do modelo a ser construído, eram necessárias sequências únicas e alinhadas do gene Spike. Em vista disso, é importante salientar que o site \gls{bvbrc} disponibiliza sequências genômicas, e sendo assim, foi preciso construir um pipeline para, após o download das sequências, transformar as mesmas para a criação de um dataset com as sequências que atendessem os requisitos esperados.
 
 Inicialmente, foi realizada uma analise do \gls{bvbrc}, para entende a sua estrutura e verificar também se era possível realizar o download de todas as sequências queridas de forma manual. Foi verificado que o site possuía uma área de seleção de filtros, e foi definido que só seriam selecionadas sequências completas no campo \textit{Genome Status} e no campo \textit{Lineage}, onde é possível filtrar as sequências pelo seu tipo \textit{Pango} e também verificar a quantidade, só os que tivessem mais de 50 sequências do mesmo tipo.
