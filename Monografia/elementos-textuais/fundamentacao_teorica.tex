@@ -5,10 +5,9 @@
 \setlength{\parskip}{0.3cm}
 
 \chapter{Fundamentação Teórica}~\label{ch:fundamentacao}
-
 % FAZER
 % Analisar e reescrever introdução da fundamentação teórica
-A análise de genes virais baseada em codons é um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente o código de codificação genética, conhecido como código IUPAC, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
+A análise de genes virais baseada em codons é um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente o código de codificação genética fornecida pela \gls{iupac}, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
 
 Este capítulo também destacará a importância da filogenética na classificação de genes virais e como as árvores filogenéticas são construídas com base em informações genéticas. Além disso, discutiremos a metodologia de Design Science Research (DSR), que serve como um guia metodológico para o desenvolvimento da nossa ferramenta.
 
@@ -19,7 +18,7 @@ Vamos começar esta jornada pela fundamentação teórica que sustenta o projeto
 \section{Biologia Molecular}
 A Biologia Molecular é um ramo da biologia que lida e investigas os processos e mecanismos moleculares relacionados à estrutura, função e interações das biomoléculas presentes nos organismos vivos~\cite{alberts_biologia_2017}. Consiste principalmente em estudar as interações entre os vários sistemas da célula, partindo da relação entre o \gls{dna}, \gls{rna} e a síntese de proteínas, e o modo como essas interações são reguladas.
 
-É fundamental entender a estrutura do \gls{dna} apresentada na Figura~\ref{fig:estruturaDNA}. Está é uma molécula em forma de dupla hélice que carrega a informação genética em organismos vivos. Ela é composta por duas cadeias polinucleotídicas complementares enroladas em torno de um eixo central. Cada cadeia é composta por uma sequência de nucleotídeos, que consistem em uma pentose (a desoxirribose), um grupo fosfato e uma base nitrogenada que pode ser \gls{adenina}, \gls{timina}, \gls{citosina} ou \gls{guanina}. A estrutura do \gls{dna} é mantida por pontes de hidrogênio entre as bases complementares, com a adenina pareando sempre com a timina e a citosina pareando sempre com a guanina.
+É fundamental entender a estrutura do \gls{dna} apresentada na Figura~\ref{fig:estruturaDNA}. Está é uma molécula em forma de dupla hélice que carrega a informação genética em organismos vivos. Ela é composta por duas cadeias polinucleotídicas complementares enroladas em torno de um eixo central. Cada cadeia é composta por uma sequência de nucleotídeos, que consistem em uma pentose (a desoxirribose), um grupo fosfato e uma base nitrogenada que pode ser \gls{adenina}, \gls{timina}, \gls{citosina} ou \gls{guanina}. A maior parte dos organismos carrega suas informações genéticas no \gls{dna}, mas alguns vírus carregam essa informação no \gls{rna}, que possui as mesma bases do \gls{dna} só substituindo a \gls{timina} pela \gls{uracila}~\cite{genetica_peter_2017}.
 
 \begin{figure}[htb]
   \centering
@@ -28,7 +27,7 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
   \fonte{Retirada de \citeauthor{alberts_biologia_2017}}~\label{fig:estruturaDNA}
 \end{figure}
 
-Além das bases nitrogenadas originais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
+Além das bases nitrogenadas principais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
 
 \begin{table}[htb]
   \caption{\textit{IUPAC Nucleotide Code}.}
@@ -124,11 +123,15 @@ Estudos detalhados da proteína Spike são essenciais para compreender a patogen
 % FAZER
 % Falar sobre as nomenclaturas PANGO e WHO
 % Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
+% FAZER Falar do VOI, VOC e VUM
 A nomenclatura das linhagens do \gls{sarscov2} é uma parte crucial na classificação e rastreamento das diferentes variantes do vírus. Duas das principais nomenclaturas usadas para descrever essas linhagens são a nomenclatura \gls{pango} e a nomenclatura da \gls{who}. Essas nomenclaturas são usadas para descrever as diferentes variantes do vírus com base em suas características genéticas e filogenéticas.
 
 A nomenclatura \gls{pango} é uma abordagem baseada na filogenia para nomear e rastrear as linhagens do \gls{sarscov2}. Ela atribui um nome único a cada linhagem com base em sua posição na árvore filogenética do vírus. Isso permite uma identificação clara das diferentes linhagens e ajuda na compreensão de como o vírus está evoluindo ao longo do tempo.~\cite{pango_rambaut_2020}
-% FAZER Falar do VOI, VOC e VUM
-Já a \gls{who} também desenvolveu sua própria nomenclatura para classificar as variantes do \gls{sarscov2}. Essa nomenclatura envolve letras gregas, como Alpha, Beta, Gamma, Delta, e assim por diante. Cada variante é nomeada com base nas letras gregas em ordem alfabética e é usada para evitar estigmatização de locais geográficos ou populações.~\cite{who_variants}
+
+Já a \gls{who} também desenvolveu sua própria nomenclatura para classificar as variantes do \gls{sarscov2}. Essa nomenclatura envolve a utilização de letras gregas em ordem alfabética (Alpha, Beta, Gamma, Delta, etc.) e foi aplicada para evitar a estigmatização de locais geográficos ou populações.~\cite{who_variants} Além disso, a \gls{who} também dividiu as variantes em 3 (três) grupos distintos: \gls{vum}, \gls{voi} e \gls{voc}.
+
+% FAZER
+As voi são assim, as vocs assim e as vum assim.
 
 A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as principais variantes com as suas respectivas nomenclaturas \gls{pango} e \gls{who}
 
@@ -151,9 +154,27 @@ A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as principa
 \end{table}
 
 \section{Bioinformática}
+% Alinhamento de Sequências, Análise de Genomas Virais, Análise de Genomas Virais, Análise de Expressão Gênica, Ferramentas de Bioinformática (Algoritmos de Alinhamento e Algoritmos de reconstrução de árvores)
+A bioinformática é um campo interdisciplinar que aplica técnicas de ciência da computação e estatística para entender e interpretar dados biológicos. Essa área surgiu com o advento das tecnologias de sequenciamento de DNA e tem se expandido para abranger diversos aspectos da biologia molecular e genômica. Vamos explorar os principais domínios da bioinformática:
 
-% Alinhamento de Sequências, Análise de Genomas Virais, Análise de Expressão Gênica, Ferramentas de Bioinformática (Algoritmos de Alinhamento e Algoritmos de reconstrução de árvores)
+% FAZER Verificar se está correto ou não e adicionar as referências
+Alinhamento de Sequências:
+O alinhamento de sequências é uma tarefa central na bioinformática, permitindo comparar e identificar similaridades entre sequências biológicas. Algoritmos como Needleman-Wunsch e Smith-Waterman são usados para alinhamentos globais e locais, respectivamente. Ferramentas populares incluem o BLAST (Basic Local Alignment Search Tool) e o ClustalW.
 
+Análise de Genomas:
+A análise de genomas visa entender a organização, função e evolução dos genes em um organismo. Ferramentas como Artemis e o Ensembl Genome Browser facilitam a navegação e interpretação de genomas completos.
+
+Análise de Expressão Gênica:
+Métodos como RNA-Seq e microarrays são usados para medir a expressão de genes em diferentes condições. Softwares como DESeq2 e edgeR realizam análise diferencial de expressão, identificando genes com níveis significativamente diferentes de expressão.
+
+Filogenética:
+A filogenética estuda as relações evolutivas entre organismos. Métodos como Máxima Verossimilhança (RAxML), Métodos Bayesianos (MrBayes) e Métodos de Distância (Neighbor-Joining) são utilizados para reconstruir árvores filogenéticas.
+
+Estrutura de Proteínas:
+Ferramentas como o Phyre2 e o SWISS-MODEL permitem a modelagem e predição da estrutura tridimensional de proteínas, proporcionando insights sobre sua função.
+
+Metagenômica:
+A metagenômica analisa comunidades microbianas em amostras ambientais. Ferramentas como QIIME e MEGAN auxiliam na análise de dados de sequenciamento de amplicons e metagenomas.
 \section{Filogenia}
 % FAZER
 % Escrever sobre Modelos Evolutivos
