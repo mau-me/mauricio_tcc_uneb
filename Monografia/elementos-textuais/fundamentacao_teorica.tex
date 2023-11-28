@@ -9,6 +9,8 @@
 % Analisar e reescrever introdução da fundamentação teórica
 A análise de genes virais baseada em codons é um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente o código de codificação genética fornecida pela \gls{iupac}, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
 
+% FAZER
+% Reescrever essa parte, tirando o DSR que está no outro capítulo
 Este capítulo também destacará a importância da filogenética na classificação de genes virais e como as árvores filogenéticas são construídas com base em informações genéticas. Além disso, discutiremos a metodologia de Design Science Research (DSR), que serve como um guia metodológico para o desenvolvimento da nossa ferramenta.
 
 Para entender completamente os métodos e resultados apresentados nos capítulos subsequentes, é crucial absorver os conceitos apresentados aqui. O conhecimento teórico sólido proporcionará a base necessária para a análise crítica do desenvolvimento da nossa ferramenta de análise de genes virais baseada em codons.
@@ -24,7 +26,7 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
   \centering
   \caption{Estrutura do DNA.}
   \includegraphics[scale=0.6]{figuras/estruturaDNA_02.pdf}
-  \fonte{Retirada de \citeauthor{alberts_biologia_2017}}~\label{fig:estruturaDNA}
+  \fonte{Retirada de \textit{\citeauthor{alberts_biologia_2017}}}~\label{fig:estruturaDNA}
 \end{figure}
 
 Além das bases nitrogenadas principais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
@@ -71,7 +73,7 @@ Após isso, ocorre o processo de tradução onde a sequência de bases nitrogena
   \centering
   \caption{Tabela de Códons.}
   \includegraphics[scale=0.6]{figuras/tabelaCodons.pdf}
-  \fonte{Adaptade de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
+  \fonte{Adaptada de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
 \end{figure}
 
 A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
@@ -105,7 +107,7 @@ O SARS-CoV-2 possui uma estrutura viral apresentada na Figura~\ref{fig:estrutura
   \centering
   \caption{Estrutura do coronavírus.}
   \includegraphics[scale=0.8]{figuras/estruturaSarsCov2.pdf}
-  \fonte{Retirada de \citeauthor{li_coronavirus_2020}}~\label{fig:estruturaCoronavirus}
+  \fonte{Retirada de \textit{\citeauthor{li_coronavirus_2020}}}~\label{fig:estruturaCoronavirus}
 \end{figure}
 
 % SPIKE
@@ -120,33 +122,34 @@ Estudos detalhados da proteína Spike são essenciais para compreender a patogen
 % SPIKE
 
 \subsubsection{Nomenclaturas de Linhagens do SARS-CoV-2}
-% FAZER
-% Falar sobre as nomenclaturas PANGO e WHO
-% Falar sobre as variantes da covid: link https://www.who.int/emergencies/diseases/novel-coronavirus-2019/question-and-answers-hub/q-a-detail/coronavirus-disease-%28covid-19%29-variants-of-sars-cov-2?gclid=Cj0KCQjwx5qoBhDyARIsAPbMagCLlJnvJwd7Z_Y3kIosIREkdjCv1BG3jU-ocG7HOPwNW0speOrwROIaAuY9EALw_wcB
-% FAZER Falar do VOI, VOC e VUM
 A nomenclatura das linhagens do \gls{sarscov2} é uma parte crucial na classificação e rastreamento das diferentes variantes do vírus. Duas das principais nomenclaturas usadas para descrever essas linhagens são a nomenclatura \gls{pango} e a nomenclatura da \gls{who}. Essas nomenclaturas são usadas para descrever as diferentes variantes do vírus com base em suas características genéticas e filogenéticas.
 
 A nomenclatura \gls{pango} é uma abordagem baseada na filogenia para nomear e rastrear as linhagens do \gls{sarscov2}. Ela atribui um nome único a cada linhagem com base em sua posição na árvore filogenética do vírus. Isso permite uma identificação clara das diferentes linhagens e ajuda na compreensão de como o vírus está evoluindo ao longo do tempo.~\cite{pango_rambaut_2020}
 
 Já a \gls{who} também desenvolveu sua própria nomenclatura para classificar as variantes do \gls{sarscov2}. Essa nomenclatura envolve a utilização de letras gregas em ordem alfabética (Alpha, Beta, Gamma, Delta, etc.) e foi aplicada para evitar a estigmatização de locais geográficos ou populações.~\cite{who_variants} Além disso, a \gls{who} também dividiu as variantes em 3 (três) grupos distintos: \gls{vum}, \gls{voi} e \gls{voc}.
 
-% FAZER
-As voi são assim, as vocs assim e as vum assim.
+A \gls{vum} é um termo usado para sinalizar às autoridades de saúde pública que uma variante do SARS-CoV-2 pode exigir atenção e monitoramento priorizados. O principal objetivo desta categoria é investigar se esta variante (e outras intimamente relacionadas com ela) pode representar uma ameaça adicional à saúde pública global em comparação com outras variantes em circulação.
+Já a \gls{voi}, é um termo usado para descrever uma variante do SARS-CoV-2 com alterações que afetam o comportamento do vírus ou seu impacto potencial na saúde humana. Isto pode incluir, por exemplo, a sua capacidade de propagação, a sua capacidade de causar doenças graves ou a facilidade com que pode ser detectada ou tratada. Um VOI também pode ser identificado porque tem uma maior capacidade de propagação quando comparado com outras variantes em circulação, sugerindo um potencial risco emergente para a saúde pública global. Por fim, a \gls{voc} é um termo que descreve uma variante do SARS-CoV-2 que atende à definição de \gls{voi}, mas também atende a pelo menos um dos seguintes critérios quando comparado com outras variantes\cite{who_variants}:
+\begin{itemize}
+  \item pode causar uma mudança prejudicial na gravidade da doença.
+  \item   pode ter um impacto substancial na capacidade dos sistemas de saúde de prestar cuidados a pacientes com COVID-19 ou outras doenças e, portanto, exigir grandes intervenções de saúde pública.
+  \item há uma diminuição significativa na eficácia das vacinas disponíveis na proteção contra doenças graves.
+\end{itemize}
 
-A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as principais variantes com as suas respectivas nomenclaturas \gls{pango} e \gls{who}
+A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as \gls{voc} \textit{Alpha, Beta, Gamma, Delta e Omicron}\footnote{Essa variante possui sublinhagens }, com as suas respectivas nomenclaturas \gls{pango} e \gls{who}
 
 \begin{table}[htb]
-  \caption{\textit{Nomenclaturas PANGO e WHO}.}
+  \caption{Variantes VOC e suas Nomenclaturas \textit{PANGO e WHO}.}
   \begin{center}
     \begin{tabular}{c|c}
       \hline
-      Nomenclatura PANGO & Nomenclatura WHO \\
+      Nomenclatura WHO & Nomenclatura PANGO \\
       \hline
-      B.1.1.7            & Alpha            \\
-      B.1.1.529          & Omicron          \\
-      B.1.351            & Beta             \\
-      B.1.617.2          & Delta            \\
-      P.1                & Gamma            \\
+      Alpha            & B.1.1.7            \\
+      Omicron          & B.1.1.529          \\
+      Beta             & B.1.351            \\
+      Delta            & B.1.617.2          \\
+      Gamma            & P.1                \\
       \hline
     \end{tabular}
   \end{center}
@@ -221,16 +224,16 @@ Na busca de trabalhos relacionados, vários métodos foram encontrados, e a segu
 
 O método de \gls{ml} (ou \textit{Maximum Likelihood}), não é exclusivo da filogenia, mas sim uma abordagem estatística. A sua aplicação em filogenia consiste em avaliar a probabilidade de que o modelo de evolução escolhido gere os dados observados, que são por exemplo, características de um organismo. Essa proposta foi utilizada nos seguintes trabalhos:
 \begin{itemize}
-  \item \citeauthor{behl_threat_2022}
-  \item \citeauthor{fall_genetic_diversity_2021}
-  \item \citeauthor{shabbir_comprehensive_2020}
-  \item \citeauthor{hudu_hepatitis_2018}
-  \item \citeauthor{sallard_tracing_2021}
-  \item \citeauthor{paez-espino_diversity_evolution_2019}
-  \item \citeauthor{tang_evolutionary_2021}
-  \item \citeauthor{cho_analysis_2022}
+  \item \textit{\citeauthor{behl_threat_2022}}
+  \item \textit{\citeauthor{fall_genetic_diversity_2021}}
+  \item \textit{\citeauthor{shabbir_comprehensive_2020}}
+  \item \textit{\citeauthor{hudu_hepatitis_2018}}
+  \item \textit{\citeauthor{sallard_tracing_2021}}
+  \item \textit{\citeauthor{paez-espino_diversity_evolution_2019}}
+  \item \textit{\citeauthor{tang_evolutionary_2021}}
+  \item \textit{\citeauthor{cho_analysis_2022}}
 \end{itemize}
 
 Já em~\textit{\citeauthoronline{yin_systematic_2019}} e \textit{\citeauthoronline{bedoya-pilozo_molecular_epidemiology_2018}}, foi usada a inferência bayesiana, que é fundamentada no teorema de Bayes, que permite a atualização das probabilidades a priori para probabilidades a posteriori à medida que novas evidências são incorporadas.
 
-Além desses,~\citeauthor{potdar_phylogenetic_2021} utilizou a junção de vizinhos (ou \textit{Neighbor-Joining}), que é baseado em uma abordagem heurística que visa construir uma árvore filogenética a partir de uma matriz de distância entre as sequências estudadas. O trabalho de~\citeauthor{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation e~\citeauthor{kim_ngs_2022} a floresta aleatória. Por fim,~\citeauthor{dimitrov_updated_2019} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; \gls{ml} e inferência bayesiana.
+Além desses,~\textit{\citeauthor{potdar_phylogenetic_2021}} utilizou a junção de vizinhos (ou \textit{Neighbor-Joining}), que é baseado em uma abordagem heurística que visa construir uma árvore filogenética a partir de uma matriz de distância entre as sequências estudadas. O trabalho de~\citeauthor{lichtblau_alignment-free_2019} expos o Frequency Chaos Game Representation e~\textit{\citeauthor{kim_ngs_2022}} a floresta aleatória. Por fim,~\textit{\citeauthor{dimitrov_updated_2019}} comparou três modelos para reconstrução de árvores filogenéticas: junção de vizinhos; \gls{ml} e inferência bayesiana.

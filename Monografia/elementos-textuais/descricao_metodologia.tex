@@ -35,16 +35,38 @@ Sendo assim, como apresentado na figura\ref{fig:processoDSR}, os passos citados 
 \begin{figure}[htb]
   \centering
   \caption{Processo iterativo da metodologia \gls{dsr}.}
-  \includegraphics[scale=0.6]{figuras/Design-Science-Research.png}
-  \fonte{O Autor}~\label{fig:processoDSR}
+  \includegraphics[scale=0.4]{Design-Science-Research03.png}
+  \fonte{Adaptada de \textit{\citeauthor{peffers_dsr_2007}}}~\label{fig:processoDSR}
 \end{figure}
 
 % FAZER
+% Pegar no de Marcelo, Falar mais sobre DSR e a parte dos artefatos e compartilhamento, Github e UnEB. Usar nota de rodapé para o link
 % Para auxiliar no processo de gerenciamento e desenvolvimento dos artefatos, foram utilizadas outras duas ferramentas, trello e github...
 % Escrever sobre as ferramentas
 Também será utilizada análises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
 A pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai pesquisar~\cite{da_silva_pesquisa_2014}.
 
+\section{Ambiente Experimental e Ciclo de Experimentos}
+Esta seção descreve o ambiente experimental utilizado para o desenvolvimento do trabalho e a realização dos experimentos. É essencial compreender o contexto no qual os testes foram conduzidos, incluindo as especificações da máquina utilizada.
+
+\begin{itemize}
+
+  \item \textbf{Configurações do Ambiente:}
+        O desenvolvimento do presente trabalho e a execução dos experimentos foram realizados em um sistema operacional Linux Ubuntu na versão 22.04.3 \gls{lts} x86\textunderscore64. As características fundamentais do computador são detalhadas abaixo:
+        \begin{itemize}
+          \item Kernel: 6.2.0{-}37-generic.
+          \item \gls{cpu}: AMD Ryzen 9 7900 (24 núcleos) 3.700GHz
+          \item Memória 32\gls{gigabyte}
+        \end{itemize}
+
+        Essa máquina está integrada ao ambiente do \gls{g2bc}, fornece do uma infraestrutura computacional robusta para proporcionar um ambiente robusto e eficiente para o desenvolvimento do código, bem como para a execução dos experimentos necessários.
+
+  \item \textbf{Ciclo de Experimentos:}
+        Os experimentos foram conduzidos em um ciclo iterativo para garantir a consistência e a validade dos resultados obtidos. Cada iteração envolveu a execução do código no ambiente descrito acima, seguida pela análise cuidadosa dos resultados e possíveis ajustes nos parâmetros experimentais.
+
+        Este ciclo permitiu o aperfeiçoamento contínua da abordagem experimental, assegurando a confiabilidade e relevância dos resultados apresentados neste trabalho.
+
+\end{itemize}
 \section{Materiais e Métodos}
 Nesta sessão, será apresentada as ferramentas utilizadas para a construção e desenvolvimento de todo o trabalho.
 
@@ -88,7 +110,7 @@ Após a análise, foi constatado que realizar o download manualmente era infact�
 \begin{figure}[htb]
   \centering
   \caption{Pipeline de Download das Sequências Genômicas.}
-  \includegraphics[scale=0.6]{figuras/pipelines/bvbrc.png}
+  \includegraphics[scale=0.6]{pipelines/bvbrc.pdf}
   \fonte{O Autor}~\label{fig:pipelineBvbrc}
 \end{figure}
 
@@ -154,7 +176,7 @@ Depois, foi verificado a existência de sequências genômicas idênticas, melho
 \begin{figure}[htb]
   \centering
   \caption{Pipeline de Filtragem de Sequências Genômicas Duplicadas.}
-  \includegraphics[scale=0.6]{figuras/pipelines/seqs_genomicas_duplicadas.png}
+  \includegraphics[scale=0.6]{pipelines/filtrando_genomas_duplicados.pdf}
   \fonte{O Autor}~\label{fig:pipelineGenomicasDuplicadas}
 \end{figure}
 
@@ -163,7 +185,7 @@ Com o dataset de sequências únicas montado, foi decidido os passos a seguir, q
 \begin{figure}[htb]
   \centering
   \caption{Pipelines descontinuado.}
-  \includegraphics[scale=0.45]{figuras/pipelines/pipelines_descontinuado.png}
+  \includegraphics[scale=0.7]{pipelines/pipelines_descontinuado.pdf}
   \fonte{O Autor}~\label{fig:pipelinesDescontinuados}
 \end{figure}
 
@@ -178,21 +200,21 @@ Após um processo de análise, o desenvolvimento continuou a partir das sequênc
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Alinhamento de Sequências Genômicas Duplicadas.}
-          \includegraphics[scale=0.45]{figuras/pipelines/alinhamento_genoma.png}
+          \includegraphics[scale=0.6]{pipelines/alinhamento_genomas_minimap2.pdf}
           \fonte{O Autor}~\label{fig:alinhamentoGenomas}
         \end{figure}
   \item \textbf{Extração do Gene Spike com Uso de Isca:} Após o alinhamento, as sequências de referência do gene spike foram usadas como ``iscas'' para identificar e extrair as sequências correspondentes nas sequências genômicas alinhadas, como visto na figura~\ref{fig:extracaoSpike}. O gene spike é de importância crítica, pois desempenha um papel fundamental na interação do vírus com as células hospedeiras. A utilização de iscas garantiu que as sequências genicas fossem extraídas corretamente do genoma completo.
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Extração do Gene Spike das Sequências Genômicas Alinhadas.}
-          \includegraphics[scale=0.45]{figuras/pipelines/extracao_gene_spike.png}
+          \includegraphics[scale=0.6]{pipelines/extraindo_gene_spike.pdf}
           \fonte{O Autor}~\label{fig:extracaoSpike}
         \end{figure}
   \item \textbf{Filtragem de Sequências Genicas Duplicadas:} Uma das preocupações na criação do dataset foi a presença de sequências duplicadas, que podem enviesar os resultados da análise. Portanto, as sequências genômicas duplicadas foram identificadas e removidas do conjunto de dados. Esse processo garantiu que cada sequência fosse única, evitando redundâncias.
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Filtragem de Sequências Genicas Duplicadas.}
-          \includegraphics[scale=0.45]{figuras/pipelines/filtrando_spikes_duplicados.png}
+          \includegraphics[scale=0.6]{pipelines/filtrando_spikes_duplicados.pdf}
           \fonte{O Autor}~\label{fig:spikeDuplicados}
         \end{figure}
   \item \textbf{Filtragem de Sequências de Má Qualidade:} Para garantir a qualidade do dataset, as sequências genômicas que continham características indesejáveis foram filtradas. Isso incluiu a remoção de sequências que continham mais de 30 bases nitrogenadas (N) consecutivas e aquelas que não correspondiam ao tamanho esperado das sequências de referência do gene spike como visto na imagem~\ref{fig:spikesRuins}. Essa filtragem ajudou a garantir que as sequências incluídas no dataset fossem de alta qualidade e relevantes para a análise subsequente.
@@ -200,7 +222,7 @@ Após um processo de análise, o desenvolvimento continuou a partir das sequênc
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Filtragem de Sequências Genicas de Má Qualidade.}
-          \includegraphics[scale=0.45]{figuras/pipelines/filtrando_spikes_ruins.png}
+          \includegraphics[scale=0.6]{pipelines/filtrando_spikes_ruins.pdf}
           \fonte{O Autor}~\label{fig:spikesRuins}
         \end{figure}
 \end{enumerate}
@@ -212,7 +234,7 @@ A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura~\ref{
 \begin{figure}[htb]
   \centering
   \caption{Arquivos de Entrada do AGUA.}
-  \includegraphics[scale=0.45]{figuras/pipelines/input_AGUA.png}
+  \includegraphics[scale=0.7]{pipelines/input_agua.pdf}
   \fonte{O Autor}~\label{fig:inputAgua}
 \end{figure}
 
@@ -243,13 +265,48 @@ A escolha do IQ-TREE como método tradicional se baseia em sua prevalência na c
 Nesta análise comparativa, examinaremos aspectos críticos da construção de árvores filogenéticas, como a topologia das árvores resultantes, a robustez das ramificações, e a resolução de agrupamentos de espécies. Além disso, consideraremos aspectos de escalabilidade e eficiência computacional.
 
 A abordagem metodológica consiste em utilizar o mesmo conjunto de dados que alimentou nosso modelo para a construção de árvores filogenéticas usando o IQ-TREE como apresentado na figura~\ref{fig:inputAguaIqtree}. Comparamos, então, as árvores filogenéticas obtidas por ambos os métodos, avaliando suas similaridades e diferenças. Essa análise comparativa nos permitirá determinar se o método proposto representa uma melhoria significativa em relação à abordagem tradicional, contribuindo assim para o avanço no campo da filogenia molecular.
+~\ref{tab:tempoProcessamentoIqtree}
 
 \begin{figure}[htb]
   \centering
   \caption{Arquivos de entrada do AGUA e do IQ-TREE.}
-  \includegraphics[scale=0.45]{figuras/pipelines/agua_iqtree.png}
+  \includegraphics[scale=0.7]{pipelines/agua_iqtree2.pdf}
   \fonte{O Autor}~\label{fig:inputAguaIqtree}
 \end{figure}
+
+\begin{table}[htb]
+  \caption{Tempo de processamento, em segundos, das sequências gênicas com o \gls{agua}.}
+  \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      \hline
+      Linhagens  & T100   & T300    & T500    & T700     \\
+      \hline
+      2 (Duas)   & 63.94  & 518.85  & 1309.27 & 2478.68  \\
+      3 (Três)   & 160.76 & 1242.55 & 2992.54 & 5589.52  \\
+      4 (Quatro) & 298.78 & 2302.29 & 5804.33 & 9878.99  \\
+      5 (Cinco)  & 438.31 & 3696.73 & 8910.84 & 15877.98 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:tempoProcessamentoAgua}
+\end{table}
+
+\begin{table}[htb]
+  \caption{Tempo de processamento, em segundos, das sequências gênicas com o IQ-TREE.}
+  \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      \hline
+      Linhagens  & T100  & T300   & T500   & T700   \\
+      \hline
+      2 (Duas)   & 62.18 & 93.40  & 105.20 & 151.04 \\
+      3 (Três)   & 76.38 & 95.33  & 121.06 & 177.27 \\
+      4 (Quatro) & 75.41 & 111.26 & 324.65 & 281.13 \\
+      5 (Cinco)  & 76.69 & 131.25 & 210.89 & 393.44 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{Criada pelo autor.}\label{tab:tempoProcessamentoIqtree}
+\end{table}
 
 % FAZER
 % A seguir, descrevemos em detalhes a metodologia utilizada para realizar essa análise comparativa, bem como os resultados obtidos e suas implicações.
@@ -270,4 +327,5 @@ No contexto da análise comparativa realizada, o IQ-TREE foi aplicado ao mesmo c
 %   \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
 % \end{itemize}
 
-% \section{Resultados Obtidos}
+\section{Resultados Obtidos}
+
