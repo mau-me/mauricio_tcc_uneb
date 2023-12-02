@@ -7,11 +7,11 @@
 \chapter{Fundamentação Teórica}~\label{ch:fundamentacao}
 % FAZER
 % Analisar e reescrever introdução da fundamentação teórica
-A análise de genes virais baseada em codons é um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente o código de codificação genética fornecida pela \gls{iupac}, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
+A análise de genes virais está localizada em um campo interdisciplinar que exige uma sólida compreensão de diversos conceitos e técnicas. Neste capítulo, exploraremos a fundamentação teórica necessária para a compreensão completa do projeto. Começaremos por abordar os princípios fundamentais da genética viral, discutindo o que é um genoma viral e o papel dos genes em vírus. Em seguida, examinaremos detalhadamente os códigos de codificação genética fornecida pela \gls{iupac}, que é essencial para traduzir sequências de nucleotídeos em sequências de aminoácidos.
 
 % FAZER
 % Reescrever essa parte, tirando o DSR que está no outro capítulo
-Este capítulo também destacará a importância da filogenética na classificação de genes virais e como as árvores filogenéticas são construídas com base em informações genéticas. Além disso, discutiremos a metodologia de Design Science Research (DSR), que serve como um guia metodológico para o desenvolvimento da nossa ferramenta.
+Este capítulo também destacará a importância da filogenética na classificação de genes virais e como as árvores filogenéticas são construídas com base em informações genéticas.
 
 Para entender completamente os métodos e resultados apresentados nos capítulos subsequentes, é crucial absorver os conceitos apresentados aqui. O conhecimento teórico sólido proporcionará a base necessária para a análise crítica do desenvolvimento da nossa ferramenta de análise de genes virais baseada em codons.
 
@@ -29,7 +29,7 @@ A Biologia Molecular é um ramo da biologia que lida e investigas os processos e
   \fonte{Retirada de \textit{\citeauthor{alberts_biologia_2017}}}~\label{fig:estruturaDNA}
 \end{figure}
 
-Além das bases nitrogenadas principais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
+Além das bases nitrogenadas principais já apresentadas (\gls{adenina}, \gls{timina}, \gls{citosina} e \gls{guanina}), a \gls{iupac} que é uma organização não governamental internacional dedicada ao avanço da química, desenvolveu também outras codificações, conhecida como \textit{IUPAC Nucleotide Code}, para representar de maneira padronizada as bases nitrogenadas encontradas nas moléculas de ácido nucleico~\cite{iupac_cornish_1985, iupac_hoppe_1986}. Também são apresentadas outras letras que representam pares de bases ou misturas específicas, a letra ``N'' que é usada para representar uma base desconhecida ou não especificada e os símbolos de ``.'' ou ``-'', conhecidos como ``GAP'', ou seja, representa onde há uma base identificável ou onde a informação é faltante\cite{iupac_cornish_1985}. As mesmas são apresentadas na tabela~\ref{tab:iupacNucleotideCode} a seguir.
 
 \begin{table}[htb]
   \caption{\textit{IUPAC Nucleotide Code}.}
@@ -58,17 +58,17 @@ Além das bases nitrogenadas principais já apresentadas (\gls{adenina}, \gls{ti
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:iupacNucleotideCode}
+  \fonte{Adaptada de \citeauthor{iupac_cornish_1985}}\label{tab:iupacNucleotideCode}
 \end{table}
 
 % FAZER
 % Corrigir/Complementar a definição de genoma e gene
 % Comparar o genoma humano com o genoma viral em relação a quantidade de pares de bases
 % https://www.genome.gov/genetics-glossary/Genome REF para imagens
-O conjunto completo de material genético contido em um organismo, seja ele um vírus, uma bactéria, uma planta ou um animal é conhecido como genoma. Ele abrange todas as informações genéticas necessárias para o desenvolvimento, funcionamento e reprodução do organismo. O genoma é composto por sequências de \gls{dna} que carregam as instruções para a síntese de proteínas e regulam várias funções celulares~\cite{alberts_biologia_2017,genetics_benjamin_2016}. A análise do genoma desempenha um papel fundamental na genética, na biologia molecular e na compreensão da hereditariedade e da evolução.~\cite{alberts_biologia_2017}
+O conjunto completo de material genético contido em um organismo, seja ele um vírus, uma bactéria, uma planta ou um animal é conhecido como genoma. Ele abrange todas as informações genéticas necessárias para o desenvolvimento, funcionamento e reprodução do organismo. O genoma é composto por sequências de \gls{dna} que carregam as instruções para a síntese de proteínas e regulam várias funções celulares~\cite{alberts_biologia_2017,genetics_benjamin_2016}. A análise do genoma desempenha um papel fundamental na genética, na biologia molecular e na compreensão da hereditariedade e da evolução~\cite{alberts_biologia_2017}.
 
-As informações contidas no \gls{dna} são copiadas em uma molécula de \gls{rna}, esse processo é conhecido como transcrição. A transcrição ocorre no núcleo das células e envolve a separação das duas fitas do \gls{dna} e o pareamento de nucleotídeos complementares para sintetizar uma molécula de \gls{mrna}. O \gls{mrna} é uma cópia do DNA que carrega a sequência de bases nitrogenadas correspondente a um gene específico.
-Após isso, ocorre o processo de tradução onde a sequência de bases nitrogenadas do \gls{mrna} é utilizada para sintetizar proteínas. A tradução ocorre nos ribossomos, presentes no citoplasma celular. Durante a tradução, o \gls{mrna} é lido em grupos de três bases, chamados de códons. Os códons são sequências de três nucleotídeos consecutivos no RNA que correspondem a um aminoácido específico. Existem 64 códons possíveis, correspondentes a 20 aminoácidos diferentes como apresentado na Figura~\ref{fig:tabelaCodons}, além de sinais de início e parada da tradução. A tradução é o processo pelo qual a sequência de códons no RNA é utilizada para sintetizar proteínas. Durante a tradução, os códons são reconhecidos por moléculas de RNA transportador (tRNA) que trazem os aminoácidos correspondentes.
+As informações contidas no \gls{dna} são copiadas em uma molécula de \gls{rna}, esse processo é conhecido como transcrição. A transcrição ocorre no núcleo das células e envolve a separação das duas fitas do \gls{dna} e o pareamento de nucleotídeos complementares para sintetizar uma molécula de \gls{mrna}. O \gls{mrna} é uma cópia do DNA que carrega a sequência de bases nitrogenadas correspondente a um gene específico~\cite{alberts_biologia_2017}.
+Após isso, ocorre o processo de tradução onde a sequência de bases nitrogenadas do \gls{mrna} é utilizada para sintetizar proteínas. A tradução ocorre nos ribossomos, presentes no citoplasma celular. Durante a tradução, o \gls{mrna} é lido em grupos de três bases nitrogenadas, chamados de códons~\cite{alberts_biologia_2017}. Os códons são sequências de três nucleotídeos consecutivos no RNA que correspondem a um aminoácido específico. Uma vez que o número de diferentes combinações de tricas formadas com quatro nucleotídeos é $4^3$, há 64 códons possíveis, entretanto existem apenas 20 aminoácidos correspondentes, como apresentado na Figura~\ref{fig:tabelaCodons} conhecida como `código genético', além de sinais de início e parada da tradução, em muitos casos códons correspondem ao mesmo aminoácido~\cite{alberts_biologia_2017}. A tradução é o processo pelo qual a sequência de códons no RNA é utilizada para sintetizar proteínas. Durante a tradução, os códons são reconhecidos por moléculas de RNA transportador (tRNA) que trazem os aminoácidos correspondentes.
 \begin{figure}[htb]
   \centering
   \caption{Tabela de Códons.}
@@ -76,7 +76,7 @@ Após isso, ocorre o processo de tradução onde a sequência de bases nitrogena
   \fonte{Adaptada de \citeauthor{openstax-genetic-code}}~\label{fig:tabelaCodons}
 \end{figure}
 
-A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene.
+A relação entre os códons, o DNA e o RNA é crucial para a síntese de proteínas e a expressão genética. O sequenciamento do DNA e a identificação dos códons correspondentes permitem a inferência das sequências de aminoácidos nas proteínas codificadas por um determinado gene~\cite{alberts_biologia_2017}.
 Cada códon especifica um aminoácido distinto. Os aminoácidos são transportados para o ribossomo por moléculas de \gls{trna}, que possuem um anticódon complementar ao códon do \gls{mrna}. À medida que o ribossomo percorre o \gls{mrna}, os aminoácidos são ligados em uma sequência específica, formando uma cadeia polipeptídica que será dobrada e modificada para se tornar uma proteína funcional~\cite{alberts_biologia_2017}.
 
 % FAZER
@@ -153,7 +153,7 @@ A tabela~\ref{tab:nomenclaturaPangoWho} apresentada a seguir, contem as \gls{voc
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:nomenclaturaPangoWho}
+  \fonte{O Autor}\label{tab:nomenclaturaPangoWho}
 \end{table}
 
 \section{Bioinformática}
@@ -178,6 +178,10 @@ Ferramentas como o Phyre2 e o SWISS-MODEL permitem a modelagem e predição da e
 
 Metagenômica:
 A metagenômica analisa comunidades microbianas em amostras ambientais. Ferramentas como QIIME e MEGAN auxiliam na análise de dados de sequenciamento de amplicons e metagenomas.
+
+% FAZER
+% Banco de dados genéticos
+% Arquivo em formato FASTA
 \section{Filogenia}
 % FAZER
 % Escrever sobre Modelos Evolutivos

@@ -1,21 +1,41 @@
 \chapter{Considerações finais}
 
-Neste estágio avançado do projeto, podemos destacar que alcançamos marcos significativos no desenvolvimento de nossa ferramenta de análise de genes virais com base no uso de codons para classificação não supervisionada. Ao longo deste processo, enfrentamos desafios técnicos e científicos, e estamos progredindo de maneira consistente em direção à conclusão do projeto.
+Em síntese, este estudo alcançou plenamente todos os objetivos propostos, abarcando tanto as metas específicas quanto a meta geral, resultando em avanços significativos no campo da análise da evolução molecular viral.
 
-Primeiramente, concluímos com sucesso a montagem do dataset, um dos passos fundamentais para o desenvolvimento do nosso método. Utilizando técnicas de download de forma automatizada, para baixar as sequências classificadas de genoma completo do vírus a partir da base de dados pública \gls{bvbrc}, fomos capazes de construir um conjunto de dados abrangente e representativo. Além disso, implementamos um procedimento de filtragem rigoroso para selecionar apenas sequências únicas, garantindo a qualidade dos dados utilizados em nossa análise.
+O objetivo geral de desenvolver um novo método para a análise da evolução molecular viral foi completamente atingido, culminando na concepção e implementação bem-sucedida do \gls{agua}, uma ferramenta de análise de genes virais com base no uso de codons para classificação não supervisionada.
 
-Além disso, desenvolvemos um conjunto de etapas para o processamento das sequências genéticas, incluindo o alinhamento com a ferramenta Minimap2, a extração de genes de interesse usando o conceito de `isca' e a remoção de sequências duplicadas. Essas etapas são cruciais para preparar os dados de maneira adequada para análise subsequente.
+Quanto aos objetivos específicos, é possível notar destacar as seguintes conquistas:
 
-O desenvolvimento do modelo de classificação não supervisionada também foi concluído com sucesso, permitindo-nos traduzir sequências de DNA em codons e extrair códigos únicos com base nas posições com codons distintos. Isso estabelece as bases para o nosso método de agrupamento e classificação.
+\begin{enumerate}[label=~(\roman*)]
+  \item Montagem do Dataset: Realizamos a compilação de um dataset abrangente, fundamental para as análises subsequentes.
+  \item Definição de um Modelo para Validação: Estabelecemos um modelo robusto que serviu como base para a validação do método proposto, assegurando a solidez das avaliações.
+  \item Desenvolvimento de uma Ferramenta para Caracterização/Validação: Criamos a ferramenta \gls{agua}, uma implementação eficaz que permitiu não apenas caracterizar, mas também validar o método proposto de forma precisa e eficiente.
+  \item Coleta de Dados Necessários para a Validação: Executamos a coleta e dos dados essenciais para validar o método, garantindo que as análises fossem realizadas com informações relevantes e representativas.
+  \item Comparação de Performance: Realizamos uma comparação abrangente da performance computacional do \gls{agua} com um método do estado da arte (IQ-TREE).
+\end{enumerate}
 
-Neste ponto, estamos nos estágios finais do projeto, com apenas uma etapa pendente. A finalização de um script que será utilizado para a comparação entre o método desenvolvido e um método tradicional está em andamento. Esta etapa é crucial para avaliar a eficácia e a precisão de nossa abordagem em relação às técnicas clássicas de filogenética. Após a finalização deste script, realizaremos a execução completa do método com o dataset completo, possibilitando uma avaliação abrangente.
+Portanto, os resultados obtidos e os objetivos integralmente alcançados reforçam a contribuição significativa deste trabalho para o avanço da compreensão da evolução molecular viral, oferecendo uma abordagem inovadora e eficiente por meio do \gls{agua}. Esses êxitos fortalecem a relevância do estudo no contexto científico e apontam para possíveis desenvolvimentos futuros na área.
 
-Além disso, continuaremos a monitorar de perto o custo computacional, prestando atenção especial ao tempo necessário para classificar as sequências. Essa informação será valiosa para avaliar a escalabilidade e a eficiência do nosso método.
+\chapter{Trabalhos Futuros}
 
-Em resumo, estamos avançando de maneira sólida e estruturada em direção aos objetivos de nosso projeto. Com a conclusão iminente da etapa final e a execução com o dataset completo, estamos ansiosos para avaliar os resultados e contribuir para a pesquisa em genética viral e análise filogenética.
+Este estudo abre perspectivas para investigações futuras, destacando algumas possibilidades de continuidade:
 
-Esta conclusão reflete o progresso atual do projeto, destacando as realizações e as etapas futuras para atingir os objetivos finais.
-
+\begin{enumerate}
+  \item Expansão para Outras Métricas e Espécies Virais:
+        \begin{itemize}
+          \item Realizar experimentos adicionais com o AGUA, explorando a sua aplicabilidade em métricas alternativas e em sequências de outras espécies virais, além do SARS-CoV-2.
+          \item Avaliar o desempenho do AGUA em relação a sequências de nucleotídeos de diferentes comprimentos, analisando sua adaptabilidade a variabilidades no tamanho dos dados.
+        \end{itemize}
+  \item Análise Qualitativa da Eficiência do Modelo:
+        \begin{itemize}
+          \item Investigar a eficácia do AGUA na análise qualitativa, particularmente em sua capacidade de identificar novas espécies.
+          \item Avaliar o desempenho do modelo em cenários de descoberta de espécies não previamente catalogadas, fornecendo insights sobre sua utilidade em contextos de pesquisa emergentes.
+        \end{itemize}
+  \item Desenvolvimento de uma Interface \textit(Frontend) (Site) para o \gls{agua}:
+        \begin{itemize}
+          \item Desenvolver um site que permita a fácil interação com o AGUA, tornando suas funcionalidades mais acessíveis a uma variedade de usuários, incluindo pesquisadores e profissionais da área.
+        \end{itemize}
+\end{enumerate}
 % Neste capítulo são apresentadas duas coisas: Conclusões e Trabalhos Futuros. Aqui devem ser apresentadas a que conclusões se pode chegar a partir dos resultados apresentados e analisados no capítulo anterior. Um erro grave e recorrente é usar este capítulo para REPETIR coisas que já foram ditas. Não precisa dizer aqui o que você fez, isto já foi dito no capítulo de desenvolvimento projeto. Não precisa aqui repetir todos os resultados, isto já foi apresentado antes também. Você pode referenciar os seus principais resultados para fundamentar suas conclusões.
 
 % Outro ponto é ter cuidado com o que se conclui. Pergunte sempre se realmente seus resultados permitem concluir o que você escreveu que está concluindo. Neste ponto das conclusões é onde você deve deixar evidente qual a principal contribuição de seu trabalho e quais as contribuições complementares/secundárias. Esta é uma pergunta que todo membro de banca examinadora tem na cabeça, então se já tiver claro aqui na conclusão é melhor.
@@ -27,4 +47,3 @@ Esta conclusão reflete o progresso atual do projeto, destacando as realizaçõe
 %  O Apêndice é algum conteúdo complementar não obrigatório gerado pelo próprio autor. Por exemplo, um manual de uso de um sistema, diagramas de classe de um sistema, código-fonte completo ou parcial de um sistema. Enfim, coisas que não são necessárias para entender a solução e os resultados mas que podem ser úteis para alguém que queira se aprofundar mais. Como dito, é opcional e você pode ter um ou mais apêndices.
 
 % Anexos também são opcionais. São conteúdos complementares de outros autores. Pode ser anexado algum capítulo de outro trabalho, ou outro texto ou material relevante que não seja de sua autoria. Obviamente com a fonte devidamente referenciada.
-

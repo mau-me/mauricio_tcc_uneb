@@ -90,7 +90,6 @@ O python possui uma gama de bibliotecas que facilitam a implementação de solu�
 % Minimap2
 % GoFasta
 % virtualEnv
-% AGUA (verificar e apresentar os sub-softwares utilizados, ex.: CLOPE)
 % BV_BRC - O \gls{bvbrc}, é um centro de recursos de bioinformática dedicado ao estudo e análise de bactérias e vírus. O site também disponibiliza uma uma coleção abrangente de banco de dados, incluindo sequências genômicas, anotações funcionais, informações de expressão gênica e estruturas tridimensionais. O acesso aos bancos de dados é dado por meio de uma interface amigável, onde é possível realizar pesquisas avançadas.
 
 \section{Plano de Implementação}
@@ -132,7 +131,6 @@ Ao final do processo de montagem do dataset, realizado no dia 02 junho de 2023, 
 
 Ao finalizar o processo de download, o \textit{dataset} completo ficou com as seguintes informações apresentadas na tabela~\ref{tab:datasetGenomas}.
 
-%%tabela
 \begin{table}[htb]
   \caption{Informações do dataset de sequências genômicas.}
   \begin{center}
@@ -146,10 +144,10 @@ Ao finalizar o processo de download, o \textit{dataset} completo ficou com as se
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:datasetGenomas}
+  \fonte{O Autor}\label{tab:datasetGenomas}
 \end{table}
 
-A seguir, era necessário construir um dataset de sequências do gene Spike a partir do existente. Para isso, com o objetivo de diminuir o tempo de execução dos pipelines durante o desenvolvimento, foi construído também, um dataset de testes, apresentado na tabela~\ref{tab:datasetGenomasTeste}, que serviria como base para execução das atividades, e após as verificações, seria realizado o processo com o dataset completo. No dataset de testes, foram escolhidas 5 (cinco) linhagens que são amplamente conhecidas (gamma, delta, alpha, beta e omicron), o que tornaria mais preciso o processo de validação futuramente.
+A seguir, era necessário construir um dataset de sequências do gene Spike a partir do existente. Para isso, com o objetivo de diminuir o tempo de execução dos pipelines durante o desenvolvimento, foi construído também, um dataset de testes, exposto na tabela~\ref{tab:datasetGenomasTeste}, que serviria como base para execução das atividades, e após as verificações, seria realizado o processo com o dataset completo. No dataset de testes, foram escolhidas 5 (cinco) linhagens que são amplamente conhecidas (gamma, delta, alpha, beta e omicron), o que tornaria mais preciso o processo de validação futuramente.
 
 \begin{table}[htb]
   \caption{Informações do dataset de teste de sequências genômicas.}
@@ -168,7 +166,7 @@ A seguir, era necessário construir um dataset de sequências do gene Spike a pa
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:datasetGenomasTeste}
+  \fonte{O Autor}\label{tab:datasetGenomasTeste}
 \end{table}
 
 Depois, foi verificado a existência de sequências genômicas idênticas, melhor dizendo, sequências com exatamente a mesma quantidade e ordem dos nucleotídeos. Por isso, foi necessário desenvolver um pipeline que filtrasse as sequências repetidas, e mantivesse apenas uma, como exibido na figura~\ref{fig:pipelineGenomicasDuplicadas}, gerando assim um novo dataset de sequências genômicas únicas.
@@ -239,34 +237,67 @@ A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura~\ref{
 \end{figure}
 
 \subsection{AGUA}
-O modelo proposto foi nomeado como \gls{agua}. A seguir o mesmo será apresentado, desde a sua concepção, implementação e testes.
+O modelo proposto foi designado como \gls{agua}. A subsequente seção discorrerá detalhadamente sobre os procedimentos metodológicos que foram seguidos para a formulação e concepção do referido modelo. Este processo envolveu uma série de etapas meticulosas e estrategicamente delineadas, as quais serão elucidadas a seguir, contribuindo para uma compreensão aprofundada de sua elaboração.
 
 % FAZER
 % Escrever uma descrição melhor do desenvolvimento do modelo
 \begin{itemize}
   \item Levantamento dos requisitos.
-  \item Definir a arquitetura e a abordagem do modelo de classificação baseado em códons.
-  \item Implementar o modelo utilizando uma biblioteca ou framework adequado.
-  \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
-  \item Realizar treinamento do modelo utilizando os dados preparados.
-  \item Avaliar o desempenho do modelo utilizando métricas apropriadas.
+  \item Definição da arquitetura e abordagem do modelo de classificação baseado em códons.
+  \item Implementação do modelo utilizando bibliotecas adequadas.
+        % \item Desenvolver algoritmo para traduzir as sequências de \gls{dna} em sequências de códons.
+  \item Treinamento do modelo.
+  \item Avaliação de desempenho utilizando métricas apropriadas.
         % \item \item Avaliar o desempenho do modelo utilizando métricas apropriadas, como acurácia, precisão e recall.
-  \item Identificar possíveis problemas e realizar ajustes no modelo.
+  \item Identificação de problemas e realização de ajustes.
         % \item Identificar possíveis problemas de overfitting ou underfitting e realizar ajustes no modelo, como ajuste de hiperparâmetros ou utilização de técnicas de regularização.
 \end{itemize}
 
-\subsection{Análise comparativa entre o método proposto (AGUA) e outro método existente}
+Prosseguindo com a sequência metodológica delineada anteriormente, será detalhada de maneira prática a implementação do \gls{agua}. Este segmento apresentará o resultado tangível desse processo, traduzido em código. As implementações e estruturações técnicas discutidas a seguir representam a concretização do modelo, oferecendo uma visão aprofundada de suas características fundamentais e contribuições efetivas no âmbito abordado. Para facilitar revisões e colaborações, o código-fonte encontra-se disponibilizado na plataforma de hospedagem GitHub, no repositório do \gls{g2bc}~\footnote{Url do repositório: \url{https://github.com/G2BC/agua}}.
 
-Nesta seção, apresentamos uma análise comparativa detalhada entre o método proposto e um método tradicional amplamente utilizado. O objetivo é avaliar o desempenho e a eficácia do nosso método em relação a uma abordagem estabelecida. Para esse fim, realizamos a análise em um conjunto de dados comum, utilizando o mesmo conjunto de dados que foi empregado na construção do nosso modelo, apresentado na figura~\ref{tab:datasetGenomasTeste}. O método tradicional selecionado para comparação é o utilizando o \textit{software} IQ-TREE, que é um estimador de máxima verossimilhança de alta performance, frequentemente empregado na filogenia molecular.~\cite{iqtree2_minh_2020}
+O \gls{agua} foi particionado em 3 (três) fases distintas, a saber: Pré-processamento, análise quantitativa e análise qualitativa. Cada uma dessas etapas será detalhada nas seções subsequentes.
+
+\subsubsection{Pré-processamento}
+
+O processo inicia-se com a leitura das sequências do gene spike de um arquivo no formato {FASTA}. Após a leitura, as sequências são verificadas quanto ao seu tamanho, assegurando que sejam múltiplos de 3, um requisito fundamental para a correta representação de códons. Posteriormente, ocorre a conversão das sequências de nucleotídeos em códigos numéricos, representando códons. Esse processo é realizado através do algoritmo \gls{cbuc}, desenvolvido pelo {Prof.} Drº. Diego Gervasio Frías Suárez e o graduando Diego dos Santos Fonseca~\cite{identificacao_cbuc_diego_2021}.
+
+As sequências de códons resultantes passam por uma filtragem, removendo sequências que contenham códons de parada no final. A matriz de sequência de códons é então processada, convertida para um array \textit{numpy}~\cite{numpy_van_2011}, e a contagem dos códons distintos por coluna é realizada. Calcula-se a variabilidade de códons em cada coluna, selecionando aquelas com variabilidade maior que 1, indicando a presença de mais de um tipo de códon.
+
+Para cada sequência, uma lista de ID's é gerada contendo os códons nas colunas selecionadas, e após isso são convertidos em \textit{strings}. A geração de ID's para as classes primárias das sequências segue a identificação e seleção de classes primárias únicas, associadas a números. Um \textit{DataFrame} é criado usando a biblioteca Pandas para organizar as informações do \gls{gvf}.
+
+A aplicação do algoritmo de \textit{clustering} clope otimiza a distribuição de transações em clusters para maximizar uma função objetivo\cite{clope_yang_2002}. Apesar do modelo construído ser não supervisionado, o código otimiza a escolha do valor de repulsão para o algoritmo clope, buscando a melhor resolução de agrupamento para um conjunto de dados de sequências genéticas. Este processo visa encontrar configurações que produzam agrupamentos com alta resolução, onde as sequências pertencentes ao mesmo cluster sejam homogêneas em termos de genótipo, em comparação com os rótulos reais fornecidos no ground truth de anotação.
+
+O código, então, realiza a leitura de um arquivo de anotações e otimiza a escolha do valor de repulsão. A matriz de confusão entre as espécies (anotações) e os clusters é gerada, indicando como as espécies reais foram agrupadas nos clusters encontrados pelo algoritmo clope. A identificação de clusters contendo múltiplas espécies é realizada, seguida pelo cálculo de uma matriz de distâncias entre pares de classes primárias.
+
+Por fim, o código utiliza a biblioteca SciPy para realizar a ligação hierárquica com diferentes métodos de ligação, gerando árvores filogenéticas que são plotadas a partir dos resultados da análise. Ao final do processo, a biblioteca Dill é utilizada para serializar o objeto e gravar o modelo~\cite{dill}.
+
+\subsection{Análise comparativa entre o método proposto (AGUA) e outro método existente}
+Nesta seção, apresentamos uma análise comparativa detalhada entre o método proposto e um método tradicional amplamente utilizado. O objetivo é avaliar o desempenho e a eficácia do nosso método em relação a uma abordagem estabelecida. Para esse fim, realizamos a análise em um conjunto de dados comum apresentado na figura~\ref{tab:datasetGenomasTeste}. O método tradicional selecionado para comparação é o utilizando no \textit{software} IQ-TREE, que é um estimador de máxima verossimilhança de alta performance, frequentemente empregado na filogenia molecular~\cite{iqtree2_minh_2020}.
 
 A escolha do IQ-TREE como método tradicional se baseia em sua prevalência na comunidade científica e sua eficácia comprovada em construir árvores filogenéticas a partir de dados de sequenciamento. A avaliação comparativa entre o método proposto e o IQ-TREE nos permitirá avaliar a capacidade do nosso modelo em produzir resultados relevantes e precisos em comparação com uma abordagem estabelecida.
 
-% FAZER Pontos importantes na análise comparativa
-Nesta análise comparativa, examinaremos aspectos críticos da construção de árvores filogenéticas, como a topologia das árvores resultantes, a robustez das ramificações, e a resolução de agrupamentos de espécies. Além disso, consideraremos aspectos de escalabilidade e eficiência computacional.
+Considerando o propósito de realizar uma comparação entre os métodos, procedeu-se à análise do tempo de execução de cada um deles, variando tanto o número de linhagens quanto a quantidade de sequências. No que diz respeito ao número de linhagens, foram consideradas 2 (Alpha e Beta) para o conjunto L1, 3 (Alpha, Beta e Gamma) para o conjunto L2, 4 (Alpha, Beta, Gamma e Delta) para o conjunto L3 e 5 (Alpha, Beta, Gamma, Delta e Omicron) para o conjunto L4, em cada conjunto de dados. Em relação à quantidade de sequências, foram contemplados 100 (T100), 300 (T300), 500 (T500) e 700 (T700) sequências para cada categoria.
+A tabela~\ref{tab:quantidadeSequenciasTeste} apresenta o total de sequências em cada um dos testes que foram montados.
+Dessa forma, estabeleceram-se cenários variados para avaliação dos métodos, considerando diferentes combinações de linhagens e quantidades de sequências.
 
-A abordagem metodológica consiste em utilizar o mesmo conjunto de dados que alimentou nosso modelo para a construção de árvores filogenéticas usando o IQ-TREE como apresentado na figura~\ref{fig:inputAguaIqtree}. Comparamos, então, as árvores filogenéticas obtidas por ambos os métodos, avaliando suas similaridades e diferenças. Essa análise comparativa nos permitirá determinar se o método proposto representa uma melhoria significativa em relação à abordagem tradicional, contribuindo assim para o avanço no campo da filogenia molecular.
-~\ref{tab:tempoProcessamentoIqtree}
+\begin{table}[htb]
+  \caption{Quantidade de sequências por treinamento utilizados para testes de performance nos dois modelos.}
+  \begin{center}
+    \begin{tabular}{c|c|c|c|c}
+      \hline
+      Linhagens & T100 & T300 & T500 & T700 \\
+      \hline
+      L1        & 200  & 600  & 1000 & 1400 \\
+      L2        & 300  & 900  & 1500 & 2100 \\
+      L3        & 400  & 1200 & 2000 & 2800 \\
+      L4        & 500  & 1500 & 2500 & 3500 \\
+      \hline
+    \end{tabular}
+  \end{center}
+  \fonte{O Autor}\label{tab:quantidadeSequenciasTeste}
+\end{table}
 
+A abordagem metodológica consiste em utilizar o mesmo conjunto de sequências do gene spike, que alimentou o \gls{agua} para a construção de árvores filogenéticas usando o IQ-TREE como apresentado na figura~\ref{fig:inputAguaIqtree}. Comparamos, então, o tempo de processamento em ambos os casos. Essa análise comparativa nos permitirá determinar se o método proposto representa uma melhoria significativa em relação à abordagem tradicional, contribuindo assim para o avanço no campo da filogenia molecular.
 \begin{figure}[htb]
   \centering
   \caption{Arquivos de entrada do AGUA e do IQ-TREE.}
@@ -274,21 +305,23 @@ A abordagem metodológica consiste em utilizar o mesmo conjunto de dados que ali
   \fonte{O Autor}~\label{fig:inputAguaIqtree}
 \end{figure}
 
+Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{tab:quantidadeSequenciasTeste}. Os tempos de processamento para o \gls{agua} são apresentados na tabela~\ref{tab:tempoProcessamentoAgua} e os tempos do IQ-TREE na tabela~\ref{tab:tempoProcessamentoIqtree}.
+
 \begin{table}[htb]
-  \caption{Tempo de processamento, em segundos, das sequências gênicas com o \gls{agua}.}
+  \caption{Tempo de processamento, em segundos, das sequências gênicas com o AGUA.}
   \begin{center}
     \begin{tabular}{c|c|c|c|c}
       \hline
-      Linhagens  & T100   & T300    & T500    & T700     \\
+      Linhagens & T100   & T300    & T500    & T700     \\
       \hline
-      2 (Duas)   & 63.94  & 518.85  & 1309.27 & 2478.68  \\
-      3 (Três)   & 160.76 & 1242.55 & 2992.54 & 5589.52  \\
-      4 (Quatro) & 298.78 & 2302.29 & 5804.33 & 9878.99  \\
-      5 (Cinco)  & 438.31 & 3696.73 & 8910.84 & 15877.98 \\
+      L1        & 63.94  & 518.85  & 1309.27 & 2478.68  \\
+      L2        & 160.76 & 1242.55 & 2992.54 & 5589.52  \\
+      L3        & 298.78 & 2302.29 & 5804.33 & 9878.99  \\
+      L4        & 438.31 & 3696.73 & 8910.84 & 15877.98 \\
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:tempoProcessamentoAgua}
+  \fonte{O Autor}\label{tab:tempoProcessamentoAgua}
 \end{table}
 
 \begin{table}[htb]
@@ -296,36 +329,24 @@ A abordagem metodológica consiste em utilizar o mesmo conjunto de dados que ali
   \begin{center}
     \begin{tabular}{c|c|c|c|c}
       \hline
-      Linhagens  & T100  & T300   & T500   & T700   \\
+      Linhagens & T100  & T300   & T500   & T700   \\
       \hline
-      2 (Duas)   & 62.18 & 93.40  & 105.20 & 151.04 \\
-      3 (Três)   & 76.38 & 95.33  & 121.06 & 177.27 \\
-      4 (Quatro) & 75.41 & 111.26 & 324.65 & 281.13 \\
-      5 (Cinco)  & 76.69 & 131.25 & 210.89 & 393.44 \\
+      L1        & 62.18 & 93.40  & 105.20 & 151.04 \\
+      L2        & 76.38 & 95.33  & 121.06 & 177.27 \\
+      L3        & 75.41 & 111.26 & 324.65 & 281.13 \\
+      L4        & 76.69 & 131.25 & 210.89 & 393.44 \\
       \hline
     \end{tabular}
   \end{center}
-  \fonte{Criada pelo autor.}\label{tab:tempoProcessamentoIqtree}
+  \fonte{O Autor}\label{tab:tempoProcessamentoIqtree}
 \end{table}
 
-% FAZER
-% A seguir, descrevemos em detalhes a metodologia utilizada para realizar essa análise comparativa, bem como os resultados obtidos e suas implicações.
-No contexto da análise comparativa realizada, o IQ-TREE foi aplicado ao mesmo conjunto de dados utilizado na construção do modelo proposto. Isso permitiu a geração de árvores filogenéticas com as linhagens corretamente separadas, como visto na figura~\ref{fig:arvoreIqtree}, que serviram como ponto de comparação para avaliar o desempenho do método proposto em relação a uma abordagem tradicional.
+% FAZER Verificar essa parte
+Embora os resultados de tempo de processamento indiquem que o método alternativo apresentou um desempenho mais rápido em comparação com o \gls{agua} em todos os cenários avaliados, é crucial ressaltar que a eficiência temporal não é o único critério para avaliar a robustez de um método. O \gls{agua}, apesar de requerer mais tempo computacional, oferece uma abordagem inovadora para a classificação de linhagens, incorporando aprendizado automático que pode melhorar significativamente a precisão da classificação.
 
-% FAZER
-% Melhorar a figura
-\begin{figure}[htb]
-  \centering
-  \caption{Árvore Filogenética Construída com o IQ-TREE.}
-  \includegraphics[scale=0.2]{figuras/filogenia_tradicional/sequencias_treinamento.fasta.treefile.pdf}
-  \fonte{O Autor}~\label{fig:arvoreIqtree}
-\end{figure}
+É fundamental destacar que a escolha entre métodos deve levar em consideração não apenas a rapidez da execução, mas também a capacidade de adaptação a diferentes contextos e a qualidade das análises produzidas. O método proposto, \gls{agua}, prioriza a aprendizagem automática e, portanto, oferece uma solução mais robusta em termos de capacidade de classificação.
 
-% \begin{itemize}
-%   \item Comparação dos métodos de agrupamento adotados, avaliando sua eficácia na formação de clusters e na identificação de padrões ou similaridades nas sequências.
-%   \item Avaliação do custo computacional (tempo de execução e recursos requeridos) para a classificação das sequências em cada método.
-%   \item Comparação da eficiência computacional entre os métodos, considerando a escalabilidade e o desempenho em grandes volumes de dados.
-% \end{itemize}
+A rápida execução do método alternativo pode ser atribuída à sua natureza não supervisionada e pré-determinada, o que, embora eficiente em termos de tempo, limita sua adaptabilidade a diferentes conjuntos de dados. O \gls{agua}, ao empregar aprendizado automático, apresenta maior flexibilidade para ajustar-se a variações nos dados, resultando em classificações mais refinadas e adaptadas.
 
-\section{Resultados Obtidos}
+Em última análise, o \gls{agua} busca proporcionar não apenas uma alternativa eficiente em termos de tempo, mas uma abordagem mais completa e contextualizada para a classificação de linhagens. Ao integrar aprendizado automático, o \gls{agua} não só automatiza o processo, mas também aprimora a qualidade das análises, oferecendo uma contribuição valiosa para a compreensão da diversidade genética.
 
