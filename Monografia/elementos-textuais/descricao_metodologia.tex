@@ -24,10 +24,10 @@ Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão 
 \begin{enumerate}
   \item \textbf{Identificação do problema e definição dos objetivos:} Nesta fase, o problema a ser resolvido é identificado e compreendido em detalhes. No contexto deste projeto, isso envolveria a compreensão das limitações das abordagens existentes para a classificação de genes virais.
   \item \textbf{Concepção e planejamento:} Aqui, são definidos os objetivos do artefato a ser criado, suas características e funcionalidades. No projeto em questão, isso envolveria a definição da funcionalidade da ferramenta de análise de genes virais com base em códons.
-  \item \textbf{Desenvolvimento dos artefatos:} Nesta etapa, o artefato é desenvolvido. Para o projeto, isso incluiria a criação dos scripts de download, processamento, tradução de sequências, algoritmos de agrupamento e outras partes da ferramenta.
+  \item \textbf{Desenvolvimento dos artefatos:} Nesta etapa, os produtos desenvolvidos foram: todos os \textit{scripts}; \textit{datasets}; modelos e as ferramentas criadas.
   \item \textbf{Avaliação do artefato:} O artefato é testado e avaliado quanto à sua eficácia na resolução do problema. Isso pode incluir testes de desempenho, experimentos e comparações com métodos existentes.
-  \item \textbf{Apresentar contribuições científicas:} Os resultados e contribuições do artefato são comunicados, geralmente por meio de artigos científicos e relatórios técnicos.
-  \item \textbf{Iteração:} O processo é iterado conforme necessário. À medida que novos problemas ou insights surgem, o artefato é aprimorado.
+  \item \textbf{Apresentar contribuições científicas:} Todos os resultados e contribuições obtidos serão disponibilizados de forma completa e detalhada na plataforma da \gls{uneb} e no repositório do projeto no GitHub do \gls{g2bc}~\footnote{Url do repositório: \url{https://github.com/G2BC/agua}}.
+  \item \textbf{Iteração:} O processo é iterado conforme necessário. À medida que novos problemas ou insights surgem, os artefatos são aprimorados.
 \end{enumerate}
 
 Sendo assim, como apresentado na figura\ref{fig:processoDSR}, os passos citados anteriormente são realizados em uma iteração constante, até a obtenção do objetivo final.
@@ -145,7 +145,7 @@ Ao finalizar o processo de download, o \textit{dataset} completo ficou com as se
   \fonte{O Autor}\label{tab:datasetGenomas}
 \end{table}
 
-A seguir, era necessário construir um dataset de sequências do gene Spike a partir do existente. Para isso, com o objetivo de diminuir o tempo de execução dos pipelines durante o desenvolvimento, foi construído também, um dataset de testes, exposto na tabela~\ref{tab:datasetGenomasTeste}, que serviriam como base para execução das atividades, e após as verificações, seria realizado o processo com o dataset completo. No dataset de testes, foram escolhidas 5 (cinco) linhagens que são amplamente conhecidas (gamma, delta, alpha, beta e omicron), o que tornaria mais preciso o processo de validação futuramente.
+A seguir, era necessário construir um dataset de sequências do gene Spike a partir do existente. Para isso, com o objetivo de diminuir o tempo de execução dos pipelines durante o desenvolvimento, foi construído também, um dataset de testes, exposto na tabela~\ref{tab:datasetGenomasTeste}, que serviriam como base para execução das atividades, e após as verificações, seria realizado o processo com o dataset completo. No dataset de testes, foram escolhidas 5 (cinco) linhagens que são amplamente conhecidas (alpha, beta, gamma, delta e omicron), o que tornaria mais preciso o processo de validação futuramente.
 
 \begin{table}[htb]
   \caption{Informações do dataset de teste de sequências genômicas.}
@@ -155,10 +155,10 @@ A seguir, era necessário construir um dataset de sequências do gene Spike a pa
       Pango     & \gls{who} & Quantidade de Sequências & Tamanho em \gls{megabyte} \\
       \hline
       B.1.1.7   & Alpha     & 9982                     & 307                       \\
-      B.1.1.529 & Omicron   & 3694                     & 112.7                     \\
       B.1.351   & Beta      & 5256                     & 160.6                     \\
-      B.1.617.2 & Delta     & 9996                     & 305.3                     \\
       P.1       & Gamma     & 10000                    & 305.9                     \\
+      B.1.617.2 & Delta     & 9996                     & 305.3                     \\
+      B.1.1.529 & Omicron   & 3694                     & 112.7                     \\
       \hline
       Total     &           & 38928                    & 1191,5                    \\
       \hline
@@ -192,7 +192,7 @@ Com o dataset de sequências únicas montado, foi decidido os passos a seguir, q
 Após um processo de análise, o desenvolvimento continuou a partir das sequências genômicas únicas, foi feito seguindo os quatro (4) passos apresentados a seguir:
 
 \begin{enumerate}
-  \item \textbf{Alinhamento das sequências genômicas:} A primeira etapa, como apresentado na figura~\ref{fig:alinhamentoGenomas}, consistiu em alinhar as sequências genômicas únicas já disponíveis, utilizando a ferramenta de alinhamento Minimap2, a qual é um recurso eficiente para mapear sequências em um genoma de referência. E esse processo permitiu a identificação de regiões específicas relacionadas ao gene spike.
+  \item \textbf{Alinhamento das sequências genômicas:} A primeira etapa, como apresentado na figura~\ref{fig:alinhamentoGenomas}, consistiu em alinhar as sequências genômicas únicas já disponíveis, utilizando a ferramenta de alinhamento Minimap2, a qual é um recurso eficiente para mapear sequências em um genoma de referência~\cite{minimap2_li_2018}. E esse processo permitiu a identificação de regiões específicas relacionadas ao gene spike.
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Alinhamento de Sequências Genômicas Duplicadas.}
@@ -223,7 +223,7 @@ Após um processo de análise, o desenvolvimento continuou a partir das sequênc
         \end{figure}
 \end{enumerate}
 
-Ao final do processo, foi gerado um \textit{dataset} de alta qualidade, contendo sequências gênicas únicas para as variantes alpha, beta, delta, gamma e omicron. E ele será a base para a análise de genes virais com base no uso de códons e a aplicação de técnicas de classificação não supervisionada.
+Ao final do processo, foi gerado um \textit{dataset} de alta qualidade, contendo sequências gênicas únicas para as variantes alpha, beta, gamma, delta, e omicron. E ele será a base para a análise de genes virais com base no uso de códons e a aplicação de técnicas de classificação não supervisionada.
 
 A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura~\ref{fig:inputAgua} apresenta, que serviria de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências genicas de cada uma das linhagem, e outro anotações que serviria como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
 
@@ -253,21 +253,19 @@ O modelo proposto foi designado como \gls{agua}. A subsequente seção discorrer
 
 Prosseguindo com a sequência metodológica delineada anteriormente, será detalhada de maneira prática a implementação do \gls{agua}. Este segmento apresentará o resultado tangível desse processo, traduzido em código. As implementações e estruturações técnicas discutidas a seguir representam a concretização do modelo, oferecendo uma visão aprofundada de suas características fundamentais e contribuições efetivas no âmbito abordado. Para facilitar revisões e colaborações, o código-fonte encontra-se disponibilizado na plataforma de hospedagem GitHub, no repositório do \gls{g2bc}~\footnote{Url do repositório: \url{https://github.com/G2BC/agua}}.
 
-O \gls{agua} foi particionado em 3 (três) fases distintas, a saber: Pré-processamento, análise quantitativa e análise qualitativa. Cada uma dessas etapas será detalhada nas seções subsequentes.
-
-\subsubsection{Pré-processamento}
-
-O processo inicia-se com a leitura das sequências do gene spike de um arquivo no formato {FASTA}. Após a leitura, as sequências são verificadas quanto ao seu tamanho, assegurando que sejam múltiplos de 3, um requisito fundamental para a correta representação de códons. Posteriormente, ocorre a conversão das sequências de nucleotídeos em códigos numéricos, representando códons. Esse processo é realizado através do algoritmo \gls{cbuc}, desenvolvido pelo {Prof.} Drº. Diego Gervasio Frías Suárez e o graduando Diego dos Santos Fonseca~\cite{identificacao_cbuc_diego_2021}.
+O processo inicia-se com a leitura das sequências do gene spike de um arquivo no formato {FASTA}. Após isso, as sequências são verificadas quanto ao seu tamanho, assegurando que sejam múltiplos de 3, um requisito fundamental para a correta representação de códons. Posteriormente, ocorre a conversão das sequências de nucleotídeos em códigos numéricos, representando códons, sendo realizado através do algoritmo \gls{cbuc}, desenvolvido pelos graduandos Diego dos Santos Fonseca, Cândido Luiz do Nascimento Júnior e o {Prof.} Drº. Diego Gervasio Frías Suárez~\cite{identificacao_cbuc_diego_2021,spike_cbuc_candido_2021}.
 
 As sequências de códons resultantes passam por uma filtragem, removendo sequências que contenham códons de parada no final. A matriz de sequência de códons é então processada, convertida para um array \textit{numpy}~\cite{numpy_van_2011}, e a contagem dos códons distintos por coluna é realizada. Calcula-se a variabilidade de códons em cada coluna, selecionando aquelas com variabilidade maior que 1, indicando a presença de mais de um tipo de códon.
 
 Para cada sequência, uma lista de ID's é gerada contendo os códons nas colunas selecionadas, e após isso são convertidos em \textit{strings}. A geração de ID's para as classes primárias das sequências segue a identificação e seleção de classes primárias únicas, associadas a números. Um \textit{DataFrame} é criado usando a biblioteca Pandas para organizar as informações do \gls{gvf}.
 
-A aplicação do algoritmo de \textit{clustering} clope otimiza a distribuição de transações em clusters para maximizar uma função objetivo\cite{clope_yang_2002}. Apesar do modelo construído ser não supervisionado, o código otimiza a escolha do valor de repulsão para o algoritmo clope, buscando a melhor resolução de agrupamento para um conjunto de dados de sequências genéticas. Este processo visa encontrar configurações que produzam agrupamentos com alta resolução, onde as sequências pertencentes ao mesmo cluster sejam homogêneas em termos de genótipo, em comparação com os rótulos reais fornecidos no ground truth de anotação.
+A aplicação do algoritmo de \textit{clustering} Clope otimiza a distribuição de transações em clusters para maximizar uma função objetivo\cite{Clope_yang_2002}. E, apesar do agrupamento com o Clope ser não supervisionado, o código utiliza-se das anotações, para otimizar a escolha do seu único parâmetro ajustável, chamado de repulsão (\textit(repulsion)), buscando a melhor resolução de agrupamento para um conjunto de dados de sequências genéticas. Este processo visa encontrar configurações que produzam agrupamentos com alta resolução, onde as sequências pertencentes ao mesmo cluster sejam homogêneas em termos de genótipo, em comparação com os rótulos reais fornecidos no \textit{ground truth} de anotação.
 
-O código, então, realiza a leitura de um arquivo de anotações e otimiza a escolha do valor de repulsão. A matriz de confusão entre as espécies (anotações) e os clusters é gerada, indicando como as espécies reais foram agrupadas nos clusters encontrados pelo algoritmo clope. A identificação de clusters contendo múltiplas espécies é realizada, seguida pelo cálculo de uma matriz de distâncias entre pares de classes primárias.
+O código, então, realiza a leitura de um arquivo de anotações e otimiza a escolha do valor de repulsão. A matriz de confusão entre as espécies (anotações) e os clusters é gerada, indicando como as espécies reais foram agrupadas nos clusters encontrados pelo algoritmo Clope. A identificação de clusters contendo múltiplas espécies é realizada, seguida pelo cálculo de uma matriz de distâncias entre pares de classes primárias.
 
 Por fim, o código utiliza a biblioteca SciPy para realizar a ligação hierárquica com diferentes métodos de ligação, gerando árvores filogenéticas que são plotadas a partir dos resultados da análise. Ao final do processo, a biblioteca Dill é utilizada para serializar o objeto e gravar o modelo~\cite{dill}.
+
+Ao fim do processo o \gls{agua} tem como suas saídas: uma matriz de distâncias, que pode ser utilizada para construir dendrogramas e o modelo treinado com as sequências.
 
 \subsection{Análise comparativa entre o método proposto (AGUA) e outro método existente}
 Nesta seção, apresentamos uma análise comparativa detalhada entre o método proposto e um tradicional amplamente utilizado. O objetivo é avaliar o desempenho e a eficácia do nosso método em relação a uma abordagem estabelecida. Para esse fim, realizamos a investigação em um conjunto de dados comum apresentado na figura~\ref{tab:datasetGenomasTeste}. O método tradicional selecionado para comparação é o utilizando no \textit{software} IQ-TREE, que é um estimador de máxima verossimilhança de alta performance, frequentemente empregado na filogenia molecular~\cite{iqtree2_minh_2020}.
@@ -303,7 +301,7 @@ A abordagem metodológica consiste em utilizar o mesmo conjunto de sequências d
   \fonte{O Autor}~\label{fig:inputAguaIqtree}
 \end{figure}
 
-Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{tab:quantidadeSequenciasTeste}. Os tempos de processamento para o \gls{agua} são apresentados na tabela~\ref{tab:tempoProcessamentoAgua} e os tempos do IQ-TREE na tabela~\ref{tab:tempoProcessamentoIqtree}.
+Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{tab:quantidadeSequenciasTeste}. Os tempos de processamento para o \gls{agua} são apresentados na tabela~\ref{tab:tempoProcessamentoAgua} e os tempos do IQ-TREE na tabela~\ref{tab:tempoProcessamentoIqtree}. Além disso foi gerado árvores nos dois modelos, a do \gls{agua} é apresentada no Anexo~\ref{an:arvore_agua}, já a árvore filogenética gerada pelo IQ-TREE é apresentada no Anexo~\ref{an:arvore_iqtree}, a mesma foi plotada utilizando o \textit{software} Figtree. Destaca-se que, devido à limitação de tempo, está pesquisa não empreenderá qualquer avaliação das árvores geradas.
 
 \begin{table}[htb]
   \caption{Tempo de processamento, em segundos, das sequências gênicas com o AGUA.}
