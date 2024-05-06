@@ -18,7 +18,7 @@ A seguir, serão apresentadas a metodologia e os softwares utilizados neste estu
 
 % Metodologia
 \section{Metodologia}~\label{sec:metodologia}
-Um ponto importante para a obtenção dos objetivos deste trabalho está relacionado a definição da metodologia que servirá como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso foi o \gls{dsr}. Ela, proporcionou um framework teórico e prático para a criação de artefatos inovadores, como métodos, modelos ou frameworks, visando resolver problemas específicos~\cite{peffers_dsr_2007}. Neste projeto, a ferramenta de análise de genes virais baseada em códons é o produto que será desenvolvido e avaliado. Além disso, o \gls{dsr} enfatiza a validação e a avaliação da utilidade e eficácia do artefato em relação aos seus objetivos práticos. No caso deste projeto, a validação será realizada através da comparação dos resultados obtidos com a ferramenta proposta em relação às técnicas clássicas filogenéticas, que são amplamente utilizadas para a análise de genes virais. Essa comparação permitirá avaliar a eficácia e o valor agregado da abordagem baseada em códons.
+Um ponto importante para atingir os objetivos deste trabalho está relacionado a definição da metodologia que servirá como alicerce. Com a proposta de desenvolver e validar um método de análise da evolução molecular de vírus com base no uso de códons, a metodologia escolhida para isso foi o \gls{dsr}. Ela, proporcionou um \textit{framework} teórico e prático para a criação de artefatos inovadores, como métodos, modelos ou \textit{frameworks}, visando resolver problemas específicos~\cite{peffers_dsr_2007}. Neste projeto, a ferramenta de análise de genes virais baseada em códons é o produto que será desenvolvido e avaliado. Além disso, o \gls{dsr} enfatiza a validação e a avaliação da utilidade e eficácia do artefato em relação aos seus objetivos práticos. No caso deste projeto, a validação será realizada através da comparação dos resultados obtidos com a ferramenta proposta em relação às técnicas clássicas filogenéticas, que são amplamente utilizadas para a análise de genes virais. Essa comparação permitirá avaliar a eficácia e o valor agregado da abordagem baseada em códons.
 
 Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão seguidos:
 \begin{enumerate}
@@ -27,10 +27,10 @@ Para a obtenção de sucesso ao utilizar o \gls{dsr} os seguintes passos serão 
   \item \textbf{Desenvolvimento dos artefatos:} Nesta etapa, os produtos desenvolvidos foram: todos os \textit{scripts}; \textit{datasets}; modelos e as ferramentas criadas.
   \item \textbf{Avaliação do artefato:} O artefato é testado e avaliado quanto à sua eficácia na resolução do problema. Isso pode incluir testes de desempenho, experimentos e comparações com métodos existentes.
   \item \textbf{Apresentar contribuições científicas:} Todos os resultados e contribuições obtidos serão disponibilizados de forma completa e detalhada na plataforma da \gls{uneb} e no repositório do projeto no GitHub do \gls{g2bc}~\footnote{Url do repositório: \url{https://github.com/G2BC/agua}}.
-  \item \textbf{Iteração:} O processo é iterado conforme necessário. À medida que novos problemas ou insights surgem, os artefatos são aprimorados.
+  \item \textbf{Iteração:} O processo é iterado conforme necessário. À medida que novos problemas ou \textit{insights} surgem, os artefatos são aprimorados.
 \end{enumerate}
 
-Sendo assim, como apresentado na figura\ref{fig:processoDSR}, os passos citados anteriormente são realizados em uma iteração constante, até a obtenção do objetivo final.
+Sendo assim, como apresentado na figura~\ref{fig:processoDSR}, os passos citados anteriormente são realizados em uma iteração constante, até a conclusão de todos os  objetivos.
 
 \begin{figure}[htb]
   \centering
@@ -43,7 +43,7 @@ Sendo assim, como apresentado na figura\ref{fig:processoDSR}, os passos citados 
 % Pegar no de Marcelo, Falar mais sobre DSR e a parte dos artefatos e compartilhamento, Github e UnEB. Usar nota de rodapé para o link
 % Para auxiliar no processo de gerenciamento e desenvolvimento dos artefatos, foram utilizadas outras duas ferramentas, trello e github...
 % Escrever sobre as ferramentas
-Também será utilizada análises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
+Também serão utilizadas análises quantitativas, ou seja, medidas estatísticas para mensurar e comparar os resultados obtidos.\\
 Em suma, a pesquisa quantitativa só tem sentido quando há um problema muito bem definido e há informação e teoria a respeito do objeto de conhecimento, entendido aqui como o foco da pesquisa e/ou aquilo que se quer estudar. Esclarecendo mais, só se faz pesquisa de natureza quantitativa quando se conhece as qualidades e se tem controle do que se vai investigar~\cite{da_silva_pesquisa_2014}.
 
 \section{Ambiente Experimental e Ciclo de Experimentos}
@@ -59,12 +59,12 @@ Esta seção descreve o ambiente experimental utilizado para o desenvolvimento d
           \item Memória 32\gls{gigabyte}
         \end{itemize}
 
-        Essa máquina está integrada ao ambiente do \gls{g2bc}, fornece do uma infraestrutura computacional robusta para proporcionar um ambiente robusto e eficiente para o desenvolvimento do código, bem como para a execução dos experimentos necessários.
+        Essa máquina está integrada ao ambiente do \gls{g2bc}, fornecendo uma infraestrutura computacional robusta para proporcionar um ambiente robusto e eficiente para o desenvolvimento do código, bem como para a execução dos experimentos necessários.
 
   \item \textbf{Ciclo de Experimentos:}
         Os experimentos foram conduzidos em um ciclo iterativo para garantir a consistência e a validade dos resultados obtidos. Cada iteração envolveu a execução do código no ambiente descrito acima, seguida pela análise cuidadosa dos resultados e possíveis ajustes nos parâmetros experimentais.
 
-        Este ciclo permitiu o aperfeiçoamento contínua da abordagem experimental, assegurando a confiabilidade e relevância dos resultados apresentados neste trabalho.
+        Este ciclo permitiu o aperfeiçoamento contínuo da abordagem experimental, assegurando a confiabilidade e relevância dos resultados apresentados neste trabalho.
 
 \end{itemize}
 \section{Materiais e Métodos}
@@ -77,8 +77,8 @@ Dessa forma, para a construção dos pipelines do projeto, utilizamos Python em 
 O python possui uma gama de bibliotecas que facilitam a implementação de soluções complexas. A seguir serão apresentadas a bibliotecas utilizadas:
 
 \begin{itemize}
-  \item \textbf{Biopython}: Coleção de bibliotecas e ferramentas em Python, disponíveis gratuitamente para biologia molecular computacional. Ele fornece uma ampla gama de funcionalidades, desde a leitura e análise de arquivos de sequência biológica até a execução de algoritmos sofisticados de bioinformática. Desenvolvido e mantido pelo Projeto Biopython, que é uma associação internacional de desenvolvedores de ferramentas python~\cite{biopython}.
-  \item \textbf{Selenium}: Biblioteca de código aberto que fornece uma interface programática para automatizar interações com navegadores da web. É amplamente utilizado por desenvolvedores e testadores de software para realizar testes automatizados, raspagem de dados na web e outras tarefas que envolvem interações com páginas da web. O Selenium para Python permite a automação de ações como clicar em botões, preencher formulários, navegar em sites e extrair informações da web, tornando-o uma ferramenta valiosa para desenvolvimento e automação de tarefas na web~\cite{selenium-python}.
+  \item \textbf{Biopython}: Coleção de bibliotecas e ferramentas em Python, disponíveis gratuitamente para biologia molecular computacional. Ele fornece uma ampla gama de funcionalidades, desde a leitura e análise de arquivos de sequências biológicas até a execução de algoritmos sofisticados de bioinformática. Desenvolvido e mantido pelo Projeto Biopython, que é uma associação internacional de desenvolvedores de ferramentas python~\cite{biopython}.
+  \item \textbf{Selenium}: Biblioteca de código aberto que fornece uma interface programática para automatizar interações com navegadores da web. É amplamente utilizado por desenvolvedores e testadores de software para realizar testes automatizados, extração de dados na web e outras tarefas que envolvem interações com páginas da web. O Selenium para Python permite a automação de ações como clicar em botões, preencher formulários, navegar em sites e extrair informações da web, tornando-o uma ferramenta valiosa para desenvolvimento e automação de tarefas na web~\cite{selenium-python}.
 \end{itemize}
 
 % Lista de Tecnologias/Ferramentas utilizadas:
@@ -100,9 +100,9 @@ Durante o desenvolvimento do projeto foi necessário dividi-lo em fases com base
 % Adicionar que o máximo de sequências baixadas por tipo foi de 10000 (dez mil). Limite máximo de sequências por vez aplicado pela própria plataforma. Sendo selecionadas as primeiras 10k
 Para realizar o treinamento do modelo a ser construído, eram necessárias sequências únicas e alinhadas do gene Spike. Em vista disso, é importante salientar que o site \gls{bvbrc} disponibiliza sequências genômicas, e sendo assim, foi preciso construir um pipeline para, após o download delas, transforma-las para a criação de um dataset com aquelas que atendessem os requisitos esperados.
 
-Inicialmente, foi realizada uma analise do \gls{bvbrc}, para entender a sua estrutura e verificar também se era possível realizar o \textit{download} de todas as sequências essenciais de forma manual. Em seguida, foi verificado que o site possuía uma área de seleção de filtros, e que só era possível selecionar dez mil sequências por vez. Além disso, foi definido que só seriam selecionadas sequências completas no campo \textit{Genome Status} e no campo \textit{Lineage}, onde é possível filtrar as sequências pelo seu tipo \textit{Pango} e também verificar a quantidade, só as que tivessem mais de 50 seriam selecionados.
+Inicialmente, foi realizada uma análise do \gls{bvbrc}, para entender a sua estrutura e verificar também se era possível realizar o \textit{download} de todas as sequências essenciais de forma manual. Em seguida, foi verificado que o site possuía uma área de seleção de filtros, e que só era possível selecionar dez mil sequências por vez. Além disso, foi definido que só seriam selecionadas sequências completas no campo \textit{Genome Status} e no campo \textit{Lineage}, onde é possível filtrar as sequências pelo seu tipo \textit{Pango} e também verificar a quantidade, só as que tivessem mais de 50 seriam selecionadas.
 
-Após a análise, foi constatado que realizar o download manualmente era infactível, e que seria preciso automatizar esse processo de iteração com a página, como vistos na Figura~\ref{fig:pipelineBvbrc}. Isto posto, foi realizado uma sequência de passos conhecidos como \textit{Web Scrapping} utilizado o Python juntamente com o Selenium, apresentados em seguida:
+Após a análise, foi constatado que realizar o download manualmente era infactível, e que seria preciso automatizar esse processo de iteração com a página, como vistos na Figura~\ref{fig:pipelineBvbrc}. Isto posto, foi realizada uma sequência de passos conhecidos como \textit{Web Scrapping} utilizando o Python juntamente com o Selenium, apresentados em seguida:
 
 \begin{figure}[htb]
   \centering
@@ -155,10 +155,10 @@ A seguir, era necessário construir um dataset de sequências do gene Spike a pa
       Pango     & \gls{who} & Quantidade de Sequências & Tamanho em \gls{megabyte} \\
       \hline
       B.1.1.7   & Alpha     & 9982                     & 307                       \\
-      B.1.351   & Beta      & 5256                     & 160.6                     \\
-      P.1       & Gamma     & 10000                    & 305.9                     \\
-      B.1.617.2 & Delta     & 9996                     & 305.3                     \\
-      B.1.1.529 & Omicron   & 3694                     & 112.7                     \\
+      B.1.351   & Beta      & 5256                     & 160,6                     \\
+      P.1       & Gamma     & 10000                    & 305,9                     \\
+      B.1.617.2 & Delta     & 9996                     & 305,3                     \\
+      B.1.1.529 & Omicron   & 3694                     & 112,7                     \\
       \hline
       Total     &           & 38928                    & 1191,5                    \\
       \hline
@@ -167,7 +167,7 @@ A seguir, era necessário construir um dataset de sequências do gene Spike a pa
   \fonte{O Autor}\label{tab:datasetGenomasTeste}
 \end{table}
 
-Depois, foi verificado a existência de sequências genômicas idênticas, melhor dizendo, sequências com exatamente a mesma quantidade e ordem dos nucleotídeos. Por essa razão, foi necessário desenvolver um pipeline que filtrasse as sequências repetidas, e mantivesse apenas uma, como exibido na figura~\ref{fig:pipelineGenomicasDuplicadas}, gerando assim um novo dataset de sequências genômicas únicas.
+Depois, foi verificada a existência de sequências genômicas idênticas, melhor dizendo, sequências com exatamente a mesma quantidade e ordem dos nucleotídeos. Por essa razão, foi necessário desenvolver um pipeline que filtrasse as sequências repetidas, e mantivesse apenas uma, como exibido na figura~\ref{fig:pipelineGenomicasDuplicadas}, gerando assim um novo dataset de sequências genômicas únicas.
 
 \begin{figure}[htb]
   \centering
@@ -176,7 +176,7 @@ Depois, foi verificado a existência de sequências genômicas idênticas, melho
   \fonte{O Autor}~\label{fig:pipelineGenomicasDuplicadas}
 \end{figure}
 
-Com o dataset de sequências únicas montado, foi decidido os passos a seguir, que seriam executados com o papel de atingir o objetivo de obter o dataset de sequências gênicas únicas e alinhadas. Primeiro, como visto na figura~\ref{fig:pipelinesDescontinuados}, foi realizado o processo de extração do gene Spike, utilizando uma sequência de referência do gene obtida do dataset da \gls{ncbi}\footnote{Url para download: \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=genbank&from=21563&to=25384}}, juntamente com o software Blast, para encontrar e extrair o gene Spike de cada uma das sequências genômicas de todo o dataset. Após isso, com o dataset de sequências gênicas já montado, era necessário realizar o processo de alinhamento. Foram verificada duas formas de realizar esse procedimento utilizando o software Clustalo Omega: passando uma sequência por vez (\textit{sequence by sequence}) com a sequência do Spike de referência; e outra passando todas as sequências com a referência (\textit{multiple sequence}). Entretanto, mesmo com o dataset de teste, que possuía um tamanho muito inferior ao principal, o processo de alinhamento apresentou uma demora excessiva (até 2 dias) para finalizar. Em decorrência disso, o processo foi descontinuado, e um novo foi repensado e reconstruído e será apresentado a seguir.
+Com o dataset de sequências únicas montado, foram decididos os passos a seguir, que seriam executados com o papel de atingir o objetivo de obter o dataset de sequências gênicas únicas e alinhadas. Primeiro, como visto na figura~\ref{fig:pipelinesDescontinuados}, foi realizado o processo de extração do gene Spike, utilizando uma sequência de referência do gene obtida do dataset da \gls{ncbi}\footnote{Url para download: \url{https://www.ncbi.nlm.nih.gov/nuccore/NC_045512.2?report=genbank&from=21563&to=25384}}, juntamente com o software Blast, para encontrar e extrair o gene Spike de cada uma das sequências genômicas de todo o dataset. Após isso, com o dataset de sequências gênicas já montado, era necessário realizar o processo de alinhamento. Foram verificada duas formas de realizar esse procedimento utilizando o software Clustal Omega: passando uma sequência por vez (\textit{sequence by sequence}) com a sequência do Spike de referência; e outra passando todas as sequências com a referência (\textit{multiple sequence}). Entretanto, mesmo com o dataset de teste, que possuía um tamanho muito inferior ao principal, o processo de alinhamento apresentou uma demora excessiva (até 2 dias) para finalizar. Em decorrência disso, o processo foi descontinuado, e um novo foi repensado e reconstruído e será apresentado a seguir.
 
 \begin{figure}[htb]
   \centering
@@ -199,25 +199,25 @@ Após um processo de análise, o desenvolvimento continuou a partir das sequênc
           \includegraphics[scale=0.6]{pipelines/alinhamento_genomas_minimap2.pdf}
           \fonte{O Autor}~\label{fig:alinhamentoGenomas}
         \end{figure}
-  \item \textbf{Extração do Gene Spike com Uso de Isca:} Após o alinhamento, as sequências de referência do gene spike foram usadas como ``iscas'' para identificar e extrair aquelas correspondentes nas sequências genômicas alinhadas, como visto na figura~\ref{fig:extracaoSpike}. O gene spike é de importância crítica, pois desempenha um papel fundamental na interação do vírus com as células hospedeiras. Ou seja, a utilização de iscas garantiu que uma extração correta do genoma completo.
+  \item \textbf{Extração do Gene Spike com Uso de Isca:} Após o alinhamento, as sequências de referência do gene spike foram usadas como ``iscas'' para identificar e extrair aquelas correspondentes nas sequências genômicas alinhadas, como visto na figura~\ref{fig:extracaoSpike}. O gene spike é de importância crítica, pois desempenha um papel fundamental na interação do vírus com as células hospedeiras. Ou seja, a utilização de iscas garantiu uma extração correta do genoma completo.
         \begin{figure}[htb]
           \centering
           \caption{Pipeline de Extração do Gene Spike das Sequências Genômicas Alinhadas.}
           \includegraphics[scale=0.6]{pipelines/extraindo_gene_spike.pdf}
           \fonte{O Autor}~\label{fig:extracaoSpike}
         \end{figure}
-  \item \textbf{Filtragem de Sequências Genicas Duplicadas:} Uma das preocupações na criação do dataset foi a presença de sequências duplicadas, que podem enviesar os resultados da análise. Portanto, as que estavam repetidas foram identificadas e removidas do conjunto de dados. Esse processo garantiu que cada sequência fosse única, evitando redundâncias.
+  \item \textbf{Filtragem de Sequências Gênicas Duplicadas:} Uma das preocupações na criação do dataset foi a presença de sequências duplicadas, que podem enviesar os resultados da análise. Portanto, as que estavam repetidas foram identificadas e removidas do conjunto de dados. Esse processo garantiu que cada sequência fosse única, evitando redundâncias.
         \begin{figure}[htb]
           \centering
-          \caption{Pipeline de Filtragem de Sequências Genicas Duplicadas.}
+          \caption{Pipeline de Filtragem de Sequências Gênicas Duplicadas.}
           \includegraphics[scale=0.6]{pipelines/filtrando_spikes_duplicados.pdf}
           \fonte{O Autor}~\label{fig:spikeDuplicados}
         \end{figure}
-  \item \textbf{Filtragem de Sequências de Má Qualidade:} Para garantir a qualidade do dataset, as sequências genômicas que continham características indesejáveis foram filtradas. Isso incluiu a remoção das que continham mais de 30 bases nitrogenadas (N) consecutivas e aquelas que não correspondiam ao tamanho esperado das sequências de referência do gene spike como visto na imagem~\ref{fig:spikesRuins}. Essa purificação ajudou a garantir que as sequências incluídas no dataset fossem de alta qualidade e relevantes para a análise subsequente.
+  \item \textbf{Filtragem de Sequências de Má Qualidade:} Para garantir a qualidade do dataset, as sequências genômicas que continham características indesejáveis foram filtradas. Isso incluiu a remoção das que continham mais de 30 bases nitrogenadas (N) consecutivas e aquelas que não correspondiam ao tamanho esperado das sequências de referência do gene spike como visto na figura~\ref{fig:spikesRuins}. Essa purificação ajudou a garantir que as sequências incluídas no dataset fossem de alta qualidade e relevantes para a análise subsequente.
         % FAZER: Corrigir parte que fala dos Ns
         \begin{figure}[htb]
           \centering
-          \caption{Pipeline de Filtragem de Sequências Genicas de Má Qualidade.}
+          \caption{Pipeline de Filtragem de Sequências Gênicas de Má Qualidade.}
           \includegraphics[scale=0.6]{pipelines/filtrando_spikes_ruins.pdf}
           \fonte{O Autor}~\label{fig:spikesRuins}
         \end{figure}
@@ -225,7 +225,7 @@ Após um processo de análise, o desenvolvimento continuou a partir das sequênc
 
 Ao final do processo, foi gerado um \textit{dataset} de alta qualidade, contendo sequências gênicas únicas para as variantes alpha, beta, gamma, delta, e omicron. E ele será a base para a análise de genes virais com base no uso de códons e a aplicação de técnicas de classificação não supervisionada.
 
-A partir deste dataset, foi elaborado 2 (dois) arquivos, conforme a figura~\ref{fig:inputAgua} apresenta, que serviria de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências genicas de cada uma das linhagem, e outro anotações que serviria como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
+A partir deste dataset, foram elaborados 2 (dois) arquivos, conforme a figura~\ref{fig:inputAgua} apresenta, que serviriam de entrada, tanto para o modelo desenvolvido como para a geração de árvores filogenéticas utilizando o modelo convencional, a fim de se realizar análises futuras. Um arquivo compreendia a mescla de sequências gênicas de cada uma das linhagem, e outro anotações que serviriam como base no treinamento, contendo o cabeçalho da sequência, na mesma ordem em que estava no arquivo mesclado, juntamente com a linhagem da sequência.
 
 \begin{figure}[htb]
   \centering
@@ -259,9 +259,9 @@ As sequências de códons resultantes passam por uma filtragem, removendo sequê
 
 Para cada sequência, uma lista de ID's é gerada contendo os códons nas colunas selecionadas, e após isso são convertidos em \textit{strings}. A geração de ID's para as classes primárias das sequências segue a identificação e seleção de classes primárias únicas, associadas a números. Um \textit{DataFrame} é criado usando a biblioteca Pandas para organizar as informações do \gls{gvf}.
 
-A aplicação do algoritmo de \textit{clustering} Clope otimiza a distribuição de transações em clusters para maximizar uma função objetivo\cite{Clope_yang_2002}. E, apesar do agrupamento com o Clope ser não supervisionado, o código utiliza-se das anotações, para otimizar a escolha do seu único parâmetro ajustável, chamado de repulsão (\textit(repulsion)), buscando a melhor resolução de agrupamento para um conjunto de dados de sequências genéticas. Este processo visa encontrar configurações que produzam agrupamentos com alta resolução, onde as sequências pertencentes ao mesmo cluster sejam homogêneas em termos de genótipo, em comparação com os rótulos reais fornecidos no \textit{ground truth} de anotação.
+A aplicação do algoritmo de \textit{clustering} Clope otimiza a distribuição de transações em \textit{clusters} para maximizar uma função objetivo~\cite{Clope_yang_2002}. E, apesar do agrupamento com o Clope ser não supervisionado, o código utiliza-se das anotações para otimizar a escolha do seu único parâmetro ajustável, chamado de repulsão (\textit{repulsion}), buscando a melhor resolução de agrupamento para um conjunto de dados de sequências genéticas. Este processo visa encontrar configurações que produzam agrupamentos com alta resolução, onde as sequências pertencentes ao mesmo \textit{cluster} sejam homogêneas em termos de genótipo, em comparação com os rótulos reais fornecidos no \textit{ground truth} de anotação.
 
-O código, então, realiza a leitura de um arquivo de anotações e otimiza a escolha do valor de repulsão. A matriz de confusão entre as espécies (anotações) e os clusters é gerada, indicando como as espécies reais foram agrupadas nos clusters encontrados pelo algoritmo Clope. A identificação de clusters contendo múltiplas espécies é realizada, seguida pelo cálculo de uma matriz de distâncias entre pares de classes primárias.
+O código, então, realiza a leitura de um arquivo de anotações e otimiza a escolha do valor de repulsão. A matriz de confusão entre as espécies (anotações) e os \textit{clusters} é gerada, indicando como as espécies reais foram agrupadas nos \textit{clusters} encontrados pelo algoritmo Clope. A identificação de \textit{clusters} contendo múltiplas espécies é realizada, seguida pelo cálculo de uma matriz de distâncias entre pares de classes primárias.
 
 Por fim, o código utiliza a biblioteca SciPy para realizar a ligação hierárquica com diferentes métodos de ligação, gerando árvores filogenéticas que são plotadas a partir dos resultados da análise. Ao final do processo, a biblioteca Dill é utilizada para serializar o objeto e gravar o modelo~\cite{dill}.
 
@@ -301,7 +301,7 @@ A abordagem metodológica consiste em utilizar o mesmo conjunto de sequências d
   \fonte{O Autor}~\label{fig:inputAguaIqtree}
 \end{figure}
 
-Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{tab:quantidadeSequenciasTeste}. Os tempos de processamento para o \gls{agua} são apresentados na tabela~\ref{tab:tempoProcessamentoAgua} e os tempos do IQ-TREE na tabela~\ref{tab:tempoProcessamentoIqtree}. Além disso foi gerado árvores nos dois modelos, a do \gls{agua} é apresentada no Anexo~\ref{an:arvore_agua}, já a árvore filogenética gerada pelo IQ-TREE é apresentada no Anexo~\ref{an:arvore_iqtree}, a mesma foi plotada utilizando o \textit{software} Figtree. Destaca-se que, devido à limitação de tempo, está pesquisa não empreenderá qualquer avaliação das árvores geradas.
+Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{tab:quantidadeSequenciasTeste}. Os tempos de processamento para o \gls{agua} são apresentados na tabela~\ref{tab:tempoProcessamentoAgua} e os tempos do IQ-TREE na tabela~\ref{tab:tempoProcessamentoIqtree}. Além disso foram geradas árvores nos dois modelos, a do \gls{agua} é apresentada no Anexo~\ref{an:arvore_agua}, já a árvore filogenética gerada pelo IQ-TREE é apresentada no Anexo~\ref{an:arvore_iqtree}, a mesma foi plotada utilizando o \textit{software} Figtree. Destaca-se que, devido à limitação de tempo, está pesquisa não empreenderá qualquer avaliação das árvores geradas.
 
 \begin{table}[htb]
   \caption{Tempo de processamento, em segundos, das sequências gênicas com o AGUA.}
@@ -310,10 +310,10 @@ Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{t
       \hline
       Linhagens & T100   & T300    & T500    & T700     \\
       \hline
-      L1        & 63.94  & 518.85  & 1309.27 & 2478.68  \\
-      L2        & 160.76 & 1242.55 & 2992.54 & 5589.52  \\
-      L3        & 298.78 & 2302.29 & 5804.33 & 9878.99  \\
-      L4        & 438.31 & 3696.73 & 8910.84 & 15877.98 \\
+      L1        & 63,94  & 518,85  & 1309,27 & 2478,68  \\
+      L2        & 160,76 & 1242,55 & 2992,54 & 5589,52  \\
+      L3        & 298,78 & 2302,29 & 5804,33 & 9878,99  \\
+      L4        & 438,31 & 3696,73 & 8910,84 & 15877,98 \\
       \hline
     \end{tabular}
   \end{center}
@@ -327,10 +327,10 @@ Os testes foram executados conforme os parâmetros apresentados na tabela~\ref{t
       \hline
       Linhagens & T100  & T300   & T500   & T700   \\
       \hline
-      L1        & 62.18 & 93.40  & 105.20 & 151.04 \\
-      L2        & 76.38 & 95.33  & 121.06 & 177.27 \\
-      L3        & 75.41 & 111.26 & 324.65 & 281.13 \\
-      L4        & 76.69 & 131.25 & 210.89 & 393.44 \\
+      L1        & 62,18 & 93,40  & 105,20 & 151,04 \\
+      L2        & 76,38 & 95,33  & 121,06 & 177,27 \\
+      L3        & 75,41 & 111,26 & 324,65 & 281,13 \\
+      L4        & 76,69 & 131,25 & 210,89 & 393,44 \\
       \hline
     \end{tabular}
   \end{center}
